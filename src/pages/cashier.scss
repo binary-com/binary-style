@@ -1,0 +1,64 @@
+.cashier-icon {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 60%;
+    background-image: url("../images/pages/cashier/payment-methods-sprite.png");
+    background-size: 100% 1824%;
+}
+
+#visa {
+    background-position: 0 27.5%;
+}
+#mastercard {
+    background-position: 0 22%;
+}
+#cuo-credit-card {
+    background-position: 0 33%;
+}
+#int_bank_wire {
+    background-position: 0 -0;
+}
+#local_bank_transfer {
+    background-position: 0 5%;
+}
+#western_union {
+    background-position: 0 11%;
+}
+#citadel {
+    background-position: 0 16.5%;
+}
+#okpay {
+    background-position: 0 39%;
+}
+#fastpay {
+    background-position: 0 50%;
+}
+#perfect_money {
+    background-position: 0 55%;
+}
+#moneybrokers {
+    background-position: 0 61%;
+}
+#neteller {
+    background-position: 0 67%;
+}
+#moneta {
+    background-position: 0 72%;
+}
+#webmoney {
+    background-position: 0 78%;
+}
+#ukash {
+    background-position: 0 83.5%;
+}
+#qiwi {
+    background-position: 0 89%;
+}
+#yandex {
+    background-position: 0 94.5%;
+}
+#paysafecard {
+    background-position: 0 100%;
+}

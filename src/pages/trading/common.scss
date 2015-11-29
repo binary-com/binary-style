@@ -1,0 +1,103 @@
+.invisible {
+    display: none !important;
+}
+.hidden {
+    visibility: hidden;
+}
+#content {
+    .rbox-table-heading {
+        padding: 3px;
+    }
+    .rbox-heading {
+        background-color: $COLOR_LIGHT_GRAY;
+        h4 {
+            margin: 0;
+            padding: .5rem 1rem;
+        }
+    }
+    .rbox-content {
+        background-color: white;
+        padding: 1rem;
+        .half-1 {
+            width: 50%;
+            float: left;
+        }
+        .half-2 {
+            width: 50%;
+            float: right;
+        }
+    }
+}
+.down-arrow-1 {
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid $COLOR_BRAND_BLUE;
+    width: 0;
+    height: 0;
+}
+.market_higher, .market_lower {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    //border-color: red blue green yellow;
+    border-style: solid;
+    border-width: .5rem;
+}
+
+/* show more button */
+.more {
+  margin-top: 15px;
+  text-align: right;
+}
+
+/* same as p, to act as an empty container */
+.div-p {
+  margin-bottom: 15px;
+}
+
+/* special notice (f_trade.cgi), currently align center */
+
+.centerText,
+.notice-1 {
+  text-align: center;
+}
+
+.title {
+    text-transform: capitalize;
+}
+#overLimitNotice {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.large {
+    height: 12em;
+}
+.disabled {
+    color: $COLOR_GRAY;
+}
+.bigger {
+    font-weight: 600;
+}
+.digit-container {
+    border-top: 1px solid #dedede;
+    background: rgba(222,222,222,0.5);
+    margin: 0 !important;
+}
+.flipper.focus.win,
+.flipper.win {
+    background: linear-gradient(to bottom, transparent, $COLOR_GREEN);
+}
+.flipper.focus.lose,
+.flipper.lose {
+    background: linear-gradient(to bottom, transparent, $COLOR_RED);
+}
+#digit-contract-details {
+    .sign {
+        font-size: 30px !important;
+    }
+}
+
+.disabled-link {
+    color: $COLOR_GRAY !important;
+    pointer-events: none;
+}

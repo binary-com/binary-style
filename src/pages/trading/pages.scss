@@ -1,0 +1,331 @@
+#strike_type,
+#amount,
+#expiry_step,
+#from_expiry,
+#pricingtable_bet_type {
+    width: 100%;
+}
+#account_balance {
+    float: right;
+    margin: 0 20px 10px 0;
+    width: 35%;
+    font-size: 100%;
+    display: none;
+}
+#std_loading_img {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#statement-table table tfoot th.num {
+    text-align: center;
+}
+.paging-navigation {
+    .paging-links {
+        display: inline-block;
+        float: right;
+        margin: 0;
+        li {
+            list-style-image: none;
+            display: inline;
+            margin: 0;
+        }
+    }
+}
+.live-help {
+    margin: 1em 0 2em;
+}
+/* Aanlyse bet*/
+#bet_details-table td {
+    padding: 5px;
+    vertical-align: top;
+}
+#bet_details-table em {
+    font-size: 60%;
+    font-weight: normal;
+    color: $COLOR_TEXT;
+}
+#profit_loss,
+#sale_price {
+    width: 11%;
+}
+.bet_demo {
+    text-align: center;
+    margin-bottom: 15px;
+}
+.finder {
+    background-color: white;
+    margin-bottom: 5px;
+    position: relative;
+    left: 1px;
+}
+h2.finder {
+    font-size: 1.0em;
+    padding: 0.4em 50px 0.4em 0;
+    margin-right: 3px;
+    margin-left: 3px;
+    border-top: 1px solid $COLOR_GRAY;
+    color: $COLOR_BRAND_BLUE;
+}
+#desc {
+    margin: 0 10px 0 90px;
+}
+.top-space {
+    padding-top: 10px;
+}
+.inline {
+    display: inline;
+}
+#openAccForm select#AddressState,
+#changeAccountForm select#AddressState {
+    width: 159px;
+}
+#changeAccountForm {
+    label {
+        padding-top: 2px;
+    }
+    input {
+        border: 1px solid $COLOR_GRAY;
+    }
+    select {
+        border: 1px solid $COLOR_GRAY;
+        background: white;
+    }
+}
+#content #error_msg {
+    margin: 10px;
+}
+#bet_details-table {
+    margin-bottom: 5px;
+}
+.smaller-font table td,
+.smaller-font table th {
+    font-size: 0.85em;
+}
+.left-align table td,
+.left-align table th {
+    text-align: left;
+}
+.center-align table td,
+.center-align table th {
+    text-align: center;
+}
+label#from_strike_label,
+label#from_strike_percent,
+label#from_expiry_label {
+    width: auto;
+}
+div#price_table_notes {
+    font-size: 0.92em;
+    padding-top: 15px;
+}
+.tab-menu-wrap {
+    ul#trading-times {
+        margin-bottom: 1em;
+    }
+}
+/* Terms and conditions */
+.tab-menu-wrap {
+    ul#legal-menu {
+        margin-bottom: 2em;
+        li#legal-tab {
+            span.tm-a-2 {
+                cursor: pointer;
+            }
+        }
+    }
+}
+#asset-index {
+    #forex-normal-tab span.tm-a-2 {
+        cursor: pointer;
+    }
+    .tm-li {
+        &.active {
+            .tooltipx {
+                background: url("../images/common/tooltips_1.png") no-repeat 0 0.3em;
+                img {
+                    width: 1.1em;
+                    visibility: hidden;
+                }
+            }
+        }
+        &.hover {
+            .tooltipx {
+                background: url("../images/common/tooltips_1.png") no-repeat 0 0.3em;
+                img {
+                    width: 1.1em;
+                }
+            }
+        }
+        .tm-ul-2 {
+            .tm-li-2 a {
+                display: inline;
+            }
+        }
+    }
+}
+#settings_message {
+    font-weight: bold;
+    color: $COLOR_BRAND_ORANGE;
+    .success_msg {
+        font-size: 100%;
+    }
+}
+#client_message.errorbox {
+    background-image: none;
+    text-align: center;
+    .rbox-wrap {
+        background-color: inherit;
+        .rbox-content {
+            .form_button {
+                padding: 0;
+                margin-top: 1em;
+            }
+            background-color: inherit;
+            margin: 10px 0;
+            ul {
+                margin: 1em 0;
+            }
+        }
+    }
+}
+.logintrouble-content a {
+    display: block;
+    text-align: center;
+}
+.about-us-content {
+    .about-col {
+        flex: 7;
+    }
+    img {
+        height: 6rem;
+        display: block;
+        margin: 0 auto;
+    }
+    .binary-logo {
+        height: 6em;
+    }
+    .mga-logo {
+        padding: 1rem;
+    }
+    h1 {
+        margin-top: 0;
+    }
+}
+.charting-application-content .appshot {
+    height: 20rem;
+    padding: 1rem 0;
+    display: block;
+    margin: auto;
+}
+.resourcesrise_fall_table-content {
+    #duration_container {
+        flex: 2;
+    }
+    #atleast,
+    #bet_currency {
+        width: 100%;
+    }
+    form {
+        padding-bottom: 1rem;
+    }
+    label {
+        display: block;
+    }
+    #duration_container input,
+    #duration_container select {
+        width: 40%;
+    }
+}
+.smart-indices-content {
+    img {
+        height: 5rem;
+    }
+}
+.login-content, .signup-content {
+    #content {
+        width: 20rem;
+    }
+    form {
+        text-align: center;
+    }
+    .form-logo {
+        width: 7rem;
+    }
+    input,
+    button,
+    select {
+        width: 100%;
+    }
+    .errorfield {
+        margin-top: -1rem;
+    }
+    .bigerror {
+        margin-top: 1rem;
+    }
+}
+.random-markets-content {
+    img {
+        height: 7rem;
+    }
+}
+.contract-guide-content,
+.usermy_account-content,
+.open-source-projects-content,
+.partnerapi-content,
+.resources-content,
+.cashier-content {
+    img {
+        //height: 5rem;
+    }
+}
+.pricing-table-content {
+    label {
+        display: block;
+    }
+    input,
+    select {
+        width: 100%;
+    }
+    .row > * {
+        min-width: 25%;
+        flex: inherit;
+    }
+    .strike-step {
+        flex: 2;
+    }
+}
+.charting-livechart-content {
+    select,
+    input {
+        width: 100%;
+    }
+    .btnrow {
+        display: flex;
+        justify-content: space-between;
+    }
+    .interval {
+        display: flex;
+    }
+}
+.affiliate-signup-content {
+    h3 {
+        // color: $COLOR_BRAND_ORANGE;
+    }
+}
+.userprofit_table-content {
+    table {
+        thead th:first-child,
+        thead th:nth-child(5) {
+            width: 20%;
+        }
+        tfoot th:first-child {
+            text-align: left;
+        }
+    }
+}
+.userlogintrouble-content, .resources-content {
+    .col {
+        min-width: 33.3333%;
+    }
+}

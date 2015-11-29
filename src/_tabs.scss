@@ -1,0 +1,54 @@
+ul[role=tabs], ul[role=segmented] {
+    display: flex;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    justify-content: space-around;
+    li {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        cursor: pointer;
+    }
+    a {
+        padding: .5rem .25rem;
+        text-decoration: none;
+        font-weight: normal;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+ul[role=tabs] {
+    background: $COLOR_BRAND_BLUE;
+    a, li {
+        color: white;
+    }
+    li.active {
+        box-shadow: inset 0px 3px 0px 0px $COLOR_BRAND_ORANGE;
+        background-color: $COLOR_NAV_ACTIVE;
+    }
+}
+
+ul[role=segmented] {
+    box-shadow: inset 0px 0px 0px 1px rgba($COLOR_BRAND_BLUE, 0.2);
+    background-color: rgba($COLOR_BRAND_BLUE, 0.1);
+    border-radius: $BORDER_RADIUS;
+    color: $COLOR_BRAND_BLUE;
+    li.active {
+        color: white;
+        background-color: $COLOR_BRAND_BLUE;
+        a {
+            color: white;
+        }
+    }
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block !important;
+}

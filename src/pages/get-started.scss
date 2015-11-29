@@ -1,0 +1,53 @@
+.get-started-content {
+    flex: 3;
+    .sections {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+    }
+    section {
+        min-width: 10rem;
+        flex: 1;
+        padding-bottom: 3rem;
+        text-align: center;
+        min-width: 33%;
+    }
+}
+.baloon {
+    width: 6rem;
+    height: 6rem;
+    position: relative;
+    padding: 1rem;
+    margin: 0 auto 1rem;
+    border: 2px solid #eee;
+    border-radius: $BORDER-RADIUS;
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-color: transparent;
+        border-bottom: 0;
+    }
+    /* Stroke */
+    &:before {
+        bottom: -15px;
+        left: 37px;
+        border-top-color: #eee;
+        border-width: 15px;
+    }
+    /* Fill */
+    &:after {
+        bottom: -12px;
+        left: 40px;
+        border-top-color: white;
+        border-width: 12px;
+    }
+}
+.beginners-faq-content {
+    h3 {
+        // color: $COLOR_BRAND_ORANGE;
+    }
+}

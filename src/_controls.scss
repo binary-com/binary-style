@@ -1,0 +1,32 @@
+button,
+input[type=submit],
+input[type=button],
+a.button {
+    border: 0;
+    border-radius: $BORDER_RADIUS;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient(lighten($COLOR_BRAND_ORANGE, 3%), darken($COLOR_BRAND_ORANGE, 3%));
+    text-transform: capitalize;
+    line-height: 1;
+    padding: .5em 1em;
+    font-weight: normal;
+    border: 1px solid rgba(0, 0, 0, .1);
+    &:focus {
+        outline: none;
+    }
+    &:hover {
+        border: 1px solid rgba(0, 0, 0, .3);
+        background: linear-gradient(darken($COLOR_BRAND_ORANGE, 3%), darken($COLOR_BRAND_ORANGE, 6%));
+    }
+}
+a.button {
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+button:disabled,
+.button-disabled {
+    color: $COLOR_GRAY;
+    background: $COLOR_LIGHT_GRAY;
+}

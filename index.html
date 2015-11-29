@@ -1,23 +1,31 @@
----
-layout: default
----
+--- ---
+<!DOCTYPE html>
+<html>
 
-<div class="home">
+{% include head.html %}
 
-  <h1 class="page-heading">Posts</h1>
+<body>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+    <h1>H1 Heading</h1>
+    <h2>H2 Heading</h2>
+    <h3>H3 Heading</h3>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+    <p>paragraph with <strong>strong text</strong> and a <a href="#">link</a></p>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+    <ul class="bullet">
+        <li>unordered list item 1</li>
+        <li>unordered list item 2</li>
+        <li>unordered list item 3</li>
+    </ul>
 
-</div>
+    <p>
+        <a class="button" href="#">
+          Link as a button
+        </a>
+        <button>Button</button>
+        <button disabled>Disabled Button</button>
+    </p>
+
+</body>
+
+</html>

@@ -1,31 +1,30 @@
---- ---
+---
+---
 <!DOCTYPE html>
 <html>
-
-{% include head.html %}
-
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Binary Style Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
-
-    <h1>H1 Heading</h1>
-    <h2>H2 Heading</h2>
-    <h3>H3 Heading</h3>
-
-    <p>paragraph with <strong>strong text</strong> and a <a href="#">link</a></p>
-
-    <ul class="bullet">
-        <li>unordered list item 1</li>
-        <li>unordered list item 2</li>
-        <li>unordered list item 3</li>
-    </ul>
-
-    <p>
-        <a class="button" href="#">
-          Link as a button
-        </a>
-        <button>Button</button>
-        <button disabled>Disabled Button</button>
-    </p>
-
+    {% include typography.html %}
+    <br />
+    {% include buttons.html %}
+    <br />
+    {% include inputs.html %}
+    <br />
+    {% include forms.html %}
+    <br />
+    {% include tabs.html %}
+    <br />
+    {% include grid.html %}
+    <br />
+    {% include notifications.html %}
+    <br />
+    {% include tables.html %}
+    <br />
+    {% include loading.html %}
 </body>
-
 </html>

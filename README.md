@@ -9,7 +9,12 @@ Style system and guide for Binary.com
 * [U.S. Web Design Standards](https://playbook.cio.gov/designstandards/)
 * [Gov.uk Style Guide](https://www.gov.uk/guidance/style-guide)
 
-### Projects (that should be) using this:
+### Style principles for big projects
+
+* [BEM](https://en.bem.info/)
+* [SMACSS](https://smacss.com/)
+
+### Projects (that should be) using this
 
 * [Binary Static](https://github.com/binary-com/binary-static)
 * [Next Gen](https://github.com/binary-com/binary-next-gen)

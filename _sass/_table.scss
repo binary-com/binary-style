@@ -3,22 +3,38 @@ table {
     border-collapse: collapse;
     margin-bottom: 1rem;
 }
-thead, tbody {
+
+thead,
+tbody {
     border-bottom: 2px solid rgba($COLOR_BRAND_BLUE, 0.2);
 }
-th, td {
+
+th,
+td {
     padding: .25rem;
     text-align: center;
     vertical-align: middle;
 }
+
 th {
     color: #2a3052;
     font-weight: bold;
     background: rgba($COLOR_BRAND_BLUE, 0.1);
 }
+
 tr {
     border-bottom: 1px solid rgba($COLOR_BRAND_BLUE, 0.2);
+
+    &:focus {
+        background-color: rgba($COLOR_BRAND_BLUE, 0.2);
+        outline: none;
+    }
 }
+
+tbody > tr:hover {
+    background-color: rgba($COLOR_BRAND_BLUE, 0.1);
+}
+
 table ul {
     padding-left: 0;
     list-style: none;
@@ -27,6 +43,7 @@ table ul {
 .asset-index-content th {
     min-width: 6rem;
 }
+
 table.borderless tr {
-  border: none!important;
+    border: none!important;
 }

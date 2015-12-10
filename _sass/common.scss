@@ -17,91 +17,6 @@ body {
 body, th, td {
     line-height: $LINE_HEIGHT;
 }
-a,
-a:visited {
-    color: $COLOR_BRAND_BLUE;
-    font-weight: bold;
-}
-a.external:after {
-    display: inline-block;
-    content: '';
-    width: 1rem;
-    height: 1rem;
-    margin-left: .5rem;
-    background-size: contain;
-    background-image: url(data:text/html;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iMCAwIDQwIDQwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0MCA0MDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4NCgkuc3Qwe2ZpbGw6bm9uZTtzdHJva2U6I0U4ODAyNDtzdHJva2Utd2lkdGg6MS44MjE4O30NCjwvc3R5bGU+DQo8ZyBpZD0iWE1MSURfNF8iIGNsYXNzPSJzdDAiPg0KCTxwb2x5bGluZSBpZD0iWE1MSURfM18iIHBvaW50cz0iMzEuOSwxMS45IDMxLjksMzguNSAxLjQsMzguNSAxLjQsOC4xIDI4LjEsOC4xIi8+DQoJPHBvbHlsaW5lIGlkPSJYTUxJRF8yXyIgcG9pbnRzPSIyMy4xLDEuNSAzOC42LDEuNSAzOC42LDE3Ii8+DQoJPGxpbmUgaWQ9IlhNTElEXzFfIiB4MT0iMTkuNiIgeTE9IjIwLjQiIHgyPSIzOC42IiB5Mj0iMS41Ii8+DQo8L2c+DQo8L3N2Zz4NCg==);
-}
-p, code, fieldset {
-    margin-bottom: 1rem;
-}
-code {
-    display: block;
-    background: rgba($COLOR_BRAND_BLUE, 0.1);
-    padding: 1rem;
-    overflow: auto;
-}
-h1,
-h2,
-h3,
-h4 {
-    font-weight: 300;
-    line-height: 1.1;
-    margin: 2rem 0 1rem;
-}
-h5, h6 {
-    font-weight: bold;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: $COLOR_BRAND_BLUE;
-    a {
-        color: $COLOR_BRAND_BLUE !important;
-    }
-}
-h1 {
-    font-size: $FONT_SIZE_XXL;
-}
-h2 {
-    font-size: $FONT_SIZE_XL;
-}
-h3 {
-    font-size: $FONT_SIZE_L;
-}
-h4 {
-    font-size: $FONT_SIZE_M;
-}
-h5 {
-    font-size: $FONT_SIZE_N;
-}
-input,
-button,
-textarea,
-select,
-optgroup,
-option {
-    font-family: inherit;
-    font-size: inherit;
-    font-style: inherit;
-    font-weight: inherit;
-}
-input,
-textarea {
-    vertical-align: middle;
-}
-ol li {
-    list-style-type: decimal;
-    list-style-image: none;
-}
-ul {
-    margin: 0 0 1rem 0;
-}
-ol {
-    margin: 0 0 1rem 1.5rem;
-}
 img {
     vertical-align: middle;
     border: 0;
@@ -114,28 +29,13 @@ acronym,
 abbr {
     cursor: help;
 }
-.button.button-disabled button.button-disabled {
-    color: $COLOR_GRAY;
-    background: $COLOR_LIGHT_GRAY;
-    cursor: default;
-}
 form {
     margin: 0;
     padding: 0;
 }
-/* form styles */
-.extra_tooltip_container {
-    float: left;
-    text-align: right;
-    padding-right: 1rem;
-    width: 40%;
-}
 // used for form label in grid structure
 .form_label {
     text-align: right;
-}
-#profit-table-form {
-    background: white;
 }
 .row.focus input,
 .row.focus textarea {
@@ -175,16 +75,6 @@ form {
 .required_asterisk {
     color: $COLOR_BRAND_ORANGE;
 }
-
-/* hacks - avoid! */
-/* using pixel as we need it to make footer sticky */
-.scrollbar-measure {
-    width: 100px;
-    height: 100px;
-    overflow: scroll;
-    position: absolute;
-    top: -9999px;
-}
 .center {
     margin-left: auto;
     margin-right: auto;
@@ -223,49 +113,6 @@ a.close {
         text-decoration: none;
     }
 }
-.inpage_popup_container {
-    position: fixed;
-    margin: 0;
-    padding: 10px;
-    text-align: center;
-    border: solid 1px $COLOR_BRAND_ORANGE;
-    background: white;
-    z-index: 1000;
-    max-width: 90%;
-    border-radius: $BORDER_RADIUS;
-    overflow: auto;
-    .drag-handle {
-        cursor: pointer;
-    }
-
-    .inpage_popup_content_box {
-        padding: 1rem 2rem;
-        background: white;
-    }
-}
-.reset_ol {
-    counter-reset: item;
-    li {
-        display: block;
-    }
-    li:before {
-        content: counters(item, ".") ". ";
-        counter-increment: item;
-    }
-}
-.hint {
-    font-size: 14px;
-    color: #58595b;
-    margin-top: 3px;
-}
-.separator-line {
-    border-bottom: 1px solid $COLOR_GRAY;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-.margin-bottom{
-    margin-bottom: 30px;
-}
 i {
     color: $COLOR_BRAND_ORANGE;
 }
@@ -275,10 +122,6 @@ p.media, div.media {
 }
 strong {
     font-weight: bold;
-}
-a.external{
-    background: url("https://static.binary.com/images/pages/patents/link-icon.svg") center right no-repeat;
-    padding-right: 0.3rem;
 }
 .icon {
     height: 6rem;

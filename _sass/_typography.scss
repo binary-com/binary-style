@@ -1,0 +1,91 @@
+a:not([class]),
+a:not([class]):visited {
+    color: $COLOR_BRAND_BLUE;
+    font-weight: bold;
+}
+a.external:after {
+    display: inline-block;
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    margin-left: .5rem;
+    background-size: contain;
+    background-image: url(data:text/html;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iMCAwIDQwIDQwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0MCA0MDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHN0eWxlIHR5cGU9InRleHQvY3NzIj4NCgkuc3Qwe2ZpbGw6bm9uZTtzdHJva2U6I0U4ODAyNDtzdHJva2Utd2lkdGg6MS44MjE4O30NCjwvc3R5bGU+DQo8ZyBpZD0iWE1MSURfNF8iIGNsYXNzPSJzdDAiPg0KCTxwb2x5bGluZSBpZD0iWE1MSURfM18iIHBvaW50cz0iMzEuOSwxMS45IDMxLjksMzguNSAxLjQsMzguNSAxLjQsOC4xIDI4LjEsOC4xIi8+DQoJPHBvbHlsaW5lIGlkPSJYTUxJRF8yXyIgcG9pbnRzPSIyMy4xLDEuNSAzOC42LDEuNSAzOC42LDE3Ii8+DQoJPGxpbmUgaWQ9IlhNTElEXzFfIiB4MT0iMTkuNiIgeTE9IjIwLjQiIHgyPSIzOC42IiB5Mj0iMS41Ii8+DQo8L2c+DQo8L3N2Zz4NCg==);
+}
+p, code, fieldset {
+    margin-bottom: 1rem;
+}
+code {
+    display: block;
+    background: rgba($COLOR_BRAND_BLUE, 0.1);
+    padding: 1rem;
+    overflow: auto;
+}
+h1,
+h2,
+h3,
+h4 {
+    font-weight: 300;
+    line-height: 1.1;
+    margin: 2rem 0 1rem;
+}
+h5, h6 {
+    font-weight: bold;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $COLOR_BRAND_BLUE;
+    a {
+        color: $COLOR_BRAND_BLUE !important;
+    }
+}
+h1, .font-size-xxl {
+    font-size: $FONT_SIZE_XXL;
+}
+h2, .font-size-xl {
+    font-size: $FONT_SIZE_XL;
+}
+h3, .font-size-l {
+    font-size: $FONT_SIZE_L;
+}
+h4, .font-size-m {
+    font-size: $FONT_SIZE_M;
+}
+h5, .font-size-n {
+    font-size: $FONT_SIZE_N;
+}
+.font-size-s {
+    font-size: $FONT_SIZE_S;
+}
+.font-size-xs {
+    font-size: $FONT_SIZE_XS;
+}
+input,
+button,
+textarea,
+select,
+optgroup,
+option {
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+}
+input,
+textarea {
+    vertical-align: middle;
+}
+ol li {
+    list-style-type: decimal;
+    list-style-image: none;
+}
+ul {
+    margin: 0 0 1rem 0;
+}
+ol {
+    margin: 0 0 1rem 1.5rem;
+}

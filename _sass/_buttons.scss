@@ -7,7 +7,7 @@ a.button {
     cursor: pointer;
     color: white;
     background: linear-gradient(lighten($COLOR_BRAND_ORANGE, 3%), darken($COLOR_BRAND_ORANGE, 3%));
-    text-transform: capitalize;
+    text-transform: uppercase;
     line-height: 1;
     padding: .5em 1em;
     font-weight: normal;

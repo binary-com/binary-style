@@ -3,43 +3,24 @@
 
 @import "reset";
 @import "media-queries";
-@import "common";
+
+@import "access";
 @import "animations";
+@import "buttons";
+@import "common";
 @import "form";
 @import "grid";
-@import "nav";
 @import "footer";
 @import "layout";
+@import "modal";
+@import "nav";
 @import "table";
 @import "tabs";
-@import "modal";
 @import "tooltip";
+@import "typography";
 @import "readable";
-@import "access";
+
 @import "inverse";
-
-@import "controls";
-@import "home";
-
-@import "pages/ad";
-@import "pages/ad1";
-@import "pages/ad2";
-@import "pages/ad3";
-@import "pages/get-started";
-@import "pages/trading";
-@import "pages/sell_popup";
-@import "pages/trading/common";
-@import "pages/trading/container";
-@import "pages/trading/pages";
-@import "pages/cashier";
-@import "pages/static";
-@import "pages/timeline";
-@import "pages/reality-check";
 
 @import "language";
 @import "media-queries";
-
-@import "pickadate/classic";
-@import "pickadate/classic.date";
-@import "pickadate/classic.time";
-@import "pickadate/binary";

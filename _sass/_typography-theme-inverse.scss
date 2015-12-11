@@ -1,0 +1,24 @@
+.inverse {
+    background: #242736; // #243036; // $COLOR_BRAND_BLUE;
+    color: #eee;
+}
+
+.inferse ol li:before {
+   color: #eee;
+}
+
+.inverse {
+    a,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: #eee;
+    }
+
+    a {
+        color: $COLOR_BRAND_BLUE !important;
+    }
+}

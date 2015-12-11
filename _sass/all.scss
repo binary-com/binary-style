@@ -2,9 +2,7 @@
 @import "colors";
 
 @import "reset";
-@import "media-queries";
 
-@import "access";
 @import "animations";
 @import "buttons";
 @import "common";
@@ -17,7 +15,11 @@
 @import "table";
 @import "tabs";
 @import "tooltip";
+
 @import "typography";
+@import "typography-theme-default";
+@import "typography-theme-inverse";
+
 @import "readable";
 
 @import "language";

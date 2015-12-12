@@ -6,7 +6,7 @@ h5,
 h6 {
     color: $COLOR_BRAND_BLUE;
 
-    a {
+    & a {
         color: $COLOR_BRAND_BLUE !important;
     }
 }

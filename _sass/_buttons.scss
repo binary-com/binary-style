@@ -1,7 +1,9 @@
 button,
 input[type=submit],
 input[type=button],
-.btn-primary, .btn-secondary {
+.btn-primary,
+.btn-primary span,
+.btn-secondary span {
     border-radius: $BORDER_RADIUS;
     cursor: pointer;
     text-transform: uppercase;
@@ -11,7 +13,8 @@ input[type=button],
 button,
 input[type=submit],
 input[type=button],
-.btn-primary {
+.btn-primary,
+.btn-primary span {
     border: 0;
     color: white;
     background: $COLOR_BRAND_ORANGE;

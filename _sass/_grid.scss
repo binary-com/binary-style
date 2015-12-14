@@ -1,11 +1,11 @@
 .row {
     display: flex;
-    margin-left: -1rem;
+    margin-left: 0 -.5rem;
     flex-wrap: wrap;
 }
 .row > * {
     flex: 1;
-    padding-left: 1rem;
+    margin: 0 .5rem;
 }
 .col.s{
 	flex: .2;

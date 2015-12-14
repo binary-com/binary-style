@@ -37,6 +37,10 @@ button:disabled {
     background: $COLOR_LIGHT_GRAY;
 }
 
+button::-moz-focus-inner, input::-moz-focus-outer {
+    border: 0;
+}
+
 .btn-secondary,
 .btn-secondary span {
     color: $COLOR_BRAND_BLUE;

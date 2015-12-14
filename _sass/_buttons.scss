@@ -37,7 +37,8 @@ button:disabled {
     background: $COLOR_LIGHT_GRAY;
 }
 
-.btn-secondary {
+.btn-secondary,
+.btn-secondary span {
     color: $COLOR_BRAND_BLUE;
     box-shadow: inset 0 0 0 1.5px rgba($COLOR_BRAND_BLUE, 0.75);
 
@@ -46,7 +47,8 @@ button:disabled {
     }
 }
 
-.inverse .btn-secondary {
+.inverse .btn-secondary,
+.inverse .btn-secondary span {
     color: white;
     box-shadow: inset 0 0 0 1.5px rgba(white, 0.75);
 

@@ -50,32 +50,6 @@ input[type=number] {
     padding-right: 0;
 }
 
-select,
-textarea,
-input[type=text],
-input[type=email],
-input[type=password],
-input[type=search],
-input[type=tel],
-input[type=number],
-input[type=date],
-input[type=datepicker],
-.dob,
-.inputlike {
-    border: 1px solid $COLOR_CONTROL_BORDER;
-    border-radius: $BORDER_RADIUS;
-    vertical-align: bottom;
-
-    &:hover {
-        border-color: rgba($COLOR_BRAND_BLUE, 0.5) !important;
-    }
-
-    &:focus {
-        border-color: $COLOR_BRAND_BLUE !important;
-        outline: none;
-    }
-}
-
 textarea {
     height: 8em;
     width: 25em;
@@ -213,7 +187,7 @@ input[type=range] {
     -webkit-appearance: none;
     width: 15rem;
     height: .2rem;
-    background: #2a3052;
+    background: $COLOR_BRAND_BLUE;
     cursor: pointer;
 }
 
@@ -226,25 +200,27 @@ input[type=range]::-webkit-slider-thumb {
     width: 1rem;
     height: 1rem;
     border-radius: 100%;
-    background: #2a3052;
-    box-shadow: 0 0 0 .5rem rgba(42, 48, 82, .1);
+    background: $COLOR_BRAND_BLUE;
+    box-shadow: 0 0 0 .5rem rgba($COLOR_BRAND_BLUE, .1);
     cursor: pointer;
 }
 
-.inverse {
-    select,
-    textarea,
-    input[type=text],
-    input[type=email],
-    input[type=password],
-    input[type=search],
-    input[type=tel],
-    input[type=number],
-    input[type=date],
-    input[type=datepicker],
-    .dob,
-    .inputlike {
-        color: white;
-        background: lighten(#1d1d24, 10%);
+select,
+textarea,
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=search],
+input[type=tel],
+input[type=number],
+input[type=date],
+input[type=datepicker],
+.dob,
+.inputlike {
+    vertical-align: bottom;
+    border-radius: $BORDER_RADIUS;    
+
+    &:focus {
+        outline: none;
     }
 }

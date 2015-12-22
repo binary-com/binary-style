@@ -1,10 +1,10 @@
 .inverse {
-    background: #1d1d24; // #243036; // $COLOR_BRAND_BLUE;
-    color: #eee;
+    background: $COLOR_INVERSE_BG; // #243036; // $COLOR_BRAND_BLUE;
+    color: $COLOR_INVERSE_TEXT;
 }
 
 .inferse ol li:before {
-   color: #eee;
+   color: #COLOR_INVERSE_TEXT;
 }
 
 .inverse {

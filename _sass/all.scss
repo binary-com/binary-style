@@ -8,7 +8,6 @@
 @import "animations";
 @import "buttons";
 @import "common";
-@import "form";
 @import "grid";
 @import "footer";
 @import "layout";
@@ -21,3 +20,7 @@
 @import "typography";
 @import "typography-theme-default";
 @import "typography-theme-inverse";
+
+@import "form";
+@import "form-theme-default";
+@import "form-theme-inverse";

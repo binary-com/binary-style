@@ -5,7 +5,7 @@
     user-drag: none;
 }
 
-*:not(input) {
+*:not(input, .selectable, pre) {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;

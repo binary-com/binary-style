@@ -1,5 +1,5 @@
 .inverse {
-    background: #242736; // #243036; // $COLOR_BRAND_BLUE;
+    background: #1d1d24; // #243036; // $COLOR_BRAND_BLUE;
     color: #eee;
 }
 
@@ -8,7 +8,7 @@
 }
 
 .inverse {
-    a,
+    a:not([class]),
     h1,
     h2,
     h3,
@@ -16,9 +16,5 @@
     h5,
     h6 {
         color: #eee;
-    }
-
-    a {
-        color: $COLOR_BRAND_BLUE !important;
     }
 }

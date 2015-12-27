@@ -158,8 +158,7 @@ label {
 }
 
 legend {
-    font-weight: 300;
-    padding: 1rem;
+    font-weight: bold;
     margin-bottom: 1rem;
     text-transform: capitalize;
     border-bottom: 1px solid $COLOR_BRAND_BLUE;
@@ -218,7 +217,7 @@ input[type=datepicker],
 .dob,
 .inputlike {
     vertical-align: bottom;
-    border-radius: $BORDER_RADIUS;    
+    border-radius: $BORDER_RADIUS;
 
     &:focus {
         outline: none;

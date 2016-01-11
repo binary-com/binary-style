@@ -48,6 +48,7 @@ button::-moz-focus-inner, input::-moz-focus-outer {
 
 .btn-secondary {
     color: $COLOR_BRAND_BLUE;
+    background: transparent;
     box-shadow: inset 0 0 0 1.5px rgba($COLOR_BRAND_BLUE, 0.75);
 
     &:not(:disabled):hover {

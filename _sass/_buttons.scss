@@ -1,3 +1,8 @@
+@mixin button-border($color) {
+    box-shadow: 0px 3px 0px 0px $color,
+                inset 0px 0px 0px 1px $color;
+}
+
 button,
 input[type=submit],
 input[type=button],
@@ -16,12 +21,12 @@ input[type=button],
     border: 0;
     color: white;
     background: $COLOR_BRAND_ORANGE;
-    box-shadow: 0px 2px 0px 0px darken($COLOR_BRAND_ORANGE, 15%);
+    @include button-border(darken($COLOR_BRAND_ORANGE, 10%));
     &:focus {
         outline: none;
     }
     &:not(:disabled):hover {
-        box-shadow: 0px 2px 0px 0px darken($COLOR_BRAND_ORANGE, 20%);
+        @include button-border(darken($COLOR_BRAND_ORANGE, 15%));
     }
 }
 
@@ -38,7 +43,7 @@ button:disabled {
     color: darken($COLOR_GRAY, 20%);
     background: $COLOR_GRAY;
     &:disabled {
-        box-shadow: 0px 2px 0px 0px darken($COLOR_GRAY, 10%);
+        @include button-border(darken($COLOR_GRAY, 10%));
     }
 }
 

@@ -45,34 +45,6 @@ header {
     margin-top: 0;
 }
 
-// .content-something:  max-width: $CONTENT_WIDTH;
-.msgbar {
-    align-items: center;
-    justify-content: center
-}
-
-.msg, .gmt-clock {
-    padding: .5em .5em .5em 0;
-}
-
-
-.msgbar {
-    font-size: $FONT_SIZE_S;
-}
-
-.msgbar, .sitemap {
-    flex-flow: row wrap;
-}
-
-.gmt-clock {
-    text-align: center;
-}
-
-#logo {
-    width: 8rem;
-    padding: .5rem 0;
-}
-
 .nav2nd {
     z-index: 100;
 }

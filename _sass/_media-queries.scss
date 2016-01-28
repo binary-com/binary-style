@@ -19,12 +19,6 @@
     h1 {
         text-align: center;
     }
-    #logo {
-        width: auto;
-    }
-    #logo > img:nth-child(2) {
-        display: none;
-    }
     .account-container {
         position: inherit;
     }
@@ -40,13 +34,6 @@
     }
     .submenu a {
         text-align: center;
-    }
-    #logo,
-    .sitemap,
-    .footer,
-    .msgbar-wrapper,
-    .emphasis-wrapper-wrapper {
-        display: none;
     }
     .content-wrapper {
         padding-top: 0;

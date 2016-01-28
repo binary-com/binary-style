@@ -9,16 +9,6 @@ header {
     max-width: $CONTENT_WIDTH;
     margin: 0 0.5em;
 }
-#logo {
-    img:nth-child(1) {
-        height: 2rem;
-    }
-    img:nth-child(2) {
-        height: 1.5rem;
-        margin-left: 0.25rem;
-        margin-top: 0.25rem;
-    }
-}
 nav {
     flex: 1;
     justify-content: center;

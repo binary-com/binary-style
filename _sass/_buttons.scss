@@ -36,7 +36,7 @@ input[type=button],
     }
     &:active {
         position: relative;
-        top: 2px;
+        top: 1px;
         @include button-outline(darken($COLOR_BRAND_ORANGE, 10%));
     }
 }

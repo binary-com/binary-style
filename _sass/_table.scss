@@ -11,13 +11,13 @@ td {
     vertical-align: middle;
 }
 
-tr td:first-child, tr th:first-child {
-    padding-left: 0;
-}
-
-tr td:last-child, tr th:last-child {
-    padding-right: 0;
-}
+// tr td:first-child, tr th:first-child {
+//     padding-left: 0;
+// }
+//
+// tr td:last-child, tr th:last-child {
+//     padding-right: 0;
+// }
 
 tr:focus {
     outline: none;

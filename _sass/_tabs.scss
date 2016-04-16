@@ -1,13 +1,11 @@
 [role=tablist] {
     display: flex;
     overflow: hidden;
-    justify-content: stretch;
     text-transform: uppercase;
-    align-content: stretch;
     [role=tab] {
         text-align: center;
         cursor: pointer;
-        line-height: 3;
+        padding: 1rem .25rem;
         width: 100%;
         white-space: nowrap;
         &[aria-selected=true] {

@@ -1,47 +1,44 @@
-ul[role=tabs], ul[role=segmented] {
+*[role=tablist] {
     display: flex;
     overflow: hidden;
-    margin-bottom: 1rem;
     justify-content: space-around;
-    li {
-        text-align: center;
-        display: flex;
+    text-transform: uppercase;;
+    *[role=tab] {
         flex: 1;
-        flex-direction: column;
-        justify-content: center;
+        text-align: center;
         cursor: pointer;
-    }
-    a {
-        padding: .5rem .25rem;
-        text-decoration: none;
-        font-weight: normal;
-        &:hover {
-            text-decoration: none;
+        line-height: 3;
+        &[aria-selected=true] {
+            color: #e98024;
+            box-shadow: inset 0 -2px 0 0 #e98024;
         }
+        img {
+            width: 1.75rem;
+            margin: .5rem auto 0;
+        }
+
     }
 }
 
-ul[role=tabs] {
+.inverse *[role=tablist] {
+    color: white;
     background: $COLOR_BRAND_BLUE;
-    a, li {
-        color: white;
-    }
-    li.active {
-        box-shadow: inset 0px 3px 0px 0px $COLOR_BRAND_ORANGE;
+    *[role=tab] {
         background-color: $COLOR_NAV_ACTIVE;
     }
 }
 
-ul[role=segmented] {
-    box-shadow: inset 0px 0px 0px 1px rgba($COLOR_BRAND_BLUE, 0.2);
-    background-color: rgba($COLOR_BRAND_BLUE, 0.1);
-    border-radius: $BORDER_RADIUS;
-    color: $COLOR_BRAND_BLUE;
-    li.active {
-        color: white;
-        background-color: $COLOR_BRAND_BLUE;
-        a {
-            color: white;
+*[role=tablist].vertical {
+    min-width: 3rem;
+    flex-direction: column;
+    align-content: flex-start;
+
+    *[role=tab] {
+        display: flex;
+        flex-direction: column;
+        flex: inherit;
+        &[aria-selected=true] {
+            box-shadow: inset 2px 0 0 0 #e98024;
         }
     }
 }

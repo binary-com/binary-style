@@ -1,15 +1,15 @@
-*[role=tablist] {
+[role=tablist] {
     display: flex;
     overflow: hidden;
     justify-content: stretch;
     text-transform: uppercase;
     align-content: stretch;
-
-    *[role=tab] {
+    [role=tab] {
         text-align: center;
         cursor: pointer;
         line-height: 3;
         width: 100%;
+        white-space: nowrap;
         &[aria-selected=true] {
             color: #e98024;
             box-shadow: inset 0 -3px 0 0 #e98024;
@@ -21,7 +21,7 @@
     }
 }
 
-*[role=tablist].vertical {
+[role=tablist].vertical {
     min-width: 3rem;
     flex-direction: column;
     align-content: flex-start;

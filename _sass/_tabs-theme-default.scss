@@ -20,6 +20,7 @@
     }
 }
 
+
 *[role=tablist].vertical {
     min-width: 3rem;
     flex-direction: column;
@@ -30,7 +31,7 @@
         flex-direction: column;
         flex: inherit;
         &[aria-selected=true] {
-            box-shadow: inset 3px 0 0 0 #e98024;
+            box-shadow: inset 2px 0 0 0 #e98024;
         }
     }
 }

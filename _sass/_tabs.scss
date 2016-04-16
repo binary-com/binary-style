@@ -1,13 +1,15 @@
 *[role=tablist] {
     display: flex;
     overflow: hidden;
-    justify-content: space-around;
-    text-transform: uppercase;;
+    justify-content: stretch;
+    text-transform: uppercase;
+    align-content: stretch;
+
     *[role=tab] {
-        flex: 1;
         text-align: center;
         cursor: pointer;
         line-height: 3;
+        width: 100%;
         &[aria-selected=true] {
             color: #e98024;
             box-shadow: inset 0 -3px 0 0 #e98024;

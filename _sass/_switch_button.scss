@@ -5,6 +5,14 @@
 }
 .onoffswitch-checkbox {
     display: none;
+    &:checked {
+        + .onoffswitch-label .onoffswitch-switch {
+            right: 0px; 
+        }
+        + .onoffswitch-label .onoffswitch-inner {
+            margin-left: 0;
+        }
+    }
 }
 .onoffswitch-label {
     display: block; overflow: hidden; cursor: pointer;
@@ -48,14 +56,4 @@
     right: 56px;
     border: 2px solid #999999; border-radius: 20px;
     transition: all 0.3s ease-in 0s; 
-}
-.onoffswitch-checkbox:checked {
-    + .onoffswitch-label .onoffswitch-inner {
-        margin-left: 0;
-    }
-}
-.onoffswitch-checkbox:checked { 
-    + .onoffswitch-label .onoffswitch-switch {
-        right: 0px; 
-    }
 }

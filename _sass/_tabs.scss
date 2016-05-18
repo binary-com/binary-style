@@ -1,4 +1,4 @@
-[role=tab-list] {
+[role=tablist] {
     display: flex;
     overflow: hidden;
     text-transform: uppercase;
@@ -20,7 +20,7 @@
     }
 }
 
-[role=tab-list].vertical {
+[role=tablist].vertical {
     min-width: 3rem;
     flex-direction: column;
     align-content: flex-start;

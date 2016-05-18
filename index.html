@@ -2,16 +2,110 @@
 ---
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Binary Style Guide</title>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700&subset=latin,vietnamese,cyrillic-ext,latin-ext,cyrillic' rel='stylesheet' type='text/css'/>
-    <link rel="stylesheet" href="binary.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Binary Style Guide</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700&subset=latin,vietnamese,cyrillic-ext,latin-ext,cyrillic' rel='stylesheet' type='text/css' />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+  <link rel="stylesheet" href="binary.css">
+  <style>
+  main{
+    width: 100%;
+      display: block;
+      margin: 0 auto;
+      max-width: 1000px;
+  }
+  [role="tab-content"] .tab-content {
+      display: none;
+  }
+  #tab-1 {
+   display: block;
+  }
+  #tabs{
+    margin-top: 2rem;
+  }
+  </style>
+  <script type="text/javascript">
+  $(document).ready(function() {
+  $('[role="tab-list"] li a').click(function(event) {
+      event.preventDefault();
+      $(this).parent().attr('aria-selected','true').siblings().removeAttr("aria-selected");
+      var tab = $(this).attr("href");
+      $('[role="tab-content"] .tab-content').not(tab).css("display", "none");
+      $(tab).fadeIn();
+  });
+});
+  </script>
+
 </head>
+
 <body>
-    <div style="width: 100%; max-width: 50rem; margin: 0 auto">
-        {% include all.html %}
+  <header>
+    <div class="header-content">
+      <a href="/"><img id="logo" alt="Binary" src="https://static.binary.com/images/pages/binary-symbol-logo.svg"></a>
+      <h3 style="color: white; margin: .5rem">Binary Style Guide</h3>
     </div>
+  </header>
+  <main>
+  <div id="tabs" class="vertical">
+  <ul role="tab-list" class="tabs-menu">
+      <li role=tab aria-selected="true" ><a href="#tab-1">Flex Grid</a></li>
+      <li role=tab ><a href="#tab-2">Colors</a></li>
+      <li role=tab ><a href="#tab-3">Typography</a></li>
+      <li role=tab ><a href="#tab-4">Form</a></li>
+      <li role=tab ><a href="#tab-5">List</a></li>
+      <li role=tab ><a href="#tab-6">Table</a></li>
+      <li role=tab ><a href="#tab-7">Tabs</a></li>
+      <li role=tab ><a href="#tab-8">Media Queries</a></li>
+      <li role=tab ><a href="#tab-9">Button</a></li>
+      <li role=tab ><a href="#tab-10">Accordion</a></li>
+      <li role=tab ><a href="#tab-11">Notification</a></li>
+      <li role=tab ><a href="#tab-12">Common</a></li>
+
+  </ul>
+  <div role="tab-content">
+      <div id="tab-1" class="tab-content">
+          <p><h2>Soon</h2></p>
+      </div>
+      <div id="tab-2" class="tab-content">
+          <p>{% include colors.html %}</p>
+      </div>
+      <div id="tab-3" class="tab-content">
+          <p>{% include typography.html %}</p>
+      </div>
+      <div id="tab-4" class="tab-content">
+          <p>{% include forms.html %}</p>
+      </div>
+      <div id="tab-5" class="tab-content">
+          <p>{% include lists.html %}</p>
+      </div>
+      <div id="tab-6" class="tab-content">
+          <p>{% include tables.html %}</p>
+      </div>
+      <div id="tab-7" class="tab-content">
+          <p>{% include tabs.html %}</p>
+      </div>
+      <div id="tab-8" class="tab-content">
+          <p><h2>Soon</h2></p>
+      </div>
+      <div id="tab-9" class="tab-content">
+          <p>{% include buttons.html %}</p>
+      </div>
+      <div id="tab-10" class="tab-content">
+          <p><h2>Soon</h2></p>
+      </div>
+      <div id="tab-11" class="tab-content">
+          <p>{% include notifications.html %}</p>
+      </div>
+      <div id="tab-12" class="tab-content">
+          <p><h2>Soon</h2></p>
+      </div>
+
+  </div>
+</div>
+</main>
 </body>
+
 </html>

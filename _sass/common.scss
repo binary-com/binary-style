@@ -41,19 +41,24 @@ form {
 .row.focus textarea {
     background-color: $COLOR_YELLOW;
 }
+.message{
+  color: $COLOR_TEXT;
+  padding: .5rem 1rem;
+  border-radius: $BORDER_RADIUS;
+}
 .errorrow,
 .errorfield,
 .error-msg {
-    color: white;
-    background: $COLOR_RED;
-    border-radius: $BORDER_RADIUS;
-    padding: .25rem .5rem;
+    @extend .message;
+    background: $COLOR_LIGHT_RED;
 }
 .notice-msg {
-    color: $COLOR_TEXT;
-    border-radius: $BORDER_RADIUS;
-    padding: .25rem .5rem;
+    @extend .message;
     background-color: $COLOR_YELLOW;
+}
+.success-msg{
+  @extend .message;
+  background-color: $COLOR_LIGHT_GREEN;
 }
 .text-only {
     color: $COLOR_TEXT;

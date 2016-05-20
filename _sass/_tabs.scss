@@ -38,13 +38,15 @@
       align-content: flex-start;
       :hover{
         background-color: $COLOR_GRAY;
+        box-shadow: inset 3px 0 0 0 #e98024;
       }
       *[role=tab] {
         flex-direction: column;
         text-align: center;
         a {
-          display: inline-block;
-          padding: 1rem;
+          display: block;
+          padding: 1rem 2rem;
+          text-decoration: initial;
         }
         &[aria-selected=true] {
           box-shadow: inset 3px 0 0 0 #e98024;

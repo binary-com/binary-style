@@ -14,7 +14,8 @@ main{
   margin-top: 2rem;
 }
 .code-sample{
-  margin-top: 5rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
 }
 
 /* desert scheme ported from vim to google prettify */

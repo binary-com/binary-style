@@ -7,6 +7,9 @@
   &.flex-vertical {
     flex-direction: column;
     justify-content: flex-start;
+    .f-item{
+      width: 100%;
+    }
   }
   &.f-row-start {
     justify-content: flex-start;
@@ -21,40 +24,59 @@
     justify-content: space-around;
   }
 }
+.f-item-common {
+  padding: 0.25rem;
+  display: inline-block;
+  width: initial;
+}
 .f-item {
+  @extend .f-item-common;
   flex: 1 1 auto;
 }
 .f-item-10 {
   flex: 0 0 10%;
   max-width: 10%;
+  @extend .f-item-common;
 }
 .f-item-20 {
   flex: 0 0 20%;
   max-width: 20%;
+  @extend .f-item-common;
+}
+.f-item-25 {
+  flex: 0 0 25%;
+  max-width: 25%;
+  @extend .f-item-common;
 }
 .f-item-33 {
   flex: 0 0 33.3333%;
   max-width: 33.3333%;
+  @extend .f-item-common;
 }
 .f-item-50 {
   flex: 0 0 50%;
   max-width: 50%;
+  @extend .f-item-common;
 }
 .f-item-67 {
   flex: 0 0 66.666%;
   max-width: 66.666%;
+  @extend .f-item-common;
 }
 .f-item-75 {
   flex: 0 0 75%;
   max-width: 75%;
+  @extend .f-item-common;
 }
 .f-item-80 {
   flex: 0 0 80%;
   max-width: 80%;
+  @extend .f-item-common;
 }
 .f-item-90 {
   flex: 0 0 90%;
   max-width: 90%;
+  @extend .f-item-common;
 }
 /* align a flex item. default is set by flex-row which is center */
 .f-item-start {

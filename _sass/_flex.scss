@@ -94,3 +94,15 @@
 .f-item-stretch {
   align-self: stretch;
 }
+@media all and (max-width: 479px) {
+  .f-item-common-1 {
+    padding: 0.25rem;
+    display: inline-block;
+    width: initial;
+  }
+  .f-item, .f-item-10, .f-item-20, .f-item-25, .f-item-33, .f-item-50, .f-item-67, .f-item-75, .f-item-80, .f-item-90 {
+    flex: 1 1 100%;
+    max-width: 100%;
+    @extend .f-item-common-1;
+  }
+}

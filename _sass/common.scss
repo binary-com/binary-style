@@ -48,6 +48,10 @@ form {
 }
 .errorrow,
 .errorfield,
+.info-msg {
+    @extend .message;
+    background: $COLOR_LIGHT_BLUE;
+}
 .error-msg {
     @extend .message;
     background: $COLOR_LIGHT_RED;

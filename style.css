@@ -50,7 +50,6 @@ pre .str {
 
 pre .kwd {
   color: #f0e68c;
-  font-weight: bold
 }
 pre .com {
   color: #87ceeb
@@ -84,14 +83,12 @@ pre .pln {
 
 pre .tag {
   color: #f0e68c;
-  font-weight: bold
 }
 
 /* html/xml tag    - lightyellow */
 
 pre .atn {
   color: #bdb76b;
-  font-weight: bold
 }
 
 /* attribute name  - khaki */

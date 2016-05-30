@@ -1,8 +1,9 @@
 *,
 *:after,
 *:before {
-    // transition: opacity .2s, color .2s, background .2s;
+    transition: opacity .2s, color .2s, background .2s;
 }
+
 @keyframes spinning {
     from {transform: rotate(0deg);}
     to {transform: rotate(360deg);}
@@ -31,31 +32,23 @@
     animation: pulsing 3s infinite ease;
 }
 
-.full-screen-overlay {
+.overlay {
     opacity: 1;
     transition: opacity .2s, height 0;
 }
 
-.full-screen-overlay.hidden {
+.overlay.hidden {
     opacity: 0;
     transition: opacity .2s, height 0 .2s;
     height: 0;
 }
 
-.full-screen-overlay > * {
+.overlay .dialog {
     transition: transform .2s, height 0;
     transform: scale(1);
 }
 
-.full-screen-overlay.hidden > * {
+.overlay.hidden .dialog {
     transition: transform .2s, height 0 .2s;
     transform: scale(.9);
-}
-
-.progress {
-    @extend .spinner;
-    background-image: url('https://static.binary.com/images/pages/binary-symbol-logo.svg');
-    background-size: contain;
-    width: 2rem;
-    height: 2rem;
 }

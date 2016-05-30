@@ -1,113 +1,385 @@
----
----
 <!DOCTYPE html>
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Binary Style Guide</title>
-  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700&subset=latin,vietnamese,cyrillic-ext,latin-ext,cyrillic' rel='stylesheet' type='text/css' />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
-  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
-<link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="binary.css">
-  <style>
-  main{
-    width: 100%;
-      display: block;
-      margin: 0 auto;
-      max-width: 1000px;
-  }
-  [role="tab-content"] .tab-content {
-      display: none;
-  }
-  #tab-1 {
-   display: block;
-  }
-  #tabs{
-    margin-top: 2rem;
-  }
-  </style>
-  <script type="text/javascript">
-  $(document).ready(function() {
-  $('[role="tab-list"] li a').click(function(event) {
-      event.preventDefault();
-      $(this).parent().attr('aria-selected','true').siblings().removeAttr("aria-selected");
-      var tab = $(this).attr("href");
-      $('[role="tab-content"] .tab-content').not(tab).css("display", "none");
-      $(tab).fadeIn();
-  });
-});
-  </script>
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Binary Style Guide</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700&subset=latin,vietnamese,cyrillic-ext,latin-ext,cyrillic' rel='stylesheet' type='text/css' />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="binary.css">
 </head>
 
 <body>
-  <header>
-    <div class="header-content">
-      <a href="/"><img id="logo" alt="Binary" src="https://www.binary.com/images/pages/binary-symbol-logo.svg"></a>
-      <h3 style="color: white; margin: .5rem">Binary Style Guide</h3>
+    <div id="topbar" class="dark-blue">
+        <div class="grd-container">
+            <div class="grd-grid-12 grd-parent">
+                <div id="topbar-msg" class="grd-grid-6 grd-grid-mobile-12 by_client_type client_virtual upgrademessage invisible" style="display: none;">
+                    <span class="grd-hide-mobile">
+<span id="virtual-text">You're using a Virtual Account.</span>
+                    </span>
+                    <a class="pjaxload with_login_cookies pulser virtual-upgrade-link" href="/en/new_account/realws.html">Upgrade to a Real Account</a>
+                    <a class="pjaxload with_login_cookies pulser vr-japan-upgrade-link" href="/en/new_account/japanws.html">Upgrade to a Real Account</a>
+                    <a class="invisible pjaxload with_login_cookies pulser vr-financial-upgrade-link" href="/en/new_account/maltainvestws.html">Upgrade to a Financial Account</a>
+                </div>
+                <div class="grd-grid-6 grd-grid-mobile-12 by_client_type client_real upgrademessage invisible" style="display: none;">
+                    <a class="invisible pjaxload with_login_cookies pulse financial-upgrade-link" href="/en/new_account/maltainvestws.html">Open a Financial Account</a>
+                </div>
+                <div class="grd-grid-6 grd-grid-mobile-12 grd-parent" id="topbar-info">
+                    <div class="grd-grid-5 grd-grid-mobile-7" id="gmt-clock"><span class="tooltip-content"></span></div>
+                    <div class="grd-grid-3 grd-hide-mobile" id="contact-us">
+                        <a class="pjaxload" href="/en/contact.html">Contact Us</a>
+                    </div>
+                    <div class="grd-grid-4 grd-grid-mobile-5">
+                        <div class="EN" id="language_select">
+                            <select>
+                                <option class="EN" selected="selected">English</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </header>
-  <main>
-  <div id="tabs" class="vertical">
-  <ul role="tab-list" class="tabs-menu">
-      <li role=tab aria-selected="true" ><a href="#tab-1">Colors</a></li>
-      <li role=tab ><a href="#tab-2">Typography</a></li>
-      <li role=tab ><a href="#tab-3">Button</a></li>
-      <li role=tab ><a href="#tab-4">Form</a></li>
-      <li role=tab ><a href="#tab-5">List</a></li>
-      <li role=tab ><a href="#tab-6">Table</a></li>
-      <li role=tab ><a href="#tab-7">Tabs</a></li>
-      <li role=tab ><a href="#tab-8">Notification</a></li>
-      <li role=tab ><a href="#tab-9">Accordion</a></li>
-      <li role=tab ><a href="#tab-10">Common</a></li>
-      <li role=tab ><a href="#tab-11">Flex Grid</a></li>
-      <li role=tab ><a href="#tab-12">Media Queries</a></li>
+    <div id="header">
+        <div class="grd-container">
+            <div class="grd-row-padding">
+                <div class="grd-grid-3 grd-grid-mobile-2 grd-grid-phablet-1">
+                    <a href="https://binary.com">
+                        <div class="grd-grid-3 grd-grid-mobile-12 grd-grid-phablet-12 grd-no-gutter">
+                            <img class="responsive" src="https://www.binary.com/images/pages/binary-symbol-logo.svg">
+                        </div>
+                        <div class="grd-grid-9 grd-hide-mobile grd-hide-phablet" id="binary-logo-text">
+                            <img class="responsive" src="https://www.binary.com/images/pages/binary-type-logo.svg">
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="grd-container">
+        <div class="grd-grid-12" style="margin-top:40px;">
+            <h1>Colors</h1>
+        </div>
+        <div class="grd-grid-4 grd-grid-mobile-12">
+            <p style="background-color:#15212d;padding:10px;color:#fff;">Dark Blue
+                <br>#15212d</p>
+        </div>
+        <div class="grd-grid-4 grd-grid-mobile-12">
+            <p style="background-color:#2a3052;padding:10px;color:#fff;">Brand Blue
+                <br>#2a3052</p>
+        </div>
+        <div class="grd-grid-4 grd-grid-mobile-12">
+            <p style="background-color:#e98024;padding:10px;color:#fff;">Brand Orange
+                <br>#e98024</p>
+        </div>
+        <div class="grd-grid-6 grd-grid-mobile-12">
+            <p style="background-color:#f2f2f2;padding:10px;">Gray
+                <br>#f2f2f2</p>
+        </div>
+        <div class="grd-grid-6 grd-grid-mobile-12">
+            <p style="background-color:#fef1cf;padding:10px;">Notification
+                <br>#fef1cf</p>
+        </div>
+    </div>
+    <div class="grd-container">
+        <div class="grd-grid-12" style="margin-top:40px;">
+            <p><h1>Title</h1></p>
+        </div>
+        <div class="grd-grid-6 grd-grid-mobile-12">
+            <h1>Title</h1>
+            <h1 class="dark">Title</h1>
+            <h2>Title</h2>
+            <h3>Title</h3>
+        </div>
+        <div class="grd-grid-6 grd-grid-mobile-12">
+            <div class="code-sample">
+                <pre class="prettyprint">
+            <code>
+      &lt;h1&gt;Title&lt;/h1&gt;
+      &lt;h1 class=&quot;dark&quot;&gt;Title&lt;/h1&gt;
+      &lt;h2&gt;Title&lt;/h2&gt;
+      &lt;h3&gt;Title&lt;/h3&gt;&lt;/div&gt;
+          </code>
+        </pre>
+            </div>
+        </div>
+    </div>
+    <div class="grd-container">
+        <div class="grd-grid-12" style="margin-top:40px;">
+            <h1>Text</h1>
+        </div>
+        <div class="grd-grid-4 grd-grid-mobile-12">
+            <p>paragraph with <strong>strong text</strong>
+                <p>
+                    <ul>
+                        <li>unordered list item 1</li>
+                        <li>unordered list item 2</li>
+                        <li>unordered list item 3</li>
+                    </ul>
+                    <ul class="bullet">
+                        <li>unordered list item 1</li>
+                        <li>unordered list item 2</li>
+                        <li>unordered list item 3</li>
+                    </ul>
+                    <ul class="checked">
+                        <li>unordered list item 1</li>
+                        <li>unordered list item 2</li>
+                        <li>unordered list item 3</li>
+                    </ul>
+                    <ol>
+                        <li>ordered list item 1</li>
+                        <li>ordered list item 2</li>
+                        <li>ordered list item 3</li>
+                    </ol>
+        </div>
+        <div class="grd-grid-8 grd-grid-mobile-12">
+            <div class="code-sample">
+                <pre class="prettyprint">
+            <code>
+              &lt;p&gt;paragraph with &lt;strong&gt;strong text&lt;/strong&gt;&lt;p&gt;
+              &lt;ul&gt;
+                  &lt;li&gt;unordered list item 1&lt;/li&gt;
+                  &lt;li&gt;unordered list item 2&lt;/li&gt;
+                  &lt;li&gt;unordered list item 3&lt;/li&gt;
+              &lt;/ul&gt;
+              &lt;ul class=&quot;bullet&quot;&gt;
+                  &lt;li&gt;unordered list item 1&lt;/li&gt;
+                  &lt;li&gt;unordered list item 2&lt;/li&gt;
+                  &lt;li&gt;unordered list item 3&lt;/li&gt;
+              &lt;/ul&gt;
+              &lt;ul class=&quot;checked&quot;&gt;
+                  &lt;li&gt;unordered list item 1&lt;/li&gt;
+                  &lt;li&gt;unordered list item 2&lt;/li&gt;
+                  &lt;li&gt;unordered list item 3&lt;/li&gt;
+              &lt;/ul&gt;
+              &lt;ol&gt;
+                  &lt;li&gt;ordered list item 1&lt;/li&gt;
+                  &lt;li&gt;ordered list item 2&lt;/li&gt;
+                  &lt;li&gt;ordered list item 3&lt;/li&gt;
+              &lt;/ol&gt;
+          </code>
+        </pre>
+            </div>
+        </div>
+    </div>
+    <div class="grd-container">
+        <div class="grd-grid-12" style="margin-top:40px;">
+            <h1>Links</h1>
+        </div>
+        <div class="grd-grid-6 grd-grid-mobile-12">
+            <p>paragraph with <a href="#">link</a>
+                <p>
+                    <a class="button" href="#">
+                        <span>button link</span>
+                    </a>
+                    <a class="button-disabled">
+                        <span>button link</span>
+                    </a>
+        </div>
+        <div class="grd-grid-6 grd-grid-mobile-12">
+            <div class="code-sample">
+                <pre class="prettyprint">
+                <code>
+                  &lt;p&gt;paragraph with &lt;a href=&quot;#&quot;&gt;link&lt;/a&gt;&lt;p&gt;
 
-  </ul>
-  <div role="tab-content">
-      <div id="tab-1" class="tab-content">
-          <p><h2>{% include colors.html %}</h2></p>
-      </div>
-      <div id="tab-2" class="tab-content">
-          <p>{% include typography.html %}</p>
-      </div>
-      <div id="tab-3" class="tab-content">
-          <p>{% include buttons.html %}</p>
-      </div>
-      <div id="tab-4" class="tab-content">
-          <p>{% include forms.html %}</p>
-      </div>
-      <div id="tab-5" class="tab-content">
-          <p>{% include lists.html %}</p>
-      </div>
-      <div id="tab-6" class="tab-content">
-          <p>{% include tables.html %}</p>
-      </div>
-      <div id="tab-7" class="tab-content">
-          <p>{% include tabs.html %}</p>
-      </div>
-      <div id="tab-8" class="tab-content">
-          <p>{% include notifications.html %}</p>
-      </div>
-      <div id="tab-9" class="tab-content">
-          <p><h2>Soon</h2></p>
-      </div>
-      <div id="tab-10" class="tab-content">
-          <p><h2>Cards</h2></p>
-      </div>
-      <div id="tab-11" class="tab-content">
-          <div>{% include flex.html %}</div>
-      </div>
-      <div id="tab-12" class="tab-content">
-          <p><h2>Soon</h2></p>
-      </div>
+                   &lt;a class=&quot;button&quot; href=&quot;#&quot;&gt;
+                          &lt;span&gt;button link&lt;/span&gt;
+                  &lt;/a&gt;
 
-  </div>
-</div>
-</main>
+                  &lt;a class=&quot;button-disabled&quot;&gt;
+                        &lt;span&gt;button link&lt;/span&gt;
+                  &lt;/a&gt;
+              </code>
+            </pre>
+            </div>
+        </div>
+    </div>
+    <div class="grd-container">
+        <div class="grd-grid-12" style="margin-top:40px;">
+            <h1>Messages</h1>
+        </div>
+        <div class="grd-grid-4 grd-grid-mobile-12">
+            <p class="success-msg">success message</p>
+            <p class="notice-msg">notice message</p>
+            <p class="error-msg">error message</p>
+            <abbr rel="tooltip" title="message">
+            text with tooltip
+            </abbr>
+        </div>
+        <div class="grd-grid-8 grd-grid-mobile-12">
+            <div class="code-sample">
+                <pre class="prettyprint">
+                <code>
+                  &lt;p class=&quot;success-msg&quot;&gt;success message&lt;/p&gt;
+                  &lt;p class=&quot;notice-msg&quot;&gt;notice message&lt;/p&gt;
+                  &lt;p class=&quot;error-msg&quot;&gt;error message&lt;/p&gt;
+                  &lt;abbr rel=&quot;tooltip&quot; title=&quot;message&quot;&gt;
+                  text with tooltip
+                  &lt;/abbr&gt;
+              </code>
+            </pre>
+            </div>
+        </div>
+    </div>
+    <div class="grd-container">
+        <div class="grd-grid-12" style="margin-top:40px;">
+            <h1>Table</h1>
+        </div>
+        <div class="grd-grid-12 grd-grid-mobile-12">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Header</th>
+                        <th>Header</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>Footer</th>
+                        <th>Footer</th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>data 1</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>data 2</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class='paging-navigation'>
+                <span class='paging-desc'>Page 2 of 3</span>
+                <ul class='paging-links'>
+                    <li>
+                        <a href='#'>Previous</a>
+                    </li>
+                    <li>
+                        <a href='#'>1</a>
+                    </li>
+                    <li class='current'>2</li>
+                    <li>
+                        <a href='#'>3</a>
+                    </li>
+                    <li>
+                        <a href='#'>Next</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="grd-grid-12 grd-grid-mobile-12">
+            <div class="code-sample">
+                <pre class="prettyprint">
+                <code>
+                  &lt;table&gt;
+      &lt;thead&gt;
+          &lt;tr&gt;
+              &lt;th&gt;Header&lt;/th&gt;
+              &lt;th&gt;Header&lt;/th&gt;
+          &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tfoot&gt;
+          &lt;tr&gt;
+              &lt;th&gt;Footer&lt;/th&gt;
+              &lt;th&gt;Footer&lt;/th&gt;
+          &lt;/tr&gt;
+      &lt;/tfoot&gt;
+      &lt;tbody&gt;
+          &lt;tr&gt;
+              &lt;td&gt;1&lt;/td&gt;
+              &lt;td&gt;data 1&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+              &lt;td&gt;2&lt;/td&gt;
+              &lt;td&gt;data 2&lt;/td&gt;
+          &lt;/tr&gt;
+      &lt;/tbody&gt;
+  &lt;/table&gt;
+  &lt;div class='paging-navigation'&gt;
+      &lt;span class='paging-desc'&gt;Page 2 of 3&lt;/span&gt;
+      &lt;ul class='paging-links'&gt;
+          &lt;li&gt;
+              &lt;a href='#'&gt;Previous&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+              &lt;a href='#'&gt;1&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class='current'&gt;2&lt;/li&gt;
+          &lt;li&gt;
+              &lt;a href='#'&gt;3&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+              &lt;a href='#'&gt;Next&lt;/a&gt;
+          &lt;/li&gt;
+      &lt;/ul&gt;
+  &lt;/div&gt;
+              </code>
+            </pre>
+            </div>
+        </div>
+    </div>
+    <div class="grd-container">
+        <div class="grd-grid-12" style="margin-top:40px;">
+            <h1>Form</h1>
+        </div>
+        <div class="grd-grid-12 grd-grid-mobile-12">
+            <fieldset>
+                <legend>Fieldset Legend</legend>
+                <div class="grd-row-padding">
+                    <div class='grd-grid-4 form_label'>
+                        <label for='loginid'>Login ID</label>
+                    </div>
+                    <div class='grd-grid-8'>
+                        <input type='text' name='loginid' />
+                        <p class='hint'>Hint comes here</p>
+                        <p class='errorfield'>error in loginid</p>
+                    </div>
+                </div>
+                <div class="grd-row-padding">
+                    <div class='grd-grid-4'></div>
+                    <div class='grd-grid-8'>
+                        <span class='button'>
+             <button class='button' name='submit' type='submit'>Login</button>
+           </span>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+        <div class="grd-grid-12 grd-grid-mobile-12">
+            <div class="code-sample">
+                <pre class="prettyprint">
+                <code>
+      &lt;fieldset&gt;
+      &lt;legend&gt;Fieldset Legend&lt;/legend&gt;
+      &lt;div class=&quot;grd-row-padding&quot;&gt;
+          &lt;div class='grd-grid-4 form_label'&gt;
+              &lt;label for='loginid'&gt;Login ID&lt;/label&gt;
+          &lt;/div&gt;
+          &lt;div class='grd-grid-8'&gt;
+              &lt;input type='text' name='loginid' /&gt;
+              &lt;p class='hint'&gt;Hint comes here&lt;/p&gt;
+              &lt;p class='errorfield'&gt;error in loginid&lt;/p&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;grd-row-padding&quot;&gt;
+          &lt;div class='grd-grid-4'&gt;&lt;/div&gt;
+          &lt;div class='grd-grid-8'&gt;
+              &lt;span class='button'&gt;
+   &lt;button class='button' name='submit' type='submit'&gt;Login&lt;/button&gt;
+ &lt;/span&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+  &lt;/fieldset&gt;
+              </code>
+            </pre>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

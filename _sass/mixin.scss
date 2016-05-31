@@ -58,7 +58,7 @@
       margin: 0;
       background: $COLOR_LIGHT_GRAY;
       line-height: 150%;
-      border-bottom: 1px solid #FFFFFF;
+      border-bottom: 1px solid $COLOR_WHITE;
       &:hover {
         background: $COLOR_GRAY;
       }
@@ -129,7 +129,7 @@
   }
   &:hover, &:active {
     text-decoration: none;
-    background-color: #14602B;
+    background-color: $COLOR_GREEN;
   }
 }
 

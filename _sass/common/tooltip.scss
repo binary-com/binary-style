@@ -4,7 +4,7 @@
     font-size: 14px;
     line-height: 1.5;
     color: #000;
-    background: #FFF1CF;
+    background: $COLOR_YELLOW;
     border-radius: 5px;
     border: 1px solid $COLOR_GRAY_SHADE;
     box-shadow: 0 3px 5px rgba( 0, 0, 0, .3 );
@@ -19,7 +19,7 @@
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-top: 10px solid $COLOR_GRAY_SHADE;
-    border-top-color: #FFF1CF;
+    border-top-color: $COLOR_YELLOW;
     content: '';
     position: absolute;
     left: 50%;

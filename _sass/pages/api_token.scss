@@ -11,15 +11,15 @@
 		}
 		tr {
 			&.deleting {
-				background-color: lightgray;
+				background-color: $COLOR_GRAY;
 			}
 			&.new {
-				background-color: #EDFFEE;
+				background-color: $COLOR_GRAY;
 			}
 		}
 	}
 	fieldset {
-		border-bottom: 1px solid #E5E5E5;
+		border-bottom: 1px solid $COLOR_GRAY;
 		margin: 20px 0;
 
 		#formMessage {

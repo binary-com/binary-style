@@ -1,6 +1,6 @@
 #login {
   #content {
-    @include topspace; 
+    @include topspace;
   }
   p {
     text-align: center;
@@ -11,7 +11,7 @@
 }
 
 #login-fail {
-    background-color: #fef1cf;
+    background-color: $COLOR_YELLOW;
     border-radius: 10px;
     padding: 20px;
     margin: 10px;

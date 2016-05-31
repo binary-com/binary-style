@@ -6,8 +6,8 @@ html {
     height: 100%;
 }
 body {
-    background: #FFFFFF;
-    color: #000000;
+    background: $COLOR_WHITE;
+    color: $COLOR_BLACK;
     font-size: 18px;
     min-height: 100%;
     position: relative;
@@ -161,7 +161,7 @@ fieldset {
         }
     }
     legend {
-        color:#444444;
+        color:$COLOR_BLACK;
         padding: 0 0.8em 0 0.8em;
         font-weight: bold;
         text-transform: capitalize;
@@ -470,7 +470,7 @@ ul.checked {
 }
 
 .light-yellow-background {
-    background-color: lightyellow;
+    background-color: $COLOR_YELLOW;
 }
 
 .tooltip-content {

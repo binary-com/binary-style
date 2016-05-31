@@ -19,18 +19,18 @@
 		outline: none;
 	}
 	.ui-state-active.ui-state-default, .ui-state-active.ui-state-default.ui-state-hover{
-		background: #2a3052!important;
-    	color: #fff!important;
+		background: $COLOR_BLUE!important;
+    	color: $COLOR_WHITE!important;
 	}
 	.ui-state-default, .ui-state-hover{
-		background: #f2f2f2!important;
-		color: #000!important;
+		background: $COLOR_LIGHT_GRAY!important;
+		color: $COLOR_BLACK!important;
 	}
 	.ui-accordion-content {
 		padding-top: 0!important;
 	}
 	.ui-widget-content {
-		border: 1px solid #E5E5E5!important;
+		border: 1px solid $COLOR_GRAY!important;
 	}
 	#supported_banks, .supported_banks {
 		text-align: center;

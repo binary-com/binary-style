@@ -9,13 +9,13 @@
       width: 10.9em;
       height: .5em;
       -webkit-appearance: none;
-      border: 1px solid #ccc;
+      border: 1px solid $COLOR_LIGHT_GRAY ;
       border-radius: 3px;
       vertical-align: top;
       display: block;
   }
   meter#password-meter::-webkit-meter-bar {
-      background: #f5f5f5;
+      background: $COLOR_LIGHT_GRAY ;
       box-shadow: 0 5px 5px -5px #333 inset;
   }
   div.hint {

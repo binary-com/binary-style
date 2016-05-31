@@ -1,39 +1,39 @@
 // Brand colors and derivatives
 
-$COLOR_TEXT: #3d474d;
-$COLOR_CONTROL_BORDER: #dadada;
-$COLOR_ACTIVE: #ff992a;
+$COLOR_TEXT: #000;
+// $COLOR_CONTROL_BORDER: #dadada;
+// $COLOR_ACTIVE: #ff992a;
 
-$COLOR_NAV: #a1aab3;
-$COLOR_NAV_ACTIVE: #929ca6;
+$COLOR_NAV: #f2f2f2;
+$COLOR_NAV_ACTIVE: #f2f2f2;
 $COLOR_NAV_BORDER: #2a3052;
 
 
 $COLOR_ORANGE: #e98024;
-$COLOR_LIGHT_BLUE: #29abe2;
+$COLOR_LIGHT_BLUE: #2a3052;
 $COLOR_BLUE: #2a3052;
-$COLOR_BLUE_SHADE: #394171;
+$COLOR_BLUE_SHADE: #2a3052;
 $COLOR_DARK_BLUE: #15212d;
 
 // Utility colors
 
 $COLOR_BLACK: #000;
 $COLOR_WHITE: #fff;
-$COLOR_DARK_WHITE: #ccc;
+// $COLOR_DARK_WHITE: #ccc;
 
 // Colors used for secondary purposes. To be used sparingly
 
-$COLOR_RED           : #c03;
+$COLOR_RED           : #e98024;
 $COLOR_YELLOW        : #fef1cf;
 $COLOR_LIGHT_GRAY    : #F2F2F2;
-$COLOR_GRAY          : #DEDEDE;
-$COLOR_DARK_GRAY     : #44484C;
+$COLOR_GRAY          : #F2F2F2;
+$COLOR_DARK_GRAY     : #F2F2F2;
 $COLOR_GREEN         : #2E8836;
 
 // colors to remove
 
-$COLOR_GRAY_SHADE: #C2C2C2;
-$COLOR_DARK_GREEN: #14602B;
+$COLOR_GRAY_SHADE: #F2F2F2;
+$COLOR_DARK_GREEN: #2E8836;
 
 $BORDER_RADIUS: 2px;
 $CONTROL_PADDING: .33333em;

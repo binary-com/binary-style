@@ -85,7 +85,7 @@
     text-decoration: none;
   }
   select#client_loginid option[disabled=disabled] {
-      background-color: lightgrey;
+      background-color: $COLOR_LIGHT_GRAY;
   }
   #binary-logo-text {
       margin-top: 10px;

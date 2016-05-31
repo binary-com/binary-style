@@ -1,6 +1,6 @@
 .open-positions {
   .grd-grid-4:not(:first-child) {
-    border: 1px dashed #d9d9d9;
+    border: 1px dashed $COLOR_GRAY;
     border-width: 0 0 0 1px;
   }
   .grd-grid-4:nth-child(3n+1) {

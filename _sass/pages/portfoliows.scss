@@ -10,7 +10,7 @@ a.dynamic, span.dynamic, div.dynamic, p.dynamic, button.dynamic, table.dynamic {
         white-space: nowrap;
     }
     td.indicative.no_resale {
-        color: lightgray;
+        color: $COLOR_LIGHT_GRAY;
         span {
             font-size: 8px;
             display: block;

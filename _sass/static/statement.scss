@@ -13,8 +13,8 @@
     #loading_in_progress {
         cursor: pointer;
         @extend .spinner;
-        background-image: url('../images/pages/binary-symbol-logo.png');
-        background-image: url('../images/pages/binary-symbol-logo.svg'), none;
+        background-image: url('https://www.binary.com/images/pages/binary-symbol-logo.png');
+        background-image: url('https://www.binary.com/images/pages/binary-symbol-logo.svg'), none;
         background-size: contain;
         width: 10rem;
         height: 10rem;

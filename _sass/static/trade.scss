@@ -185,10 +185,10 @@
     }
     border: 1px solid $COLOR_GRAY;
     flex: 1 0 auto;
-    input[type=number]::-webkit-inner-spin-button, 
-    input[type=number]::-webkit-outer-spin-button { 
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
       -webkit-appearance: none;
-      margin: 0; 
+      margin: 0;
     }
     input[type=number] {
       -moz-appearance: textfield;
@@ -230,81 +230,81 @@
     padding-top: 2.4em;
     text-align: center;
     &.ASIANU {
-      background: url("../images/pages/trade/asian-u_1.svg") no-repeat top center;
+      background: url("https://www.binary.com/images/pages/trade/asian-u_1.svg") no-repeat top center;
     }
     &.ASIAND {
-      background: url("../images/pages/trade/asian-d_1.svg") no-repeat top center;
+      background: url("https://www.binary.com/images/pages/trade/asian-d_1.svg") no-repeat top center;
     }
     &.DIGITDIFF {
-      background: url("../images/pages/trade/differs_1.svg") no-repeat top center;
+      background: url("https://www.binary.com/images/pages/trade/differs_1.svg") no-repeat top center;
     }
     &.DIGITMATCH {
-      background: url("../images/pages/trade/matches_1.svg") no-repeat top center;
+      background: url("https://www.binary.com/images/pages/trade/matches_1.svg") no-repeat top center;
     }
     &.CALLE {
-      background: url("../images/pages/trade/rise_1.png") no-repeat top center;
+      background: url("https://www.binary.com/images/pages/trade/rise_1.png") no-repeat top center;
     }
     &.PUTE {
-      background: url("../images/pages/trade/fall_1.png") no-repeat top center;
+      background: url("https://www.binary.com/images/pages/trade/fall_1.png") no-repeat top center;
     }
     &.DIGITEVEN {
-      background: url("../images/pages/trade/digits_even_1.svg") no-repeat no-repeat top center;
+      background: url("https://www.binary.com/images/pages/trade/digits_even_1.svg") no-repeat no-repeat top center;
       background-size: 40%;
     }
     &.DIGITODD {
-      background: url("../images/pages/trade/digits_odd_1.svg") no-repeat no-repeat top center;
+      background: url("https://www.binary.com/images/pages/trade/digits_odd_1.svg") no-repeat no-repeat top center;
       background-size: 40%;
     }
     &.DIGITOVER {
-      background: url("../images/pages/trade/digits_over_1.svg") no-repeat no-repeat top center;
+      background: url("https://www.binary.com/images/pages/trade/digits_over_1.svg") no-repeat no-repeat top center;
       background-size: 40%;
     }
     &.DIGITUNDER {
-      background: url("../images/pages/trade/digits_under_1.svg") no-repeat no-repeat top center;
+      background: url("https://www.binary.com/images/pages/trade/digits_under_1.svg") no-repeat no-repeat top center;
       background-size: 40%;
     }
     &.CALL {
-      background: url("../images/pages/trade/rise_1.png") no-repeat top center;
+      background: url("https://www.binary.com/images/pages/trade/rise_1.png") no-repeat top center;
     }
     &.PUT {
-      background: url("../images/pages/trade/fall_1.png") no-repeat top center;
+      background: url("https://www.binary.com/images/pages/trade/fall_1.png") no-repeat top center;
     }
     &.CALLE {
-      background: url("../images/pages/trade/rise_1.png") no-repeat top center;
+      background: url("https://www.binary.com/images/pages/trade/rise_1.png") no-repeat top center;
     }
     &.PUTE {
-      background: url("../images/pages/trade/fall_1.png") no-repeat top center;
+      background: url("https://www.binary.com/images/pages/trade/fall_1.png") no-repeat top center;
     }
     &.ONETOUCH {
-      background: url("../images/pages/trade/touch_1.png") no-repeat top center;
+      background: url("https://www.binary.com/images/pages/trade/touch_1.png") no-repeat top center;
     }
     &.NOTOUCH {
-      background: url("../images/pages/trade/no-touch_1.png") no-repeat top center;
+      background: url("https://www.binary.com/images/pages/trade/no-touch_1.png") no-repeat top center;
     }
     &.RANGE {
-      background: url("../images/pages/trade/stay-in-between_1.png") no-repeat top center;
+      background: url("https://www.binary.com/images/pages/trade/stay-in-between_1.png") no-repeat top center;
     }
     &.UPORDOWN {
-      background: url("../images/pages/trade/stay-out_1.png") no-repeat top center;
+      background: url("https://www.binary.com/images/pages/trade/stay-out_1.png") no-repeat top center;
     }
     &.EXPIRYRANGEE {
-      background: url("../images/pages/trade/ends-between_1.png") no-repeat top center;
+      background: url("https://www.binary.com/images/pages/trade/ends-between_1.png") no-repeat top center;
     }
     &.EXPIRYMISSE {
-      background: url("../images/pages/trade/ends-outside_1.png") no-repeat top center;
+      background: url("https://www.binary.com/images/pages/trade/ends-outside_1.png") no-repeat top center;
     }
     &.EXPIRYRANGE {
-      background: url("../images/pages/trade/ends-between_1.png") no-repeat top center;
+      background: url("https://www.binary.com/images/pages/trade/ends-between_1.png") no-repeat top center;
     }
     &.EXPIRYMISS {
-      background: url("../images/pages/trade/ends-outside_1.png") no-repeat top center;
+      background: url("https://www.binary.com/images/pages/trade/ends-outside_1.png") no-repeat top center;
     }
     &.SPREADU {
-      background: url("../images/pages/trade/spreads.svg") no-repeat top center;
+      background: url("https://www.binary.com/images/pages/trade/spreads.svg") no-repeat top center;
       background-size: 40%;
     }
     &.SPREADD {
-      background: url("../images/pages/trade/spreads_1.svg") no-repeat top center;
+      background: url("https://www.binary.com/images/pages/trade/spreads_1.svg") no-repeat top center;
       background-size: 40%;
     }
   }
@@ -667,7 +667,7 @@
 
   .pricing_table_cell{
     position: relative;
-  } 
+  }
 
   .inactive {
     position: absolute;

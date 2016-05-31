@@ -7,7 +7,7 @@
 
     span.close {
         display: none;
-        color: red;
+        color: $COLOR_RED;
         font-size: 0.8em;
         cursor: pointer;
         position: absolute;
@@ -34,11 +34,11 @@
             background-repeat: no-repeat;
             background-position: center;
             @if $LANGUAGE_DIRECTION == ltr {
-                background-image: url('../images/pages/guide/guide-icon.svg');
+                background-image: url('https://www.binary.com/images/pages/guide/guide-icon.svg');
                 margin-right: 7px;
             }
             @else {
-                background-image: url('../images/pages/guide/guide-icon_rtl.svg');
+                background-image: url('https://www.binary.com/images/pages/guide/guide-icon_rtl.svg');
                 margin-left: 7px;
             }
         }

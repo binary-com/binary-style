@@ -17,14 +17,6 @@ Then include any app-specific styles.
 
 For already existing apps, please remove any styles that override the base ones.
 
-### Customizability
-
-There is an official [Dark theme](https://style.binary.com/inverse)
-
-Just add 'inverse' class to an html tag and it and all its children will now be styled as light elements on dark background.
-
-
-
 ### Style guides this will be based on
 
 * [Material Design](https://www.google.com/design/spec/material-design/introduction.html)
@@ -48,4 +40,5 @@ Just add 'inverse' class to an html tag and it and all its children will now be 
 * [Web Trader](https://github.com/binary-com/webtrader)
 * [Binary Blog](https://github.com/binary-com/blog)
 * [Binary Static](https://github.com/binary-com/binary-static)
-* [Binary Mobile App](https://github.com/binary-com/mobile) (maybe)
+* [Binary Mobile App](https://github.com/binary-com/mobile)
+

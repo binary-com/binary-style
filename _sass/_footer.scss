@@ -1,0 +1,94 @@
+.sitemap, .regulatory, .responsible-trading {
+    margin: 0 auto;
+    padding: 2rem .5rem;
+    max-width: $CONTENT_WIDTH;
+}
+.sitemap {
+    font-size: $FONT_SIZE_S;
+    h5 {
+        font-weight: normal;
+    }
+    a {
+        text-decoration: none;
+        color: $COLOR_TEXT;
+        font-weight: normal;
+        display: block;
+        line-height: 1.6;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+.regulatory-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 600px;
+    margin: 0 auto;
+    a {
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    img {
+        height: 3rem;
+    }
+    a:nth-child(3) img {
+        height: 2.5rem;
+    }
+}
+.regulatory-text {
+    text-align: justify;
+    flex: 3;
+    font-size: $FONT_SIZE_XS;
+}
+.responsible-trading {
+    font-size: $FONT_SIZE_S;
+}
+.social-col img {
+    width: 1rem;
+    opacity: .8;
+    padding: 0 .1rem .1rem 0;
+}
+.social-col a:hover img {
+    opacity: 1;
+}
+.fb-gplus-follow {
+    margin-top: 10px;
+    .fb-like {
+        margin-right: 5px;
+    }
+    .gplus {
+        position: relative;
+        display: inline-block;
+        top: 3px;
+    }
+}
+#appcache-reload-message {
+    display: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: $COLOR_YELLOW;
+    z-index: 999;
+    text-align: center;
+    .message {
+        margin: 12px;
+        font-style: italic;
+        color: $COLOR_RED;
+    }
+}
+#suspend-message {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: $COLOR_YELLOW;
+    z-index: 999;
+    text-align: center;
+    .message {
+        margin: 12px;
+        font-style: italic;
+        color: $COLOR_RED;
+    }
+}

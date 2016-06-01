@@ -1,138 +1,63 @@
-*,
-*:before,
-*:after {
-    box-sizing: inherit;
-}
-html {
-    box-sizing: border-box;
-    height: 100%;
-    font-size: $FONT_SIZE_N;
-    text-rendering: geometricPrecision;
-}
 body {
-    background: #fff;
-    color: $COLOR_TEXT;
-    font-family: roboto, sans-serif;
+    background: $COLOR_WHITE;
+    color: $COLOR_BLACK;
+    font-size: 18px;
+    min-height: 100%;
+    position: relative;
+    background-position: bottom;
+    background-repeat: repeat-x;
+    padding: 0;
+    margin: 0;
+    font-family: $FONT-STACK;
 }
-body, th, td {
-    line-height: $LINE_HEIGHT;
+ol,
+ul {
+    list-style: none;
+}
+ul.bullet {
+    margin: 1.25em 0 1.25em 1.25em;
+}
+ol {
+    margin: 1.25em 0 1.25em 1.25em;
+}
+ul.bullet li {
+    list-style-image: url("https://www.binary.com/images/pages/get-started/list-circle_1.png");
+}
+ol,
+ul {
+    li {
+        margin: 0.5em 0 0;
+        line-height: 1.4em;
+        ol,
+        ul {
+            margin: 0.8em 0 0 1em;
+        }
+    }
+}
+ol li {
+    list-style-type: decimal;
+    list-style-image: none;
 }
 img {
     vertical-align: middle;
     border: 0;
-    max-width: 100%;
 }
-img.h10 {
-    height: 10rem;
-}
-acronym,
-abbr {
-    cursor: help;
-}
-form {
-    margin: 0;
-    padding: 0;
-}
-// used for form label in grid structure
-.form_label {
-    text-align: right;
-}
-.row.focus input,
-.row.focus textarea {
-    background-color: $COLOR_YELLOW;
-}
-.errorrow,
-.errorfield,
-.error-msg {
-    color: white;
-    background: $COLOR_RED;
-    border-radius: $BORDER_RADIUS;
-    padding: .25rem .5rem;
-}
-.notice-msg {
-    color: $COLOR_TEXT;
-    border-radius: $BORDER_RADIUS;
-    padding: .25rem .5rem;
-    background-color: $COLOR_YELLOW;
-}
-.text-only {
-    color: $COLOR_TEXT;
-}
-/* global styles */
-#popup {
-    width: 95%;
-    margin: 0 auto;
-}
-.hidden {
-    display: none;
-}
-.left {
-    float: left;
-}
-.right {
-    float: right;
-}
-.required_asterisk {
-    color: $COLOR_BRAND_ORANGE;
-}
-.center {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-ul.bullet li, .checkmark {
-    background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2ZXJzaW9uPSIxLjEiIHdpZHRoPSIxOHB4IiBoZWlnaHQ9IjE4cHgiIHZpZXdCb3g9IjAgMCAyNCAyMCI+DQo8cG9seWdvbiBmaWxsPSIjRTk4MDI1IiBwb2ludHM9IjguNjIzLDE5LjU1NyAwLDEwLjkzNiAzLjczNiw3LjE5OCA4LjYyMywxMi4wODIgMjAuMjYyLDAuNDQzIDI0LDQuMTggOC42MjMsMTkuNTU3Ii8+DQo8L3N2Zz4NCg==") no-repeat;
-}
-.checkmark {
-    background-position: center;
-}
-ul.bullet li {
-    background-position: 0 .2rem;
-    padding-left: 1.25em;
-    margin-bottom: .25rem;
-    background-size: 1rem;
-}
-a.close {
-    display: inline-block;
-    position: relative;
-    margin-top: 0;
-    margin-right: 0;
-    padding: 10px 8px;
-    cursor: pointer;
-    color: white;
-    background: $COLOR_BRAND_ORANGE;
-    font-size: 24px;
-    font-weight: bold;
-    line-height: .5;
-    z-index: 1001;
-    top: -10px;
-    right: -10px;
-    float: right;
-    border-radius: 0 0 0 $BORDER_RADIUS;
-    &:hover {
-        text-decoration: none;
+ul.checked {
+    li {
+        background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNC4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDQzMzYzKSAgLS0+DQo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgd2lkdGg9IjI0cHgiIGhlaWdodD0iMjBweCIgdmlld0JveD0iMCAwIDI0IDIwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAyNCAyMCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8Zz4NCgkJPGc+DQoJCQk8cG9seWdvbiBmaWxsPSIjRTk4MDI1IiBwb2ludHM9IjguNjIzLDE5LjU1NyAwLDEwLjkzNiAzLjczNiw3LjE5OCA4LjYyMywxMi4wODIgMjAuMjYyLDAuNDQzIDI0LDQuMTggOC42MjMsMTkuNTU3IAkJCSIvPg0KCQk8L2c+DQoJPC9nPg0KPC9nPg0KPC9zdmc+DQo=") no-repeat;
+        // @include BIDIR_VALUE(background-position, left, right);
+        // @include BIDIR_PROP(padding-left, padding-right, 35px);
+        min-height: 24px;
+        padding-left: 35px;
     }
 }
-i {
-    color: $COLOR_BRAND_ORANGE;
-}
-p.media, div.media {
-    text-align: center;
-    margin-bottom: 1rem;
-}
-strong {
-    font-weight: bold;
-}
-.icon {
-    height: 6rem;
-    width: 6rem;
-    padding: 1.25rem;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 0px 0px 0px 1px rgba($COLOR_BRAND_BLUE, .1);
-    background: rgba($COLOR_BRAND_BLUE, .025);
-    border-radius: 100px;
-}
-.icon-desc {
-    // text-align: center;
+.reset_ol {
+    counter-reset: item;
+    li {
+        display: block;
+    }
+    li:before {
+        content: counters(item, ".") ". ";
+        counter-increment: item;
+    }
 }

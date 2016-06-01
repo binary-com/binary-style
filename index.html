@@ -1,17 +1,300 @@
----
----
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Binary Style Guide</title>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700&subset=latin,vietnamese,cyrillic-ext,latin-ext,cyrillic' rel='stylesheet' type='text/css'/>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700&subset=latin,vietnamese,cyrillic-ext,latin-ext,cyrillic' rel='stylesheet' type='text/css' />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="binary.css">
 </head>
+
 <body>
-    <div style="width: 100%; max-width: 50rem; margin: 0 auto">
-        {% include all.html %}
+    <div id="topbar" class="dark-blue" style="height:20px;">
     </div>
+    <div id="header">
+        <div style="max-width: 960px; margin: 0 auto; padding: 10px 0;">
+            <a href="https://binary.com">
+                <div style="display:inline-block;margin:0 10px;">
+                    <img class="responsive" src="https://www.binary.com/images/pages/binary-symbol-logo.svg">
+                </div>
+                <div style="display:inline-block;">
+                    <img class="responsive" src="https://www.binary.com/images/pages/binary-type-logo.svg" style="width:80%;">
+                </div>
+            </a>
+        </div>
+    </div>
+    <main style="max-width: 960px; margin: 0 auto;">
+        <div class="f-row">
+            <div class="f-item" style="margin-top:40px;">
+                <h1 class="h1-title">Colors</h1>
+            </div>
+        </div>
+        <div class="f-row">
+            <div class="f-item">
+                <p style="background-color:#15212d;padding:10px;color:#fff;">Dark Blue
+                    <br>#15212d</p>
+            </div>
+            <div class="f-item">
+                <p style="background-color:#2a3052;padding:10px;color:#fff;">Brand Blue
+                    <br>#2a3052</p>
+            </div>
+            <div class="f-item">
+                <p style="background-color:#e98024;padding:10px;color:#fff;">Brand Orange
+                    <br>#e98024</p>
+            </div>
+        </div>
+        <div class="f-row">
+            <div class="f-item">
+                <p style="background-color:#f2f2f2;padding:10px;">Gray
+                    <br>#f2f2f2</p>
+            </div>
+            <div class="f-item">
+                <p style="background-color:#fef1cf;padding:10px;">Notification
+                    <br>#fef1cf</p>
+            </div>
+        </div>
+        <div class="f-row">
+            <div class="f-item" style="margin-top:40px;">
+                <p>
+                    <h1 class="h1-title">Title</h1></p>
+            </div>
+        </div>
+        <div class="f-row">
+            <div class="f-item">
+                <h1>Header 1</h1>
+                <h1 class="dark">Header 1 Dark</h1>
+                <h2>Header 2</h2>
+                <h3>Header 3</h3>
+            </div>
+            <div class="f-item">
+                <div class="code-sample">
+                    <pre class="prettyprint">
+            <code>
+      &lt;h1&gt;Title&lt;/h1&gt;
+      &lt;h1 class=&quot;dark&quot;&gt;Title&lt;/h1&gt;
+      &lt;h2&gt;Title&lt;/h2&gt;
+      &lt;h3&gt;Title&lt;/h3&gt;&lt;/div&gt;
+          </code>
+        </pre>
+                </div>
+            </div>
+        </div>
+        <div class="f-row">
+            <div class="f-item" style="margin-top:40px;">
+                <h1>Text</h1>
+            </div>
+        </div>
+        <div class="f-row">
+            <div class="f-item">
+                <p>paragraph with <strong>strong text</strong></p>
+                <p class="font-s">This is small font</p>
+                <p class="font-xs">This is extra small font</p>
+                <ul>
+                    <li>unordered list item 1</li>
+                    <li>unordered list item 2</li>
+                    <li>unordered list item 3</li>
+                </ul>
+                <ul class="bullet">
+                    <li>unordered list item 1</li>
+                    <li>unordered list item 2</li>
+                    <li>unordered list item 3</li>
+                </ul>
+                <ul class="checked">
+                    <li>unordered list item 1</li>
+                    <li>unordered list item 2</li>
+                    <li>unordered list item 3</li>
+                </ul>
+                <ol>
+                    <li>ordered list item 1</li>
+                    <li>ordered list item 2</li>
+                    <li>ordered list item 3</li>
+                </ol>
+            </div>
+            <div class="f-item">
+                <div class="code-sample">
+                    <pre class="prettyprint">
+            <code>
+      &lt;p&gt;paragraph with &lt;strong&gt;strong text&lt;/strong&gt;&lt;/p&gt;
+      &lt;p class=&quot;font-s&quot;&gt;This is small font&lt;/p&gt;
+      &lt;p class=&quot;font-xs&quot;&gt;This is extra small font&lt;/p&gt;
+      &lt;ul&gt;
+          &lt;li&gt;unordered list item 1&lt;/li&gt;
+          &lt;li&gt;unordered list item 2&lt;/li&gt;
+          &lt;li&gt;unordered list item 3&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;ul class=&quot;bullet&quot;&gt;
+          &lt;li&gt;unordered list item 1&lt;/li&gt;
+          &lt;li&gt;unordered list item 2&lt;/li&gt;
+          &lt;li&gt;unordered list item 3&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;ul class=&quot;checked&quot;&gt;
+          &lt;li&gt;unordered list item 1&lt;/li&gt;
+          &lt;li&gt;unordered list item 2&lt;/li&gt;
+          &lt;li&gt;unordered list item 3&lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;ol&gt;
+          &lt;li&gt;ordered list item 1&lt;/li&gt;
+          &lt;li&gt;ordered list item 2&lt;/li&gt;
+          &lt;li&gt;ordered list item 3&lt;/li&gt;
+      &lt;/ol&gt;
+          </code>
+        </pre>
+                </div>
+            </div>
+        </div>
+        <div class="f-row">
+            <div class="f-item" style="margin-top:40px;">
+                <h1 class="h1-title">Links</h1>
+            </div>
+        </div>
+        <div class="f-row">
+            <div class="f-item">
+                <p>paragraph with <a href="#">link</a>
+                    <p>
+                        <a class="button" href="#">
+                            <span>button link</span>
+                        </a>
+                        <a class="button-disabled">
+                            <span>button link</span>
+                        </a>
+            </div>
+            <div class="f-item">
+                <div class="code-sample">
+                    <pre class="prettyprint">
+                <code>
+  &lt;p&gt;paragraph with &lt;a href=&quot;#&quot;&gt;link&lt;/a&gt;&lt;p&gt;
+
+   &lt;a class=&quot;button&quot; href=&quot;#&quot;&gt;
+          &lt;span&gt;button link&lt;/span&gt;
+  &lt;/a&gt;
+
+  &lt;a class=&quot;button-disabled&quot;&gt;
+        &lt;span&gt;button link&lt;/span&gt;
+  &lt;/a&gt;
+              </code>
+            </pre>
+                </div>
+            </div>
+        </div>
+        <div class="f-row">
+            <div class="f-item" style="margin-top:40px;">
+                <h1 class="h1-title">Messages</h1>
+            </div>
+        </div>
+        <div class="f-row">
+            <div class="f-item">
+                <p class="success-msg">success message</p>
+                <p class="notice-msg" style="margin-right:1rem;">notice message</p>
+                <p class="error-msg">error message</p>
+            </div>
+            <div class="f-item">
+                <div class="code-sample">
+                    <pre class="prettyprint">
+                <code>
+    &lt;p class=&quot;success-msg&quot;&gt;success message&lt;/p&gt;
+    &lt;p class=&quot;notice-msg&quot;&gt;notice message&lt;/p&gt;
+    &lt;p class=&quot;error-msg&quot;&gt;error message&lt;/p&gt;
+    &lt;abbr rel=&quot;tooltip&quot; title=&quot;message&quot;&gt;
+    text with tooltip
+    &lt;/abbr&gt;
+              </code>
+            </pre>
+                </div>
+            </div>
+        </div>
+        <div class="f-row">
+            <div class="f-item">
+                <h1 class="h1-title">Table</h1>
+            </div>
+        </div>
+        <div class="f-row f-row-start">
+            <div class="f-item">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Header</th>
+                            <th>Header</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>Footer</th>
+                            <th>Footer</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>data 1</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>data 2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="f-item">
+                <div class="code-sample">
+                    <pre class="prettyprint">
+                <code>
+  &lt;table&gt;
+      &lt;thead&gt;
+          &lt;tr&gt;
+              &lt;th&gt;Header&lt;/th&gt;
+              &lt;th&gt;Header&lt;/th&gt;
+          &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tfoot&gt;
+          &lt;tr&gt;
+              &lt;th&gt;Footer&lt;/th&gt;
+              &lt;th&gt;Footer&lt;/th&gt;
+          &lt;/tr&gt;
+      &lt;/tfoot&gt;
+      &lt;tbody&gt;
+          &lt;tr&gt;
+              &lt;td&gt;1&lt;/td&gt;
+              &lt;td&gt;data 1&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+              &lt;td&gt;2&lt;/td&gt;
+              &lt;td&gt;data 2&lt;/td&gt;
+          &lt;/tr&gt;
+      &lt;/tbody&gt;
+  &lt;/table&gt;
+              </code>
+            </pre>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="f-row">
+        <div class="f-item">
+            <h1 class="h1-title">Form</h1>
+        </div>
+    </div>
+    <div class="f-row">
+        <div class="f-item">
+            <div>
+                <input type='text' name='loginid' />
+                <p class='hint'>Hint comes here</p>
+                <p class='errorfield'>error in loginid</p>
+            </div>
+        </div>
+        <div class="f-item">
+            <div class="code-sample">
+                <pre class="prettyprint">
+                <code>
+
+              </code>
+            </pre>
+            </div>
+        </div>
+    </div> -->
+    </main>
 </body>
+
 </html>

@@ -14,8 +14,8 @@ table
         line-height: 1.1em;
         font-weight: bold;
         padding: 3px 8px;
-        background: $COLOR_LIGHT_GRAY;
-        border-bottom: 1px solid $COLOR_DARK_GRAY;
+        background: $COLOR_GRAY;
+        border-bottom: 1px solid $COLOR_GRAY;
         vertical-align: middle;
         &#pf-bet-details {
             text-align: left;
@@ -31,7 +31,7 @@ table
         vertical-align: top;
         border-width: 0 1px;
         padding: 4px 4px;
-        border-bottom: 3px solid $COLOR_LIGHT_GRAY;
+        border-bottom: 3px solid $COLOR_GRAY;
         &.num {
             text-align: center;
         }
@@ -93,7 +93,7 @@ table
         text-align: center;
     }
     .loss, .lower {
-        color: $COLOR_RED;
+        color: $COLOR_ORANGE;
     }
 }
 
@@ -104,7 +104,7 @@ table
     font-weight: bold;
     font-size: 90%;
     border-bottom: 1px solid $COLOR_GRAY;
-    background: none repeat scroll 0% 0% $COLOR_LIGHT_GRAY;
+    background: none repeat scroll 0% 0% $COLOR_GRAY;
     [class*="grd-grid-"] {
         word-wrap: break-word;
         white-space: normal;
@@ -122,7 +122,7 @@ table
         color: $COLOR_GREEN;
     }
     .loss, .lower {
-        color: $COLOR_RED;
+        color: $COLOR_ORANGE;
     }
     a.button-analyse, a.button-analyse:visited {
         color: $COLOR_GREEN;
@@ -144,5 +144,5 @@ table
     }
 }
 .table-body-lines {
-    border-bottom: 3px solid #F2F2F2;
+    border-bottom: 3px solid $COLOR_GRAY;
 }

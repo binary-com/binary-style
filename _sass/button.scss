@@ -20,6 +20,7 @@
 }
 button {
     @include link-button;
+    cursor: pointer;
     font-weight: bold;
     font-size: $FONT_SIZE_N;
     border: 0;

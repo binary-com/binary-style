@@ -1,0 +1,29 @@
+.sidebar-left {
+  ul {
+    font-size:90%;
+    li {
+      list-style-image: none;
+      margin: 0;
+      background: $COLOR_GRAY;
+      line-height: 150%;
+      border-bottom: 1px solid $COLOR_WHITE;
+      &:hover {
+        background: $COLOR_GRAY;
+      }
+      a {
+        font-weight: normal;
+        text-decoration: none;
+        display: block;
+        padding: 5px 5px 5px 10px;
+        color: $COLOR_BLUE;
+      }
+    }
+    li.selected {
+      background: $COLOR_BLUE;
+      a {
+        color: $COLOR_WHITE;
+        text-decoration: none;
+      }
+    }
+  }
+}

@@ -1,21 +1,36 @@
 @mixin link-button {
-  color: $COLOR_WHITE;
-  text-decoration: none;
-  text-align: center;
-  line-height:100%;
-  background: $COLOR_GREEN;
-  border-radius: 4px;
-  text-transform: capitalize;
-  padding: 10px 25px 10px 25px;
-  display: inline-block;
-  letter-spacing: 0.75px;
-  &:visited {
     color: $COLOR_WHITE;
-  }
-  &:hover, &:active {
     text-decoration: none;
-    background-color: $COLOR_DARK_GREEN;
-  }
+    text-align: center;
+    line-height: 100%;
+    background: $COLOR_GREEN;
+    border-radius: 4px;
+    text-transform: capitalize;
+    padding: 10px 25px;
+    display: inline-block;
+    letter-spacing: 0.75px;
+    &:visited {
+        color: $COLOR_WHITE;
+    }
+    &:active,
+    &:hover {
+        text-decoration: none;
+        background-color: $COLOR_DARK_GREEN;
+    }
+}
+button {
+    @include link-button;
+    font-weight: bold;
+    font-size: $FONT_SIZE_N;
+    border: 0;
+    &:visited {
+        color: $COLOR_WHITE;
+    }
+    &:active,
+    &:hover {
+        text-decoration: none;
+        background-color: $COLOR_DARK_GREEN;
+    }
 }
 .button {
     cursor: pointer;
@@ -24,7 +39,6 @@
         color: $COLOR_WHITE;
         text-decoration: none;
     }
-    button,
     span {
         @include link-button;
         overflow: visible;
@@ -39,7 +53,6 @@
         background: $COLOR_GRAY;
         text-decoration: none;
     }
-    button,
     span {
         @include link-button;
         overflow: visible;

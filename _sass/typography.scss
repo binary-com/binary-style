@@ -31,14 +31,15 @@ h1 {
     }
 }
 h1.dark {
-    color: $COLOR_BLACK;
+    color: $COLOR_BLUE;
     a {
-        color: $COLOR_BLACK !important;
+        color: $COLOR_BLUE !important;
     }
 }
 h2 {
     font-size: 28px;
-    color: $COLOR_BLUE;
+    color: $COLOR_ORANGE;
+    font-weight: 300;
     a {
         color: $COLOR_BLUE !important;
     }
@@ -51,11 +52,12 @@ h2 {
     }
 }
 h3 {
-    color: $COLOR_BLACK;
-    a {
-        color: $COLOR_BLACK !important;
-    }
+    color: $COLOR_BLUE;
     font-size: 22px;
+    font-weight: 300;
+    a {
+        color: $COLOR_BLUE !important;
+    }
 }
 h4 {
     color: $COLOR_BLACK;

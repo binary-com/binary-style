@@ -9,6 +9,7 @@
     padding: 10px 25px;
     display: inline-block;
     letter-spacing: 0.75px;
+    font-weight: 500;
     &:visited {
         color: $COLOR_WHITE;
     }
@@ -21,7 +22,6 @@
 button {
     @include link-button;
     cursor: pointer;
-    font-weight: bold;
     font-size: $FONT_SIZE_N;
     border: 0;
     &:visited {
@@ -59,7 +59,6 @@ button {
         overflow: visible;
         white-space: nowrap;
         border: 0;
-        font-weight: bold;
         color: $COLOR_BLACK;
         background: $COLOR_GRAY;
         cursor: default;

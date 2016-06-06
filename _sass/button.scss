@@ -8,8 +8,8 @@
     text-transform: capitalize;
     padding: 10px 25px;
     display: inline-block;
-    letter-spacing: 0.75px;
-    font-weight: 500;
+    font-weight: 400;
+    font-family: inherit;
     &:visited {
         color: $COLOR_WHITE;
     }

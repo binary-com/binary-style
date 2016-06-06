@@ -84,7 +84,7 @@
         </div>
         <div class="f-row">
             <div class="f-item" style="margin-top:40px;">
-                <h1>Text</h1>
+                <h1 class="h1-title">Text</h1>
             </div>
         </div>
         <div class="f-row">
@@ -278,6 +278,59 @@
             </pre>
                 </div>
             </div>
+        </div>
+        <div class="f-row">
+          <div class="f-item">
+            <h1 class="h1-title">Sidebar Menu</h1>
+          </div>
+        </div>
+        <div class="f-row f-row-start">
+          <div class="f-item">
+            <div>
+              <div class="sidebar-left">
+                <ul>
+                  <li>
+                    <a href="#">Section 1</a>
+                  </li>
+                  <li>
+                    <a href="#">Section 2</a>
+                  </li>
+                </ul>
+              </div>
+              <script type="text/javascript">
+                $('.sidebar-left a').on('click', function(e) {
+                  e.preventDefault();
+                  $('.sidebar-left li').removeClass('selected');
+                  $(this).parent().addClass('selected');
+                });
+              </script>
+            </div>
+          </div>
+          <div class="f-item">
+              <div class="code-sample">
+                  <pre class="prettyprint">
+                    <code>
+  &lt;div class=&quot;sidebar-left&quot;&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Section 1&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Section 2&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;
+    $('.sidebar-left a').on('click', function(e) {
+      e.preventDefault();
+      $('.sidebar-left li').removeClass('selected');
+      $(this).parent().addClass('selected');
+    });
+  &lt;/script&gt;
+                    </code>
+                  </pre>
+              </div>
+          </div>
         </div>
         <!-- <div class="f-row">
         <div class="f-item">

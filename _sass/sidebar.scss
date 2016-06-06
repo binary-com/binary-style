@@ -1,6 +1,6 @@
 .sidebar-left {
   ul {
-    font-size:90%;
+    font-size:$FONT_SIZE_N;
     li {
       list-style-image: none;
       margin: 0;
@@ -8,7 +8,7 @@
       line-height: 150%;
       border-bottom: 1px solid $COLOR_WHITE;
       &:hover {
-        background: $COLOR_GRAY;
+        background: $COLOR_DARK_GRAY;
       }
       a {
         font-weight: normal;

@@ -7,6 +7,7 @@
     <title>Binary Style Guide</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script src="main.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="binary.css">
 </head>
@@ -198,6 +199,13 @@
                 <p class="success-msg">success message</p>
                 <p class="notice-msg" style="margin-right:1rem;">notice message</p>
                 <p class="error-msg">error message</p>
+                <abbr rel="tooltip" title="message">
+                  text with tooltip
+                </abbr>
+                <script type="text/javascript">
+                  var tooltip = new ToolTip();
+                  tooltip.attach();
+                </script>
             </div>
             <div class="f-item">
                 <div class="code-sample">
@@ -207,8 +215,12 @@
     &lt;p class=&quot;notice-msg&quot;&gt;notice message&lt;/p&gt;
     &lt;p class=&quot;error-msg&quot;&gt;error message&lt;/p&gt;
     &lt;abbr rel=&quot;tooltip&quot; title=&quot;message&quot;&gt;
-    text with tooltip
+      text with tooltip
     &lt;/abbr&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+      var tooltip = new ToolTip();
+      tooltip.attach();
+    &lt;/script&gt;
               </code>
             </pre>
                 </div>

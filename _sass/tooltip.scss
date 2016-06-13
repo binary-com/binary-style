@@ -1,46 +1,99 @@
-abbr {
-    border-bottom: 1px dotted $COLOR_BLACK;
-    cursor: help;
+*[data-tooltip] {
+  position: relative;
+  border-bottom: 1px dotted $COLOR_BLACK;
 }
-#tooltip {
-    font-family: proxima-nova, arial, sans-serif;
-    font-size: 14px;
-    line-height: 1.5;
-    color: $COLOR_BLACK;
-    background: $COLOR_YELLOW;
-    border-radius: 5px;
-    border: 1px solid $COLOR_GRAY;
-    box-shadow: 0 3px 5px rgba( 0, 0, 0, .3 );
-    position: absolute;
-    z-index: 100;
-    padding: 15px;
+*[data-tooltip]::before,
+*[data-tooltip]::after {
+  position: absolute;
+  display: none;
 }
-#tooltip:after {
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 10px solid $COLOR_GRAY;
-    border-top-color: $COLOR_YELLOW;
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: -10px;
-    margin-left: -10px;
+*[data-tooltip]::before {
+  /*
+   * using data-tooltip instead of title so we
+   * don't have the real tooltip overlapping
+   */
+  font-family: proxima-nova, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: $COLOR_BLACK;
+  background: $COLOR_YELLOW;
+  border-radius: 5px;
+  box-shadow: 0 3px 5px rgba( 0, 0, 0, .3 );
+  padding: 15px;
+  content: attr(data-tooltip);
+  text-decoration: none;
 }
-#tooltip.top:after {
-    border-top-color: transparent;
-    border-bottom: 10px solid $COLOR_GRAY;
-    border-bottom-color: $COLOR_GRAY;
-    top: -20px;
-    bottom: auto;
+*[data-tooltip]::after {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid $COLOR_GRAY;
+  border-top-color: $COLOR_YELLOW;
+  content: '';
 }
-#tooltip.left:after {
-    left: 10px;
-    margin: 0;
+
+*[data-tooltip]:hover::before,
+*[data-tooltip]:hover::after {
+  display: block;
 }
-#tooltip.right:after {
-    right: 10px;
-    left: auto;
-    margin: 0;
+
+/** positioning **/
+
+/* left tooltip */
+*[data-tooltip][data-placement="left"]::before {
+  top: -25%;
+  right: 100%;
+  margin-right: 10px;
+}
+*[data-tooltip][data-placement="left"]::after {
+  border-left-color: $COLOR_YELLOW;
+  border-right: none;
+  top: 50%;
+  right: 100%;
+  margin-top: -6px;
+  margin-right: 4px;
+}
+
+/* right tooltip */
+*[data-tooltip][data-placement="right"]::before {
+  top: -25%;
+  left: 100%;
+  margin-left: 10px;
+}
+*[data-tooltip][data-placement="right"]::after {
+  border-right-color: $COLOR_YELLOW;
+  border-left: none;
+  top: 50%;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: 4px;
+}
+
+/* top tooltip */
+*[data-tooltip][data-placement="top"]::before {
+  bottom: 100%;
+  left: 15px;
+  margin-bottom: 10px;
+}
+*[data-tooltip][data-placement="top"]::after {
+  border-top-color: $COLOR_YELLOW;
+  border-bottom: none;
+  bottom: 17px;
+  left: 40%;
+  margin-bottom: 4px;
+}
+
+/* bottom tooltip */
+*[data-tooltip][data-placement="bottom"]::before {
+  top: 100%;
+  left: 0;
+  margin-top: 10px;
+}
+*[data-tooltip][data-placement="bottom"]::after {
+  border-bottom-color: $COLOR_YELLOW;
+  border-top: none;
+  top: 100%;
+  left: 10px;
+  margin-top: 4px;
 }

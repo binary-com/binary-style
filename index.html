@@ -198,7 +198,8 @@
                 <p class="success-msg">success message</p>
                 <p class="notice-msg" style="margin-right:1rem;">notice message</p>
                 <p class="error-msg">error message</p>
-                <span data-tooltip="message" data-placement="top">text with tooltip</span>
+                <p><span data-balloon="message">text with default tooltip</span></p>
+                <span data-balloon="large size tooltip at bottom" data-balloon-length="large" data-balloon-pos="down" class="no-underline">text with long tooltip</span>
             </div>
             <div class="f-item">
                 <div class="code-sample">
@@ -207,8 +208,13 @@
     &lt;p class=&quot;success-msg&quot;&gt;success message&lt;/p&gt;
     &lt;p class=&quot;notice-msg&quot;&gt;notice message&lt;/p&gt;
     &lt;p class=&quot;error-msg&quot;&gt;error message&lt;/p&gt;
-    &lt;span data-tooltip=&quot;message&quot; data-placement=&quot;top&quot;&gt;
-      text with tooltip
+    &lt;span data-balloon=&quot;message&quot;&gt;
+      text with default tooltip
+    &lt;/span&gt;
+    &lt;span data-balloon=&quot;large size tooltip at bottom&quot;
+      data-balloon-length=&quot;large&quot; data-balloon-pos=&quot;down&quot;
+      class=&quot;no-underline&quot;&gt;
+        text with long tooltip
     &lt;/span&gt;
               </code>
             </pre>

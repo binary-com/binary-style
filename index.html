@@ -287,35 +287,35 @@
             </div>
         </div>
         <div class="f-row">
-          <div class="f-item">
-            <h1 class="h1-title">Sidebar Menu</h1>
-          </div>
+            <div class="f-item">
+                <h1 class="h1-title">Sidebar Menu</h1>
+            </div>
         </div>
         <div class="f-row f-row-start">
-          <div class="f-item">
-            <div>
-              <div class="sidebar-left">
-                <ul>
-                  <li>
-                    <a href="#">Section 1</a>
-                  </li>
-                  <li>
-                    <a href="#">Section 2</a>
-                  </li>
-                </ul>
-              </div>
-              <script type="text/javascript">
-                $('.sidebar-left a').on('click', function(e) {
-                  e.preventDefault();
-                  $('.sidebar-left li').removeClass('selected');
-                  $(this).parent().addClass('selected');
-                });
-              </script>
+            <div class="f-item">
+                <div>
+                    <div class="sidebar-left">
+                        <ul>
+                            <li>
+                                <a href="#">Section 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Section 2</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <script type="text/javascript">
+                        $('.sidebar-left a').on('click', function(e) {
+                            e.preventDefault();
+                            $('.sidebar-left li').removeClass('selected');
+                            $(this).parent().addClass('selected');
+                        });
+                    </script>
+                </div>
             </div>
-          </div>
-          <div class="f-item">
-              <div class="code-sample">
-                  <pre class="prettyprint">
+            <div class="f-item">
+                <div class="code-sample">
+                    <pre class="prettyprint">
                     <code>
   &lt;div class=&quot;sidebar-left&quot;&gt;
     &lt;ul&gt;
@@ -336,32 +336,50 @@
   &lt;/script&gt;
                     </code>
                   </pre>
-              </div>
-          </div>
-        </div>
-        <!-- <div class="f-row">
-        <div class="f-item">
-            <h1 class="h1-title">Form</h1>
-        </div>
-    </div>
-    <div class="f-row">
-        <div class="f-item">
-            <div>
-                <input type='text' name='loginid' />
-                <p class='hint'>Hint comes here</p>
-                <p class='errorfield'>error in loginid</p>
+                </div>
             </div>
         </div>
-        <div class="f-item">
-            <div class="code-sample">
-                <pre class="prettyprint">
+        <div class="f-row">
+            <div class="f-item">
+                <h1 class="h1-title">Form</h1>
+            </div>
+        </div>
+        <div class="f-row">
+            <div class="f-item">
+                <div style="margin-top:20px;">
+                    <select>
+                        <option value="" selected="selected">Option 1</option>
+                        <option value="">Option 2</option>
+                        <option value="">Option 3</option>
+                    </select>
+                </div>
+                <div style="margin-top:20px;">
+                    <input type='text'/>
+                    <p class='hint'>Hint comes here</p>
+                </div>
+                <div style="margin-top:20px;">
+                    <textarea name="name" rows="8" cols="20"></textarea>
+                </div>
+            </div>
+            <div class="f-item">
+                <div class="code-sample">
+                    <pre class="prettyprint">
                 <code>
+  &lt;select&gt;
+    &lt;option value=&quot;&quot; selected=&quot;selected&quot;&gt;Option 1&lt;/option&gt;
+    &lt;option value=&quot;&quot;&gt;Option 2&lt;/option&gt;
+     &lt;option value=&quot;&quot;&gt;Option 3&lt;/option&gt;
+  &lt;/select&gt;
 
+  &lt;input type='text'/&gt;
+  &lt;p class='hint'&gt;Hint comes here&lt;/p&gt;
+
+  &lt;textarea name=&quot;name&quot; rows=&quot;8&quot; cols=&quot;40&quot;&gt;&lt;/textarea&gt;
               </code>
             </pre>
+                </div>
             </div>
         </div>
-    </div> -->
     </main>
 </body>
 

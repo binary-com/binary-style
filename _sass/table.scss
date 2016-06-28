@@ -14,8 +14,8 @@ table
         line-height: 1.1em;
         font-weight: bold;
         padding: 3px 8px;
-        background: $COLOR_GRAY;
-        border-bottom: 1px solid $COLOR_GRAY;
+        background: $COLOR_LIGHT_GRAY;
+        border-bottom: 1px solid $COLOR_LIGHT_GRAY;
         vertical-align: middle;
         &#pf-bet-details {
             text-align: left;
@@ -31,7 +31,7 @@ table
         vertical-align: top;
         border-width: 0 1px;
         padding: 4px 4px;
-        border-bottom: 3px solid $COLOR_GRAY;
+        border-bottom: 3px solid $COLOR_LIGHT_GRAY;
         &.num {
             text-align: center;
         }

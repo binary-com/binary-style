@@ -51,7 +51,7 @@ button {
     margin-bottom: 0.5em;
     &:hover {
         color: $COLOR_BLACK;
-        background: $COLOR_GRAY;
+        background: $COLOR_LIGHT_GRAY;
         text-decoration: none;
     }
     span {
@@ -60,12 +60,12 @@ button {
         white-space: nowrap;
         border: 0;
         color: $COLOR_BLACK;
-        background: $COLOR_GRAY;
+        background: $COLOR_LIGHT_GRAY;
         cursor: default;
         &:active,
         &:hover {
             color: $COLOR_BLACK;
-            background: $COLOR_GRAY;
+            background: $COLOR_LIGHT_GRAY;
         }
     }
 }

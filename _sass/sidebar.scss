@@ -4,11 +4,11 @@
     li {
       list-style-image: none;
       margin: 0;
-      background: $COLOR_GRAY;
+      background: $COLOR_LIGHT_GRAY;
       line-height: 150%;
       border-bottom: 1px solid $COLOR_WHITE;
       &:hover {
-        background: $COLOR_DARK_GRAY;
+        background: $COLOR_GRAY;
       }
       a {
         font-weight: normal;

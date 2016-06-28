@@ -1,0 +1,15 @@
+select, input, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    padding: 2px 3px;
+    border: 1px solid $COLOR_LIGHT_GRAY;
+    background: $COLOR_WHITE;
+    border-radius: $BORDER_RADIUS;
+}
+.hint {
+    font-size: $FONT_SIZE_S;
+    color: $COLOR_DARK_GRAY;
+    margin-top: 3px
+}

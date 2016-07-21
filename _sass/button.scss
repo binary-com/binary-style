@@ -1,22 +1,16 @@
 @mixin link-button {
-    color: $COLOR_WHITE;
     text-decoration: none;
     text-align: center;
     line-height: 100%;
-    background: $COLOR_GREEN;
-    border-radius: $BORDER_RADIUS;
     text-transform: capitalize;
     padding: 10px 25px;
     display: inline-block;
     font-weight: 400;
     font-family: inherit;
-    &:visited {
-        color: $COLOR_WHITE;
-    }
+    border-radius: $BORDER_RADIUS;
     &:active,
     &:hover {
         text-decoration: none;
-        background-color: $COLOR_DARK_GREEN;
     }
 }
 button {
@@ -24,47 +18,62 @@ button {
     cursor: pointer;
     font-size: $FONT_SIZE_N;
     border: 0;
+    background: $COLOR_GREEN;
+    color: $COLOR_WHITE;
     &:visited {
         color: $COLOR_WHITE;
     }
     &:active,
     &:hover {
-        text-decoration: none;
         background-color: $COLOR_DARK_GREEN;
     }
 }
 .button {
     cursor: pointer;
     margin-bottom: 0.5em;
-    &:hover {
-        color: $COLOR_WHITE;
-        text-decoration: none;
-    }
     span {
         @include link-button;
         overflow: visible;
         border: 0;
+        color: $COLOR_WHITE;
+        background: $COLOR_GREEN;
+        &:hover {
+          background-color: $COLOR_DARK_GREEN;
+        }
+        &visited{
+          color: $COLOR_WHITE;;
+        }
+    }
+}
+.button-secondary {
+    cursor: pointer;
+    margin-bottom: 0.5em;
+    span {
+        @include link-button;
+        overflow: visible;
+        border: 0;
+        color: $COLOR_BLACK;
+        background: $COLOR_LIGHT_GRAY;
+        &:hover {
+            text-decoration: none;
+            background: $COLOR_GRAY;
+        }
     }
 }
 .button-disabled {
     cursor: pointer;
     margin-bottom: 0.5em;
-    &:hover {
-        color: $COLOR_BLACK;
-        background: $COLOR_LIGHT_GRAY;
-        text-decoration: none;
-    }
     span {
         @include link-button;
         overflow: visible;
         white-space: nowrap;
         border: 0;
-        color: $COLOR_BLACK;
+        color: $COLOR_GRAY;
         background: $COLOR_LIGHT_GRAY;
         cursor: default;
         &:active,
         &:hover {
-            color: $COLOR_BLACK;
+            color: $COLOR_GRAY;
             background: $COLOR_LIGHT_GRAY;
         }
     }

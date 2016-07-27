@@ -10,6 +10,25 @@ body {
     margin: 0;
     font-family: $FONT-STACK;
 }
+#topbar{
+  &.darkblue{
+    background: $COLOR_DARK_BLUE;
+  }
+}
+header, #header{
+    background: $COLOR_BLUE;
+    border-top: 2px solid $COLOR_LIGHT_BLUE;
+    border-bottom: 4px solid $COLOR_ORANGE;
+}
+#footer-menu {
+    background: $COLOR_BLUE;
+}
+#footer #footer-regulatory {
+    background: $COLOR_DARK_BLUE;
+}
+#footer #footer-last {
+    background: $COLOR_BLUE;
+}
 ol,
 ul {
     list-style: none;

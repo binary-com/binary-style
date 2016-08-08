@@ -13,22 +13,23 @@ img.responsive{
   padding:10px;
 }
 /*Header */
-#topbar {
-    width: 100%;
-    color: #fff;
-    line-height: 1;
-    font-size: 70%;
-    text-align: right;
-    padding: 3px 0;
+#header #logo {
+    display:inline-block;
+    width: 24%;
 }
 .dark-blue {
     background: #15212d;
 }
-#header{ background: #2a3052;
+#header{
+    background: #2a3052;
     border-top: 2px solid #394171;
     border-bottom: 4px solid #e98024;
     height: 75px;
-    }
+}
+#topbar-info div {
+    display: inline-flex;
+    padding: 0 10px;
+}
 [role="tab-content"] .tab-content {
   display: none;
 }
@@ -301,4 +302,14 @@ li.L1, li.L3, li.L5, li.L7, li.L9 {}
     flex: 1 1 100%;
     max-width: 100%;
   }
+}
+
+@media screen and (max-width: 769px) {
+    .mobile-hide {
+        display: none !important;
+    }
+
+    #header #logo {
+        width: 100%;
+    }
 }

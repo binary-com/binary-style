@@ -7,8 +7,10 @@
     <title>Binary Style Guide</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script src="js/jquery-ui-custom-accordion.js"></script>
     <link rel="icon" type="image/png" sizes="16x16" href="https://www.binary.com/images/favicons/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://www.binary.com/images/favicons/favicon-32x32.png">
+    <link rel="stylesheet" href="css/jquery-ui-custom-accordion.css" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="binary.css">
 </head>
@@ -390,6 +392,57 @@
   &lt;p class='hint'&gt;Hint comes here&lt;/p&gt;
 
   &lt;textarea name=&quot;name&quot; rows=&quot;8&quot; cols=&quot;40&quot;&gt;&lt;/textarea&gt;
+              </code>
+            </pre>
+                </div>
+            </div>
+        </div>
+        <div class="f-row">
+            <div class="f-item">
+                <h1 class="h1-title">Accordion</h1>
+            </div>
+        </div>
+        <div class="f-row">
+            <div class="f-item">
+                <div id="accordion" style="margin-top:20px;">
+                    <h3>Section 1</h3>
+                    <div>Contents of section 1</div>
+                    <h3>Section 2</h3>
+                    <div>Contents of section 2</div>
+                </div>
+                <div>
+                    <h3>iQueryUI customized files for accordion:</h3>
+                    <ul class="bullet">
+                        <li><a href="js/jquery-ui-custom-accordion.js">js</a></li>
+                        <li><a href="css/jquery-ui-custom-accordion.css">css</a></li>
+                    </ul>
+                </div>
+                <script type='text/javascript'>
+                    $('#accordion').accordion({
+                        heightStyle : 'content',
+                        collapsible : true,
+                        active      : false
+                    });
+                </script>
+            </div>
+            <div class="f-item">
+                <div class="code-sample">
+                    <pre class="prettyprint">
+                <code>
+  &lt;div id="accordion"&gt;
+    &lt;h3&gt;Section 1&lt;/h3&gt;
+    &lt;div&gt;Contents of section 1&lt;/div&gt;
+    &lt;h3&gt;Section 2&lt;/h3&gt;
+    &lt;div&gt;Contents of section 2&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;script type='text/javascript'&gt;
+    $('#accordion').accordion({
+      heightStyle : 'content',
+      collapsible : true,
+      active      : false
+    });
+  &lt;/script&gt;
               </code>
             </pre>
                 </div>

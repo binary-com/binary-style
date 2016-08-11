@@ -1,0 +1,20 @@
+#topbar {
+    width: 100%;
+    line-height: 1;
+    font-size: 70%;
+    text-align: right;
+    padding: 3px 0;
+    background-color: $COLOR_DARK_BLUE;
+}
+
+#topbar, #topbar a {
+    color: $COLOR_WHITE;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+#header #binary-logo-text {
+    margin-top: 10px;
+    padding: 0 10px;
+}

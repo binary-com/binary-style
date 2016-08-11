@@ -1,0 +1,87 @@
+/* main menu styling */
+.nav-menu {
+    font-size: 1rem;
+    a {
+        color: $COLOR_WHITE;
+    }
+    & > li {
+        position: relative;
+        text-align: center;
+        > ul {
+            width: 100%;
+            background-color: $COLOR_LIGHT_GRAY;
+        }
+    }
+}
+
+.main-nav {
+    width: 165px;
+    border: 1px solid $COLOR_BLUE;
+    position: absolute;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    background-color: $COLOR_BLUE;
+    transition: none !important;
+    & > li {
+        margin-top: 3px;
+        height: 70px;
+        a {
+            font-weight: normal;
+            &:hover {
+              text-decoration: none;
+            }
+        }
+        & > ul {
+            margin: -18px -1px;
+            border: 1px solid $COLOR_GRAY;
+            padding: 0;
+            a {
+                color: initial;
+                li {
+                    margin-top: 0;
+                    padding: 7px 0;
+                    &:hover {
+                      background-color: $COLOR_GRAY;
+                    }
+                }
+            }
+        }
+    }
+    .nav-caret {
+        position: relative;
+        top: -45px;
+        right: -68px;
+    }
+}
+
+.nav-caret {
+    vertical-align: middle;
+    border-top: 4px dashed;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    display: inline-block;
+}
+
+#all-accounts, #all-accounts-top {
+    background-color: $COLOR_LIGHT_GRAY;
+    border: 1px solid $COLOR_GRAY;
+    z-index: 99999;
+    opacity: 0;
+    visibility: hidden;
+    & > li a {
+        color: $COLOR_BLACK;
+    }
+}
+
+#main-logout, #logout-top {
+    position: relative;
+    height: 75px;
+    display: flex;
+    width: 165px;
+    float: right;
+}
+
+.separator-line-thin-gray {
+    border-top: 1px solid $COLOR_GRAY;
+}

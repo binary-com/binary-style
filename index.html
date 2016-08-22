@@ -7,26 +7,118 @@
     <title>Binary Style Guide</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script src="binary.js"></script>
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.binary.com/images/favicons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.binary.com/images/favicons/favicon-32x32.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="binary.css">
 </head>
 
 <body>
-    <div id="topbar" class="dark-blue" style="height:20px;">
+    <div id="topbar">
+        <div class="container">
+            <div id='topbar-info'>
+                <div id="gmt-clock" data-balloon-pos="down" data-balloon="2016-08-11 15:31:00 +08:00" style="margin-right: 35px;">2016-08-11 07:31 GMT</div>
+                <div style="margin-right: 12px;">
+                    <a href="#">Contact Us</a>
+                </div>
+                <div id="language_select">
+                    <select>
+                        <option class="EN" selected="selected">English</option>
+                        <option class="AR">Arabic</option>
+                        <option class="DE">Deutsch</option>
+                        <option class="ES">Español</option>
+                        <option class="FR">Français</option>
+                        <option class="ID">Bahasa Indonesia</option>
+                        <option class="IT">Italiano</option>
+                        <option class="PL">Polish</option>
+                        <option class="PT">Português</option>
+                        <option class="RU">Русский</option>
+                        <option class="VI">Vietnamese</option>
+                        <option class="ZH_CN">简体中文</option>
+                        <option class="ZH_TW">繁體中文</option>
+                    </select>
+                </div>
+            </div>
+        </div>
     </div>
-    <div id="header">
-        <div style="max-width: 960px; margin: 0 auto; padding: 10px 0;">
-            <a href="https://binary.com">
-                <div style="display:inline-block;margin:0 10px;">
-                    <img class="responsive" src="https://www.binary.com/images/pages/binary-symbol-logo.svg">
-                </div>
-                <div style="display:inline-block;">
-                    <img class="responsive" src="https://www.binary.com/images/pages/binary-type-logo.svg" style="width:80%;">
-                </div>
-            </a>
+    <div id="header" class="dark-blue">
+        <div class="container">
+            <div style="display: inline-flex;">
+                <a href="https://binary.com" style="display: inline-flex;padding: 10px 0;">
+                    <div id="logo">
+                        <img class="responsive" src="https://www.binary.com/images/pages/binary-symbol-logo.svg">
+                    </div>
+                    <div id="binary-logo-text" style="display:inline-block;" class="mobile-hide">
+                        <img class="responsive" src="https://www.binary.com/images/pages/binary-type-logo.svg" style="width:80%;">
+                    </div>
+                </a>
+            </div>
+            <div id="logout-top">
+                <ul id="main-account" class="nav-menu main-nav">
+                    <li class="account">
+                        <a href="javascript:;">
+                            <div class="main-account">
+                                <div class="account-type">Real Account</div>
+                                <div class="account-id">CR9010912</div>
+                                <div class="topMenuBalance">USD 0.00</div>
+                            </div>
+                            <div class="nav-caret"></div>
+                        </a>
+                    </li>
+                </ul>
+                <ul id="all-accounts" class="nav-menu main-nav" style="opacity: 0; visibility: hidden;">
+                    <li class="account">
+                        <a href="javascript:;">
+                            <div class="main-account">
+                                <div class="account-type">Real Account</div>
+                                <div class="account-id">CR9010912</div>
+                                <div class="topMenuBalance">USD 0.00</div>
+                            </div>
+                            <div class="nav-caret"></div>
+                        </a>
+                        <ul>
+                            <a class="link" href="#">
+                                <li class="topMenuProfile">Profile</li>
+                            </a>
+                            <a class="link" href="#">
+                                <li class="topMenuSecurity">Security &amp; Limits</li>
+                            </a>
+                            <a class="link" href="#">
+                                <li class="topMenuMetaTrader">MetaTrader Accounts</li>
+                            </a>
+                            <div class="separator-line-thin-gray"></div>
+                            <div class="login-id-list">
+                                <a href="#" value="VRTC1191226">
+                                    <li>
+                                        <div>Virtual Account</div>
+                                        <div>VRTC1191226</div>
+                                    </li>
+                                </a>
+                                <div class="separator-line-thin-gray"></div>
+                            </div>
+                            <a href="javascript:;">
+                                <li>Sign out</li>
+                            </a>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
     <main style="max-width: 960px; margin: 0 auto;">
+      <div class="f-row">
+          <div class="f-item" style="margin-top:40px;">
+              <h1>binary-style</h1>
+              <p>The goal of the project is to serve as base style for all Binary projects, and to ensure consistency and maintainability of the brand presentation.</p>
+              <h2>Usage</h2>
+              <ul class="bullet">
+                <li>Add <a href="https://jquery.com/" target="_blank">jQuery</a> to your project</li>
+                <li>Add the <a href="binary.js" target="_blank">JS file</a> to your project</li>
+                <li>Add the styles by including <a href="binary.css" target="_blank">this file</a> to your project</li>
+              </ul>
+          </div>
+      </div>
         <div class="f-row">
             <div class="f-item" style="margin-top:40px;">
                 <h1 class="h1-title">Colors</h1>
@@ -354,6 +446,125 @@
         </div>
         <div class="f-row">
             <div class="f-item">
+                <h1 class="h1-title">Drop-Down Menu</h1>
+            </div>
+        </div>
+        <div class="f-row">
+            <div class="f-item">
+                <div style="margin:20px;">
+                    <div id="main-logout">
+                        <ul id="main-account" class="nav-menu main-nav">
+                            <li class="account">
+                                <a href="javascript:;">
+                                    <div class="main-account">
+                                        <div class="account-type">Real Account</div>
+                                        <div class="account-id">CR9010912</div>
+                                        <div class="topMenuBalance">USD 0.00</div>
+                                    </div>
+                                    <div class="nav-caret"></div>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul id="all-accounts-top" class="nav-menu main-nav" style="opacity: 0;">
+                            <li class="account">
+                                <a href="javascript:;">
+                                    <div class="main-account">
+                                        <div class="account-type">Real Account</div>
+                                        <div class="account-id">CR9010912</div>
+                                        <div class="topMenuBalance">USD 0.00</div>
+                                    </div>
+                                    <div class="nav-caret"></div>
+                                </a>
+                                <ul>
+                                    <a class="link" href="#">
+                                        <li class="topMenuProfile">Profile</li>
+                                    </a>
+                                    <a class="link" href="#">
+                                        <li class="topMenuSecurity">Security & Limits</li>
+                                    </a>
+                                    <a class="link" href="#">
+                                        <li class="topMenuMetaTrader">MetaTrader Accounts</li>
+                                    </a>
+                                    <div class="separator-line-thin-gray"></div>
+                                    <div class="login-id-list">
+                                        <a href="#" value="VRTC1191226">
+                                            <li>
+                                                <div>Virtual Account</div>
+                                                <div>VRTC1191226</div>
+                                            </li>
+                                        </a>
+                                        <div class="separator-line-thin-gray"></div>
+                                    </div>
+                                    <a href="javascript:;">
+                                        <li>Sign out</li>
+                                    </a>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="f-item">
+                <div class="code-sample">
+                    <pre class="prettyprint">
+                <code>
+&lt;div id=&quot;main-logout&quot;&gt;
+  &lt;ul id=&quot;main-account&quot; class=&quot;nav-menu main-nav&quot;&gt;
+    &lt;li class=&quot;account&quot;&gt;
+      &lt;a href=&quot;javascript:;&quot;&gt;
+        &lt;div class=&quot;main-account&quot;&gt;
+          &lt;div class=&quot;account-type&quot;&gt;Real Account&lt;/div&gt;
+          &lt;div class=&quot;account-id&quot;&gt;CR9010912&lt;/div&gt;
+          &lt;div class=&quot;topMenuBalance&quot;&gt;USD 0.00&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;nav-caret&quot;&gt;&lt;/div&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;ul id=&quot;all-accounts&quot; class=&quot;nav-menu main-nav&quot;&gt;
+    &lt;li class=&quot;account&quot;&gt;
+      &lt;a href=&quot;javascript:;&quot;&gt;
+        &lt;div class=&quot;main-account&quot;&gt;
+          &lt;div class=&quot;account-type&quot;&gt;Real Account&lt;/div&gt;
+          &lt;div class=&quot;account-id&quot;&gt;CR9010912&lt;/div&gt;
+          &lt;div class=&quot;topMenuBalance&quot;&gt;USD 0.00&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;nav-caret&quot;&gt;&lt;/div&gt;
+      &lt;/a&gt;
+      &lt;ul&gt;
+        &lt;a class=&quot;link&quot; href=&quot;#&quot;&gt;
+          &lt;li class=&quot;topMenuProfile&quot;&gt;Profile&lt;/li&gt;
+        &lt;/a&gt;
+        &lt;a class=&quot;link&quot; href=&quot;#&quot;&gt;
+          &lt;li class=&quot;topMenuSecurity&quot;&gt;Security &amp; Limits&lt;/li&gt;
+        &lt;/a&gt;
+        &lt;a class=&quot;link&quot; href=&quot;#&quot;&gt;
+          &lt;li class=&quot;topMenuMetaTrader&quot;&gt;MetaTraderAccounts&lt;/li&gt;
+        &lt;/a&gt;
+        &lt;div class=&quot;separator-line-thin-gray&quot;&gt;&lt;/div&gt;
+          &lt;div class=&quot;login-id-list&quot;&gt;
+          &lt;a href=&quot;#&quot; value=&quot;VRTC1191226&quot;&gt;
+            &lt;li&gt;
+              &lt;div&gt;Virtual Account&lt;/div&gt;
+              &lt;div&gt;VRTC1191226&lt;/div&gt;
+            &lt;/li&gt;
+          &lt;/a&gt;
+          &lt;div class=&quot;separator-line-thin-gray&quot;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;a href=&quot;javascript:;&quot;&gt;
+          &lt;li&gt;Sign out&lt;/li&gt;
+        &lt;/a&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+              </code>
+            </pre>
+                </div>
+            </div>
+        </div>
+        <div class="f-row">
+            <div class="f-item">
                 <h1 class="h1-title">Form</h1>
             </div>
         </div>
@@ -389,6 +600,94 @@
 
   &lt;textarea name=&quot;name&quot; rows=&quot;8&quot; cols=&quot;40&quot;&gt;&lt;/textarea&gt;
               </code>
+            </pre>
+                </div>
+            </div>
+        </div>
+        <div class="f-row">
+            <div class="f-item">
+                <h1 class="h1-title">Accordion</h1>
+            </div>
+        </div>
+        <div class="f-row">
+            <div class="f-item" style="min-width:300px;">
+                <div id="accordion" style="margin-top:20px;">
+                    <h3>Section 1</h3>
+                    <div>Contents of section 1</div>
+                    <h3>Section 2</h3>
+                    <div>Contents of section 2</div>
+                </div>
+                <script type="text/javascript">
+                    $('#accordion').accordion({
+                        heightStyle : 'content',
+                        collapsible : true,
+                        active      : false
+                    });
+                </script>
+            </div>
+            <div class="f-item">
+                <div class="code-sample">
+                    <pre class="prettyprint">
+                <code>
+  &lt;div id="accordion"&gt;
+    &lt;h3&gt;Section 1&lt;/h3&gt;
+    &lt;div&gt;Contents of section 1&lt;/div&gt;
+    &lt;h3&gt;Section 2&lt;/h3&gt;
+    &lt;div&gt;Contents of section 2&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;script type="text/javascript"&gt;
+    $('#accordion').accordion({
+      heightStyle : 'content',
+      collapsible : true,
+      active      : false
+    });
+  &lt;/script&gt;
+              </code>
+            </pre>
+                </div>
+            </div>
+        </div>
+        <div class="f-row">
+            <div class="f-item">
+                <h1 class="h1-title">Tabs</h1>
+            </div>
+        </div>
+        <div class="f-row">
+            <div class="f-item">
+                <div class="has-tabs" style="margin-top:20px;">
+                    <ul>
+                        <li><a href="#tab_1">Tab 1</a></li>
+                        <li><a href="#tab_2">Tab 2</a></li>
+                    </ul>
+                    <div id="tab_1">Contents of tab 1</div>
+                    <div id="tab_2">Contents of tab 2</div>
+                </div>
+                <script type='text/javascript'>
+                    $('.has-tabs').tabs();
+                </script>
+            </div>
+            <div class="f-item">
+                <div class="code-sample">
+                    <pre class="prettyprint">
+                <code>
+  &lt;div class="has-tabs"&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="#tab_1"&gt;Tab 1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#tab_2"&gt;Tab 2&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div id="tab_1"&gt;
+      Contents of tab 1
+    &lt;/div&gt;
+    &lt;div id="tab_2"&gt;
+      Contents of tab 2
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;script type="text/javascript"&gt;
+    $('.has-tabs').tabs();
+  &lt;/script&gt;
+              </code&gt;
             </pre>
                 </div>
             </div>

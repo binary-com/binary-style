@@ -55,7 +55,7 @@ ol
 }
 ul.bullet li
 {
-    list-style-image: url('data:image/svg+xml;utf8,<svg width="18px" height="18px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><defs><style>.cls-1{fill:#{rgba($COLOR_ORANGE, 1)};}</style></defs><title>bullet</title><path class="cls-1" d="M12,17.5A5.5,5.5,0,1,1,17.5,12,5.507,5.507,0,0,1,12,17.5Zm0-9A3.5,3.5,0,1,0,15.5,12,3.5,3.5,0,0,0,12,8.5Z"/></svg>');
+    list-style-image: svg-url('<svg width="18px" height="18px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path fill="#{rgba($COLOR_ORANGE, 1)}" d="M12,17.5A5.5,5.5,0,1,1,17.5,12,5.507,5.507,0,0,1,12,17.5Zm0-9A3.5,3.5,0,1,0,15.5,12,3.5,3.5,0,0,0,12,8.5Z"/></svg>');
 }
 ol,
 ul
@@ -90,7 +90,7 @@ ul.checked
         min-height: 24px;
         padding-left: 35px;
 
-        background: url('data:image/svg+xml;utf8,<svg width="24px" height="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><defs><style>.cls-1{fill:#{rgba($COLOR_ORANGE, 1)};}</style></defs><title>tick</title><polygon class="cls-1" points="8.308 22.298 0.399 14.39 3.934 10.854 8.308 15.228 20.066 3.47 23.601 7.005 8.308 22.298"/></svg>') no-repeat;
+        background: svg-url('<svg width="24px" height="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon fill="#{rgba($COLOR_ORANGE, 1)}" points="8.308 22.298 0.399 14.39 3.934 10.854 8.308 15.228 20.066 3.47 23.601 7.005 8.308 22.298"/></svg>') no-repeat;
     }
 }
 .reset_ol
@@ -105,12 +105,4 @@ ul.checked
         content: counters(item, '.') '. ';
         counter-increment: item;
     }
-}
-
-.container {
-    margin: 0 auto;
-    max-width: 960px;
-    padding-right: 10px;
-    padding-left: 10px;
-    box-sizing: border-box;
 }

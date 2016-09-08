@@ -12,6 +12,13 @@ img.responsive{
   background-color:#f2f2f2;
   padding:10px;
 }
+.container {
+    margin: 0 auto;
+    max-width: 960px;
+    padding-right: 10px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
 /*Header */
 #header #logo {
     display:inline-block;

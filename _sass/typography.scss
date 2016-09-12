@@ -2,7 +2,7 @@ h1, h2, h3, h4, li, p, a, span {
     text-rendering: optimizelegibility;
 }
 a, a:visited {
-    color: $COLOR_BLUE;
+    color: $primaryBrandColor;
     text-decoration: none;
     font-weight: bold;
     &:hover, &:active {
@@ -25,23 +25,23 @@ p {
 h1 {
     font-size: 36px;
     font-weight: 300;
-    color: $COLOR_ORANGE;
+    color: $secondaryBrandColor;
     a {
-        color: $COLOR_ORANGE !important;
+        color: $secondaryBrandColor !important;
     }
 }
 h1.dark {
-    color: $COLOR_BLUE;
+    color: $primaryBrandColor;
     a {
-        color: $COLOR_BLUE !important;
+        color: $primaryBrandColor !important;
     }
 }
 h2 {
     font-size: 28px;
-    color: $COLOR_ORANGE;
+    color: $secondaryBrandColor;
     font-weight: 300;
     a {
-        color: $COLOR_BLUE !important;
+        color: $primaryBrandColor !important;
     }
     em {
         text-decoration: underline;
@@ -52,17 +52,17 @@ h2 {
     }
 }
 h3 {
-    color: $COLOR_BLUE;
+    color: $primaryBrandColor;
     font-size: 22px;
     font-weight: 300;
     a {
-        color: $COLOR_BLUE !important;
+        color: $primaryBrandColor !important;
     }
 }
 h4 {
-    color: $COLOR_BLACK;
+    color: $contentColor;
     a {
-        color: $COLOR_BLACK !important;
+        color: $contentColor !important;
     }
     font-size: 18px;
 }

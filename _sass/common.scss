@@ -9,36 +9,36 @@ body
     margin: 0;
     padding: 0;
 
-    color: $COLOR_BLACK;
-    background: $COLOR_WHITE;
+    color: $contentColor;
+    background: $contentInverseColor;
     background-repeat: repeat-x;
     background-position: bottom;
 }
 .primary-color{
-  background-color:$COLOR_BLUE;
+  background-color:$primaryBrandColor;
 }
 .primary-bg-color{
-  background-color:$COLOR_BLUE;
+  background-color:$primaryBrandColor;
 }
 .secondary-color{
-  color:$COLOR_ORANGE;
+  color:$secondaryBrandColor;
 }
 .secondary-bg-color{
-  background-color:$COLOR_ORANGE;
+  background-color:$secondaryBrandColor;
 }
 .primary-color-dark{
-  background-color:$COLOR_DARK_BLUE;
+  background-color:$darkPrimaryBrandColor;
 }
 .primary-bg-color-dark{
-  background-color:$COLOR_DARK_BLUE;
+  background-color:$darkPrimaryBrandColor;
 }
 header,
 #header,
 .header
 {
     border-top: 2px solid $COLOR_LIGHT_BLUE;
-    border-bottom: 4px solid $COLOR_ORANGE;
-    background: $COLOR_BLUE;
+    border-bottom: 4px solid $secondaryBrandColor;
+    background: $primaryBrandColor;
 }
 ol,
 ul
@@ -55,7 +55,7 @@ ol
 }
 ul.bullet li
 {
-    list-style-image: svg-url('<svg width="18px" height="18px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path fill="#{rgba($COLOR_ORANGE, 1)}" d="M12,17.5A5.5,5.5,0,1,1,17.5,12,5.507,5.507,0,0,1,12,17.5Zm0-9A3.5,3.5,0,1,0,15.5,12,3.5,3.5,0,0,0,12,8.5Z"/></svg>');
+    list-style-image: svg-url('<svg width="18px" height="18px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path fill="#{rgba($secondaryBrandColor, 1)}" d="M12,17.5A5.5,5.5,0,1,1,17.5,12,5.507,5.507,0,0,1,12,17.5Zm0-9A3.5,3.5,0,1,0,15.5,12,3.5,3.5,0,0,0,12,8.5Z"/></svg>');
 }
 ol,
 ul
@@ -90,7 +90,7 @@ ul.checked
         min-height: 24px;
         padding-left: 35px;
 
-        background: svg-url('<svg width="24px" height="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon fill="#{rgba($COLOR_ORANGE, 1)}" points="8.308 22.298 0.399 14.39 3.934 10.854 8.308 15.228 20.066 3.47 23.601 7.005 8.308 22.298"/></svg>') no-repeat;
+        background: svg-url('<svg width="24px" height="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon fill="#{rgba($secondaryBrandColor, 1)}" points="8.308 22.298 0.399 14.39 3.934 10.854 8.308 15.228 20.066 3.47 23.601 7.005 8.308 22.298"/></svg>') no-repeat;
     }
 }
 .reset_ol

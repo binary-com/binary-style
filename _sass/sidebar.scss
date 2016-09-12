@@ -4,24 +4,24 @@
     li {
       list-style-image: none;
       margin: 0;
-      background: $COLOR_LIGHT_GRAY;
+      background: $fillColor;
       line-height: 150%;
-      border-bottom: 1px solid $COLOR_WHITE;
+      border-bottom: 1px solid $contentInverseColor;
       &:hover {
-        background: $COLOR_GRAY;
+        background: $borderColor;
       }
       a {
         font-weight: normal;
         text-decoration: none;
         display: block;
         padding: 5px 5px 5px 10px;
-        color: $COLOR_BLUE;
+        color: $primaryBrandColor;
       }
     }
     li.selected {
-      background: $COLOR_BLUE;
+      background: $primaryBrandColor;
       a {
-        color: $COLOR_WHITE;
+        color: $contentInverseColor;
         text-decoration: none;
       }
     }

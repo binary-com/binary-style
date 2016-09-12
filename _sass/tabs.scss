@@ -9,7 +9,7 @@
         li {
             border: none;
             list-style-image: none;
-            background: $COLOR_LIGHT_GRAY;
+            background: $fillColor;
             border-radius: $BORDER_RADIUS $BORDER_RADIUS 0 0;
             margin: 0 2px 0 0;
             padding: 0 10px;
@@ -17,18 +17,18 @@
                 padding: 0 !important;
                 font-weight: normal;
                 text-decoration: none;
-                color: $COLOR_BLACK;
+                color: $contentColor;
                 font-size: 90%;
                 background: transparent;
             }
         }
         li.active,
         li.ui-tabs-active {
-            background: $COLOR_BLUE;
-            color: $COLOR_WHITE;
+            background: $primaryBrandColor;
+            color: $contentInverseColor;
             a {
                 background: none;
-                color: $COLOR_WHITE;
+                color: $contentInverseColor;
                 font-weight: normal;
                 text-decoration: none;
                 padding: 0;
@@ -40,7 +40,7 @@
         }
     }
     .ui-tabs-panel {
-        border: 1px solid $COLOR_GRAY;
+        border: 1px solid $borderColor;
         padding: 10px;
     }
 }

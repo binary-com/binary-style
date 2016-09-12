@@ -3,8 +3,8 @@
     font-size: 93%;
 }
 .notice-msg {
-    color: $COLOR_BLACK;
-    background-color: $COLOR_YELLOW;
+    color: $contentColor;
+    background-color: $noticeColor;
     padding: 10px;
     overflow: hidden;
 }

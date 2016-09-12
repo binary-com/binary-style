@@ -18,10 +18,10 @@ button {
     cursor: pointer;
     font-size: $FONT_SIZE_N;
     border: 0;
-    background: $COLOR_GREEN;
-    color: $COLOR_WHITE;
+    background: $positiveColor;
+    color: $contentInverseColor;
     &:visited {
-        color: $COLOR_WHITE;
+        color: $contentInverseColor;
     }
     &:active,
     &:hover {
@@ -35,13 +35,13 @@ button {
         @include link-button;
         overflow: visible;
         border: 0;
-        color: $COLOR_WHITE;
-        background: $COLOR_GREEN;
+        color: $contentInverseColor;
+        background: $positiveColor;
         &:hover {
           background-color: $COLOR_DARK_GREEN;
         }
         &visited{
-          color: $COLOR_WHITE;;
+          color: $contentInverseColor;;
         }
     }
 }
@@ -52,11 +52,11 @@ button {
         @include link-button;
         overflow: visible;
         border: 0;
-        color: $COLOR_BLACK;
-        background: $COLOR_LIGHT_GRAY;
+        color: $contentColor;
+        background: $fillColor;
         &:hover {
             text-decoration: none;
-            background: $COLOR_GRAY;
+            background: $borderColor;
         }
     }
 }
@@ -68,13 +68,13 @@ button {
         overflow: visible;
         white-space: nowrap;
         border: 0;
-        color: $COLOR_GRAY;
-        background: $COLOR_LIGHT_GRAY;
+        color: $borderColor;
+        background: $fillColor;
         cursor: default;
         &:active,
         &:hover {
-            color: $COLOR_GRAY;
-            background: $COLOR_LIGHT_GRAY;
+            color: $borderColor;
+            background: $fillColor;
         }
     }
 }

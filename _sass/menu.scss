@@ -2,26 +2,26 @@
 .nav-menu {
     font-size: 1rem;
     a {
-        color: $COLOR_WHITE;
+        color: $contentInverseColor;
     }
     & > li {
         position: relative;
         text-align: center;
         > ul {
             width: 100%;
-            background-color: $COLOR_LIGHT_GRAY;
+            background-color: $fillColor;
         }
     }
 }
 
 .main-nav {
     width: 165px;
-    border: 1px solid $COLOR_BLUE;
+    border: 1px solid $primaryBrandColor;
     position: absolute;
     right: 0;
     padding: 0;
     margin: 0;
-    background-color: $COLOR_BLUE;
+    background-color: $primaryBrandColor;
     transition: none !important;
     & > li {
         margin-top: 3px;
@@ -34,7 +34,7 @@
         }
         & > ul {
             margin: -18px -1px;
-            border: 1px solid $COLOR_GRAY;
+            border: 1px solid $borderColor;
             padding: 0;
             a {
                 color: initial;
@@ -42,7 +42,7 @@
                     margin-top: 0;
                     padding: 7px 0;
                     &:hover {
-                      background-color: $COLOR_GRAY;
+                      background-color: $borderColor;
                     }
                 }
             }
@@ -64,13 +64,13 @@
 }
 
 #all-accounts, #all-accounts-top {
-    background-color: $COLOR_LIGHT_GRAY;
-    border: 1px solid $COLOR_GRAY;
+    background-color: $fillColor;
+    border: 1px solid $borderColor;
     z-index: 99999;
     opacity: 0;
     visibility: hidden;
     & > li a {
-        color: $COLOR_BLACK;
+        color: $contentColor;
     }
 }
 
@@ -83,5 +83,5 @@
 }
 
 .separator-line-thin-gray {
-    border-top: 1px solid $COLOR_GRAY;
+    border-top: 1px solid $borderColor;
 }

@@ -5,7 +5,7 @@ table
     line-height: 1.5em;
     width: 100%;
     .even {
-        background-color: $COLOR_WHITE;
+        background-color: $contentInverseColor;
     }
     * {
         font-size: 1em;
@@ -14,8 +14,8 @@ table
         line-height: 1.1em;
         font-weight: bold;
         padding: 3px 8px;
-        background: $COLOR_LIGHT_GRAY;
-        border-bottom: 1px solid $COLOR_LIGHT_GRAY;
+        background: $fillColor;
+        border-bottom: 1px solid $fillColor;
         vertical-align: middle;
         &#pf-bet-details {
             text-align: left;
@@ -31,7 +31,7 @@ table
         vertical-align: top;
         border-width: 0 1px;
         padding: 4px 4px;
-        border-bottom: 3px solid $COLOR_LIGHT_GRAY;
+        border-bottom: 3px solid $fillColor;
         &.num {
             text-align: center;
         }

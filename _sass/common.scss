@@ -41,18 +41,6 @@ body
 .border-color{
   color:$borderColor;
 }
-header,
-#header,
-.header
-{
-    border-top: 2px solid $primaryBrandColor;
-    border-bottom: 4px solid $secondaryBrandColor;
-    background: $primaryBrandColor;
-}
-#header a {
-  color: $contentInverseColor;
-  text-decoration: none;
-}
 ol,
 ul
 {
@@ -121,6 +109,22 @@ ul.checked
 }
 .border-bottom {
     border-bottom: 1px solid $borderColor;
+}
+//header
+header,
+#header,
+.header
+{
+    border-top: 2px solid $primaryBrandColor;
+    border-bottom: 4px solid $secondaryBrandColor;
+    background: $primaryBrandColor;
+}
+#header a {
+  color: $contentInverseColor;
+  text-decoration: none;
+}
+#header li.active a {
+  color: $secondaryBrandColor;
 }
 //footer rules
 #footer a {

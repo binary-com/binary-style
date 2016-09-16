@@ -5,6 +5,7 @@ select, input, textarea {
     font-style: inherit;
     padding: 2px 3px;
     border: 1px solid $fillColor;
+    color: $contentColor;
     background: $contentInverseColor;
     border-radius: $BORDER_RADIUS;
 }

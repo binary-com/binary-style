@@ -38,6 +38,9 @@ body
 .fill-bg-color{
   background-color: $fillColor;
 }
+.border-color{
+  color:$borderColor;
+}
 header,
 #header,
 .header
@@ -115,6 +118,11 @@ ul.checked
         content: counters(item, '.') '. ';
         counter-increment: item;
     }
+}
+.separator-line {
+    border-bottom: 1px solid $borderColor;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 //footer rules
 #footer a {

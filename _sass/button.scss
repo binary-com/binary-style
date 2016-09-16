@@ -25,7 +25,7 @@ button {
     }
     &:active,
     &:hover {
-        background-color: $COLOR_DARK_GREEN;
+        background-color: $darkPositiveColor;
     }
 }
 .button {
@@ -38,7 +38,7 @@ button {
         color: $contentInverseColor;
         background: $positiveColor;
         &:hover {
-          background-color: $COLOR_DARK_GREEN;
+          background-color: $darkPositiveColor;
         }
         &visited{
           color: $contentInverseColor;;

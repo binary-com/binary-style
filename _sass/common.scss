@@ -35,6 +35,9 @@ body
 .content-inverse-color{
   color:$contentInverseColor;
 }
+.fill-bg-color{
+  background-color: $fillColor;
+}
 header,
 #header,
 .header
@@ -113,5 +116,5 @@ ul.checked
 #footer a {
   font-size: $FONT_SIZE_S;
   font-weight: 400;
-  color: $contentInverseColor; 
+  color: $contentInverseColor;
 }

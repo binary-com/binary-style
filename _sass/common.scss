@@ -109,3 +109,9 @@ ul.checked
         counter-increment: item;
     }
 }
+//footer rules
+#footer a {
+  font-size: $FONT_SIZE_S;
+  font-weight: 400;
+  color: $contentInverseColor; 
+}

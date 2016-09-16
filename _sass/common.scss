@@ -46,6 +46,10 @@ header,
     border-bottom: 4px solid $secondaryBrandColor;
     background: $primaryBrandColor;
 }
+#header a {
+  color: $contentInverseColor;
+  text-decoration: none;
+}
 ol,
 ul
 {

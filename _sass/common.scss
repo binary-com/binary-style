@@ -119,10 +119,8 @@ ul.checked
         counter-increment: item;
     }
 }
-.separator-line {
+.border-bottom {
     border-bottom: 1px solid $borderColor;
-    margin-top: 10px;
-    margin-bottom: 10px;
 }
 //footer rules
 #footer a {

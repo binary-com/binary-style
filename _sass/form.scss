@@ -13,6 +13,15 @@ select, input, textarea {
     color: $black;
     margin-top: 3px
 }
-placeholder {
-  color:$secondaryContentColor;
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $secondaryContentColor;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: $secondaryContentColor;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: $secondaryContentColor;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: $secondaryContentColor;
 }

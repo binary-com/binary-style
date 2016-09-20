@@ -2,6 +2,8 @@
     .ui-accordion-header {
         border-radius: 0;
         margin-bottom: -3px;
+        font-size: $FONT_SIZE_N;
+        font-weight: normal;
     }
     .ui-icon {
         display: none;
@@ -26,7 +28,7 @@
         background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="#{rgba($COLOR_BLUE, 1)}" d="M8.59,16.59,13.17,12,8.59,7.41,10,6l6,6-6,6Z"/></svg>');
         background-color: $COLOR_LIGHT_GRAY;
         border: 1px solid $COLOR_GRAY;
-        color: $COLOR_BLACK;
+        color: $COLOR_BLUE;
     }
     .ui-state-hover {
         background-color: $COLOR_GRAY;

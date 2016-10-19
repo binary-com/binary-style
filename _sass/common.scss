@@ -111,7 +111,7 @@ ul.checked
     border-bottom: 1px solid $borderColor;
 }
 .contract_error{
-  background-color: $noticeColor;
+  background-color: $noticeColor !important;
 }
 //header
 header,

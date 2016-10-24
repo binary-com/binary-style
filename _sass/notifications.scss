@@ -1,6 +1,7 @@
 .error-msg {
     font-style: italic;
-    font-size: 93%;
+    font-size: $FONT_SIZE_S;
+    color:$negativeColor;
 }
 .notice-msg {
     color: $contentColor;

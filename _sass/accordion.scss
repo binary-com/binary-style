@@ -19,24 +19,24 @@
         background-position: right;
     }
     .ui-state-active.ui-state-default, .ui-state-active.ui-state-default.ui-state-hover {
-        background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="#{rgba($COLOR_WHITE, 1)}" d="M7.41,7.84,12,12.42l4.59-4.58L18,9.25l-6,6-6-6Z"/></svg>');
-        background-color: $COLOR_BLUE;
-        border-color: $COLOR_BLUE;
-        color: $COLOR_WHITE;
+        background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="#{rgba($contentInverseColor, 1)}" d="M7.41,7.84,12,12.42l4.59-4.58L18,9.25l-6,6-6-6Z"/></svg>');
+        background-color: $primaryBrandColor;
+        border-color: $primaryBrandColor;
+        color: $contentInverseColor;
     }
     .ui-state-default, .ui-state-hover {
-        background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="#{rgba($COLOR_BLUE, 1)}" d="M8.59,16.59,13.17,12,8.59,7.41,10,6l6,6-6,6Z"/></svg>');
-        background-color: $COLOR_LIGHT_GRAY;
-        border: 1px solid $COLOR_GRAY;
-        color: $COLOR_BLUE;
+        background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="#{rgba($primaryBrandColor, 1)}" d="M8.59,16.59,13.17,12,8.59,7.41,10,6l6,6-6,6Z"/></svg>');
+        background-color: $fillColor;
+        border: 1px solid $borderColor;
+        color: $contentColor;
     }
     .ui-state-hover {
-        background-color: $COLOR_GRAY;
+        background-color: $borderColor;
     }
     .ui-accordion-content {
         border-radius: 0;
     }
     .ui-widget-content {
-        border: 1px solid $COLOR_GRAY;
+        border: 1px solid $borderColor;
     }
 }

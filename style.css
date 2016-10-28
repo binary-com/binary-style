@@ -19,6 +19,10 @@ img.responsive{
     padding-left: 10px;
     box-sizing: border-box;
 }
+.palette{
+  padding: 10px;
+  border: 1px solid #000;
+}
 /*Header */
 #header #logo {
     display:inline-block;

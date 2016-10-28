@@ -4,12 +4,25 @@ select, input, textarea {
     font-weight: inherit;
     font-style: inherit;
     padding: 2px 3px;
-    border: 1px solid $COLOR_LIGHT_GRAY;
-    background: $COLOR_WHITE;
+    border: 1px solid $fillColor;
+    color: $contentColor;
+    background: $contentInverseColor;
     border-radius: $BORDER_RADIUS;
 }
 .hint {
     font-size: $FONT_SIZE_S;
-    color: $COLOR_DARK_GRAY;
+    color: $black;
     margin-top: 3px
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $secondaryContentColor;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: $secondaryContentColor;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: $secondaryContentColor;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: $secondaryContentColor;
 }

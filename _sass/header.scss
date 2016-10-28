@@ -7,7 +7,7 @@
 }
 
 #topbar, #topbar a {
-    color: $COLOR_WHITE;
+    color: $contentInverseColor;
     &:hover {
         text-decoration: none;
     }

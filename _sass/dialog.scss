@@ -1,21 +1,6 @@
-.ui-dialog {
-    padding: 0!important;
-    .ui-dialog-titlebar-close {
-        width: 14px !important;
-        height: 14px !important;
-    }
-}
-
 .ui-dialog-content {
-    color: $contentColor;
-    background: $contentInverseColor;
-}
-
-.ui-corner-all {
-    border-bottom-right-radius: 0!important;
-    border-bottom-left-radius: 0!important;
-    border-top-right-radius: 0!important;
-    border-top-left-radius: 0!important;
+    color: $contentColor!important;
+    background: $contentInverseColor!important;
 }
 
 .ui-state-default,
@@ -33,25 +18,4 @@
     color: #FFFFFF!important;
     font-family: $FONT-STACK !important;
     font-weight: normal!important;
-}
-
-.ui-dialog .ui-dialog-content {
-    padding: .5em .5em;
-    padding-bottom: 0;
-}
-.ui-dialog-titlebar-buttonpane {
-  height: 14px !important;
-  margin-top: -7px !important;
-  margin-right: 10px!important;
-}
-
-button.ui-button-text-only {
-    margin-top: 15px;
-    /*height: 46px;*/
-    margin: 0;
-    padding: 0;
-}
-
-button.ui-button-text-only .ui-menu {
-    border-color: $secondaryBrandColor;
 }

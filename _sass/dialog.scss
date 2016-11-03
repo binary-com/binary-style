@@ -21,10 +21,10 @@
 .ui-state-default,
 .ui-widget-content .ui-state-default,
 .ui-widget-header .ui-state-default {
-    border: 0px solid $primaryBrandColor;
-    background: $primaryBrandColor;
+    border: 0px solid $primaryBrandColor!important;
+    background: $primaryBrandColor!important;
     font-weight: normal;
-    color: #FFFFFF;
+    color: #FFFFFF!important;
 }
 
 .ui-widget-header {

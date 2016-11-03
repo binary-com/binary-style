@@ -28,9 +28,9 @@
 }
 
 .ui-widget-header {
-    border: 1px solid $primaryBrandColor;
+    border: 1px solid $primaryBrandColor!important;
     background: $primaryBrandColor!important;
-    color: #FFFFFF;
+    color: #FFFFFF!important;
     font-family: $FONT-STACK !important;
     font-weight: normal!important;
 }

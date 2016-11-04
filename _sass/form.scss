@@ -26,3 +26,15 @@ select, input, textarea {
 :-moz-placeholder { /* Firefox 18- */
   color: $secondaryContentColor;
 }
+
+//Jquery ui Selectmenu
+.ui-selectmenu-button {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    border: 1px solid $fillColor!important;
+    color: $contentColor!important;
+    background: $contentInverseColor!important;
+    border-radius: $BORDER_RADIUS!important;
+}

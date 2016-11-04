@@ -8,13 +8,9 @@
     font-weight: 400;
     font-family: inherit;
     border-radius: $BORDER_RADIUS;
-    box-shadow: $z-depth-1;
-    transition: box-shadow .25s;
     &:active,
     &:hover {
         text-decoration: none;
-        box-shadow: $z-depth-1-half;
-        transition: box-shadow .25s;
     }
 }
 button {
@@ -23,7 +19,7 @@ button {
     font-size: $FONT_SIZE_N;
     border: 0;
     background: $positiveColor;
-    color: $contentInverseColor;    
+    color: $contentInverseColor;
     &:visited {
         color: $contentInverseColor;
     }
@@ -56,22 +52,17 @@ button {
         @include link-button;
         overflow: visible;
         border: 0;
-        color: $black;
-        background: $white;
-        border: 1px solid $fillColor;
-        border-radius: $BORDER_RADIUS;       
+        color: $contentColor;
+        background: $fillColor;
         &:hover {
             text-decoration: none;
-            background: $secondaryContentColor;
-            border: 1px solid $secondaryContentColor;
+            background: $borderColor;
         }
     }
 }
 .button-disabled {
     cursor: pointer;
     margin-bottom: 0.5em;
-    border-radius: $BORDER_RADIUS;
-    box-shadow: none!important;
     span {
         @include link-button;
         overflow: visible;
@@ -80,7 +71,6 @@ button {
         color: $borderColor;
         background: $fillColor;
         cursor: default;
-        box-shadow: none!important;
         &:active,
         &:hover {
             color: $borderColor;

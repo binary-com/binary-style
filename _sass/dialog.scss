@@ -1,0 +1,21 @@
+.ui-dialog-content {
+    color: $contentColor!important;
+    background: $contentInverseColor!important;
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+    border: 0px solid $primaryBrandColor!important;
+    background: $primaryBrandColor!important;
+    font-weight: normal;
+    color: #FFFFFF!important;
+}
+
+.ui-widget-header {
+    border: 1px solid $primaryBrandColor!important;
+    background: $primaryBrandColor!important;
+    color: #FFFFFF!important;
+    font-family: $FONT-STACK !important;
+    font-weight: normal!important;
+}

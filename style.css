@@ -4,10 +4,6 @@ main {
   margin: 0 auto;
   max-width: 1000px;
 }
-img.responsive{
-  width: 100%;
-    height: auto;
-}
 .h1-title{
   background-color:#f2f2f2;
   padding:10px;
@@ -24,10 +20,6 @@ img.responsive{
   border: 1px solid #000;
 }
 /*Header */
-#header #logo {
-    display:inline-block;
-    width: 24%;
-}
 .dark-blue {
     background: #15212d;
 }

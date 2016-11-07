@@ -28,13 +28,13 @@ select, input, textarea {
 }
 
 //Jquery ui Selectmenu
-.ui-selectmenu-button {
+.ui-widget-content .ui-state-default.ui-selectmenu-button {
     font-family: inherit;
     font-size: inherit;
     font-weight: inherit;
     font-style: inherit;
-    border: 1px solid $fillColor!important;
-    color: $contentColor!important;
-    background: $contentInverseColor!important;
-    border-radius: $BORDER_RADIUS!important;
+    border: 1px solid $fillColor;
+    color: $contentColor;
+    background: $contentInverseColor;
+    border-radius: $BORDER_RADIUS;
 }

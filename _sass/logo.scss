@@ -32,7 +32,12 @@ img.responsive{
 }
 
 @media screen and (max-width: 769px) {
-    #header .logo {
-        width: 100%;
+    #header {
+        .logo {
+            width: 100%;
+        }
+        .binary-logo-text {
+            display: none;
+        }
     }
 }

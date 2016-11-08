@@ -6,10 +6,12 @@
             width: 80%;
         }
     }
+    .logo-parent {
+        display: inline-flex;
+    }
 }
 
 .logo-parent {
-    display: inline-flex;
     padding: 10px 0;
 }
 

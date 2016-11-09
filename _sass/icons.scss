@@ -1,0 +1,92 @@
+.candlestick-icon{
+	background-image: svg-url('<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><defs><style>.cls-1{fill:none;}.cls-1,.cls-2{stroke:#{rgba($primaryBrandColor,1)};stroke-miterlimit:10;stroke-width:2px;}.cls-2{fill:#{rgba($contentInverseColor,1)};}</style></defs><title>candle</title><line class="cls-1" x1="25" y1="8.5" x2="25" y2="41.5"/><rect class="cls-2" x="20.842" y="17.146" width="8.316" height="15.708"/></svg>');
+}
+
+.candlestick-w-icon{
+	background-image: svg-url('<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><defs><style>.cls-1{fill:none;}.cls-1,.cls-2{stroke:#{rgba($contentInverseColor,1)};stroke-miterlimit:10;stroke-width:2px;}.cls-2{fill:#{rgba($primaryBrandColor,1)};}</style></defs><title>candle</title><line class="cls-1" x1="25" y1="8.5" x2="25" y2="41.5"/><rect class="cls-2" x="20.842" y="17.146" width="8.316" height="15.708"/></svg>');
+}
+
+.chart_template-icon{
+	background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g fill="none" fill-rule="evenodd">
+    <rect width="20" height="20" fill="none"/>
+    <g fill="#{rgba($primaryBrandColor,1)}" transform="translate(3 3)">
+      <path d="M4.05864772,10.5881597 L3.96565789,10.5881597 C1.90358816,10.5916328 0.184234309,8.96390779 0.0137311841,6.84684145 C-0.156771941,4.7297751 1.27867882,2.83239362 3.31310798,2.48571907 C4.29476577,0.740866197 6.20012412,-0.222868908 8.14053573,0.0439938228 C10.0809473,0.310856554 11.6741844,1.75574974 12.1771711,3.70478418 C13.9107218,3.99533956 15.1352245,5.6113735 14.9880145,7.4143868 C14.8408044,9.2174001 13.3714727,10.6000077 11.6151664,10.5881597 L11.5525941,10.5881597 L11.5525941,9.68122738 L11.5964329,9.68109808 C12.4888104,9.71384902 13.3303615,9.25365832 13.8040821,8.47387535 C14.2778026,7.69409239 14.3117231,6.71318475 13.8930661,5.90065085 C13.4744092,5.08811695 12.6667786,4.56740002 11.7744011,4.53464908 L11.4621762,4.51213337 L11.3997313,4.1904803 C11.0706846,2.4807448 9.72928238,1.17160096 8.05430581,0.925506607 C6.37932925,0.679412256 4.7361642,1.55005136 3.95629115,3.09685989 L3.8501347,3.30593438 L3.62221057,3.33166663 C1.99609499,3.53101612 0.800142372,4.99766193 0.890110859,6.68215272 C0.980079347,8.3666435 2.32500627,9.68926151 3.96253565,9.7036138 L4.05864772,9.70333032 L4.05864772,10.5881597 Z"/>
+      <path d="M6.8034056 12.0588235L6.8034056 7.94117647 5.54953561 7.94117647 5.54953561 12.0588235 4.85294118 12.0588235 6.17647059 14.7058824 7.5 12.0588235 6.8034056 12.0588235zM8.63777091 8.82352941L9.89164089 8.82352941 9.89164089 13.2352941 8.63777091 13.2352941 8.63777091 8.82352941zM9.26470588 6.17647059L10.5882353 8.82352941 7.94117647 8.82352941 9.26470588 6.17647059z"/>
+    </g>
+  </g>
+</svg>');
+}
+
+.chart_template-w-icon{
+	background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g fill="none" fill-rule="evenodd">
+    <rect width="20" height="20" fill="none"/>
+    <g fill="#{rgba($contentInverseColor,1)}" transform="translate(3 3)">
+      <path d="M4.05864772,10.5881597 L3.96565789,10.5881597 C1.90358816,10.5916328 0.184234309,8.96390779 0.0137311841,6.84684145 C-0.156771941,4.7297751 1.27867882,2.83239362 3.31310798,2.48571907 C4.29476577,0.740866197 6.20012412,-0.222868908 8.14053573,0.0439938228 C10.0809473,0.310856554 11.6741844,1.75574974 12.1771711,3.70478418 C13.9107218,3.99533956 15.1352245,5.6113735 14.9880145,7.4143868 C14.8408044,9.2174001 13.3714727,10.6000077 11.6151664,10.5881597 L11.5525941,10.5881597 L11.5525941,9.68122738 L11.5964329,9.68109808 C12.4888104,9.71384902 13.3303615,9.25365832 13.8040821,8.47387535 C14.2778026,7.69409239 14.3117231,6.71318475 13.8930661,5.90065085 C13.4744092,5.08811695 12.6667786,4.56740002 11.7744011,4.53464908 L11.4621762,4.51213337 L11.3997313,4.1904803 C11.0706846,2.4807448 9.72928238,1.17160096 8.05430581,0.925506607 C6.37932925,0.679412256 4.7361642,1.55005136 3.95629115,3.09685989 L3.8501347,3.30593438 L3.62221057,3.33166663 C1.99609499,3.53101612 0.800142372,4.99766193 0.890110859,6.68215272 C0.980079347,8.3666435 2.32500627,9.68926151 3.96253565,9.7036138 L4.05864772,9.70333032 L4.05864772,10.5881597 Z"/>
+      <path d="M6.8034056 12.0588235L6.8034056 7.94117647 5.54953561 7.94117647 5.54953561 12.0588235 4.85294118 12.0588235 6.17647059 14.7058824 7.5 12.0588235 6.8034056 12.0588235zM8.63777091 8.82352941L9.89164089 8.82352941 9.89164089 13.2352941 8.63777091 13.2352941 8.63777091 8.82352941zM9.26470588 6.17647059L10.5882353 8.82352941 7.94117647 8.82352941 9.26470588 6.17647059z"/>
+    </g>
+  </g>
+</svg>');
+}
+.comparison-icon {
+	background-image: svg-url('<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><defs><style>.cls-1{fill:none;}.cls-1,.cls-2{stroke:#{rgba($primaryBrandColor,1)};stroke-miterlimit:10;stroke-width:2px;}.cls-2{fill:#{rgba($fillColor,1)};}.cls-3{fill:#{rgba($primaryBrandColor,1)}</style></defs><title>comparison</title><line class="cls-1" x1="8.5" y1="12.65" x2="41.5" y2="12.65"/><line class="cls-1" x1="16.69" y1="39.35" x2="33.31" y2="39.35"/><circle class="cls-2" cx="25" cy="12.65" r="2"/><path class="cls-3" d="M14,17.78l3.43,8.15a3.47,3.47,0,0,1-6.9,0L14,17.78m0-5.13L8.52,25.57A5.47,5.47,0,0,0,14,31h0a5.47,5.47,0,0,0,5.47-5.47L14,12.65Z"/><path class="cls-3" d="M19.46,25.57A5.47,5.47,0,0,1,14,31h0a5.47,5.47,0,0,1-5.47-5.47Z"/><path class="cls-3" d="M36,17.78l3.43,8.15a3.47,3.47,0,0,1-6.9,0L36,17.78m0-5.13-5.5,12.92A5.47,5.47,0,0,0,36,31h0a5.47,5.47,0,0,0,5.47-5.47L36,12.65Z"/><path class="cls-3" d="M41.48,25.57A5.47,5.47,0,0,1,36,31h0a5.47,5.47,0,0,1-5.47-5.47Z"/><line class="cls-1" x1="25" y1="14.65" x2="25" y2="39.35"/></svg>');
+}
+.crosshair-icon {
+	background-image: svg-url('<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><defs><style>.cls-1{fill:none;stroke:#{rgba($primaryBrandColor,1)};stroke-miterlimit:10;stroke-width:2px;}</style></defs><title>crosshair</title><line class="cls-1" x1="8.5" y1="25" x2="20.095" y2="25"/><line class="cls-1" x1="29.905" y1="25" x2="41.5" y2="25"/><line class="cls-1" x1="25" y1="8.5" x2="25" y2="20.095"/><line class="cls-1" x1="25" y1="29.905" x2="25" y2="41.5"/></svg>');
+}
+.dot-icon {
+	background-image: svg-url('<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><defs><style>.cls-1{fill:#{rgba($primaryBrandColor,1)};}</style></defs><title>dot</title><circle class="cls-1" cx="25" cy="25" r="3.234"/><circle class="cls-1" cx="38.266" cy="25" r="3.234"/><circle class="cls-1" cx="11.734" cy="25" r="3.234"/></svg>');
+}
+.dot-w-icon {
+	background-image: svg-url('<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><defs><style>.cls-1{fill:#{rgba($contentInverseColor,1)};}</style></defs><title>dot</title><circle class="cls-1" cx="25" cy="25" r="3.234"/><circle class="cls-1" cx="38.266" cy="25" r="3.234"/><circle class="cls-1" cx="11.734" cy="25" r="3.234"/></svg>');
+}
+.drawing-icon {
+	background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g fill="none" fill-rule="evenodd">
+    <rect width="20" height="20" fill="none"/>
+    <path fill="#{rgba($primaryBrandColor,1)}" d="M4,13.4995206 L4,15.9995133 L6.49999276,15.9995133 L13.8724714,8.62703469 L11.3724786,6.12704193 L4,13.4995206 Z M15.8049658,6.69454028 C16.0643625,6.43489417 16.0643625,6.01418912 15.8049658,5.75454301 L14.2499703,4.19454753 C13.9903242,3.93515082 13.5696191,3.93515082 13.309973,4.19454753 L12.0849766,5.41454399 L14.5849693,7.91453675 L15.8049658,6.69454028 Z"/>
+  </g>
+</svg>');
+}
+.drawing-w-icon {
+	background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g fill="none" fill-rule="evenodd">
+    <rect width="20" height="20" fill="none"/>
+    <path fill="#{rgba($contentInverseColor,1)}" d="M4,13.4995206 L4,15.9995133 L6.49999276,15.9995133 L13.8724714,8.62703469 L11.3724786,6.12704193 L4,13.4995206 Z M15.8049658,6.69454028 C16.0643625,6.43489417 16.0643625,6.01418912 15.8049658,5.75454301 L14.2499703,4.19454753 C13.9903242,3.93515082 13.5696191,3.93515082 13.309973,4.19454753 L12.0849766,5.41454399 L14.5849693,7.91453675 L15.8049658,6.69454028 Z"/>
+  </g>
+</svg>');
+}
+.indicator-icon {
+	background-image: svg-url('<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><defs><style>.cls-1{fill:none;stroke:#{rgba($primaryBrandColor,1)};stroke-miterlimit:10;stroke-width:2px;}.cls-2{fill:#{rgba($primaryBrandColor,1)};}</style></defs><title>indicator</title><polyline class="cls-1" points="7.14 16.68 18.02 7.5 31.84 19.3 42.86 10.75"/><rect class="cls-2" x="7.14" y="23.37" width="3.88" height="19.13"/><rect class="cls-2" x="15.1" y="15.67" width="3.88" height="26.83"/><rect class="cls-2" x="23.06" y="22.3" width="3.88" height="20.2"/><rect class="cls-2" x="31.02" y="26.8" width="3.88" height="15.7"/><rect class="cls-2" x="38.98" y="18.83" width="3.88" height="23.67"/></svg>');
+}
+.line-icon {
+	background-image: svg-url('<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><defs><style>.cls-1{fill:none;stroke:#{rgba($primaryBrandColor,1)};stroke-miterlimit:10;stroke-width:2px;}</style></defs><title>line</title><line class="cls-1" x1="7.14" y1="25" x2="42.86" y2="25"/></svg>');
+}
+.line-w-icon {
+	background-image: svg-url('<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><defs><style>.cls-1{fill:none;stroke:#{rgba($contentInverseColor,1)};stroke-miterlimit:10;stroke-width:2px;}</style></defs><title>line</title><line class="cls-1" x1="7.14" y1="25" x2="42.86" y2="25"/></svg>');
+}
+.linedot-icon {
+	background-image: svg-url('<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><defs><style>.cls-1{fill:#{rgba($primaryBrandColor,1)};}.cls-2{fill:none;stroke:#{rgba($primaryBrandColor,1)};stroke-miterlimit:10;stroke-width:2px;}</style></defs><title>linedot</title><circle class="cls-1" cx="25" cy="25" r="3.234"/><circle class="cls-1" cx="38.266" cy="25" r="3.234"/><circle class="cls-1" cx="11.734" cy="25" r="3.234"/><line class="cls-2" x1="11.734" y1="25" x2="38.266" y2="25"/></svg>');
+}
+.linedot-w-icon {
+	background-image: svg-url('<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><defs><style>.cls-1{fill:#{rgba($contentInverseColor,1)};}.cls-2{fill:none;stroke:#{rgba($contentInverseColor,1)};stroke-miterlimit:10;stroke-width:2px;}</style></defs><title>linedot</title><circle class="cls-1" cx="25" cy="25" r="3.234"/><circle class="cls-1" cx="38.266" cy="25" r="3.234"/><circle class="cls-1" cx="11.734" cy="25" r="3.234"/><line class="cls-2" x1="11.734" y1="25" x2="38.266" y2="25"/></svg>');
+}
+.ohlc-icon {
+	background-image: svg-url('<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><defs><style>.cls-1{fill:none;stroke:#{rgba($primaryBrandColor,1)};stroke-miterlimit:10;stroke-width:2px;}</style></defs><title>ohlc</title><line class="cls-1" x1="25" y1="8.5" x2="25" y2="41.5"/><line class="cls-1" x1="13.912" y1="14.403" x2="25" y2="14.403"/><line class="cls-1" x1="25" y1="35.597" x2="36.088" y2="35.597"/></svg>');
+}
+.ohlc-w-icon {
+	background-image: svg-url('<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><defs><style>.cls-1{fill:none;stroke:#{rgba($contentInverseColor,1)};stroke-miterlimit:10;stroke-width:2px;}</style></defs><title>ohlc</title><line class="cls-1" x1="25" y1="8.5" x2="25" y2="41.5"/><line class="cls-1" x1="13.912" y1="14.403" x2="25" y2="14.403"/><line class="cls-1" x1="25" y1="35.597" x2="36.088" y2="35.597"/></svg>');
+}
+.share-icon {
+	background-image: svg-url('<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><defs><style>.cls-1{fill:none;stroke:#{rgba($primaryBrandColor,1)};stroke-miterlimit:10;stroke-width:2px;}.cls-2{fill:#{rgba($primaryBrandColor,1)};}</style></defs><title>share</title><polyline class="cls-1" points="34.17 35.82 15.83 25 34.17 14.18"/><circle class="cls-2" cx="15.83" cy="25" r="3.5"/><circle class="cls-2" cx="34.17" cy="14.18" r="3.5"/><circle class="cls-2" cx="34.17" cy="35.82" r="3.5"/></svg>');
+}
+.share-w-icon {
+	background-image: svg-url('<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><defs><style>.cls-1{fill:none;stroke:#{rgba($contentInverseColor,1)};stroke-miterlimit:10;stroke-width:2px;}.cls-2{fill:#{rgba($contentInverseColor,1)};}</style></defs><title>share</title><polyline class="cls-1" points="34.17 35.82 15.83 25 34.17 14.18"/><circle class="cls-2" cx="15.83" cy="25" r="3.5"/><circle class="cls-2" cx="34.17" cy="14.18" r="3.5"/><circle class="cls-2" cx="34.17" cy="35.82" r="3.5"/></svg>');
+}
+.spline-icon {
+	background-image: svg-url('<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><defs><style>.cls-1{fill:none;stroke:#{rgba($primaryBrandColor,1)};stroke-miterlimit:10;stroke-width:2px;}</style></defs><title>spline</title><path class="cls-1" d="M8.5,23.733l3-3.559a6.468,6.468,0,0,1,10.52.9l4.619,7.862a6.468,6.468,0,0,0,10.858.458l4-5.656"/></svg>');
+}
+.spline-w-icon {
+	background-image: svg-url('<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><defs><style>.cls-1{fill:none;stroke:#{rgba($contentInverseColor,1)};stroke-miterlimit:10;stroke-width:2px;}</style></defs><title>spline</title><path class="cls-1" d="M8.5,23.733l3-3.559a6.468,6.468,0,0,1,10.52.9l4.619,7.862a6.468,6.468,0,0,0,10.858.458l4-5.656"/></svg>');
+}

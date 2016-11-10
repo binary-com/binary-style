@@ -1,12 +1,12 @@
 .candlestick-icon{
-	background-image: svg-url('<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+	background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 50 50">
     <line style="fill:none;stroke:#{rgba($primaryBrandColor,1)};stroke-miterlimit:10;stroke-width:2px;" x1="25" y1="8.5" x2="25" y2="41.5"/>
     <rect style="fill:#{rgba($contentInverseColor,1)};stroke:#{rgba($primaryBrandColor,1)};stroke-miterlimit:10;stroke-width:2px;" x="20.842" y="17.146" width="8.316" height="15.708"/>
     </svg>');
 }
 
 .candlestick-w-icon{
-  background-image: svg-url('<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+  background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 50 50">
     <line style="fill:none;stroke:#{rgba($contentInverseColor,1)};stroke-miterlimit:10;stroke-width:2px;" x1="25" y1="8.5" x2="25" y2="41.5"/>
     <rect style="fill:#{rgba($primaryBrandColor,1)};stroke:#{rgba($contentInverseColor,1)};stroke-miterlimit:10;stroke-width:2px;" x="20.842" y="17.146" width="8.316" height="15.708"/>
     </svg>');
@@ -36,7 +36,7 @@
 </svg>');
 }
 .comparison-icon {
-	background-image: svg-url('<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+	background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 50 50">
     <line style="fill:none;stroke:#{rgba($primaryBrandColor,1)};stroke-miterlimit:10;stroke-width:2px;" x1="8.5" y1="12.65" x2="41.5" y2="12.65"/>
     <line style="fill:none;stroke:#{rgba($primaryBrandColor,1)};stroke-miterlimit:10;stroke-width:2px;" x1="16.69" y1="39.35" x2="33.31" y2="39.35"/>
     <circle style="fill:#{rgba($fillColor,1)};stroke:#{rgba($primaryBrandColor,1)};stroke-miterlimit:10;stroke-width:2px;" cx="25" cy="12.65" r="2"/>
@@ -48,20 +48,20 @@
     </svg>');
 }
 .crosshair-icon {
-	background-image: svg-url('<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+	background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 50 50">
     <line style="fill:none;stroke:#{rgba($primaryBrandColor,1)};stroke-miterlimit:10;stroke-width:2px;" x1="8.5" y1="25" x2="20.095" y2="25"/>
     <line style="fill:none;stroke:#{rgba($primaryBrandColor,1)};stroke-miterlimit:10;stroke-width:2px;" x1="29.905" y1="25" x2="41.5" y2="25"/>
     <line style="fill:none;stroke:#{rgba($primaryBrandColor,1)};stroke-miterlimit:10;stroke-width:2px;" x1="25" y1="8.5" x2="25" y2="20.095"/>
     <line style="fill:none;stroke:#{rgba($primaryBrandColor,1)};stroke-miterlimit:10;stroke-width:2px;" x1="25" y1="29.905" x2="25" y2="41.5"/></svg>');
 }
 .dot-icon {
-	background-image: svg-url('<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+	background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 50 50">
     <circle style="fill:#{rgba($primaryBrandColor,1)};" cx="25" cy="25" r="3.234"/>
     <circle style="fill:#{rgba($primaryBrandColor,1)};" cx="38.266" cy="25" r="3.234"/>
     <circle style="fill:#{rgba($primaryBrandColor,1)};" cx="11.734" cy="25" r="3.234"/></svg>');
 }
 .dot-w-icon {
-	background-image: svg-url('<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+	background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 50 50">
     <circle style="fill:#{rgba($contentInverseColor,1)};" cx="25" cy="25" r="3.234"/>
     <circle style="fill:#{rgba($contentInverseColor,1)};" cx="38.266" cy="25" r="3.234"/>
     <circle style="fill:#{rgba($contentInverseColor,1)};" cx="11.734" cy="25" r="3.234"/></svg>');
@@ -83,7 +83,7 @@
 </svg>');
 }
 .indicator-icon {
-	background-image: svg-url('<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+	background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 50 50">
     <polyline style="fill:none;stroke:#{rgba($primaryBrandColor,1)};stroke-miterlimit:10;stroke-width:2px;" points="7.14 16.68 18.02 7.5 31.84 19.3 42.86 10.75"/>
     <rect style="fill:#{rgba($primaryBrandColor,1)};" x="7.14" y="23.37" width="3.88" height="19.13"/>
     <rect style="fill:#{rgba($primaryBrandColor,1)};" x="15.1" y="15.67" width="3.88" height="26.83"/>
@@ -92,58 +92,58 @@
     <rect style="fill:#{rgba($primaryBrandColor,1)};" x="38.98" y="18.83" width="3.88" height="23.67"/></svg>');
 }
 .line-icon {
-	background-image: svg-url('<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+	background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 50 50">
     <line style="fill:none;stroke:#{rgba($primaryBrandColor,1)};stroke-miterlimit:10;stroke-width:2px;" x1="7.14" y1="25" x2="42.86" y2="25"/></svg>');
 }
 .line-w-icon {
-	background-image: svg-url('<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+	background-image: svg-url('<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 50 50">
     <line style="fill:none;stroke:#{rgba($contentInverseColor,1)};stroke-miterlimit:10;stroke-width:2px;" x1="7.14" y1="25" x2="42.86" y2="25"/></svg>');
 }
 .linedot-icon {
-	background-image: svg-url('<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+	background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 50 50">
     <circle style="fill:#{rgba($primaryBrandColor,1)};" cx="25" cy="25" r="3.234"/>
     <circle style="fill:#{rgba($primaryBrandColor,1)};" cx="38.266" cy="25" r="3.234"/>
     <circle style="fill:#{rgba($primaryBrandColor,1)};" cx="11.734" cy="25" r="3.234"/>
     <line style="fill:none;stroke:#{rgba($primaryBrandColor,1)};stroke-miterlimit:10;stroke-width:2px;" x1="11.734" y1="25" x2="38.266" y2="25"/></svg>');
 }
 .linedot-w-icon {
-  background-image: svg-url('<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+  background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 50 50">
     <circle style="fill:#{rgba($contentInverseColor,1)};" cx="25" cy="25" r="3.234"/>
     <circle style="fill:#{rgba($contentInverseColor,1)};" cx="38.266" cy="25" r="3.234"/>
     <circle style="fill:#{rgba($contentInverseColor,1)};" cx="11.734" cy="25" r="3.234"/>
     <line style="fill:none;stroke:#{rgba($contentInverseColor,1)};stroke-miterlimit:10;stroke-width:2px;" x1="11.734" y1="25" x2="38.266" y2="25"/></svg>');
 }
 .ohlc-icon {
-	background-image: svg-url('<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+	background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 50 50">
     <line style="fill:none;stroke:#{rgba($primaryBrandColor,1)};stroke-miterlimit:10;stroke-width:2px;" x1="25" y1="8.5" x2="25" y2="41.5"/>
     <line style="fill:none;stroke:#{rgba($primaryBrandColor,1)};stroke-miterlimit:10;stroke-width:2px;" x1="13.912" y1="14.403" x2="25" y2="14.403"/>
     <line style="fill:none;stroke:#{rgba($primaryBrandColor,1)};stroke-miterlimit:10;stroke-width:2px;" x1="25" y1="35.597" x2="36.088" y2="35.597"/></svg>')
 }
 .ohlc-w-icon {
-  background-image: svg-url('<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+  background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 50 50">
     <line style="fill:none;stroke:#{rgba($contentInverseColor,1)};stroke-miterlimit:10;stroke-width:2px;" x1="25" y1="8.5" x2="25" y2="41.5"/>
     <line style="fill:none;stroke:#{rgba($contentInverseColor,1)};stroke-miterlimit:10;stroke-width:2px;" x1="13.912" y1="14.403" x2="25" y2="14.403"/>
     <line style="fill:none;stroke:#{rgba($contentInverseColor,1)};stroke-miterlimit:10;stroke-width:2px;" x1="25" y1="35.597" x2="36.088" y2="35.597"/></svg>')
 }
 .share-icon {
-	background-image: svg-url('<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+	background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 50 50">
     <polyline style="fill:none;stroke:#{rgba($primaryBrandColor,1)};stroke-miterlimit:10;stroke-width:2px;" points="34.17 35.82 15.83 25 34.17 14.18"/>
     <circle style="fill:#{rgba($primaryBrandColor,1)};" cx="15.83" cy="25" r="3.5"/>
     <circle style="fill:#{rgba($primaryBrandColor,1)};" cx="34.17" cy="14.18" r="3.5"/>
     <circle style="fill:#{rgba($primaryBrandColor,1)};" cx="34.17" cy="35.82" r="3.5"/></svg>');
 }
 .share-w-icon {
-	background-image: svg-url('<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+	background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 50 50">
     <polyline style="fill:none;stroke:#{rgba($contentInverseColor,1)};stroke-miterlimit:10;stroke-width:2px;" points="34.17 35.82 15.83 25 34.17 14.18"/>
     <circle style="fill:#{rgba($contentInverseColor,1)};" cx="15.83" cy="25" r="3.5"/>
     <circle style="fill:#{rgba($contentInverseColor,1)};" cx="34.17" cy="14.18" r="3.5"/>
     <circle style="fill:#{rgba($contentInverseColor,1)};" cx="34.17" cy="35.82" r="3.5"/></svg>');
 }
 .spline-icon {
-	background-image: svg-url('<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+	background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 50 50">
     <path style="fill:none;stroke:#{rgba($primaryBrandColor,1)};stroke-miterlimit:10;stroke-width:2px;" d="M8.5,23.733l3-3.559a6.468,6.468,0,0,1,10.52.9l4.619,7.862a6.468,6.468,0,0,0,10.858.458l4-5.656"/></svg>');
 }
 .spline-w-icon {
-  background-image: svg-url('<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+  background-image: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 50 50">
    <path style="fill:none;stroke:#{rgba($contentInverseColor,1)};stroke-miterlimit:10;stroke-width:2px;" d="M8.5,23.733l3-3.559a6.468,6.468,0,0,1,10.52.9l4.619,7.862a6.468,6.468,0,0,0,10.858.458l4-5.656"/></svg>');
 }

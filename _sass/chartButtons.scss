@@ -40,6 +40,12 @@
   .img {
     display: inline;
 
+    div {
+      width: 25px;
+      height: 25px;
+      margin: 5px;
+      background-repeat: no-repeat;
+    }
     img {
       width: 20px;
       height: 20px;

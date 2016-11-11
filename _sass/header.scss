@@ -1,12 +1,16 @@
-#topbar {
+#topbar, .topbar {
     width: 100%;
     line-height: 1;
     font-size: 70%;
     text-align: right;
-    padding: 3px 0;
+    padding: 3px 18px;
+    #language_select {
+        float: right;
+        background-color: $white;
+    }
 }
 
-#topbar, #topbar a {
+#topbar, #topbar a, .topbar, .topbar a {
     color: $contentInverseColor;
     &:hover {
         text-decoration: none;

@@ -1,0 +1,12 @@
+.ui-dialog-titlebar-buttonpane .ui-corner-all.ui-state-default {
+    border: 0px solid $primaryBrandColor;
+    background: $primaryBrandColor;
+}
+
+.ui-widget-header {
+    border: 1px solid $primaryBrandColor;
+    background: $primaryBrandColor;
+    color: $contentInverseColor;
+    font-family: $FONT-STACK;
+    font-weight: normal;
+}

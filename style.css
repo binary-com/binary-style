@@ -28,6 +28,12 @@ h1 {
     border-bottom: 4px solid #e98024;
     height: 75px;
 }
+.header{
+    background: #2a3052;
+    border-top: 2px solid #394171;
+    border-bottom: 4px solid #e98024;
+    height: 75px;
+}
 #topbar-info div {
     display: inline-flex;
     padding: 0 10px;
@@ -350,7 +356,7 @@ li.L1, li.L3, li.L5, li.L7, li.L9 {}
     .mobile-hide {
         display: none !important;
     }
-    #header #logo {
+    #header #logo, .header #logo {
         width: 100%;
     }
     #mobile-page-selector {

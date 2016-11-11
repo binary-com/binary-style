@@ -1,0 +1,101 @@
+#nav-container {
+    text-align: center;
+}
+
+.nav-normal-menu {
+    list-style: none outside none;
+    display: inline-table;
+    margin: 0;
+    vertical-align: middle;
+    li {
+        float: left;
+        position: relative;
+        &:hover {
+            z-index: 999999;
+            & > ul {
+                display: block;
+                list-style: none outside none;
+                margin: -1px 0;
+                padding: 0;
+            }
+        }
+        a {
+            display: block;
+            color: $white;
+            text-decoration: none;
+            padding: 16px 20px 20px 30px;
+            transition: padding .5s;
+            white-space: nowrap;
+            text-align: left;
+            outline: none;
+            font-size: 1rem;
+            font-weight: 400;
+            &.disabled, &.disabled:hover {
+                opacity: 0.5;
+            }
+            &:hover {
+                opacity: 0.75;
+            }
+        }
+        ul {
+            li ul {
+                position: absolute;
+                left: 100%;
+                top: 0;
+                display: none;
+            }
+        }
+        & > ul li {
+            float: none;
+            background-color: $primaryBrandColor;
+            & a {
+                font-size: 1rem;
+                padding: 10px 30px;
+            }
+        }
+    }
+    & > li  {
+        position: relative;
+        padding-top: 10px;
+        & > a {
+           font-size: 1rem;
+           height: 30px;
+       }
+       & > ul {
+           position: absolute;
+           display: none;
+           z-index: 999999;
+           list-style: none outside none;
+           min-width: 100%;
+       }
+    }
+    .nav-caret {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        margin-left: 2px;
+        vertical-align: middle;
+        border-top: 4px dashed;
+        border-right: 4px solid transparent;
+        border-left: 4px solid transparent;
+    }
+    .nav-submenu-caret {
+        position: absolute;
+        right: 15px;
+        top: 10px;
+        display: inline-block;
+        color: $white;
+        &:after {
+            content: '»';
+        }
+    }
+    .resources, .nav-normal-menu .windows {
+         & > ul > li {
+             padding-left: 5px;
+         }
+    }
+}
+
+#nav-menu li {
+    margin : 0 0 0;
+}

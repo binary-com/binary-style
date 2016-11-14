@@ -7,23 +7,24 @@
     display: inline-table;
     margin: 0;
     vertical-align: middle;
+    & > li  {
+        & > a {
+           height: 30px;
+       }
+       & > ul {
+           position: absolute;
+           list-style: none outside none;
+           min-width: 100%;
+       }
+    }
     li {
         float: left;
         position: relative;
-        &:hover {
-            z-index: 999999;
-            & > ul {
-                display: block;
-                list-style: none outside none;
-                margin: -1px 0;
-                padding: 0;
-            }
-        }
+        list-style: none outside none;
+        padding: 0;
         a {
             display: block;
-            color: $white;
-            text-decoration: none;
-            padding: 16px 20px 20px 30px;
+            padding: 20px 30px;
             transition: padding .5s;
             white-space: nowrap;
             text-align: left;
@@ -35,49 +36,34 @@
             }
             &:hover {
                 opacity: 0.75;
+                text-decoration: none;
             }
         }
         ul {
+            visibility: hidden;
+            opacity: 0;
+            margin: 0;
+            padding: 0;
             li ul {
                 position: absolute;
                 left: 100%;
                 top: 0;
-                display: none;
             }
         }
         & > ul li {
             float: none;
             background-color: $primaryBrandColor;
             & a {
-                font-size: 1rem;
                 padding: 10px 30px;
             }
         }
     }
-    & > li  {
-        position: relative;
-        padding-top: 10px;
-        & > a {
-           font-size: 1rem;
-           height: 30px;
-       }
-       & > ul {
-           position: absolute;
-           display: none;
-           z-index: 999999;
-           list-style: none outside none;
-           min-width: 100%;
-       }
+    ul li:hover > ul {
+        visibility: visible !important;
+        opacity: 1 !important;
     }
     .nav-caret {
-        display: inline-block;
-        width: 0;
-        height: 0;
         margin-left: 2px;
-        vertical-align: middle;
-        border-top: 4px dashed;
-        border-right: 4px solid transparent;
-        border-left: 4px solid transparent;
     }
     .nav-submenu-caret {
         position: absolute;

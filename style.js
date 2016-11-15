@@ -55,4 +55,17 @@ $(document).ready(function() {
         $('.f-row').hide();
         $('.' + classToShow).css('display', 'flex');
     }
+
+    $('#language_select li').unbind('click').on('click', function(event) {
+        event.stopPropagation();
+        var $newClass = $(this).attr('class'),
+            $newText = $(this).text(),
+            $languageSelect = $('#language_select'),
+            selectClass = 'invisible';
+        $('#language_select li:first-child, #display_language li').removeClass().addClass($newClass).find('span.language').text($newText);
+        $languageSelect.find('li').removeClass(selectClass).end().find('li.' + $newClass + ':eq(1)').addClass(selectClass);
+        $languageSelect.animate({'opacity': 0}, 100, function() {
+            $languageSelect.css('visibility', 'hidden');
+        });;
+    });
 });

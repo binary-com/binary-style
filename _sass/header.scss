@@ -3,10 +3,64 @@
     line-height: 1;
     font-size: 70%;
     text-align: right;
-    padding: 3px 18px;
+    padding: 0px 18px;
+    z-index: 2;
     #language_select {
+        opacity: 0;
+        visibility: hidden;
+        background-color: $fillColor;
+        border: 1px solid $borderColor;
+        color: $black;
+        position: relative;
+        right: -152px;
+        .nav-caret {
+            color: $black;
+        }
+        .orange {
+            color: $secondaryBrandColor;
+        }
+    }
+    #display_language {
+        background-color: $darkPrimaryBrandColor;
+        border: 1px solid $darkPrimaryBrandColor;
+        color: $white;
+        height: 18px;
+        .nav-caret {
+            color: $white;
+        }
+    }
+    #language_select, #display_language {
         float: right;
-        background-color: $white;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        width: 150px;
+        font-size: $FONT_SIZE_S;
+        li {
+            cursor: pointer;
+            &:first-child {
+                margin: 2px;
+                display: inline-block;
+            }
+        }
+    }
+    span.language {
+        vertical-align: text-bottom;
+        padding: 0 5px;
+    }
+    .nav-caret {
+        vertical-align: super;
+    }
+    .world {
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+    }
+    .world-white {
+        background-image: svg-icon('world', $white);
+    }
+    .world-black {
+        background-image: svg-icon('world', $black);
     }
 }
 

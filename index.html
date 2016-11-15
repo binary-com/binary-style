@@ -54,6 +54,7 @@
                     <li><a href="#icon-section">Icons</a></li>
                     <li><a href="#picker-section">Date and Time Pickers</a></li>
                 </ul>
+
             </div>
             <div class="page-content">
                 <div class="f-row introduction-section">
@@ -75,23 +76,37 @@
                     </div>
                 </div>
                 <div class="f-row header-section">
-                    <div class="topbar primary-color-dark" style="height:20px;">
-                      <select id="language_select">
-                        <option class="EN" selected="selected">English</option>
-                        <option class="DE">Deutsch</option>
-                        <option class="ES">Español</option>
-                        <option class="FR">Français</option>
-                        <option class="ID">Bahasa Indonesia</option>
-                        <option class="IT">Italiano</option>
-                        <option class="PL">Polish</option>
-                        <option class="PT">Português</option>
-                        <option class="RU">Русский</option>
-                        <option class="VI">Vietnamese</option>
-                        <option class="ZH_CN">简体中文</option>
-                        <option class="ZH_TW">繁體中文</option>
-                      </select>
+                    <div class="topbar primary-color-dark" style="height:25px;margin-left:20px;">
+                        <div class="languages">
+                            <ul id="display_language">
+                                <li class="EN">
+                                    <span class="world world-white"></span>
+                                    <span class="language">English</span>
+                                    <span class="nav-caret"></span>
+                                </li>
+                            </ul>
+                            <ul id="language_select">
+                                <li class="EN">
+                                    <span class="world world-black"></span>
+                                    <span class="language">English</span>
+                                    <span class="nav-caret"></span>
+                                </li>
+                                <li class="ID">Bahasa Indonesia</li>
+                                <li class="DE">Deutsch</li>
+                                <li class="EN orange">English</li>
+                                <li class="ES">Español</li>
+                                <li class="FR">Français</li>
+                                <li class="IT">Italiano</li>
+                                <li class="PL">Polski</li>
+                                <li class="PT">Português</li>
+                                <li class="RU">Русский</li>
+                                <li class="VI">Tiếng Việt</li>
+                                <li class="ZH_CN">简体中文</li>
+                                <li class="ZH_TW">繁體中文</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="dark-blue header" style="width:100%;">
+                    <div class="dark-blue header" style="width:100%;margin-left:20px;">
                       <div class="container">
                         <div class="logo-wrapper" style="width:30%;">
                           <a href="https://binary.com" class="logo-parent">
@@ -193,23 +208,37 @@
                         <div class="code-sample">
                             <pre class="prettyprint">
                     <code>
-    &lt;div class=&quot;topbar primary-color-dark&quot;&gt;
-    &lt;select id=&quot;language_select&quot;&gt;
-    &lt;option class=&quot;EN&quot; selected=&quot;selected&quot;&gt;English&lt;/option&gt;
-    &lt;option class=&quot;DE&quot;&gt;Deutsch&lt;/option&gt;
-    &lt;option class=&quot;ES&quot;&gt;Espa&ntilde;ol&lt;/option&gt;
-    &lt;option class=&quot;FR&quot;&gt;Fran&ccedil;ais&lt;/option&gt;
-    &lt;option class=&quot;ID&quot;&gt;Bahasa Indonesia&lt;/option&gt;
-    &lt;option class=&quot;IT&quot;&gt;Italiano&lt;/option&gt;
-    &lt;option class=&quot;PL&quot;&gt;Polish&lt;/option&gt;
-    &lt;option class=&quot;PT&quot;&gt;Portugu&ecirc;s&lt;/option&gt;
-    &lt;option class=&quot;RU&quot;&gt;Русский&lt;/option&gt;
-    &lt;option class=&quot;VI&quot;&gt;Vietnamese&lt;/option&gt;
-    &lt;option class=&quot;ZH_CN&quot;&gt;简体中文&lt;/option&gt;
-    &lt;option class=&quot;ZH_TW&quot;&gt;繁體中文&lt;/option&gt;
-    &lt;/select&gt;
+  &lt;div class=&quot;topbar primary-color-dark&quot;&gt;
+    &lt;div class=&quot;languages&quot;&gt;
+      &lt;ul id=&quot;display_language&quot;&gt;
+        &lt;li class=&quot;EN&quot;&gt;
+          &lt;span class=&quot;world world-white&quot;&gt;&lt;/span&gt;
+          &lt;span class=&quot;language&quot;&gt;English&lt;/span&gt;
+          &lt;span class=&quot;nav-caret&quot;&gt;&lt;/span&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;ul id=&quot;language_select&quot;&gt;
+        &lt;li class=&quot;EN&quot;&gt;
+          &lt;span class=&quot;world world-black&quot;&gt;&lt;/span&gt;
+          &lt;span class=&quot;language&quot;&gt;English&lt;/span&gt;
+          &lt;span class=&quot;nav-caret&quot;&gt;&lt;/span&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;ID&quot;&gt;Bahasa Indonesia&lt;/li&gt;
+        &lt;li class=&quot;DE&quot;&gt;Deutsch&lt;/li&gt;
+        &lt;li class=&quot;EN orange&quot;&gt;English&lt;/li&gt;
+        &lt;li class=&quot;ES&quot;&gt;Espa&ntilde;ol&lt;/li&gt;
+        &lt;li class=&quot;FR&quot;&gt;Fran&ccedil;ais&lt;/li&gt;
+        &lt;li class=&quot;IT&quot;&gt;Italiano&lt;/li&gt;
+        &lt;li class=&quot;PL&quot;&gt;Polski&lt;/li&gt;
+        &lt;li class=&quot;PT&quot;&gt;Portugu&ecirc;s&lt;/li&gt;
+        &lt;li class=&quot;RU&quot;&gt;Русский&lt;/li&gt;
+        &lt;li class=&quot;VI&quot;&gt;Tiếng Việt&lt;/li&gt;
+        &lt;li class=&quot;ZH_CN&quot;&gt;简体中文&lt;/li&gt;
+        &lt;li class=&quot;ZH_TW&quot;&gt;繁體中文&lt;/li&gt;
+      &lt;/ul&gt;
     &lt;/div&gt;
-    &lt;div class=&quot;dark-blue header&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;dark-blue header&quot;&gt;
     &lt;div class=&quot;container&quot;&gt;
     &lt;div class=&quot;logo-wrapper&quot;&gt;
     &lt;a href=&quot;https://binary.com&quot; class=&quot;logo-parent&quot;&gt;

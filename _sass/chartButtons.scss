@@ -29,6 +29,7 @@
   span {
     border-bottom: 0px;
     cursor: pointer;
+    display: inline-block;
     &[data-balloon]:before {
       padding: 0.5em;
       font-size: 0.8em;
@@ -45,6 +46,7 @@
       height: 25px;
       margin: 5px;
       background-repeat: no-repeat;
+      background-position: center;
     }
     img {
       width: 20px;

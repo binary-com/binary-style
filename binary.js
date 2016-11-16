@@ -2,7 +2,7 @@
  * js code for Drop-Down Menu
  */
 $(document).ready(function() {
-    $('.nav-menu').unbind('click').on('click', function(){
+    $('.nav-menu').unbind('click').on('click', function(event) {
         event.stopPropagation();
         if ($('#all-accounts, #all-accounts-top').css('opacity') == 1 ) {
             $('#all-accounts, #all-accounts-top').animate({'opacity': 0}, 100, function() {

@@ -4,13 +4,12 @@ main {
   margin: 0 auto;
   max-width: 1000px;
 }
-.h1-title{
-  background-color:#f2f2f2;
-  padding:10px;
+h1 {
+    margin-top: 0;
 }
 .container {
     margin: 0 auto;
-    max-width: 960px;
+    max-width: 1240px;
     padding-right: 10px;
     padding-left: 10px;
     box-sizing: border-box;
@@ -196,7 +195,6 @@ li.L1, li.L3, li.L5, li.L7, li.L9 {}
   flex-flow: row wrap;
   justify-content: center;
   /*align-items: center;*/
-  margin: 1rem auto;
 }
 .f-row.flex-vertical {
   flex-direction: column;
@@ -217,11 +215,14 @@ li.L1, li.L3, li.L5, li.L7, li.L9 {}
 .f-row.f-row-around {
   justify-content: space-around;
 }
+.icon-section > .f-item .f-row {
+    margin-bottom: 1rem;
+}
 
 .f-item-common, .f-item, .f-item-10, .f-item-20, .f-item-25, .f-item-33, .f-item-50, .f-item-67, .f-item-75, .f-item-80, .f-item-90 {
-  padding: 0.25rem;
   display: inline-block;
   width: initial;
+  margin-left: 20px;
 }
 
 .f-item {
@@ -294,6 +295,44 @@ li.L1, li.L3, li.L5, li.L7, li.L9 {}
   align-self: stretch;
 }
 
+#content {
+    max-width: 1240px;
+    padding: 0 2rem;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+#mobile-page-selector {
+    width: 100%;
+    display: none;
+    margin: 2rem 0 1rem;
+}
+
+.page-wrapper {
+    display: flex;
+    margin-top: 40px;
+}
+
+.page-wrapper > .sidebar-left {
+    flex: 1;
+    margin: 0 0 2rem 0;
+    overflow: hidden;
+}
+
+.page-wrapper > .sidebar-left ul {
+    padding: 0;
+    margin: 0;
+}
+
+.page-content {
+    font-size: 18px;
+    flex: 4;
+}
+
+.page-content > div:not(:first-child) {
+    display: none;
+}
+
 @media all and (max-width: 479px) {
   .f-item-common-1, .f-item, .f-item-10, .f-item-20, .f-item-25, .f-item-33, .f-item-50, .f-item-67, .f-item-75, .f-item-80, .f-item-90 {
     padding: 0.25rem;
@@ -311,8 +350,13 @@ li.L1, li.L3, li.L5, li.L7, li.L9 {}
     .mobile-hide {
         display: none !important;
     }
-
     #header #logo {
         width: 100%;
+    }
+    #mobile-page-selector {
+        display: block;
+    }
+    .sidebar-left {
+        display: none;
     }
 }

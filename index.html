@@ -8,6 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
     <script src="binary.js"></script>
+    <script src="style.js"></script>
     <link rel="icon" type="image/png" sizes="16x16" href="https://www.binary.com/images/favicons/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://www.binary.com/images/favicons/favicon-32x32.png">
     <link rel="stylesheet" href="style.css">
@@ -31,61 +32,65 @@
             </div>
         </div>
     </div>
-    <main style="max-width: 960px; margin: 0 auto;">
-      <div class="f-row">
-          <div class="f-item" style="margin-top:40px;">
-              <h1>binary-style</h1>
-              <p>The goal of the project is to serve as base style for all Binary projects, and to ensure consistency and maintainability of the brand presentation.</p>
-              <h2>Usage</h2>
-              <ul class="bullet">
-                <li>Include <a href="https://jquery.com/" target="_blank">jQuery</a> (Version 2.1.1) to your project</li>
-                <li>Include the <a href="binary.js" target="_blank">JS file</a> to your project</li>
-                <li>Include the styles by including <a href="binary.css" target="_blank">this file</a> to your project</li>
-              </ul>
-          </div>
-      </div>
-        <div class="f-row">
-            <div class="f-item" style="margin-top:40px;">
-                <h1 class="h1-title">Colors</h1>
+    <div id="content">
+        <!-- mobile menu will be populated by javascript using the sidebar-left values to avoid duplication -->
+        <select id="mobile-page-selector"></select>
+        <div class="page-wrapper">
+            <div class="sidebar-left">
+                <ul>
+                    <li><a href="/">Introduction</a></li>
+                    <li><a href="#logo-section">Logo</a></li>
+                    <li><a href="#colors-section">Colors</a></li>
+                    <li><a href="#title-section">Title</a></li>
+                    <li><a href="#text-section">Text</a></li>
+                    <li><a href="#button-section">Link and Buttons</a></li>
+                    <li><a href="#message-section">Messages</a></li>
+                    <li><a href="#spinner-section">Spinner</a></li>
+                    <li><a href="#table-section">Table</a></li>
+                    <li><a href="#sidebar-section">Sidebar Menu</a></li>
+                    <li><a href="#drop-down-menu-section">Drop-Down Menu</a></li>
+                    <li><a href="#form-section">Form</a></li>
+                    <li><a href="#accordion-section">Accordion</a></li>
+                    <li><a href="#tabs-section">Tabs</a></li>
+                    <li><a href="#icon-section">Icons</a></li>
+                </ul>
             </div>
-        </div>
-        <div class="f-row">
-            <div class="f-item">
-                <p style="background-color:#15212d;padding:10px;color:#fff;">Dark Blue
-                    <br>#15212d</p>
-            </div>
-            <div class="f-item">
-                <p style="background-color:#2a3052;padding:10px;color:#fff;">Brand Blue
-                    <br>#2a3052</p>
-            </div>
-            <div class="f-item">
-                <p style="background-color:#e98024;padding:10px;color:#fff;">Brand Orange
-                    <br>#e98024</p>
-            </div>
-        </div>
-        <div class="f-row">
-            <div class="f-item" style="margin-top:40px;">
-                <p>
-                    <h1 class="h1-title">Logo</h1></p>
-            </div>
-        </div>
-        <div class="f-row">
-            <div class="f-item" style="margin-top: 19px;">
-                <div class="logo-wrapper primary-color">
-                    <a class="logo-parent" href="https://binary.com">
-                        <div class="logo">
-                            <img class="responsive" src="./images/logo/symbol.svg">
-                        </div>
-                        <div class="mobile-hide binary-logo-text">
-                            <img class="responsive" src="./images/logo/type.svg">
-                        </div>
-                    </a>
+            <div class="page-content">
+                <div class="f-row introduction-section">
+                    <div class="f-item">
+                        <h1>binary-style</h1>
+                        <p>The goal of the project is to serve as base style for all Binary projects, and to ensure consistency and maintainability of the brand presentation.</p>
+                        <h2>Usage</h2>
+                        <ul class="bullet">
+                          <li>Include <a href="https://jquery.com/" target="_blank">jQuery</a> (Version 2.1.1) to your project</li>
+                          <li>Include the <a href="binary.js" target="_blank">JS file</a> to your project</li>
+                          <li>Include the styles by including <a href="binary.css" target="_blank">this file</a> to your project</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="f-item">
-                <div class="code-sample">
-                    <pre class="prettyprint">
-            <code>
+
+                <div class="f-row logo-section">
+                    <div class="f-item">
+                        <h1>Logo</h1>
+                    </div>
+                </div>
+                <div class="f-row logo-section">
+                    <div class="f-item" style="margin-top: 19px;">
+                        <div class="logo-wrapper primary-color">
+                            <a class="logo-parent" href="https://binary.com">
+                                <div class="logo">
+                                    <img class="responsive" src="./images/logo/symbol.svg">
+                                </div>
+                                <div class="mobile-hide binary-logo-text">
+                                    <img class="responsive" src="./images/logo/type.svg">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="f-item">
+                        <div class="code-sample">
+                            <pre class="prettyprint">
+                    <code>
     &lt;a class=&quot;logo-parent&quot; href=&quot;https://binary.com&quot;&gt;
         &lt;div class=&quot;logo&quot;&gt;
             &lt;img class=&quot;responsive&quot;
@@ -96,173 +101,196 @@
                 src=&quot;./images/logo/type.svg&quot;&gt;
         &lt;/div&gt;
     &lt;/a&gt;
-          </code>
-        </pre>
+                  </code>
+                </pre>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="f-row">
-            <div class="f-item" style="margin-top:40px;">
-                <p>
-                    <h1 class="h1-title">Title</h1></p>
-            </div>
-        </div>
-        <div class="f-row">
-            <div class="f-item">
-                <h1>Header 1</h1>
-                <h1 class="dark">Header 1 Dark</h1>
-                <h2>Header 2</h2>
-                <h3>Header 3</h3>
-            </div>
-            <div class="f-item">
-                <div class="code-sample">
-                    <pre class="prettyprint">
-            <code>
-      &lt;h1&gt;Title&lt;/h1&gt;
-      &lt;h1 class=&quot;dark&quot;&gt;Title&lt;/h1&gt;
-      &lt;h2&gt;Title&lt;/h2&gt;
-      &lt;h3&gt;Title&lt;/h3&gt;
-          </code>
-        </pre>
+
+                <div class="f-row colors-section">
+                    <div class="f-item">
+                        <h1>Colors</h1>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="f-row">
-            <div class="f-item" style="margin-top:40px;">
-                <h1 class="h1-title">Text</h1>
-            </div>
-        </div>
-        <div class="f-row">
-            <div class="f-item">
-                <p>paragraph with <strong>strong text</strong></p>
-                <p class="font-s">This is small font</p>
-                <p class="font-xs">This is extra small font</p>
-                <ul>
-                    <li>unordered list item 1</li>
-                    <li>unordered list item 2</li>
-                    <li>unordered list item 3</li>
-                </ul>
-                <ul class="bullet">
-                    <li>unordered list item 1</li>
-                    <li>unordered list item 2</li>
-                    <li>unordered list item 3</li>
-                </ul>
-                <ul class="checked">
-                    <li>unordered list item 1</li>
-                    <li>unordered list item 2</li>
-                    <li>unordered list item 3</li>
-                </ul>
-                <ol>
-                    <li>ordered list item 1</li>
-                    <li>ordered list item 2</li>
-                    <li>ordered list item 3</li>
-                </ol>
-            </div>
-            <div class="f-item">
-                <div class="code-sample">
-                    <pre class="prettyprint">
-            <code>
-      &lt;p&gt;paragraph with &lt;strong&gt;strong text&lt;/strong&gt;&lt;/p&gt;
-      &lt;p class=&quot;font-s&quot;&gt;This is small font&lt;/p&gt;
-      &lt;p class=&quot;font-xs&quot;&gt;This is extra small font&lt;/p&gt;
-      &lt;ul&gt;
-          &lt;li&gt;unordered list item 1&lt;/li&gt;
-          &lt;li&gt;unordered list item 2&lt;/li&gt;
-          &lt;li&gt;unordered list item 3&lt;/li&gt;
-      &lt;/ul&gt;
-      &lt;ul class=&quot;bullet&quot;&gt;
-          &lt;li&gt;unordered list item 1&lt;/li&gt;
-          &lt;li&gt;unordered list item 2&lt;/li&gt;
-          &lt;li&gt;unordered list item 3&lt;/li&gt;
-      &lt;/ul&gt;
-      &lt;ul class=&quot;checked&quot;&gt;
-          &lt;li&gt;unordered list item 1&lt;/li&gt;
-          &lt;li&gt;unordered list item 2&lt;/li&gt;
-          &lt;li&gt;unordered list item 3&lt;/li&gt;
-      &lt;/ul&gt;
-      &lt;ol&gt;
-          &lt;li&gt;ordered list item 1&lt;/li&gt;
-          &lt;li&gt;ordered list item 2&lt;/li&gt;
-          &lt;li&gt;ordered list item 3&lt;/li&gt;
-      &lt;/ol&gt;
-          </code>
-        </pre>
+                <div class="f-row colors-section">
+                    <div class="f-item">
+                        <p style="background-color:#15212d;padding:10px;color:#fff;">Dark Blue
+                            <br>#15212d</p>
+                    </div>
+                    <div class="f-item">
+                        <p style="background-color:#2a3052;padding:10px;color:#fff;">Brand Blue
+                            <br>#2a3052</p>
+                    </div>
+                    <div class="f-item">
+                        <p style="background-color:#e98024;padding:10px;color:#fff;">Brand Orange
+                            <br>#e98024</p>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="f-row">
-            <div class="f-item" style="margin-top:40px;">
-                <h1 class="h1-title">Link and Buttons</h1>
-            </div>
-        </div>
-        <div class="f-row">
-            <div class="f-item">
-                <p>paragraph with <a href="#">link</a>
-                </p>
-                <p>
-                    <a class="button" href="#">
-                        <span>button link</span>
-                    </a>
-                </p>
-                <p>
-                    <a class="button-secondary" href="#">
-                        <span>button link</span>
-                    </a>
-                </p>
-                <p>
-                    <a class="button-disabled">
-                        <span>Disabled</span>
-                    </a>
-                </p>
-                <p>
-                    <button type="button" name="button">button</button>
-                </p>
-            </div>
-            <div class="f-item">
-                <div class="code-sample">
-                    <pre class="prettyprint">
-                <code>
-  &lt;p&gt;paragraph with &lt;a href=&quot;#&quot;&gt;link&lt;/a&gt;&lt;/p&gt;
-  &lt;p&gt;
-      &lt;a class=&quot;button&quot; href=&quot;#&quot;&gt;
-          &lt;span&gt;button link&lt;/span&gt;
-      &lt;/a&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-      &lt;a class=&quot;button-secondary&quot; href=&quot;#&quot;&gt;
-          &lt;span&gt;button link&lt;/span&gt;
-      &lt;/a&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-      &lt;a class=&quot;button-disabled&quot;&gt;
-          &lt;span&gt;Disabled&lt;/span&gt;
-      &lt;/a&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-      &lt;button type=&quot;button&quot; name=&quot;button&quot;&gt;button&lt;/button&gt;
-  &lt;/p&gt;
-              </code>
-            </pre>
+
+                <div class="f-row title-section">
+                    <div class="f-item">
+                        <h1>Title</h1>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="f-row">
-            <div class="f-item" style="margin-top:40px;">
-                <h1 class="h1-title">Messages</h1>
-            </div>
-        </div>
-        <div class="f-row">
-            <div class="f-item">
-                <p class="success-msg">success message</p>
-                <p class="notice-msg" style="margin-right:1rem;">notice message</p>
-                <p class="error-msg">error message</p>
-                <p><span data-balloon="message">text with default tooltip</span></p>
-                <span data-balloon="large size tooltip at bottom" data-balloon-length="large" data-balloon-pos="down" class="no-underline">text with long tooltip</span>
-            </div>
-            <div class="f-item">
-                <div class="code-sample">
-                    <pre class="prettyprint">
-                <code>
+                <div class="f-row title-section">
+                    <div class="f-item">
+                        <h1>Header 1</h1>
+                        <h1 class="dark">Header 1 Dark</h1>
+                        <h2>Header 2</h2>
+                        <h3>Header 3</h3>
+                    </div>
+                    <div class="f-item">
+                        <div class="code-sample">
+                            <pre class="prettyprint">
+                    <code>
+    &lt;h1&gt;Title&lt;/h1&gt;
+    &lt;h1 class=&quot;dark&quot;&gt;Title&lt;/h1&gt;
+    &lt;h2&gt;Title&lt;/h2&gt;
+    &lt;h3&gt;Title&lt;/h3&gt;
+                  </code>
+                </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="f-row text-section">
+                    <div class="f-item">
+                        <h1>Text</h1>
+                    </div>
+                </div>
+                <div class="f-row text-section">
+                    <div class="f-item">
+                        <p>paragraph with <strong>strong text</strong></p>
+                        <p class="font-s">This is small font</p>
+                        <p class="font-xs">This is extra small font</p>
+                        <ul>
+                            <li>unordered list item 1</li>
+                            <li>unordered list item 2</li>
+                            <li>unordered list item 3</li>
+                        </ul>
+                        <ul class="bullet">
+                            <li>unordered list item 1</li>
+                            <li>unordered list item 2</li>
+                            <li>unordered list item 3</li>
+                        </ul>
+                        <ul class="checked">
+                            <li>unordered list item 1</li>
+                            <li>unordered list item 2</li>
+                            <li>unordered list item 3</li>
+                        </ul>
+                        <ol>
+                            <li>ordered list item 1</li>
+                            <li>ordered list item 2</li>
+                            <li>ordered list item 3</li>
+                        </ol>
+                    </div>
+                    <div class="f-item">
+                        <div class="code-sample">
+                            <pre class="prettyprint">
+                    <code>
+    &lt;p&gt;paragraph with&lt;strong&gt;strong text&lt;/strong&gt;&lt;/p&gt;
+    &lt;p class=&quot;font-s&quot;&gt;This is small font&lt;/p&gt;
+    &lt;p class=&quot;font-xs&quot;&gt;This is extra small font&lt;/p&gt;
+    &lt;ul&gt;
+    &lt;li&gt;unordered list item 1&lt;/li&gt;
+    &lt;li&gt;unordered list item 2&lt;/li&gt;
+    &lt;li&gt;unordered list item 3&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul class=&quot;bullet&quot;&gt;
+    &lt;li&gt;unordered list item 1&lt;/li&gt;
+    &lt;li&gt;unordered list item 2&lt;/li&gt;
+    &lt;li&gt;unordered list item 3&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul class=&quot;checked&quot;&gt;
+    &lt;li&gt;unordered list item 1&lt;/li&gt;
+    &lt;li&gt;unordered list item 2&lt;/li&gt;
+    &lt;li&gt;unordered list item 3&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ol&gt;
+    &lt;li&gt;ordered list item 1&lt;/li&gt;
+    &lt;li&gt;ordered list item 2&lt;/li&gt;
+    &lt;li&gt;ordered list item 3&lt;/li&gt;
+    &lt;/ol&gt;
+                  </code>
+                </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="f-row button-section">
+                    <div class="f-item">
+                        <h1>Link and Buttons</h1>
+                    </div>
+                </div>
+                <div class="f-row button-section">
+                    <div class="f-item">
+                        <p>paragraph with <a href="javascript:;">link</a>
+                        </p>
+                        <p>
+                            <a class="button" href="javascript:;">
+                                <span>button link</span>
+                            </a>
+                        </p>
+                        <p>
+                            <a class="button-secondary" href="javascript:;">
+                                <span>button link</span>
+                            </a>
+                        </p>
+                        <p>
+                            <a class="button-disabled">
+                                <span>Disabled</span>
+                            </a>
+                        </p>
+                        <p>
+                            <button type="button" name="button">button</button>
+                        </p>
+                    </div>
+                    <div class="f-item">
+                        <div class="code-sample">
+                            <pre class="prettyprint">
+                        <code>
+      &lt;p&gt;paragraph with &lt;a href=&quot;#&quot;&gt;link&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;
+          &lt;a class=&quot;button&quot; href=&quot;#&quot;&gt;
+              &lt;span&gt;button link&lt;/span&gt;
+          &lt;/a&gt;
+      &lt;/p&gt;
+      &lt;p&gt;
+          &lt;a class=&quot;button-secondary&quot; href=&quot;#&quot;&gt;
+              &lt;span&gt;button link&lt;/span&gt;
+          &lt;/a&gt;
+      &lt;/p&gt;
+      &lt;p&gt;
+          &lt;a class=&quot;button-disabled&quot;&gt;
+              &lt;span&gt;Disabled&lt;/span&gt;
+          &lt;/a&gt;
+      &lt;/p&gt;
+      &lt;p&gt;
+          &lt;button type=&quot;button&quot; name=&quot;button&quot;&gt;button&lt;/button&gt;
+      &lt;/p&gt;
+                      </code>
+                    </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="f-row message-section">
+                    <div class="f-item">
+                        <h1>Messages</h1>
+                    </div>
+                </div>
+                <div class="f-row message-section">
+                    <div class="f-item">
+                        <p class="success-msg">success message</p>
+                        <p class="notice-msg" style="margin-right:1rem;">notice message</p>
+                        <p class="error-msg">error message</p>
+                        <p><span data-balloon="message">text with default tooltip</span></p>
+                        <span data-balloon="large size tooltip at bottom" data-balloon-length="large" data-balloon-pos="down" class="no-underline">text with long tooltip</span>
+                    </div>
+                    <div class="f-item">
+                        <div class="code-sample">
+                            <pre class="prettyprint">
+                        <code>
     &lt;p class=&quot;success-msg&quot;&gt;success message&lt;/p&gt;
     &lt;p class=&quot;notice-msg&quot;&gt;notice message&lt;/p&gt;
     &lt;p class=&quot;error-msg&quot;&gt;error message&lt;/p&gt;
@@ -274,42 +302,43 @@
       class=&quot;no-underline&quot;&gt;
         text with long tooltip
     &lt;/span&gt;
-              </code>
-            </pre>
-                </div>
-            </div>
-        </div>
-        <div class="f-row">
-            <div class="f-item" style="margin-top:40px;">
-                <h1 class="h1-title">Spinner</h1>
-            </div>
-        </div>
-        <div class="f-row">
-            <div class="f-item">
-                <p>use over a transparent background:</p>
-                <div class="barspinner dark">
-                    <div class="rect1"></div>
-                    <div class="rect2"></div>
-                    <div class="rect3"></div>
-                    <div class="rect4"></div>
-                    <div class="rect5"></div>
-                </div>
-                <p>use over a dark background:</p>
-                <div class="primary-bg-color" style="padding: 20px;">
-                    <div class="barspinner white">
-                        <div class="rect1"></div>
-                        <div class="rect2"></div>
-                        <div class="rect3"></div>
-                        <div class="rect4"></div>
-                        <div class="rect5"></div>
+                      </code>
+                    </pre>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="f-item">
-                <div class="code-sample">
-                    <pre class="prettyprint">
-                <code>
-    &lt;p&gt;use over a transparent background:&lt;/p&gt;
+
+                <div class="f-row spinner-section">
+                    <div class="f-item">
+                        <h1>Spinner</h1>
+                    </div>
+                </div>
+                <div class="f-row spinner-section">
+                    <div class="f-item">
+                        <p>use over a transparent background:</p>
+                        <div class="barspinner dark">
+                            <div class="rect1"></div>
+                            <div class="rect2"></div>
+                            <div class="rect3"></div>
+                            <div class="rect4"></div>
+                            <div class="rect5"></div>
+                        </div>
+                        <p>use over a dark background:</p>
+                        <div class="primary-bg-color" style="padding: 20px;">
+                            <div class="barspinner white">
+                                <div class="rect1"></div>
+                                <div class="rect2"></div>
+                                <div class="rect3"></div>
+                                <div class="rect4"></div>
+                                <div class="rect5"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f-item">
+                        <div class="code-sample">
+                            <pre class="prettyprint">
+                        <code>
+    use over a transparent background:
     &lt;div class=&quot;barspinner dark&quot;&gt;
         &lt;div class=&quot;rect1&quot;&gt;&lt;/div&gt;
         &lt;div class=&quot;rect2&quot;&gt;&lt;/div&gt;
@@ -317,7 +346,7 @@
         &lt;div class=&quot;rect4&quot;&gt;&lt;/div&gt;
         &lt;div class=&quot;rect5&quot;&gt;&lt;/div&gt;
     &lt;/div&gt;
-    &lt;p&gt;use over a dark background:&lt;/p&gt;
+    use over a dark background:
     &lt;div class=&quot;barspinner white&quot;&gt;
         &lt;div class=&quot;rect1&quot;&gt;&lt;/div&gt;
         &lt;div class=&quot;rect2&quot;&gt;&lt;/div&gt;
@@ -325,107 +354,109 @@
         &lt;div class=&quot;rect4&quot;&gt;&lt;/div&gt;
         &lt;div class=&quot;rect5&quot;&gt;&lt;/div&gt;
     &lt;/div&gt;
-              </code>
-            </pre>
-                </div>
-            </div>
-        </div>
-        <div class="f-row">
-            <div class="f-item">
-                <h1 class="h1-title">Table</h1>
-            </div>
-        </div>
-        <div class="f-row f-row-start">
-            <div class="f-item">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Header</th>
-                            <th>Header</th>
-                        </tr>
-                    </thead>
-                    <tfoot>
-                        <tr>
-                            <th>Footer</th>
-                            <th>Footer</th>
-                        </tr>
-                    </tfoot>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>data 1</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>data 2</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="f-item">
-                <div class="code-sample">
-                    <pre class="prettyprint">
-                <code>
-  &lt;table&gt;
-      &lt;thead&gt;
-          &lt;tr&gt;
-              &lt;th&gt;Header&lt;/th&gt;
-              &lt;th&gt;Header&lt;/th&gt;
-          &lt;/tr&gt;
-      &lt;/thead&gt;
-      &lt;tfoot&gt;
-          &lt;tr&gt;
-              &lt;th&gt;Footer&lt;/th&gt;
-              &lt;th&gt;Footer&lt;/th&gt;
-          &lt;/tr&gt;
-      &lt;/tfoot&gt;
-      &lt;tbody&gt;
-          &lt;tr&gt;
-              &lt;td&gt;1&lt;/td&gt;
-              &lt;td&gt;data 1&lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;tr&gt;
-              &lt;td&gt;2&lt;/td&gt;
-              &lt;td&gt;data 2&lt;/td&gt;
-          &lt;/tr&gt;
-      &lt;/tbody&gt;
-  &lt;/table&gt;
-              </code>
-            </pre>
-                </div>
-            </div>
-        </div>
-        <div class="f-row">
-            <div class="f-item">
-                <h1 class="h1-title">Sidebar Menu</h1>
-            </div>
-        </div>
-        <div class="f-row f-row-start">
-            <div class="f-item">
-                <div>
-                    <div class="sidebar-left">
-                        <ul>
-                            <li>
-                                <a href="#">Section 1</a>
-                            </li>
-                            <li>
-                                <a href="#">Section 2</a>
-                            </li>
-                        </ul>
+                      </code>
+                    </pre>
+                        </div>
                     </div>
-                    <script type="text/javascript">
-                        $('.sidebar-left a').on('click', function(e) {
-                            e.preventDefault();
-                            $('.sidebar-left li').removeClass('selected');
-                            $(this).parent().addClass('selected');
-                        });
-                    </script>
                 </div>
-            </div>
-            <div class="f-item">
-                <div class="code-sample">
-                    <pre class="prettyprint">
-                    <code>
+
+                <div class="f-row table-section">
+                    <div class="f-item">
+                        <h1>Table</h1>
+                    </div>
+                </div>
+                <div class="f-row f-row-start table-section">
+                    <div class="f-item" style="margin-top:20px;">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Header</th>
+                                    <th>Header</th>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                                <tr>
+                                    <th>Footer</th>
+                                    <th>Footer</th>
+                                </tr>
+                            </tfoot>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>data 1</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>data 2</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="f-item">
+                        <div class="code-sample">
+                            <pre class="prettyprint">
+                        <code>
+      &lt;table&gt;
+          &lt;thead&gt;
+              &lt;tr&gt;
+                  &lt;th&gt;Header&lt;/th&gt;
+                  &lt;th&gt;Header&lt;/th&gt;
+              &lt;/tr&gt;
+          &lt;/thead&gt;
+          &lt;tfoot&gt;
+              &lt;tr&gt;
+                  &lt;th&gt;Footer&lt;/th&gt;
+                  &lt;th&gt;Footer&lt;/th&gt;
+              &lt;/tr&gt;
+          &lt;/tfoot&gt;
+          &lt;tbody&gt;
+              &lt;tr&gt;
+                  &lt;td&gt;1&lt;/td&gt;
+                  &lt;td&gt;data 1&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr&gt;
+                  &lt;td&gt;2&lt;/td&gt;
+                  &lt;td&gt;data 2&lt;/td&gt;
+              &lt;/tr&gt;
+          &lt;/tbody&gt;
+      &lt;/table&gt;
+                      </code>
+                    </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="f-row sidebar-section">
+                    <div class="f-item">
+                        <h1>Sidebar Menu</h1>
+                    </div>
+                </div>
+                <div class="f-row f-row-start sidebar-section">
+                    <div class="f-item">
+                        <div>
+                            <div class="sidebar-left">
+                                <ul>
+                                    <li>
+                                        <a href="#">Section 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Section 2</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <script type="text/javascript">
+                                $('.sidebar-left a').on('click', function(e) {
+                                    e.preventDefault();
+                                    $('.sidebar-left li').removeClass('selected');
+                                    $(this).parent().addClass('selected');
+                                });
+                            </script>
+                        </div>
+                    </div>
+                    <div class="f-item">
+                        <div class="code-sample">
+                            <pre class="prettyprint">
+                            <code>
   &lt;div class=&quot;sidebar-left&quot;&gt;
     &lt;ul&gt;
       &lt;li&gt;
@@ -443,156 +474,172 @@
       $(this).parent().addClass('selected');
     });
   &lt;/script&gt;
-                    </code>
-                  </pre>
-                </div>
-            </div>
-        </div>
-        <div class="f-row">
-            <div class="f-item">
-                <h1 class="h1-title">Drop-Down Menu</h1>
-            </div>
-        </div>
-        <div class="f-row">
-            <div class="f-item">
-                <div style="margin:20px;">
-                    <div id="main-logout">
-                        <ul id="main-account" class="nav-menu main-nav">
-                            <li class="account">
-                                <a href="javascript:;">
-                                    <div class="main-account">
-                                        <div class="account-type">Real Account</div>
-                                        <div class="account-id">CR9010912</div>
-                                        <div class="topMenuBalance">USD 0.00</div>
-                                    </div>
-                                    <div class="nav-caret"></div>
-                                </a>
-                            </li>
-                        </ul>
-                        <ul id="all-accounts-top" class="nav-menu main-nav" style="opacity: 0;">
-                            <li class="account">
-                                <a href="javascript:;">
-                                    <div class="main-account">
-                                        <div class="account-type">Real Account</div>
-                                        <div class="account-id">CR9010912</div>
-                                        <div class="topMenuBalance">USD 0.00</div>
-                                    </div>
-                                    <div class="nav-caret"></div>
-                                </a>
-                                <ul>
-                                    <a class="link" href="#">
-                                        <li class="topMenuProfile">Profile</li>
-                                    </a>
-                                    <a class="link" href="#">
-                                        <li class="topMenuSecurity">Security & Limits</li>
-                                    </a>
-                                    <a class="link" href="#">
-                                        <li class="topMenuMetaTrader">MetaTrader Accounts</li>
-                                    </a>
-                                    <div class="separator-line-thin-gray"></div>
-                                    <div class="login-id-list">
-                                        <a href="#" value="VRTC1191226">
-                                            <li>
-                                                <div>Virtual Account</div>
-                                                <div>VRTC1191226</div>
-                                            </li>
-                                        </a>
-                                        <div class="separator-line-thin-gray"></div>
-                                    </div>
-                                    <a href="javascript:;">
-                                        <li>Sign out</li>
-                                    </a>
-                                </ul>
-                            </li>
-                        </ul>
+                            </code>
+                          </pre>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="f-item">
-                <div class="code-sample">
-                    <pre class="prettyprint">
-                <code>
-&lt;div id=&quot;main-logout&quot;&gt;
-  &lt;ul id=&quot;main-account&quot; class=&quot;nav-menu main-nav&quot;&gt;
-    &lt;li class=&quot;account&quot;&gt;
-      &lt;a href=&quot;javascript:;&quot;&gt;
-        &lt;div class=&quot;main-account&quot;&gt;
-          &lt;div class=&quot;account-type&quot;&gt;Real Account&lt;/div&gt;
-          &lt;div class=&quot;account-id&quot;&gt;CR9010912&lt;/div&gt;
-          &lt;div class=&quot;topMenuBalance&quot;&gt;USD 0.00&lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;nav-caret&quot;&gt;&lt;/div&gt;
-      &lt;/a&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-  &lt;ul id=&quot;all-accounts&quot; class=&quot;nav-menu main-nav&quot;&gt;
-    &lt;li class=&quot;account&quot;&gt;
-      &lt;a href=&quot;javascript:;&quot;&gt;
-        &lt;div class=&quot;main-account&quot;&gt;
-          &lt;div class=&quot;account-type&quot;&gt;Real Account&lt;/div&gt;
-          &lt;div class=&quot;account-id&quot;&gt;CR9010912&lt;/div&gt;
-          &lt;div class=&quot;topMenuBalance&quot;&gt;USD 0.00&lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;nav-caret&quot;&gt;&lt;/div&gt;
-      &lt;/a&gt;
-      &lt;ul&gt;
-        &lt;a class=&quot;link&quot; href=&quot;#&quot;&gt;
-          &lt;li class=&quot;topMenuProfile&quot;&gt;Profile&lt;/li&gt;
+
+                <div class="f-row drop-down-menu-section">
+                    <div class="f-item">
+                        <h1>Drop-Down Menu</h1>
+                    </div>
+                </div>
+                <div class="f-row drop-down-menu-section">
+                    <div class="f-item">
+                        <div style="margin:20px;">
+                            <div id="main-logout">
+                                <ul id="main-account" class="nav-menu main-nav">
+                                    <li class="account">
+                                        <a href="javascript:;">
+                                            <div class="main-account">
+                                                <div class="account-type">Real Account</div>
+                                                <div class="account-id">CR9010912</div>
+                                                <div class="topMenuBalance">USD 0.00</div>
+                                            </div>
+                                            <div class="nav-caret"></div>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <ul id="all-accounts-top" class="nav-menu main-nav" style="opacity: 0;">
+                                    <li class="account">
+                                        <a href="javascript:;">
+                                            <div class="main-account">
+                                                <div class="account-type">Real Account</div>
+                                                <div class="account-id">CR9010912</div>
+                                                <div class="topMenuBalance">USD 0.00</div>
+                                            </div>
+                                            <div class="nav-caret"></div>
+                                        </a>
+                                        <ul>
+                                            <a class="link" href="#">
+                                                <li class="topMenuProfile">Profile</li>
+                                            </a>
+                                            <a class="link" href="#">
+                                                <li class="topMenuSecurity">Security & Limits</li>
+                                            </a>
+                                            <div class="separator-line-thin-gray"></div>
+                                            <div class="login-id-list">
+                                                <a href="#" value="VRTC1191226">
+                                                    <li>
+                                                        <div>Virtual Account</div>
+                                                        <div>VRTC1191226</div>
+                                                    </li>
+                                                </a>
+                                                <div class="separator-line-thin-gray"></div>
+                                            </div>
+                                            <a href="javascript:;">
+                                                <li>Sign out</li>
+                                            </a>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f-item">
+                        <div class="code-sample">
+                            <pre class="prettyprint">
+                        <code>
+  &lt;div id=&quot;main-logout&quot;&gt;
+    &lt;ul id=&quot;main-account&quot;
+    class=&quot;nav-menu main-nav&quot;&gt;
+      &lt;li class=&quot;account&quot;&gt;
+        &lt;a href=&quot;javascript:;&quot;&gt;
+          &lt;div class=&quot;main-account&quot;&gt;
+            &lt;div class=&quot;account-type&quot;&gt;
+              Real Account
+            &lt;/div&gt;
+            &lt;div class=&quot;account-id&quot;&gt;
+              CR9010912
+            &lt;/div&gt;
+            &lt;div class=&quot;topMenuBalance&quot;&gt;
+              USD 0.00
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;nav-caret&quot;&gt;&lt;/div&gt;
         &lt;/a&gt;
-        &lt;a class=&quot;link&quot; href=&quot;#&quot;&gt;
-          &lt;li class=&quot;topMenuSecurity&quot;&gt;Security &amp; Limits&lt;/li&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul id=&quot;all-accounts&quot;
+    class=&quot;nav-menu main-nav&quot;&gt;
+      &lt;li class=&quot;account&quot;&gt;
+        &lt;a href=&quot;javascript:;&quot;&gt;
+          &lt;div class=&quot;main-account&quot;&gt;
+            &lt;div class=&quot;account-type&quot;&gt;
+              Real Account
+            &lt;/div&gt;
+            &lt;div class=&quot;account-id&quot;&gt;
+              CR9010912
+            &lt;/div&gt;
+            &lt;div class=&quot;topMenuBalance&quot;&gt;
+              USD 0.00
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;nav-caret&quot;&gt;&lt;/div&gt;
         &lt;/a&gt;
-        &lt;a class=&quot;link&quot; href=&quot;#&quot;&gt;
-          &lt;li class=&quot;topMenuMetaTrader&quot;&gt;MetaTraderAccounts&lt;/li&gt;
-        &lt;/a&gt;
-        &lt;div class=&quot;separator-line-thin-gray&quot;&gt;&lt;/div&gt;
-          &lt;div class=&quot;login-id-list&quot;&gt;
-          &lt;a href=&quot;#&quot; value=&quot;VRTC1191226&quot;&gt;
-            &lt;li&gt;
-              &lt;div&gt;Virtual Account&lt;/div&gt;
-              &lt;div&gt;VRTC1191226&lt;/div&gt;
+        &lt;ul&gt;
+          &lt;a class=&quot;link&quot; href=&quot;#&quot;&gt;
+            &lt;li class=&quot;topMenuProfile&quot;&gt;
+              Profile
             &lt;/li&gt;
           &lt;/a&gt;
-          &lt;div class=&quot;separator-line-thin-gray&quot;&gt;&lt;/div&gt;
-        &lt;/div&gt;
-        &lt;a href=&quot;javascript:;&quot;&gt;
-          &lt;li&gt;Sign out&lt;/li&gt;
-        &lt;/a&gt;
-      &lt;/ul&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/div&gt;
-              </code>
-            </pre>
+          &lt;a class=&quot;link&quot; href=&quot;#&quot;&gt;
+            &lt;li class=&quot;topMenuSecurity&quot;&gt;
+              Security &amp; Limits
+            &lt;/li&gt;
+          &lt;/a&gt;
+          &lt;div class=&quot;separator-line-thin-gray&quot;&gt;
+          &lt;/div&gt;
+            &lt;div class=&quot;login-id-list&quot;&gt;
+            &lt;a href=&quot;#&quot; value=&quot;VRTC1191226&quot;&gt;
+              &lt;li&gt;
+                &lt;div&gt;Virtual Account&lt;/div&gt;
+                &lt;div&gt;VRTC1191226&lt;/div&gt;
+              &lt;/li&gt;
+            &lt;/a&gt;
+            &lt;div class=&quot;separator-line-thin-gray&quot;&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;a href=&quot;javascript:;&quot;&gt;
+            &lt;li&gt;Sign out&lt;/li&gt;
+          &lt;/a&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+                      </code>
+                    </pre>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="f-row">
-            <div class="f-item">
-                <h1 class="h1-title">Form</h1>
-            </div>
-        </div>
-        <div class="f-row">
-            <div class="f-item">
-                <div style="margin-top:20px;">
-                    <select>
-                        <option value="" selected="selected">Option 1</option>
-                        <option value="">Option 2</option>
-                        <option value="">Option 3</option>
-                    </select>
+
+                <div class="f-row form-section">
+                    <div class="f-item">
+                        <h1>Form</h1>
+                    </div>
                 </div>
-                <div style="margin-top:20px;">
-                    <input type='text'/>
-                    <p class='hint'>Hint comes here</p>
-                </div>
-                <div style="margin-top:20px;">
-                    <textarea name="name" rows="8" cols="20"></textarea>
-                </div>
-            </div>
-            <div class="f-item">
-                <div class="code-sample">
-                    <pre class="prettyprint">
-                <code>
+                <div class="f-row form-section">
+                    <div class="f-item">
+                        <div style="margin-top:20px;">
+                            <select>
+                                <option value="" selected="selected">Option 1</option>
+                                <option value="">Option 2</option>
+                                <option value="">Option 3</option>
+                            </select>
+                        </div>
+                        <div style="margin-top:20px;">
+                            <input type='text'/>
+                            <p class='hint'>Hint comes here</p>
+                        </div>
+                        <div style="margin-top:20px;">
+                            <textarea name="name" rows="8" cols="20"></textarea>
+                        </div>
+                    </div>
+                    <div class="f-item">
+                        <div class="code-sample">
+                            <pre class="prettyprint">
+                        <code>
   &lt;select&gt;
     &lt;option value=&quot;&quot; selected=&quot;selected&quot;&gt;Option 1&lt;/option&gt;
     &lt;option value=&quot;&quot;&gt;Option 2&lt;/option&gt;
@@ -603,36 +650,37 @@
   &lt;p class='hint'&gt;Hint comes here&lt;/p&gt;
 
   &lt;textarea name=&quot;name&quot; rows=&quot;8&quot; cols=&quot;40&quot;&gt;&lt;/textarea&gt;
-              </code>
-            </pre>
+                      </code>
+                    </pre>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="f-row">
-            <div class="f-item">
-                <h1 class="h1-title">Accordion</h1>
-            </div>
-        </div>
-        <div class="f-row">
-            <div class="f-item" style="min-width:300px;">
-                <div id="accordion" style="margin-top:20px;">
-                    <h3>Section 1</h3>
-                    <div>Contents of section 1</div>
-                    <h3>Section 2</h3>
-                    <div>Contents of section 2</div>
+
+                <div class="f-row accordion-section">
+                    <div class="f-item">
+                        <h1>Accordion</h1>
+                    </div>
                 </div>
-                <script type="text/javascript">
-                    $('#accordion').accordion({
-                        heightStyle : 'content',
-                        collapsible : true,
-                        active      : false
-                    });
-                </script>
-            </div>
-            <div class="f-item">
-                <div class="code-sample">
-                    <pre class="prettyprint">
-                <code>
+                <div class="f-row accordion-section">
+                    <div class="f-item" style="min-width:300px;">
+                        <div id="accordion" style="margin-top:20px;">
+                            <h3>Section 1</h3>
+                            <div>Contents of section 1</div>
+                            <h3>Section 2</h3>
+                            <div>Contents of section 2</div>
+                        </div>
+                        <script type="text/javascript">
+                            $('#accordion').accordion({
+                                heightStyle : 'content',
+                                collapsible : true,
+                                active      : false
+                            });
+                        </script>
+                    </div>
+                    <div class="f-item">
+                        <div class="code-sample">
+                            <pre class="prettyprint">
+                        <code>
   &lt;div id="accordion"&gt;
     &lt;h3&gt;Section 1&lt;/h3&gt;
     &lt;div&gt;Contents of section 1&lt;/div&gt;
@@ -647,34 +695,35 @@
       active      : false
     });
   &lt;/script&gt;
-              </code>
-            </pre>
+                      </code>
+                    </pre>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="f-row">
-            <div class="f-item">
-                <h1 class="h1-title">Tabs</h1>
-            </div>
-        </div>
-        <div class="f-row">
-            <div class="f-item">
-                <div class="has-tabs" style="margin-top:20px;">
-                    <ul>
-                        <li><a href="#tab_1">Tab 1</a></li>
-                        <li><a href="#tab_2">Tab 2</a></li>
-                    </ul>
-                    <div id="tab_1">Contents of tab 1</div>
-                    <div id="tab_2">Contents of tab 2</div>
+
+                <div class="f-row tabs-section">
+                    <div class="f-item">
+                        <h1>Tabs</h1>
+                    </div>
                 </div>
-                <script type='text/javascript'>
-                    $('.has-tabs').tabs();
-                </script>
-            </div>
-            <div class="f-item">
-                <div class="code-sample">
-                    <pre class="prettyprint">
-                <code>
+                <div class="f-row tabs-section">
+                    <div class="f-item">
+                        <div class="has-tabs" style="margin-top:20px;">
+                            <ul>
+                                <li><a href="#tab_1">Tab 1</a></li>
+                                <li><a href="#tab_2">Tab 2</a></li>
+                            </ul>
+                            <div id="tab_1">Contents of tab 1</div>
+                            <div id="tab_2">Contents of tab 2</div>
+                        </div>
+                        <script type='text/javascript'>
+                            $('.has-tabs').tabs();
+                        </script>
+                    </div>
+                    <div class="f-item">
+                        <div class="code-sample">
+                            <pre class="prettyprint">
+                        <code>
   &lt;div class="has-tabs"&gt;
     &lt;ul&gt;
       &lt;li&gt;&lt;a href="#tab_1"&gt;Tab 1&lt;/a&gt;&lt;/li&gt;
@@ -691,162 +740,166 @@
   &lt;script type="text/javascript"&gt;
     $('.has-tabs').tabs();
   &lt;/script&gt;
-              </code>
-            </pre>
+                      </code>
+                    </pre>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="f-row">
-            <div class="f-item">
-                <h1 class="h1-title">Icons</h1>
-            </div>
-        </div>
-        <div class="f-row">
-            <div class="f-item" style="max-width: 550px;">
-                <div class="f-row">
-                  <div class="f-item chartOptions_button">
-                    <span class = "templateButton" data-balloon="Candles" data-balloon-pos="down">
-                      <div class="img"><div class="candlestick-icon"></div></div>
-                    </span>
-                  </div>
-                  <div class="f-item chartOptions_button">
-                    <span class = "templateButton" data-balloon="Chart template" data-balloon-pos="down">
-                      <div class="img"><div class="chart_template-icon"></div></div>
-                    </span>
-                  </div>
-                  <div class="f-item chartOptions_button">
-                    <span class = "templateButton" data-balloon="Comparisons" data-balloon-pos="down">
-                      <div class="img"><div class="comparison-icon"></div></div>
-                    </span>
-                  </div>
-                  <div class="f-item chartOptions_button">
-                    <span class = "templateButton" data-balloon="Crosshair" data-balloon-pos="down">
-                      <div class="img"><div class="crosshair-icon"></div></div>
-                    </span>
-                  </div>
-                  <div class="f-item chartOptions_button">
-                    <span class = "templateButton" data-balloon="Dot" data-balloon-pos="down">
-                      <div class="img"><div class="dot-icon"></div></div>
-                    </span>
-                  </div>
-                  <div class="f-item chartOptions_button">
-                    <span class = "templateButton" data-balloon="Drawing" data-balloon-pos="down">
-                      <div class="img"><div class="drawing-icon"></div></div>
-                    </span>
-                  </div>
+
+                <div class="f-row icon-section">
+                    <div class="f-item">
+                        <h1>Icons</h1>
+                    </div>
                 </div>
-                <div class="f-row">
-                  <div class="f-item chartOptions_button">
-                    <span class = "templateButton" data-balloon="indicator" data-balloon-pos="down">
-                      <div class="img"><div class="indicator-icon"></div></div>
-                    </span>
-                  </div>
-                  <div class="f-item chartOptions_button">
-                    <span class = "templateButton" data-balloon="Line" data-balloon-pos="down">
-                      <div class="img"><div class="line-icon"></div></div>
-                    </span>
-                  </div>
-                  <div class="f-item chartOptions_button">
-                    <span class = "templateButton" data-balloon="Line dot" data-balloon-pos="down">
-                      <div class="img"><div class="linedot-icon"></div></div>
-                    </span>
-                  </div>
-                  <div class="f-item chartOptions_button">
-                    <span class = "templateButton" data-balloon="OHLC" data-balloon-pos="down">
-                      <div class="img"><div class="ohlc-icon"></div></div>
-                    </span>
-                  </div>
-                  <div class="f-item chartOptions_button">
-                    <span class = "templateButton" data-balloon="Share" data-balloon-pos="down">
-                      <div class="img"><div class="share-icon"></div></div>
-                    </span>
-                  </div>
-                  <div class="f-item chartOptions_button">
-                    <span class = "templateButton" data-balloon="Spline" data-balloon-pos="down">
-                      <div class="img"><div class="spline-icon"></div></div>
-                    </span>
-                  </div>
-                </div>
-                <div class="f-row">
-                  <div class="f-item chartOptions_button button_selected">
-                    <span class = "templateButton" data-balloon="Candles" data-balloon-pos="down">
-                      <div class="img"><div class="candlestick-w-icon"></div></div>
-                    </span>
-                  </div>
-                  <div class="f-item chartOptions_button button_selected">
-                    <span class = "templateButton" data-balloon="Chart template" data-balloon-pos="down">
-                      <div class="img"><div class="chart_template-w-icon"></div></div>
-                    </span>
-                  </div>
-                  <div class="f-item chartOptions_button button_selected">
-                    <span class = "templateButton" data-balloon="Dot" data-balloon-pos="down">
-                      <div class="img"><div class="dot-w-icon"></div></div>
-                    </span>
-                  </div>
-                  <div class="f-item chartOptions_button button_selected">
-                    <span class = "templateButton" data-balloon="Drawing" data-balloon-pos="down">
-                      <div class="img"><div class="drawing-w-icon"></div></div>
-                    </span>
-                  </div>
-                  <div class="f-item chartOptions_button button_selected">
-                    <span class = "templateButton" data-balloon="Line" data-balloon-pos="down">
-                      <div class="img"><div class="line-w-icon"></div></div>
-                    </span>
-                  </div>
-                  <div class="f-item chartOptions_button button_selected">
-                    <span class = "templateButton" data-balloon="Line dot" data-balloon-pos="down">
-                      <div class="img"><div class="linedot-w-icon"></div></div>
-                    </span>
-                  </div>
-                </div>
-                <div class="f-row" style="max-width:150px">
-                  <div class="f-item chartOptions_button button_selected">
-                    <span class = "templateButton" data-balloon="OHLC" data-balloon-pos="down">
-                      <div class="img"><div class="ohlc-w-icon"></div></div>
-                    </span>
-                  </div>
-                  <div class="f-item chartOptions_button button_selected">
-                    <span class = "templateButton" data-balloon="Share" data-balloon-pos="down">
-                      <div class="img"><div class="share-w-icon"></div></div>
-                    </span>
-                  </div>
-                  <div class="f-item chartOptions_button button_selected">
-                    <span class = "templateButton" data-balloon="Spline" data-balloon-pos="down">
-                      <div class="img"><div class="spline-w-icon"></div></div>
-                    </span>
-                  </div>
-                </div>
-                
-            </div>
-            <div class="f-item">
-                <div class="code-sample">
-                    <pre class="prettyprint">
-                <code>
+                <div class="f-row icon-section">
+                    <div class="f-item" style="max-width: 550px; margin-top:18px;">
+                        <div class="f-row icon-section">
+                          <div class="f-item chartOptions_button">
+                            <span class = "templateButton" data-balloon="Candles" data-balloon-pos="down">
+                              <div class="img"><div class="candlestick-icon"></div></div>
+                            </span>
+                          </div>
+                          <div class="f-item chartOptions_button">
+                            <span class = "templateButton" data-balloon="Chart template" data-balloon-pos="down">
+                              <div class="img"><div class="chart_template-icon"></div></div>
+                            </span>
+                          </div>
+                          <div class="f-item chartOptions_button">
+                            <span class = "templateButton" data-balloon="Comparisons" data-balloon-pos="down">
+                              <div class="img"><div class="comparison-icon"></div></div>
+                            </span>
+                          </div>
+                          <div class="f-item chartOptions_button">
+                            <span class = "templateButton" data-balloon="Crosshair" data-balloon-pos="down">
+                              <div class="img"><div class="crosshair-icon"></div></div>
+                            </span>
+                          </div>
+                          <div class="f-item chartOptions_button">
+                            <span class = "templateButton" data-balloon="Dot" data-balloon-pos="down">
+                              <div class="img"><div class="dot-icon"></div></div>
+                            </span>
+                          </div>
+                          <div class="f-item chartOptions_button">
+                            <span class = "templateButton" data-balloon="Drawing" data-balloon-pos="down">
+                              <div class="img"><div class="drawing-icon"></div></div>
+                            </span>
+                          </div>
+                        </div>
+                        <div class="f-row icon-section">
+                          <div class="f-item chartOptions_button">
+                            <span class = "templateButton" data-balloon="indicator" data-balloon-pos="down">
+                              <div class="img"><div class="indicator-icon"></div></div>
+                            </span>
+                          </div>
+                          <div class="f-item chartOptions_button">
+                            <span class = "templateButton" data-balloon="Line" data-balloon-pos="down">
+                              <div class="img"><div class="line-icon"></div></div>
+                            </span>
+                          </div>
+                          <div class="f-item chartOptions_button">
+                            <span class = "templateButton" data-balloon="Line dot" data-balloon-pos="down">
+                              <div class="img"><div class="linedot-icon"></div></div>
+                            </span>
+                          </div>
+                          <div class="f-item chartOptions_button">
+                            <span class = "templateButton" data-balloon="OHLC" data-balloon-pos="down">
+                              <div class="img"><div class="ohlc-icon"></div></div>
+                            </span>
+                          </div>
+                          <div class="f-item chartOptions_button">
+                            <span class = "templateButton" data-balloon="Share" data-balloon-pos="down">
+                              <div class="img"><div class="share-icon"></div></div>
+                            </span>
+                          </div>
+                          <div class="f-item chartOptions_button">
+                            <span class = "templateButton" data-balloon="Spline" data-balloon-pos="down">
+                              <div class="img"><div class="spline-icon"></div></div>
+                            </span>
+                          </div>
+                        </div>
+                        <div class="f-row icon-section">
+                          <div class="f-item chartOptions_button button_selected">
+                            <span class = "templateButton" data-balloon="Candles" data-balloon-pos="down">
+                              <div class="img"><div class="candlestick-w-icon"></div></div>
+                            </span>
+                          </div>
+                          <div class="f-item chartOptions_button button_selected">
+                            <span class = "templateButton" data-balloon="Chart template" data-balloon-pos="down">
+                              <div class="img"><div class="chart_template-w-icon"></div></div>
+                            </span>
+                          </div>
+                          <div class="f-item chartOptions_button button_selected">
+                            <span class = "templateButton" data-balloon="Dot" data-balloon-pos="down">
+                              <div class="img"><div class="dot-w-icon"></div></div>
+                            </span>
+                          </div>
+                          <div class="f-item chartOptions_button button_selected">
+                            <span class = "templateButton" data-balloon="Drawing" data-balloon-pos="down">
+                              <div class="img"><div class="drawing-w-icon"></div></div>
+                            </span>
+                          </div>
+                          <div class="f-item chartOptions_button button_selected">
+                            <span class = "templateButton" data-balloon="Line" data-balloon-pos="down">
+                              <div class="img"><div class="line-w-icon"></div></div>
+                            </span>
+                          </div>
+                          <div class="f-item chartOptions_button button_selected">
+                            <span class = "templateButton" data-balloon="Line dot" data-balloon-pos="down">
+                              <div class="img"><div class="linedot-w-icon"></div></div>
+                            </span>
+                          </div>
+                        </div>
+                        <div class="f-row icon-section" style="max-width:150px">
+                          <div class="f-item chartOptions_button button_selected">
+                            <span class = "templateButton" data-balloon="OHLC" data-balloon-pos="down">
+                              <div class="img"><div class="ohlc-w-icon"></div></div>
+                            </span>
+                          </div>
+                          <div class="f-item chartOptions_button button_selected">
+                            <span class = "templateButton" data-balloon="Share" data-balloon-pos="down">
+                              <div class="img"><div class="share-w-icon"></div></div>
+                            </span>
+                          </div>
+                          <div class="f-item chartOptions_button button_selected">
+                            <span class = "templateButton" data-balloon="Spline" data-balloon-pos="down">
+                              <div class="img"><div class="spline-w-icon"></div></div>
+                            </span>
+                          </div>
+                        </div>
+
+                    </div>
+                    <div class="f-item">
+                        <div class="code-sample">
+                            <pre class="prettyprint">
+                        <code>
   &lt;div class="f-item chartOptions_button"&gt;
-    &lt;span class = "templateButton" 
+    &lt;span class = "templateButton"
           data-balloon="Candles" data-balloon-pos="down"&gt;
       &lt;div class="img"&gt;
-        &lt;div 
+        &lt;div
         class="candlestick-icon"&gt;
-        &lt;/div&gt;  
+        &lt;/div&gt;
       &lt;/div&gt;
     &lt;/span&gt;
   &lt;/div&gt;
   &lt;div class="f-item chartOptions_button button_selected"&gt;
-    &lt;span class = "templateButton" 
+    &lt;span class = "templateButton"
           data-balloon="Candles" data-balloon-pos="down"&gt;
       &lt;div class="img"&gt;
-        &lt;div 
+        &lt;div
         class="candlestick-icon"&gt;
         &lt;/div&gt;
     &lt;/span&gt;
   &lt;/div&gt;
-              </code>
-            </pre>
+                      </code>
+                    </pre>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
-    </main>
+    </div>
 </body>
 
 </html>

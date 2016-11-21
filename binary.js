@@ -5,7 +5,7 @@ $(document).ready(function() {
     $('.nav-menu').unbind('click').on('click', function(event) {
         event.stopPropagation();
         hide_menu($('.nav-normal-menu li ul'));
-        hide_menu($('#language_select'));
+        hide_menu($('#language_select, #select_language'));
         var $el = $('#all-accounts, #all-accounts-top');
         if ($el.css('opacity') == 1 ) {
             hide_menu($el);
@@ -17,7 +17,7 @@ $(document).ready(function() {
     $('.nav-normal-menu > li').unbind('click').on('click', function(event) {
         event.stopPropagation();
         hide_menu($('#all-accounts, #all-accounts-top'));
-        hide_menu($('#language_select'));
+        hide_menu($('#language_select, #select_language'));
         var childMenu = $(this).find(' > ul'),
             $el = $('.nav-normal-menu li ul');
         if (childMenu.css('opacity') == 1 && $(event.target).find('span').hasClass('nav-caret')) {
@@ -33,7 +33,7 @@ $(document).ready(function() {
     $(document).unbind('click').on('click', function(){
         hide_menu($('#all-accounts, #all-accounts-top'));
         hide_menu($('.nav-normal-menu li ul'));
-        hide_menu($('#language_select'));
+        hide_menu($('#language_select, #select_language'));
     });
 
     function hide_menu($element) {
@@ -51,7 +51,7 @@ $(document).ready(function() {
         event.stopPropagation();
         hide_menu($('.nav-normal-menu li ul'));
         hide_menu($('#all-accounts, #all-accounts-top'));
-        var $el = $('#language_select');
+        var $el = $('#language_select, #select_language');
         if ($el.css('opacity') == 1 ) {
             hide_menu($el);
         } else {

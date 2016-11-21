@@ -3,21 +3,24 @@
     line-height: 1;
     font-size: 70%;
     text-align: right;
-    padding: 0px 18px;
+    padding: 3px 0;
     z-index: 2;
-    #language_select {
+    #select_language {
         opacity: 0;
         visibility: hidden;
         background-color: $fillColor;
         border: 1px solid $borderColor;
         color: $black;
         position: relative;
-        right: -152px;
+        right: -165px;
         .nav-caret {
             color: $black;
         }
-        .orange {
-            color: $secondaryBrandColor;
+        li:nth-child(2) {
+            margin-top: 2px;
+        }
+        li:not(:first-child) {
+            padding-left: 29px;
         }
     }
     #display_language {
@@ -29,24 +32,28 @@
             color: $white;
         }
     }
-    #language_select, #display_language {
+    #select_language, #display_language {
         float: right;
-        text-align: center;
+        text-align: left;
         padding: 0;
         margin: 0;
-        width: 150px;
+        width: 163px;
         font-size: $FONT_SIZE_S;
         li {
             cursor: pointer;
+            margin: 3px;
             &:first-child {
-                margin: 2px;
                 display: inline-block;
+                margin-bottom: 0;
+                margin-left: 8px;
             }
         }
     }
-    span.language {
+    .language {
         vertical-align: text-bottom;
         padding: 0 5px;
+        display: inline-flex;
+        min-width: 106px;
     }
     .nav-caret {
         vertical-align: super;
@@ -62,6 +69,10 @@
     .world-black {
         background-image: svg-icon('world', $black);
     }
+}
+
+body .topbar {
+    padding: 0 11px;
 }
 
 #topbar, #topbar a, .topbar, .topbar a {

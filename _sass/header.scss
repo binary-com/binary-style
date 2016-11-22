@@ -12,20 +12,21 @@
         border: 1px solid $borderColor;
         color: $black;
         position: relative;
-        right: -165px;
+        right: -118px;
         .nav-caret {
             color: $black;
         }
-        li:nth-child(2) {
-            margin-top: 2px;
-        }
-        li:not(:first-child) {
-            padding-left: 29px;
+        li {
+            &:nth-child(2) {
+                margin-top: 8px;
+            }
+            &:first-child {
+                padding-top: 3px;
+            }
         }
     }
     #display_language {
-        background-color: $darkPrimaryBrandColor;
-        border: 1px solid $darkPrimaryBrandColor;
+        border: 1px solid transparent;
         color: $white;
         height: 18px;
         .nav-caret {
@@ -34,34 +35,39 @@
     }
     #select_language, #display_language {
         float: right;
-        text-align: left;
+        text-align: center;
         padding: 0;
         margin: 0;
-        width: 163px;
+        width: 116px;
         font-size: $FONT_SIZE_S;
         li {
             cursor: pointer;
-            margin: 3px;
+            margin: 8px;
             &:first-child {
                 display: inline-block;
-                margin-bottom: 0;
-                margin-left: 8px;
+                margin: 0;
             }
         }
     }
-    .language {
-        vertical-align: text-bottom;
+    .language-wrapper {
+        vertical-align: middle;
         padding: 0 5px;
         display: inline-flex;
-        min-width: 106px;
+        min-width: 58px;
+        margin: 0 auto;
+    }
+    .language {
+        margin: 0 auto;
     }
     .nav-caret {
-        vertical-align: super;
+        vertical-align: middle;
+        margin-right: 9px;
     }
     .world {
         width: 16px;
         height: 16px;
         display: inline-block;
+        vertical-align: middle;
     }
     .world-white {
         background-image: svg-icon('world', $white);

@@ -1,8 +1,4 @@
-#nav-container {
-    text-align: center;
-}
-
-.nav-normal-menu {
+.top-nav-menu {
     list-style: none outside none;
     display: inline-table;
     padding: 0;
@@ -23,6 +19,7 @@
         position: relative;
         list-style: none outside none;
         padding: 0;
+        margin : 0;
         a {
             display: block;
             padding: 20px 30px;
@@ -76,13 +73,4 @@
             content: '»';
         }
     }
-    .resources, .nav-normal-menu .windows {
-         & > ul > li {
-             padding-left: 5px;
-         }
-    }
-}
-
-#nav-menu li {
-    margin : 0 0 0;
 }

@@ -62,7 +62,7 @@ $(document).ready(function() {
             $newText = $(this).text(),
             $languageSelect = $('#select_language'),
             selectClass = 'invisible';
-        $('#select_language li:first-child, #display_language li').removeClass().addClass($newClass).find('div.language').text($newText);
+        $('#select_language li:first-child, #display_language li').removeClass().addClass($newClass).find('span.language').text($newText);
         $languageSelect.find('li').removeClass(selectClass).end().find('li.' + $newClass + ':eq(1)').addClass(selectClass);
         $languageSelect.animate({'opacity': 0}, 100, function() {
             $languageSelect.css('visibility', 'hidden');

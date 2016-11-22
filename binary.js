@@ -4,7 +4,7 @@
 $(document).ready(function() {
     $('.nav-menu').unbind('click').on('click', function(event) {
         event.stopPropagation();
-        hide_menu($('.nav-normal-menu li ul'));
+        hide_menu($('.top-nav-menu li ul'));
         hide_menu($('#language_select, #select_language'));
         var $el = $('#all-accounts, #all-accounts-top');
         if ($el.css('opacity') == 1 ) {
@@ -14,12 +14,12 @@ $(document).ready(function() {
         }
     });
 
-    $('.nav-normal-menu > li').unbind('click').on('click', function(event) {
+    $('.top-nav-menu > li').unbind('click').on('click', function(event) {
         event.stopPropagation();
         hide_menu($('#all-accounts, #all-accounts-top'));
         hide_menu($('#language_select, #select_language'));
         var childMenu = $(this).find(' > ul'),
-            $el = $('.nav-normal-menu li ul');
+            $el = $('.top-nav-menu li ul');
         if (childMenu.css('opacity') == 1 && $(event.target).find('span').hasClass('nav-caret')) {
             hide_menu($el);
         } else if (childMenu.css('opacity') == 0 && $(event.target).find('span').hasClass('nav-caret')) {
@@ -32,24 +32,26 @@ $(document).ready(function() {
 
     $(document).unbind('click').on('click', function(){
         hide_menu($('#all-accounts, #all-accounts-top'));
-        hide_menu($('.nav-normal-menu li ul'));
+        hide_menu($('.top-nav-menu li ul'));
         hide_menu($('#language_select, #select_language'));
     });
 
     function hide_menu($element) {
         $element.animate({'opacity': 0}, 100, function() {
-            $element.css('visibility', 'hidden');
+            $element.css('visibility', 'hidden')
+                    .css('display', 'none');
         });
     }
 
     function show_menu($element) {
         $element.css('visibility', 'visible')
+                .css('display', 'block')
                 .animate({'opacity': 1}, 100);
     }
 
     $('.languages').unbind('click').on('click', function(event) {
         event.stopPropagation();
-        hide_menu($('.nav-normal-menu li ul'));
+        hide_menu($('.top-nav-menu li ul'));
         hide_menu($('#all-accounts, #all-accounts-top'));
         var $el = $('#language_select, #select_language');
         if ($el.css('opacity') == 1 ) {

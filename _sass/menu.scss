@@ -6,10 +6,9 @@
     }
     & > li {
         position: relative;
-        text-align: left;
-        margin-left: 12px;
+        text-align: center;
         > ul {
-            width: 108%;
+            width: 100%;
             background-color: $fillColor;
         }
     }
@@ -34,14 +33,14 @@
             }
         }
         & > ul {
-            margin: -18px -13px;
+            margin: -18px -1px;
             border: 1px solid $borderColor;
             padding: 0;
             a {
                 color: initial;
                 li {
                     margin-top: 0;
-                    padding: 7px 12px;
+                    padding: 7px 0;
                     &:hover {
                       background-color: $borderColor;
                     }
@@ -52,7 +51,7 @@
     .nav-caret {
         position: relative;
         top: -45px;
-        right: -135px;
+        right: -68px;
     }
 }
 

@@ -55,4 +55,26 @@ $(document).ready(function() {
         $('.f-row').hide();
         $('.' + classToShow).css('display', 'flex');
     }
+
+    $('#date-picker').datepicker({
+                        dateFormat: 'dd M, yy',
+                        changeMonth: true,
+                        changeYear: true,
+                        minDate: new Date(),
+                      });
+    attachTimePicker();
+    $("#time-picker").on('click', function() {
+        $(this).timepicker('destroy');
+        attachTimePicker();
+    });
+
+    function attachTimePicker() {
+        var date = new Date();
+        $("#time-picker").timepicker({
+            minTime: {
+                hour: date.getHours(),
+                minute: date.getMinutes()
+            }
+        });
+    }
 });

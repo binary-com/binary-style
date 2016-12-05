@@ -962,7 +962,7 @@
                         </div>
                         <h3>Time Picker:</h3>
                         <div>
-                            <input type="text" id="time-picker" size="12" readonly="readonly"/>
+                            <input type="text" id="time-picker" size="12" maxlength="5"/>
                         </div>
                     </div>
                     <div class="f-item">
@@ -972,7 +972,7 @@
   Date Picker:
   &lt;input type=&quot;text&quot; id=&quot;date-picker&quot; size=&quot;12&quot; readonly=&quot;readonly&quot;/&gt;
   Time Picker:
-  &lt;input type=&quot;text&quot; id=&quot;time-picker&quot; size=&quot;12&quot; readonly=&quot;readonly&quot;/&gt;
+  &lt;input type=&quot;text&quot; id=&quot;time-picker&quot; size=&quot;12&quot; maxLength=&quot;5&quot;/&gt;
   &lt;script type=&quot;text/javascript&quot;&gt;
   var date = new Date();
   $('#date-picker').datepicker({
@@ -981,14 +981,22 @@
     changeYear: true,
     minDate: date,
   });
-  $(&quot;#time-picker&quot;).on('click', function() {
-    date = new Date();
-    $(this).timepicker('destroy').timepicker({
-      minTime: {
-        hour: date.getHours(),
-        minute: date.getMinutes()
+  $(&quot;#time-picker&quot;)
+    .on('click', function() {
+      date = new Date();
+      $(this).timepicker('destroy').timepicker({
+        minTime: {
+          hour: date.getHours(),
+          minute: date.getMinutes()
+        }
+      });
+    })
+    .on('keypress', debounce(function(time) {
+      var regex = new RegExp(time);
+      if (!/^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/.test(regex)) {
+        $('#time-picker').parent().append($('<p>', {class: 'error-msg', text: 'Time is invalid'}));
       }
-    });
+    }));
   });
   &lt;/script&gt;
                                 </code>

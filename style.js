@@ -63,10 +63,20 @@ $(document).ready(function() {
                         minDate: new Date(),
                       });
     attachTimePicker();
-    $("#time-picker").on('click', function() {
-        $(this).timepicker('destroy');
-        attachTimePicker();
-    });
+    $("#time-picker")
+        .on('click', function() {
+          $(this).timepicker('destroy');
+          attachTimePicker();
+        })
+        .on('keypress', debounce(function(e) {
+            if (!/^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/.test(e.target.value)) {
+                if ($('#invalid-time').length === 0) {
+                    $('#time-picker').parent().append($('<p>', {class: 'error-msg', id: 'invalid-time', text: 'Invalid time'}));
+                }
+            } else {
+                $('#invalid-time').remove();
+            }
+        }));
 
     function attachTimePicker() {
         var date = new Date();
@@ -76,5 +86,22 @@ $(document).ready(function() {
                 minute: date.getMinutes()
             }
         });
+    }
+
+    function debounce(func, wait, immediate) {
+        'use strict';
+        var timeout;
+        var delay = wait || 500;
+        return function() {
+            var context = this, args = arguments;
+            var later = function() {
+                timeout = null;
+                if (!immediate) func.apply(context, args);
+            };
+            var callNow = immediate && !timeout;
+            clearTimeout(timeout);
+            timeout = setTimeout(later, delay);
+            if (callNow) func.apply(context, args);
+        };
     }
 });

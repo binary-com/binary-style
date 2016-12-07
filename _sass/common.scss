@@ -133,10 +133,15 @@ header,
   color: $secondaryBrandColor;
 }
 //footer rules
-#footer a {
-  font-size: $FONT_SIZE_S;
-  font-weight: 400;
-  color: $contentInverseColor;
+#footer {
+    #footer-regulatory a {
+        font-size: $FONT_SIZE_XS;
+    }
+    a {
+     font-size: $FONT_SIZE_S;
+     font-weight: 400;
+     color: $contentInverseColor;
+   }
 }
 .invisible {
     display: none !important;

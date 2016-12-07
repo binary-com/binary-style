@@ -52,6 +52,7 @@
                     <li><a href="#accordion-section">Accordion</a></li>
                     <li><a href="#tabs-section">Tabs</a></li>
                     <li><a href="#icon-section">Icons</a></li>
+                    <li><a href="#picker-section">Date and Time Pickers</a></li>
                 </ul>
 
             </div>
@@ -1094,6 +1095,63 @@
   &lt;/div&gt;
                       </code>
                     </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="f-row picker-section">
+                    <div class="f-item">
+                        <h1>Date and Time Pickers</h1>
+                    </div>
+                </div>
+
+                <div class="f-row picker-section">
+                    <div class="f-item">
+                        <h3>Date Picker:</h3>
+                        <div>
+                            <input type="text" id="date-picker" size="12" readonly="readonly"/>
+                        </div>
+                        <h3>Time Picker:</h3>
+                        <div>
+                            <input type="text" id="time-picker" size="12" maxlength="5"/>
+                        </div>
+                    </div>
+                    <div class="f-item">
+                        <div class="code-sample">
+                            <pre class="prettyprint">
+                                <code>
+  Date Picker:
+  &lt;input type=&quot;text&quot; id=&quot;date-picker&quot; size=&quot;12&quot; readonly=&quot;readonly&quot;/&gt;
+  Time Picker:
+  &lt;input type=&quot;text&quot; id=&quot;time-picker&quot; size=&quot;12&quot; maxLength=&quot;5&quot;/&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;
+  var date = new Date();
+  $('#date-picker').datepicker({
+    dateFormat: 'dd M, yy',
+    changeMonth: true,
+    changeYear: true,
+    minDate: date,
+  });
+  $(&quot;#time-picker&quot;)
+    .on('click', function() {
+      date = new Date();
+      $(this).timepicker('destroy').timepicker({
+        minTime: {
+          hour: date.getHours(),
+          minute: date.getMinutes()
+        }
+      });
+    })
+    .on('keypress', debounce(function(time) {
+      var regex = new RegExp(time);
+      if (!/^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/.test(regex)) {
+        $('#time-picker').parent().append($('<p>', {class: 'error-msg', text: 'Time is invalid'}));
+      }
+    }));
+  });
+  &lt;/script&gt;
+                                </code>
+                            </pre>
                         </div>
                     </div>
                 </div>

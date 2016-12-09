@@ -758,6 +758,7 @@
                 </div>
                 <div class="f-row tabs-section">
                     <div class="f-item">
+                        <p>Tabs:</p>
                         <div class="has-tabs" style="margin-top:20px;">
                             <ul>
                                 <li><a href="#tab_1">Tab 1</a></li>
@@ -769,11 +770,45 @@
                         <script type='text/javascript'>
                             $('.has-tabs').tabs();
                         </script>
+                        <p>Tabs with subsections:</p>
+                        <div class="content-tab-container tab-with-subsection" style="margin-top: 10px;">
+                            <div class="tab-menu">
+                                <div class="tab-menu-wrap">
+                                    <ul class="tm-ul">
+                                        <li id="first-tab" class="tm-li active first">
+                                            <span class="menu-wrap-a">
+                                                <span class="menu-wrap-b">
+                                                    <a class="tm-a first a-active">Tab 1</a>
+                                                </span>
+                                            </span>
+                                            <ul class="tm-ul-2">
+                                                <li id="first-tab-subsection-one" class="tm-li-2 first">
+                                                    <span class="tm-a-2 a-active">Subsection of tab 1</span>
+                                                </li>
+                                            </ul>
+                                        </li><li id="second-tab" class="tm-li">
+                                            <a href="javascript:;" class="tm-a">Tab 2</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-content-wrapper menu-has-sub-item">
+                                    <div id="first-tab-subsection-one-content" class="toggle-content">
+                                        Contents of tab 1
+                                    </div>
+                                    <div id="second-tab-content" class="toggle-content invisible">
+                                        Contents of tab 2
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="f-item">
                         <div class="code-sample">
                             <pre class="prettyprint">
                         <code>
+  Tabs:
   &lt;div class="has-tabs"&gt;
     &lt;ul&gt;
       &lt;li&gt;&lt;a href="#tab_1"&gt;Tab 1&lt;/a&gt;&lt;/li&gt;
@@ -790,6 +825,51 @@
   &lt;script type="text/javascript"&gt;
     $('.has-tabs').tabs();
   &lt;/script&gt;
+
+  Tabs with subsections:
+  &lt;div class=&quot;content-tab-container
+                      tab-with-subsection&quot;&gt;
+    &lt;div class=&quot;tab-menu&quot;&gt;
+      &lt;div class=&quot;tab-menu-wrap&quot;&gt;
+        &lt;ul class=&quot;tm-ul&quot;&gt;
+          &lt;li id=&quot;first-tab&quot;
+                 class=&quot;tm-li active first&quot;&gt;
+            &lt;span class=&quot;menu-wrap-a&quot;&gt;
+              &lt;span class=&quot;menu-wrap-b&quot;&gt;
+                &lt;a class=&quot;tm-a first
+                            a-active&quot;&gt;Tab 1&lt;/a&gt;
+              &lt;/span&gt;
+            &lt;/span&gt;
+            &lt;ul class=&quot;tm-ul-2&quot;&gt;
+              &lt;li id=&quot;first-tab-subsection-one&quot;
+                     class=&quot;tm-li-2 first&quot;&gt;
+                &lt;span class=&quot;tm-a-2 a-active&quot;&gt;
+                  Subsection of tab 1
+                &lt;/span&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;&lt;li id=&quot;second-tab&quot;
+                            class=&quot;tm-li&quot;&gt;
+            &lt;a href=&quot;javascript:;&quot;
+                  class=&quot;tm-a&quot;&gt;Tab 2&lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tab-content&quot;&gt;
+      &lt;div class=&quot;tab-content-wrapper
+                          menu-has-sub-item&quot;&gt;
+        &lt;div id=&quot;first-tab-subsection-one-content&quot;
+                class=&quot;toggle-content&quot;&gt;
+          Contents of tab 1
+        &lt;/div&gt;
+        &lt;div id=&quot;second-tab-content&quot;
+                class=&quot;toggle-content invisible&quot;&gt;
+          Contents of tab 2
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
                       </code>
                     </pre>
                         </div>

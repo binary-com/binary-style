@@ -41,6 +41,9 @@ h1 {
 #tabs {
   margin-top: 2rem;
 }
+.tab-content {
+    font-size: initial;
+}
 .code-sample {
   margin-top: 1rem;
   margin-bottom: 3rem;

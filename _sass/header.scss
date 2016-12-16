@@ -5,14 +5,17 @@
     text-align: right;
     padding: 3px 0;
     z-index: 2;
+    .languages {
+        position: relative;
+    }
     #select_language {
         opacity: 0;
         visibility: hidden;
         background-color: $fillColor;
         border: 1px solid $borderColor;
         color: $black;
-        position: relative;
-        right: -118px;
+        position: absolute;
+        right: 0;
         .nav-caret {
             color: $black;
         }

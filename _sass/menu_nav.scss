@@ -58,6 +58,7 @@
     }
     ul li:hover > ul {
         visibility: visible !important;
+        display: inline-block !important;
         opacity: 1 !important;
     }
     .nav-caret {

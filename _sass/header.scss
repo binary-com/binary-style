@@ -21,7 +21,8 @@
         }
         li {
             &:nth-child(2) {
-                margin-top: 8px;
+                margin-top: 2px;
+                padding: 3px;
             }
             &:first-child {
                 padding-top: 3px;
@@ -35,6 +36,10 @@
         .nav-caret {
             color: $white;
         }
+        li:first-child {
+            margin: 0;
+            padding: 0;
+        }
     }
     #select_language, #display_language {
         float: right;
@@ -45,7 +50,8 @@
         font-size: $FONT_SIZE_S;
         li {
             cursor: pointer;
-            margin: 8px;
+            margin: 2px;
+            padding: 3px;
             &:first-child {
                 display: inline-block;
                 margin: 0;

@@ -2,7 +2,7 @@
  * js code for Drop-Down Menu
  */
 $(document).ready(function() {
-    $('.nav-menu').unbind('click').on('click', function(event) {
+    $('.nav-menu').on('click', function(event) {
         event.stopPropagation();
         hide_menu($('.top-nav-menu li ul'));
         hide_menu($('#language_select, #select_language'));
@@ -14,7 +14,7 @@ $(document).ready(function() {
         }
     });
 
-    $('.top-nav-menu > li').unbind('click').on('click', function(event) {
+    $('.top-nav-menu > li').on('click', function(event) {
         event.stopPropagation();
         hide_menu($('#all-accounts, #all-accounts-top'));
         hide_menu($('#language_select, #select_language'));
@@ -30,7 +30,7 @@ $(document).ready(function() {
         }
     });
 
-    $(document).unbind('click').on('click', function(){
+    $(document).on('click', function(){
         hide_menu($('#all-accounts, #all-accounts-top'));
         hide_menu($('.top-nav-menu li ul'));
         hide_menu($('#language_select, #select_language'));
@@ -49,7 +49,7 @@ $(document).ready(function() {
                 .animate({'opacity': 1}, 100);
     }
 
-    $('.languages').unbind('click').on('click', function(event) {
+    $('.languages').on('click', function(event) {
         event.stopPropagation();
         hide_menu($('.top-nav-menu li ul'));
         hide_menu($('#all-accounts, #all-accounts-top'));

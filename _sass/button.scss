@@ -27,6 +27,13 @@ button {
     &:hover {
         background-color: $darkPositiveColor;
     }
+    &.button-secondary {
+        background: $fillColor;
+        color: $contentColor;
+        &:active, &:hover, &:visited {
+            background-color: $borderColor;
+        }
+    }
 }
 .button {
     cursor: pointer;

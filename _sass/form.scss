@@ -9,6 +9,9 @@ select, input, textarea {
     background: $contentInverseColor;
     border-radius: $BORDER_RADIUS;
 }
+fieldset {
+    border: 1px solid $fillColor;
+}
 .hint {
     font-size: $FONT_SIZE_S;
     color: $black;

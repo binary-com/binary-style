@@ -1,5 +1,4 @@
-body
-{
+body {
     font-family: $FONT-STACK;
     font-size: 18px;
 
@@ -44,68 +43,50 @@ i {
 .border-color{
   color:$borderColor;
 }
-ol,
-ul
-{
+ol, ul {
     list-style: none;
 }
-ul.bullet
-{
+ul.bullet {
     margin: 1.25em 0 1.25em 1.25em;
 }
-ol
-{
+ol {
     margin: 1.25em 0 1.25em 1.25em;
 }
-ul.bullet li
-{
+ul.bullet li {
     list-style-image: svg-url('<svg width="18px" height="18px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path fill="#{rgba($secondaryBrandColor, 1)}" d="M12,17.5A5.5,5.5,0,1,1,17.5,12,5.507,5.507,0,0,1,12,17.5Zm0-9A3.5,3.5,0,1,0,15.5,12,3.5,3.5,0,0,0,12,8.5Z"/></svg>');
 }
-ol,
-ul
-{
-    li
-    {
+ol, ul {
+    li {
         line-height: 1.4em;
-
         margin: .5em 0 0;
-        ol,
-        ul
-        {
+        ol, ul {
             margin: .8em 0 0 1em;
         }
     }
 }
-ol li
-{
+ol li {
     list-style-type: decimal;
     list-style-image: none;
 }
-img
-{
+img {
     vertical-align: middle;
 
     border: 0;
 }
-ul.checked
-{
-    li
-    {
+ul.checked {
+    li {
         min-height: 24px;
         padding-left: 35px;
 
         background: svg-url('<svg width="24px" height="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon fill="#{rgba($secondaryBrandColor, 1)}" points="8.308 22.298 0.399 14.39 3.934 10.854 8.308 15.228 20.066 3.47 23.601 7.005 8.308 22.298"/></svg>') no-repeat;
     }
 }
-.reset_ol
-{
+.reset_ol {
     counter-reset: item;
-    li
-    {
+    li {
         display: block;
     }
-    li:before
-    {
+    li:before {
         content: counters(item, '.') '. ';
         counter-increment: item;
     }
@@ -146,4 +127,13 @@ header,
 
 .invisible {
     display: none !important;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.separator-line {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }

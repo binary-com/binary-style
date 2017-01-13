@@ -277,24 +277,17 @@
 
 .ui-datepicker .ui-datepicker-buttonpane {
     background-image: none;
-    margin: 0;
-    padding: 0 0.2em;
-    border-left: 0;
-    border-right: 0;
-    border-bottom: 0;
+    margin: -8px 0;
+    padding: 0.25em;
+    border: 2px solid $fillColor;
+    border-radius: $BORDER_RADIUS;
+    height: 32px;
 }
 #ui-datepicker-div.ui-datepicker .ui-datepicker-buttonpane button, #ui-timepicker-div.ui-timepicker .ui-timepicker-table .ui-timepicker-buttonpane button {
     border: none;
-    background: $positiveColor;
-    color: $contentInverseColor;
-    border-radius: $BORDER_RADIUS;
     padding: 5px 15px;
     cursor: pointer;
-    font-size: $FONT_SIZE_S;
     margin-bottom: 5px;
-    &:hover {
-        background-color: $darkPositiveColor;
-    }
 }
 .ui-datepicker .ui-datepicker-buttonpane button {
     float: right;
@@ -461,11 +454,11 @@
 /* buttons and button pane styling */
 .ui-timepicker .ui-timepicker-buttonpane {
     background-image: none;
-    margin: 0;
-    padding: 0 0.2em;
-    border-left: 0;
-    border-right: 0;
-    border-bottom: 0;
+    margin: -2px 0;
+    padding: 0.25em;
+    border: 2px solid $fillColor;
+    border-radius: $BORDER_RADIUS;
+    height: 32px;
 }
 
 .ui-timepicker .ui-timepicker-buttonpane button {

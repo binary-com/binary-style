@@ -4,7 +4,7 @@
         max-width: 480px;
     }
     .container {
-        margin: 0 auto;
+        margin: 0 5px;
         max-width: 480px;
         #wrapper {
             &.login {
@@ -14,7 +14,7 @@
         }
     }
     #wrapper.login {
-        margin: 150px auto;
+        margin: 150px 30px;;
         max-width: 360px;
         #main-header #logo {
             margin: 0 auto;

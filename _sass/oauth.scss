@@ -4,7 +4,7 @@
         max-width: 480px;
     }
     .container {
-        margin: 0 5px;
+        margin: 0 auto;
         max-width: 480px;
         #wrapper {
             &.login {
@@ -14,7 +14,7 @@
         }
     }
     #wrapper.login {
-        margin: 150px 30px;;
+        margin: 150px auto;
         max-width: 360px;
         #main-header #logo {
             margin: 0 auto;
@@ -78,5 +78,13 @@
     :-ms-input-placeholder {
         font-style: italic;
         color: $secondaryContentColor;
+    }
+    @media screen and (max-width: 480px) {
+        .container {
+            margin: 0 10px;
+        }
+        #wrapper.login {
+            margin: 150px 30px;
+        }
     }
 }

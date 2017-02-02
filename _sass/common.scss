@@ -52,7 +52,7 @@ ul.bullet {
 ol {
     margin: 1.25em 0 1.25em 1.25em;
 }
-ul.bullet li {
+ul.bullet > li {
     list-style-image: svg-url('<svg width="18px" height="18px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path fill="#{rgba($secondaryBrandColor, 1)}" d="M12,17.5A5.5,5.5,0,1,1,17.5,12,5.507,5.507,0,0,1,12,17.5Zm0-9A3.5,3.5,0,1,0,15.5,12,3.5,3.5,0,0,0,12,8.5Z"/></svg>');
 }
 ol, ul {
@@ -74,7 +74,7 @@ img {
     border: 0;
 }
 ul.checked {
-    li {
+    > li {
         min-height: 24px;
         padding-left: 35px;
 

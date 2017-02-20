@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,700&subset=latin,vietnamese,cyrillic-ext,latin-ext,cyrillic);
+
 /* Base */
 * {
     -webkit-user-select: none;
@@ -12,11 +14,11 @@
 
 .plugin {
     margin: 0;
-    padding: 0 0 20px 0;
-    background-color: transparent;
+    padding: 10px 0 20px 0;
+    background-color: #F2F2F2;
     font-size: 12px;
     color: #333;
-    font-family: Tahoma, Kalimati, Verdana, "Bitstream Vera Sans", "DejaVu Sans", Geneva, Arial, Helvetica, Sans-serif;
+    font-family: Roboto, Tahoma, Kalimati, Verdana, "Bitstream Vera Sans", "DejaVu Sans", Geneva, Arial, Helvetica, sans-serif;
 }
 
 .plugin #content {
@@ -225,9 +227,19 @@
 }
 
 .plugin #providers .provider #button_google {
-    background-position: 2px -1551px;
-    background-color: #c53929;
+    background-image: url("images/oneall/g-normal.png");
+    background-color: white;
     border-radius: 3px;
+    width: 62px !important;
+    border: thin solid #F2F2F2;
+    box-shadow: 1px 1px 1px grey;
+}
+
+.plugin #providers .provider .name#name_google {
+    color: #444;
+    margin-left: 69px;
+    margin-top: -31px;
+    font-size: 14px;
 }
 
 .plugin #providers .provider #button_twitter {

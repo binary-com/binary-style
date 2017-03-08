@@ -180,6 +180,9 @@ $contract_icons: (
     &.CALLE {
         background-image: contract-icon('calle');
     }
+    &.CALLE.negative-color {
+        background-image: contract-icon('calle', $negativeColor);
+    }
     &.PUT {
         background-image: contract-icon('put');
     }

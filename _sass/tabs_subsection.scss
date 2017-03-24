@@ -88,6 +88,7 @@
   ul.tm-ul {
     @include tab-list;
     margin-bottom: 2em;
+    white-space: nowrap;
   }
   .tab-with-subsection, .content-tab-container {
     .tm-ul {

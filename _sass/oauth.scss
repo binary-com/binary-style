@@ -5,19 +5,20 @@
     }
     .container {
         margin: 0 auto;
-        max-width: 480px;
-        #wrapper {
-            &.login {
-                margin: 15px auto;
-                max-width: 300px;
-            }
+        max-width: 960px;
+    }
+    #wrapper {
+        #frmLogin > div {
+            width: 300px;
+            margin-left: auto;
+            margin-right: auto;
         }
     }
-    #wrapper.login {
-        margin: 150px auto;
-        max-width: 360px;
-        #main-header #logo {
-            margin: 0 auto;
+    #inline {
+        display: flex;
+        margin-top: 50px;
+        > div:nth-child(odd) {
+            width: 100%;
         }
     }
     #wrapper.scope-confirms {
@@ -59,7 +60,7 @@
         height: 44px;
     }
     button {
-        margin-top: 15px;
+        margin-top: 18px;
     }
     input {
         box-sizing: border-box;
@@ -80,15 +81,68 @@
         color: $secondaryContentColor;
     }
     #oa_social_login_container iframe {
-        width: 303px !important;
+        width: 100% !important;
         height: 60px;
+        margin-top: 22%;
+    }
+    .vertical-separator {
+        border-right: 1px solid #f2f2f2;
+        width: 1px;
+        height: 75px;
+        margin-left: 25px;
+        &:first-child {
+            margin-top: 28px;
+        }
+    }
+    .circle-separator {
+        border: 1px solid #f2f2f2;
+        border-radius: 100%;
+        padding: 15px 18px;
+    }
+    @media screen and (max-width: 768px) {
+        #wrapper {
+            order: -2;
+        }
+        .separators {
+            order: -1;
+            margin: 0 auto;
+        }
+        .vertical-separator {
+            height: 1px;
+            width: 130px;
+            border-top: 1px solid #f2f2f2;
+            &:first-child {
+                margin-top: 40px;
+                margin-left: 0;
+            }
+            &:not(:first-child) {
+                display: inline-block;
+                margin-left: -5px;
+                position: relative;
+                top: -17px;
+            }
+        }
+        .circle-separator {
+            width: 20px;
+            display: inline;
+            position: relative;
+            margin-left: 131px;
+            top: -13px;
+        }
+        #inline {
+            flex-wrap: wrap;
+        }
+        #oa_social_login_container iframe {
+            margin-top: 8%;
+        }
+        .links {
+            font-size: 13px;
+            margin-top: 5%;
+        }
     }
     @media screen and (max-width: 480px) {
         .container {
             margin: 0 10px;
-        }
-        #wrapper.login {
-            margin: 150px 30px;
         }
     }
 }

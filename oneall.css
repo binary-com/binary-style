@@ -15,25 +15,9 @@
 .plugin {
     margin: 0;
     padding: 10px 0 20px 0;
-    background-color: #F2F2F2;
     font-size: 12px;
     color: #333;
     font-family: Roboto, Tahoma, Kalimati, Verdana, "Bitstream Vera Sans", "DejaVu Sans", Geneva, Arial, Helvetica, sans-serif;
-}
-
-.plugin #content {
-    overflow: hidden;
-    display: table;
-    margin: auto;
-}
-
-.plugin #providers {
-    float: left;
-    position: relative;
-}
-
-.plugin #providers .providers_group {
-    float: left;
 }
 
 .plugin #providers .providers_group.hidden {
@@ -103,7 +87,6 @@
 }
 
 .plugin #providers .provider {
-    float: left;
     outline: 0 none;
 }
 
@@ -173,11 +156,6 @@
 }
 
 /* Custom */
-.plugin #providers .provider {
-    width: 178px !important;
-    padding: 2px 4px 4px 2px;
-}
-
 .plugin #providers .provider .button {
     background-image: url("./images/oneall/flat_w32_h32_w_b_v1.png");
     background-repeat: no-repeat;
@@ -187,7 +165,6 @@
     padding: 0 0 0 35px;
     text-align: left;
     text-decoration: none;
-    width: 143px !important;
 }
 
 .plugin #providers .provider {
@@ -227,19 +204,28 @@
 }
 
 .plugin #providers .provider #button_google {
-    background-image: url("images/oneall/g-normal.png");
-    background-color: white;
+    background-image: url("images/oneall/google.svg");
+    background-position: center;
+    background-position-x: 20px;
+    color: black;
     border-radius: 3px;
-    width: 62px !important;
+    width: 298px !important;
     border: thin solid #F2F2F2;
-    box-shadow: 1px 1px 1px grey;
+    padding: 5px 0;
+}
+
+.plugin #providers .provider #button_google:hover {
+    background-color: #F2F2F2;
 }
 
 .plugin #providers .provider .name#name_google {
-    color: #444;
-    margin-left: 69px;
-    margin-top: -31px;
-    font-size: 14px;
+    display: none !important;
+}
+
+.plugin #providers .provider #button_google span:first-child {
+    height: 28px !important;
+    font-size: 13px !important;
+    text-align: center;
 }
 
 .plugin #providers .provider #button_twitter {

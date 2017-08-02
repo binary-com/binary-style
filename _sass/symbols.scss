@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'Symbols';
+    font-style: normal;
+    font-weight: normal;
+    src: url('fonts/symbols/symbols.woff') format('woff');
+}
+
+.symbols {
+    &:before{
+        font-family: Symbols;
+        margin-right: 2px;
+    }
+    &.aud:before {
+        content: '\0041\0024';
+    }
+    &.eur:before {
+        content: '\20AC';
+    }
+    &.gbp:before {
+        content: '\00A3';
+    }
+    &.jpy:before {
+        content: '\00A5';
+    }
+    &.usd:before {
+        content: '\0024';
+    }
+    &.btc:before {
+        content: '\0042';
+    }
+}

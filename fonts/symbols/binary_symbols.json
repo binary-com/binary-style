@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "name": "symbols",
-    "lastOpened": 1501743754595,
+    "name": "binary_symbols",
+    "lastOpened": 1501817468691,
     "created": 1501743711546
   },
   "iconSets": [
@@ -176,9 +176,13 @@
     "fontPref": {
       "prefix": "icon-",
       "metadata": {
-        "fontFamily": "symbols",
+        "fontFamily": "binary_symbols",
         "majorVersion": 1,
-        "minorVersion": 0
+        "minorVersion": 0,
+        "fontURL": "https://style.binary.com/",
+        "description": "Binary.com symbols font",
+        "copyright": "Binary.com",
+        "license": "MIT License"
       },
       "metrics": {
         "emSize": 1024,
@@ -195,7 +199,8 @@
       "cssVarsFormat": "scss",
       "showSelector": true,
       "selector": "class",
-      "classSelector": ".symbols"
+      "classSelector": ".symbols",
+      "includeMetadata": true
     },
     "imagePref": {
       "prefix": "icon-",
@@ -213,6 +218,5 @@
     "showCodes": true,
     "gridSize": 16
   },
-  "uid": -1,
-  "time": 1501747681194
+  "uid": -1
 }

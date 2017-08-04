@@ -1,13 +1,13 @@
 @font-face {
-    font-family: 'Symbols';
+    font-family: 'BinarySymbols';
     font-style: normal;
     font-weight: normal;
-    src: url('fonts/symbols/symbols.woff') format('woff');
+    src: url('fonts/symbols/binary_symbols.woff') format('woff');
 }
 
 .symbols {
     &:before{
-        font-family: Symbols;
+        font-family: BinarySymbols;
         margin-right: 2px;
     }
     &, &:before {

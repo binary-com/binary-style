@@ -10,6 +10,10 @@
         font-family: Symbols;
         margin-right: 2px;
     }
+    &, &:before {
+        transition: none;
+        animation: none;
+    }
     &.aud:before {
         content: '\0041\0024';
     }

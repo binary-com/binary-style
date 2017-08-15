@@ -53,6 +53,11 @@
             background-color: $primaryBrandColor;
             & a {
                 padding: 10px 30px;
+                &:hover {
+                    background: #E98024;
+                    opacity: 1;
+                    text-decoration: none;
+                }
             }
         }
     }

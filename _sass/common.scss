@@ -17,7 +17,7 @@ i {
   font-style: italic;
 }
 .primary-color{
-  background-color:$primaryBrandColor;
+  color:$primaryBrandColor;
 }
 .primary-bg-color{
   background-color:$primaryBrandColor;
@@ -29,7 +29,7 @@ i {
   background-color:$secondaryBrandColor;
 }
 .primary-color-dark{
-  background-color:$darkPrimaryBrandColor;
+  color:$darkPrimaryBrandColor;
 }
 .primary-bg-color-dark{
   background-color:$darkPrimaryBrandColor;
@@ -43,7 +43,7 @@ i {
   background-color: $fillColor;
 }
 .border-color{
-  color:$borderColor;
+  border-color:$borderColor;
 }
 ol, ul {
     list-style: none;

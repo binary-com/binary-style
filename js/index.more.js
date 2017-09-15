@@ -1,3 +1,4 @@
+import jQuery from 'jquery';
 import '../_sass/jquery-ui-custom.scss';
 /*! jQuery UI - v1.12.1 - 2017-05-12
  * http://jqueryui.com
@@ -6013,7 +6014,7 @@ import '../_sass/jquery-ui-custom.scss';
 
 
 
-})(window.jQuery);
+})(jQuery);
 
 /*
  * jQuery UI Timepicker
@@ -7486,4 +7487,4 @@ import '../_sass/jquery-ui-custom.scss';
     // Add another global to avoid noConflict issues with inline event handlers
     window['TP_jQuery_' + tpuuid] = $;
 
-})(window.jQuery);
+})(jQuery);

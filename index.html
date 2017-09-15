@@ -51,11 +51,11 @@
                     <li><a href="#table-section">Table</a></li>
                     <li><a href="#sidebar-section">Sidebar Menu</a></li>
                     <li><a href="#form-section">Form</a></li>
-                    <li><a href="#accordion-section">Accordion</a></li>
-                    <li><a href="#tabs-section">Tabs</a></li>
+                    <li><a href="#accordion-section">Accordion*</a></li>
+                    <li><a href="#tabs-section">Tabs*</a></li>
                     <li><a href="#icon-section">Icons</a></li>
                     <li><a href="#symbols-section">Symbols</a></li>
-                    <li><a href="#picker-section">Date and Time Pickers</a></li>
+                    <li><a href="#picker-section">Date and Time Pickers*</a></li>
                 </ul>
 
             </div>
@@ -67,8 +67,15 @@
                         <h2>Usage</h2>
                         <ul class="bullet">
                           <li>Include <a href="https://jquery.com/" target="_blank">jQuery</a> (Version 2.1.1) in your project</li>
-                          <li>Include the <a href="binary.js" target="_blank">JS file</a> in your project</li>
-                          <li>Include the styles by including <a href="binary.css" target="_blank">this file</a> in your project</li>
+                          <li>Include the <a href="binary.js" target="_blank">binary.js</a> file in your project</li>
+                          <li>If you need Date and Time Pickers, Tabs or Accordion include the <a href="binary.more.js" target="_blank">binary.more.js</a> file in your project, this will include a copy of jquery-ui@v1.12.1 and customized styles.<br/></li>
+                          <li>
+                            If you are using npm: <br/>
+                            <code>
+                              import 'binary-style'; <br/>
+                              import 'binary-style/binary.more'; // only when you need jquery-ui
+                            </code>
+                          </li>
                         </ul>
                     </div>
                 </div>

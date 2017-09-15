@@ -3,7 +3,10 @@
   "version": "0.0.1",
   "description": "Style system and guide for Binary.com",
   "main": "binary.js",
-  "scripts": {},
+  "scripts": {
+    "watch": "webpack --progress -w",
+    "build": "webpack --progress"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/binary-com/binary-style.git"

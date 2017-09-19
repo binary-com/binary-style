@@ -16,7 +16,7 @@ before_install:
 - yarn
 install: yarn build
 after_success:
-- git clone --branch gh-pages https://$GIT_KEY@github.com/aminroosta/binary-style
+- git clone --branch gh-pages https://${GH_TOKEN}@github.com/aminroosta/binary-style.git
   --depth 1 gh-pages
 - cd gh-pages
 - rm -rf $(node -e "console.log(require('../package.json').version);")

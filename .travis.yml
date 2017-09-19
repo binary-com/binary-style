@@ -1,0 +1,34 @@
+git:
+  depth: 1
+language: node_js
+matrix:
+  fast_finish: true
+node_js:
+  - 8.5
+notifications:
+  email:
+  - amin@binary.com
+  - ashkan@binary.com
+branches:
+  only:
+  - master
+before_install:
+  - yarn
+install: yarn build
+after_success:
+  - git clone --branch gh-pages https://$GIT_KEY@github.com/binary-com/binary-style --depth 1 gh-pages
+  - cd gh-pages
+  - rm -rf $(node -e "console.log(require('../package.json').version);")
+  - mkdir $(node -e "console.log(require('../package.json').version);")
+  - cd $(node -e "console.log(require('../package.json').version);")
+  - cp ../../binary.js .
+  - cp ../../binary.more.js .
+  - cd ..
+  - git config --global user.email "ashkan@binary.com"
+  - git config --global user.name "Ashkan Nemati"
+  - git config --global push.default simple
+  - git add --all
+  - git commit -m 'Commit from TravisCI Build'
+  - git push
+  - cd ..
+  - rm -rf gh-pages

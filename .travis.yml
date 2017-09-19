@@ -16,7 +16,7 @@ before_install:
   - yarn
 install: yarn build
 after_success:
-  - git clone --branch gh-pages https://$GIT_KEY@github.com/binary-com/binary-style --depth 1 gh-pages
+  - git clone --branch gh-pages git@github.com:aminroosta/binary-style.git --depth 1 gh-pages
   - cd gh-pages
   - rm -rf $(node -e "console.log(require('../package.json').version);")
   - mkdir $(node -e "console.log(require('../package.json').version);")
@@ -24,8 +24,6 @@ after_success:
   - cp ../../binary.js .
   - cp ../../binary.more.js .
   - cd ..
-  - git config --global user.email "ashkan@binary.com"
-  - git config --global user.name "Ashkan Nemati"
   - git config --global push.default simple
   - git add --all
   - git commit -m 'Commit from TravisCI Build'

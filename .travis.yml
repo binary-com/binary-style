@@ -16,6 +16,9 @@ before_install:
 - yarn
 install: yarn build
 after_success:
+- git config --global user.email "amin.roosta@outlook.com"
+- git config --global user.name "Amin Roosta"
+- git config --global push.default simple
 - git clone --branch gh-pages https://${GH_TOKEN}@github.com/binary-com/binary-style.git
   --depth 1 gh-pages
 - cd gh-pages
@@ -25,9 +28,6 @@ after_success:
 - cp ../../binary.js .
 - cp ../../binary.more.js .
 - cd ..
-- git config --global user.email "amin.roosta@outlook.com"
-- git config --global user.name "Amin Roosta"
-- git config --global push.default simple
 - git add --all
 - git commit -m 'Commit from TravisCI Build'
 - git push

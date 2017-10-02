@@ -19,7 +19,7 @@ after_success:
 - git config --global user.email "amin.roosta@outlook.com"
 - git config --global user.name "Amin Roosta"
 - git config --global push.default simple
-- git clone --branch gh-pages https://${GH_TOKEN}@github.com/binary-com/binary-style.git
+- git clone --branch gh-pages https://${GHITHUB_TOKEN}@github.com/binary-com/binary-style.git
   --depth 1 gh-pages
 - cd gh-pages
 - rm -rf $(node -e "console.log(require('../package.json').version);")

@@ -14,12 +14,21 @@ The goal of the project is to serve as base style for all Binary projects, and t
 https://style.binary.com/binary.js
 ```
 
-- Include the styles by including this file as your first style resource:
+- If you need Date and Time Pickers, Tabs or Accordion include "binary.more.js" in your project, this will include a copy of jquery-ui with customized styles.
 
 ```
-https://style.binary.com/binary.css
+https://style.binary.com/binary.more.js
 ```
 
-Then include any app-specific styles.
+- This library is also aviable on `npm`
 
-For already existing apps, please remove any styles that override the base ones.
+```
+npm install --save binary-style
+```
+
+- If you need Date and Time Pickers, Tabs or Accordion import "binary-styles/binary.more" in addition to "binary-style"
+
+```
+import 'binary-style';
+import 'binary-style/binary.more'; // Include custom build of jquery-ui@1.12.1
+``` 

@@ -57,6 +57,14 @@ const index_cfg = Object.assign({}, config, {
      libraryTarget: 'umd'
    },
 });
+const index_isolated_cfg = Object.assign({}, config, {
+   entry: './js/index.isolated.js',
+   output: {
+     path: path.resolve(__dirname, '.'),
+     filename: 'binary.isolated.js',
+     libraryTarget: 'umd'
+   },
+});
 const index_more_cfg = Object.assign({}, config, {
    entry: './js/index.more.js',
    output: {
@@ -66,5 +74,5 @@ const index_more_cfg = Object.assign({}, config, {
    },
 });
 
-module.exports = [ index_cfg, index_more_cfg ];
+module.exports = [ index_cfg, index_isolated_cfg, index_more_cfg ];
 

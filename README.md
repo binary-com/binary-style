@@ -32,3 +32,6 @@ npm install --save binary-style
 import 'binary-style';
 import 'binary-style/binary.more'; // Include custom build of jquery-ui@1.12.1
 ``` 
+
+- For new projects it's remommended to `import 'binary-style/binary.isolated` instead,  
+the only difference is that all css styles are wrapped inside a wrapper with `.binary-style` selector.

@@ -16,8 +16,8 @@ before_install:
 - yarn
 install: yarn build
 after_success:
-- git config --global user.email "amin.roosta@outlook.com"
-- git config --global user.name "Amin Roosta"
+- git config --global user.email "ashkan.nemati@gmail.com"
+- git config --global user.name "ashkanx"
 - git config --global push.default simple
 - git clone --branch gh-pages https://${GHITHUB_TOKEN}@github.com/binary-com/binary-style.git
   --depth 1 gh-pages

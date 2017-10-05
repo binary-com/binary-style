@@ -20,7 +20,8 @@ https://style.binary.com/binary.js
 https://style.binary.com/binary.more.js
 ```
 
-- This library is also aviable on `npm`
+### NPM Usage (Recommended)
+- The library is aviable on `npm`
 
 ```
 npm install --save binary-style
@@ -30,8 +31,13 @@ npm install --save binary-style
 
 ```
 import 'binary-style';
-import 'binary-style/binary.more'; // Include custom build of jquery-ui@1.12.1
+import 'binary-style/binary.more'; // This includes a custom jquery-ui@1.12.1 build
 ``` 
 
 - For new projects it's remommended to `import 'binary-style/binary.isolated` instead,  
-the only difference is that all css styles are wrapped inside a wrapper with `.binary-style` selector.
+
+```
+import 'binary-style/binary.isolated`;
+```
+
+The only difference is that all css styles are wrapped inside a wrapper with `.binary-style` selector.

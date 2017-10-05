@@ -9,6 +9,7 @@
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
     <script src="binary.js"></script>
     <script src="style.js"></script>
+    <script src="select2.js"></script>
     <link rel="icon" type="image/png" sizes="16x16" href="https://style.binary.com/images/favicons/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://style.binary.com/images/favicons/favicon-32x32.png">
     <link rel="stylesheet" href="style.css">
@@ -956,6 +957,17 @@
                             </select>
                         </div>
                         <div style="margin-top:20px;">
+                            <select id="select2">
+                                <option value="" selected="selected">Option 1</option>
+                                <option value="">Option 2</option>
+                                <option value="">Option 3</option>
+                            </select>
+
+                            <script>
+                                $('#select2').select2();
+                            </script>
+                        </div>
+                        <div style="margin-top:20px;">
                             <input type='text'/>
                             <p class='hint'>Hint comes here</p>
                         </div>
@@ -970,8 +982,17 @@
   &lt;select&gt;
     &lt;option value=&quot;&quot; selected=&quot;selected&quot;&gt;Option 1&lt;/option&gt;
     &lt;option value=&quot;&quot;&gt;Option 2&lt;/option&gt;
-     &lt;option value=&quot;&quot;&gt;Option 3&lt;/option&gt;
+    &lt;option value=&quot;&quot;&gt;Option 3&lt;/option&gt;
   &lt;/select&gt;
+
+  &lt;select id=&quot;select2&quot;&gt;
+    &lt;option selected=&quot;selected&quot;&gt;Option 1&lt;/option&gt;
+    &lt;option &gt;Option 2&lt;/option&gt;
+    &lt;option &gt;Option 3&lt;/option&gt;
+  &lt;/select&gt;
+  &lt;script&gt;
+    $('#select2').select2();
+  &lt;/script&gt;
 
   &lt;input type='text'/&gt;
   &lt;p class='hint'&gt;Hint comes here&lt;/p&gt;

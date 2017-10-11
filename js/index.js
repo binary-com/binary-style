@@ -3,20 +3,20 @@ import '../_sass/all.scss';
  * js code for Drop-Down Menu
  */
 
-function hide_menu($element) {
+export function hide_menu($element) {
     $element.animate({'opacity': 0}, 100, function() {
         $element.css('visibility', 'hidden')
             .css('display', 'none');
     });
 }
 
-function show_menu($element) {
+export function show_menu($element) {
     $element.css('visibility', 'visible')
         .css('display', 'block')
         .animate({'opacity': 1}, 100);
 }
 
-function navMenuListener() {
+export function navMenuListener() {
     $('.nav-menu').on('click', function(event) {
         event.stopPropagation();
         hide_menu($('.top-nav-menu li ul'));
@@ -30,7 +30,7 @@ function navMenuListener() {
     });
 }
 
-function topNavMenuListener() {
+export function topNavMenuListener() {
     $('.top-nav-menu > li').on('click', function(event) {
         event.stopPropagation();
         hide_menu($('#all-accounts, #all-accounts-top'));
@@ -48,7 +48,7 @@ function topNavMenuListener() {
     });
 }
 
-function documentListener() {
+export function documentListener() {
     $(document).on('click', function(){
         hide_menu($('#all-accounts, #all-accounts-top'));
         hide_menu($('.top-nav-menu li ul'));
@@ -56,7 +56,7 @@ function documentListener() {
     });
 }
 
-function langListener() {
+export function langListener() {
     $('.languages').on('click', function(event) {
         event.stopPropagation();
         hide_menu($('.top-nav-menu li ul'));
@@ -70,7 +70,7 @@ function langListener() {
     });
 }
 
-function initMenuContent(_menu_containers) {
+export function initMenuContent(_menu_containers) {
     var listeners_events = [];
     _menu_containers.filter(':not(.follow-default)').delegate('.tm-a,.tm-a-2', 'click', function (event) {
         event.preventDefault();
@@ -147,7 +147,7 @@ function initMenuContent(_menu_containers) {
 /*
  * js code for tabs with subsections
  */
-function tabListener() {
+export function tabListener() {
     $('.tm-ul > li').hover(
         function () {
             $(this).addClass('hover');

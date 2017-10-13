@@ -1,5 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 const config = {
@@ -50,20 +51,68 @@ const config = {
 };
 
 const index_cfg = Object.assign({}, config, {
-   entry: './js/index.js',
-   output: {
-     path: path.resolve(__dirname, '.'),
-     filename: 'binary.js',
-     libraryTarget: 'umd'
-   },
+  entry: './js/index.js',
+  output: {
+    path: path.resolve(__dirname, '.'),
+    filename: 'binary.js',
+    libraryTarget: 'umd'
+  },
+  module: {
+    loaders: [
+      {
+        test: /\.woff$/,
+        loader: 'url-loader',
+        options: { limit: 50000, },
+      },
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        query: { presets: ['es2015'] }
+      },
+      {
+        test: /\.scss$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [{loader: 'css-loader', options: { minimize: true } }, 'sass-loader']
+        })
+      }
+    ]
+  },
+  plugins: [
+    new ExtractTextPlugin('binary.css')
+  ]
 });
 const index_isolated_cfg = Object.assign({}, config, {
-   entry: './js/index.isolated.js',
-   output: {
-     path: path.resolve(__dirname, '.'),
-     filename: 'binary.isolated.js',
-     libraryTarget: 'umd'
-   },
+  entry: './js/index.isolated.js',
+  output: {
+    path: path.resolve(__dirname, '.'),
+    filename: 'binary.isolated.js',
+    libraryTarget: 'umd'
+  },
+  module: {
+    loaders: [
+      {
+        test: /\.woff$/,
+        loader: 'url-loader',
+        options: { limit: 50000, },
+      },
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        query: { presets: ['es2015'] }
+      },
+      {
+        test: /\.scss$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [{loader: 'css-loader', options: { minimize: true } }, 'sass-loader']
+        })
+      }
+    ]
+  },
+  plugins: [
+    new ExtractTextPlugin('binary.isolated.css')
+  ]
 });
 const index_more_cfg = Object.assign({}, config, {
    entry: './js/index.more.js',

@@ -1,6 +1,4 @@
-_site
 .sass-cache
-.jekyll-metadata
 .idea/
 binary.js.map
 binary.more.js.map

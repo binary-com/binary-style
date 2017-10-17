@@ -1,10 +1,7 @@
-_site
 .sass-cache
-.jekyll-metadata
 .idea/
 node_modules/
 CNAME
-_config.yml
 oauth.scss
 payment.css
 webpack.config.js

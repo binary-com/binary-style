@@ -3,7 +3,7 @@
  */
 
 export function hide_menu($element) {
-    $element.animate({'opacity': 0}, 100, function() {
+    $element.animate({'opacity': 0}, 100, () => {
         $element.css('visibility', 'hidden')
             .css('display', 'none');
     });
@@ -16,12 +16,12 @@ export function show_menu($element) {
 }
 
 export function navMenuListener() {
-    $('.nav-menu').on('click', function(event) {
+    $('.nav-menu').on('click', (event) => {
         event.stopPropagation();
         hide_menu($('.top-nav-menu li ul'));
         hide_menu($('#language_select, #select_language'));
-        var $el = $('#all-accounts, #all-accounts-top');
-        if ($el.css('opacity') == 1 ) {
+        const $el = $('#all-accounts, #all-accounts-top');
+        if (+$el.css('opacity') === 1 ) {
             hide_menu($el);
         } else {
             show_menu($el);
@@ -34,12 +34,12 @@ export function topNavMenuListener() {
         event.stopPropagation();
         hide_menu($('#all-accounts, #all-accounts-top'));
         hide_menu($('#language_select, #select_language'));
-        var childMenu = $(this).find(' > ul'),
-            $el = $('.top-nav-menu li ul');
-        if (childMenu.css('opacity') == 1 && $(event.target).find('span').hasClass('nav-caret')) {
+        const childMenu = $(this).find(' > ul');
+        const $el = $('.top-nav-menu li ul');
+        if (+childMenu.css('opacity') === 1 && $(event.target).find('span').hasClass('nav-caret')) {
             hide_menu($el);
-        } else if (childMenu.css('opacity') == 0 && $(event.target).find('span').hasClass('nav-caret')) {
-            $el.animate({'opacity': 0}, 100, function() {
+        } else if (+childMenu.css('opacity') === 0 && $(event.target).find('span').hasClass('nav-caret')) {
+            $el.animate({'opacity': 0}, 100, () => {
                 $el.css('visibility', 'hidden');
                 show_menu(childMenu);
             });
@@ -48,7 +48,7 @@ export function topNavMenuListener() {
 }
 
 export function documentListener() {
-    $(document).on('click', function(){
+    $(document).on('click', () => {
         hide_menu($('#all-accounts, #all-accounts-top'));
         hide_menu($('.top-nav-menu li ul'));
         hide_menu($('#language_select, #select_language'));
@@ -56,12 +56,12 @@ export function documentListener() {
 }
 
 export function langListener() {
-    $('.languages').on('click', function(event) {
+    $('.languages').on('click', (event) => {
         event.stopPropagation();
         hide_menu($('.top-nav-menu li ul'));
         hide_menu($('#all-accounts, #all-accounts-top'));
-        var $el = $('#language_select, #select_language');
-        if ($el.css('opacity') == 1 ) {
+        const $el = $('#language_select, #select_language');
+        if (+$el.css('opacity') === 1 ) {
             hide_menu($el);
         } else {
             show_menu($el);
@@ -70,17 +70,17 @@ export function langListener() {
 }
 
 export function initMenuContent(_menu_containers) {
-    var listeners_events = [];
-    _menu_containers.filter(':not(.follow-default)').delegate('.tm-a,.tm-a-2', 'click', function (event) {
+    const listeners_events = [];
+    _menu_containers.filter(':not(.follow-default)').delegate('.tm-a,.tm-a-2', 'click', (event) => {
         event.preventDefault();
 
-        var target = $(event.target);
-        var tab_id = target.parents('li:first').attr('id');
+        const target = $(event.target);
+        const tab_id = target.parents('li:first').attr('id');
 
         if (tab_id) {
-            var tab_container = target.parents('.tm-ul');
+            const tab_container = target.parents('.tm-ul');
 
-            var selected_tab =
+            let selected_tab =
                 // find previously active tab
                 tab_container.find('.tm-a,.tm-a-2')
                 // remove previously active tab
@@ -100,12 +100,12 @@ export function initMenuContent(_menu_containers) {
                     .end().end();
 
             // replace span to a, to make it clickable for real
-            var span_tm_a = tab_container.find('span.tm-a');
-            span_tm_a.replaceWith('<a href="#" class="' + span_tm_a.attr('class') + '">' + span_tm_a.html() + '</a>');
+            const span_tm_a = tab_container.find('span.tm-a');
+            span_tm_a.replaceWith(`<a href="#" class="${span_tm_a.attr('class')}">${span_tm_a.html()}</a>`);
 
-            var menu_li = selected_tab.parents('li');
-            var sub_menu_selected = menu_li.find('.tm-ul-2 .a-active');
-            var selected_tab_id = menu_li.attr('id');
+            const menu_li = selected_tab.parents('li');
+            let sub_menu_selected = menu_li.find('.tm-ul-2 .a-active');
+            let selected_tab_id = menu_li.attr('id');
 
             if (!sub_menu_selected.length) {
                 sub_menu_selected = menu_li.find('.tm-a-2:first').addClass('a-active');
@@ -113,31 +113,30 @@ export function initMenuContent(_menu_containers) {
                 if (sub_menu_selected.length) {
                     selected_tab = sub_menu_selected;
                     selected_tab_id = sub_menu_selected.parents('li').attr('id');
-                    selected_content = $('#' + selected_tab_id + '-content').removeClass('invisible');
                 } else {
                     selected_tab_id = menu_li.attr('id');
                 }
             }
 
-            var selected_content = $('#' + selected_tab_id + '-content')
+            const selected_content = $(`#${selected_tab_id}-content`)
             // show selected tab content
                 .removeClass('invisible')
                 // and hide the rest
                 .siblings(':not(.sticky)').addClass('invisible').end();
 
             push_to_listeners({
-                'id': selected_tab_id,
-                'target': selected_tab,
-                'content': selected_content,
-                'menu': menu_li.parents('ul.tm-ul'),
-                'event': event
+                id     : selected_tab_id,
+                target : selected_tab,
+                content: selected_content,
+                menu   : menu_li.parents('ul.tm-ul'),
+                event,
             });
         }
         return false;
     });
     function push_to_listeners(info) {
         // push to listeners events
-        for (var i=0; i<listeners_events.length; i++) {
+        for (let i = 0; i < listeners_events.length; i++) {
             listeners_events[i](info);
         }
     }
@@ -158,7 +157,7 @@ export function tabListener() {
     initMenuContent($('.content-tab-container').find('.tm-ul'));
 }
 
-$(document).ready(function() {
+$(document).ready(() => {
     navMenuListener();
     topNavMenuListener();
     documentListener();

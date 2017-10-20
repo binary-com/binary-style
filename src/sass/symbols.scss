@@ -1,8 +1,10 @@
-@font-face {
-    font-family: 'BinarySymbols';
-    font-style: normal;
-    font-weight: normal;
-    src: url('../fonts/symbols/binary_symbols.woff') format('woff');
+@at-root {
+    @font-face {
+        font-family: 'BinarySymbols';
+        font-style: normal;
+        font-weight: normal;
+        src: url('fonts/symbols/binary_symbols.woff') format('woff');
+    }
 }
 
 .symbols {

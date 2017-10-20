@@ -1,4 +1,3 @@
-import '../_sass/all.scss';
 /*
  * js code for Drop-Down Menu
  */

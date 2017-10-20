@@ -40,3 +40,7 @@ release:
   - 'shell:make_cname'
   - 'default'
   - 'gh-pages'
+
+npm_publish:
+  - 'default'
+  - 'shell:npm_publish'

@@ -6,7 +6,8 @@
   "scripts": {
     "test": "grunt test",
     "watch": "sudo -p 'enter password for sudo:' grunt livereload",
-    "serve": "sudo -p 'enter password for sudo:' grunt serve"
+    "serve": "sudo -p 'enter password for sudo:' grunt serve",
+    "npm_publish": "grunt npm_publish"
   },
   "repository": {
     "type": "git",

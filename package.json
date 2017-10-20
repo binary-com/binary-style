@@ -4,8 +4,9 @@
   "description": "Style system and guide for Binary.com",
   "main": "binary.js",
   "scripts": {
-    "watch": "webpack --progress -w",
-    "build": "webpack --progress"
+    "test": "grunt test",
+    "watch": "sudo -p 'enter password for sudo:' grunt livereload",
+    "serve": "sudo -p 'enter password for sudo:' grunt serve"
   },
   "repository": {
     "type": "git",
@@ -18,17 +19,37 @@
   },
   "homepage": "https://style.binary.com",
   "devDependencies": {
+    "autoprefixer": "^6.5.3",
     "babel-core": "^6.26.0",
+    "babel-eslint": "^7.1.1",
     "babel-loader": "^7.1.2",
     "babel-preset-es2015": "^6.24.1",
-    "css-loader": "^0.28.7",
-    "node-sass": "^4.5.3",
-    "sass-loader": "^6.0.6",
-    "style-loader": "^0.18.2",
-    "url-loader": "^0.5.9",
+    "connect-livereload": "^0.6.0",
+    "connect-modrewrite": "^0.9.0",
+    "eslint-config-airbnb-base": "^10.0.1",
+    "eslint-config-binary": "^1.0.2",
+    "eslint-config-prettier": "^2.3.0",
+    "eslint-plugin-import": "^2.2.0",
+    "grunt": "^1.0.1",
+    "grunt-concurrent": "^2.3.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^2.2.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-embed-fonts": "^0.5.0",
+    "grunt-eslint": "^19.0.0",
+    "grunt-gh-pages": "^2.0.0",
+    "grunt-postcss": "^0.8.0",
+    "grunt-shell": "^2.1.0",
+    "grunt-stylelint": "^0.9.0",
+    "grunt-webpack": "^3.0.0",
+    "load-grunt-config": "^0.19.2",
+    "load-grunt-tasks": "^3.5.2",
+    "postcss-scss": "^0.4.0",
+    "stylelint": "^8.2.0",
+    "time-grunt": "^1.0.0",
     "webpack": "^3.5.6"
-  },
-  "dependencies": {
-    "extract-text-webpack-plugin": "^3.0.1"
   }
 }

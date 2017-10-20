@@ -1,11 +1,9 @@
 import jQuery from 'jquery';
-import '../_sass/jquery-ui-custom.scss';
 /*! jQuery UI - v1.12.1 - 2017-05-12
  * http://jqueryui.com
  * Includes: widget.js, data.js, keycode.js, scroll-parent.js, unique-id.js,
  *   widgets/draggable.js, widgets/accordion.js, widgets/datepicker.js, widgets/mouse.js, widgets/tabs.js
  * Copyright jQuery Foundation and other contributors; Licensed MIT */
-
 (function($) {
     $.ui = $.ui || {};
 

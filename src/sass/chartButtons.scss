@@ -1,0 +1,58 @@
+.chartOptions_button {
+    background: $fillColor;
+    margin-left: 5px;
+    color: $primaryBrandColor;
+    border-radius: 2px;
+
+    &:hover {
+        cursor: pointer;
+    }
+    &.button_selected {
+        color: $contentInverseColor;
+        background: $primaryBrandColor;
+
+        &:hover {
+            color: $contentInverseColor;
+            background: $primaryBrandColor;
+        }
+        [data-balloon] {
+            &:before, &:after {
+                opacity: 0;
+            }
+        }
+        &[data-balloon] {
+            &:before, &:after {
+                opacity: 0;
+            }
+        }
+    }
+    span {
+        border-bottom: 0px;
+        cursor: pointer;
+        display: inline-block;
+
+        &[data-balloon]:before {
+            padding: 0.5em;
+            font-size: $FONT_SIZE_S;
+            border: none;
+            box-shadow: none;
+            border-radius: 0px;
+        }
+    }
+    .img {
+        display: inline;
+
+        div {
+            width: 25px;
+            height: 25px;
+            margin: 5px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        img {
+            width: 20px;
+            height: 20px;
+            margin: 5px;
+        }
+    }
+}

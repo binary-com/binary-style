@@ -1,0 +1,108 @@
+/* main menu styling */
+.nav-menu {
+    font-size: 1rem;
+
+    a {
+        color: $contentInverseColor;
+    }
+    & > li {
+        position: relative;
+        text-align: center;
+
+        > ul {
+            width: 100%;
+            background-color: $fillColor;
+        }
+    }
+}
+
+.main-nav {
+    width: 165px;
+    border: 1px solid $primaryBrandColor;
+    position: absolute;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    background-color: $primaryBrandColor;
+    transition: none !important;
+
+    & > li {
+        margin: 0;
+        height: 77px;
+
+        a {
+            font-weight: normal;
+            display: block;
+            max-height: 70px;
+            margin-top: 3px;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        & > ul {
+            margin: 0;
+            margin-left: -1px;
+            padding: 0;
+            border: 1px solid $borderColor;
+
+            a {
+                color: initial;
+
+                li {
+                    margin-top: 0;
+                    padding: 7px 0;
+
+                    &:hover {
+                        background-color: $borderColor;
+                    }
+                }
+            }
+        }
+    }
+    .nav-caret {
+        position: relative;
+        top: -45px;
+        right: -68px;
+    }
+    * {
+        outline: none;
+    }
+}
+
+.nav-caret {
+    vertical-align: middle;
+    border-top: 4px dashed;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    display: inline-block;
+}
+
+#all-accounts, #all-accounts-top {
+    background-color: $fillColor;
+    border: 1px solid $borderColor;
+    z-index: 99999;
+    opacity: 0;
+    visibility: hidden;
+
+    & > li a {
+        color: $contentColor;
+        margin: 0;
+    }
+}
+
+#main-logout, #logout-top {
+    position: relative;
+    height: 75px;
+    display: flex;
+    width: 165px;
+    float: right;
+}
+
+.separator-line-thin-gray {
+    border-top: 1px solid $borderColor;
+}
+
+#main-account {
+    height: 70px;
+}

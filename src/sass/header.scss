@@ -1,0 +1,105 @@
+#topbar, .topbar {
+    width: 100%;
+    line-height: 1;
+    font-size: 70%;
+    text-align: right;
+    padding: 3px 0;
+    z-index: 2;
+    min-height: 20px;
+
+    .languages {
+        position: relative;
+    }
+    #select_language {
+        opacity: 0;
+        visibility: hidden;
+        background-color: $fillColor;
+        border: 1px solid $borderColor;
+        color: $black;
+        position: absolute;
+        right: 0;
+
+        .nav-caret {
+            color: $black;
+        }
+        li {
+            &:nth-child(2) {
+                margin-top: 2px;
+                padding: 3px;
+            }
+            &:first-child {
+                padding-top: 3px;
+            }
+        }
+    }
+    #display_language {
+        border: 1px solid transparent;
+        color: $white;
+        height: 18px;
+
+        .nav-caret {
+            color: $white;
+        }
+        li:first-child {
+            margin: 0;
+            padding: 0;
+        }
+    }
+    #select_language, #display_language {
+        float: right;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        width: 116px;
+        font-size: $FONT_SIZE_S;
+
+        li {
+            cursor: pointer;
+            margin: 2px;
+            padding: 3px;
+
+            &:first-child {
+                display: inline-block;
+                margin: 0;
+            }
+        }
+    }
+    .language-wrapper {
+        vertical-align: middle;
+        padding: 0 5px;
+        display: inline-flex;
+        min-width: 58px;
+        margin: 0 auto;
+    }
+    .language {
+        margin: 0 auto;
+    }
+    .nav-caret {
+        vertical-align: middle;
+        margin-right: 9px;
+    }
+    .world {
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .world-white {
+        background-image: svg-icon('world', $white);
+    }
+    .world-black {
+        background-image: svg-icon('world', $black);
+    }
+}
+
+body .topbar {
+    padding: 0 11px;
+}
+
+#topbar, #topbar a, .topbar, .topbar a {
+    color: $contentInverseColor;
+
+    &:hover {
+        text-decoration: none;
+    }
+}

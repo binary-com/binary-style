@@ -1,0 +1,84 @@
+h1, h2, h3, h4, li, p, a, span {
+    text-rendering: optimizeLegibility;
+}
+
+a, a:visited {
+    color: $primaryBrandColor;
+    text-decoration: none;
+    font-weight: bold;
+
+    &:hover, &:active {
+        text-decoration: underline;
+    }
+}
+
+p {
+    margin: 1em 0;
+    line-height: 1.4em;
+}
+
+.font-n {
+    font-size: $FONT_SIZE_N;
+}
+
+.font-s {
+    font-size: $FONT_SIZE_S;
+}
+
+.font-xs {
+    font-size: $FONT_SIZE_XS;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 300;
+    color: $secondaryBrandColor;
+
+    a {
+        color: $secondaryBrandColor !important;
+    }
+}
+
+h1.dark {
+    color: $primaryBrandColor;
+
+    a {
+        color: $primaryBrandColor !important;
+    }
+}
+
+h2 {
+    font-size: 28px;
+    color: $secondaryBrandColor;
+    font-weight: 300;
+
+    a {
+        color: $primaryBrandColor !important;
+    }
+    em {
+        text-decoration: underline;
+    }
+    &.center {
+        text-align: center;
+        margin: 1.25em auto;
+    }
+}
+
+h3 {
+    color: $primaryBrandColor;
+    font-size: 22px;
+    font-weight: 300;
+
+    a {
+        color: $primaryBrandColor !important;
+    }
+}
+
+h4 {
+    color: $contentColor;
+
+    a {
+        color: $contentColor !important;
+    }
+    font-size: 18px;
+}

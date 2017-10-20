@@ -93,5 +93,18 @@ module.exports = function (grunt) {
                 stdout: true
             }
         },
+        npm_publish: {
+            command: [
+                prompt('Copying files...'),
+                `cp ${global.dist}/binary.* ${process.cwd()}`,
+                prompt('Publishing to npm...'),
+                'npm publish',
+                prompt('Cleaning up...'),
+                `rm ${process.cwd()}/binary.*`,
+            ].join(' && '),
+            options: {
+                stdout: true
+            }
+        },
     }
 };

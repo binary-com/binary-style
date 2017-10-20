@@ -1,4 +1,4 @@
-@import "common_import";
+@import 'common_import';
 
 .oauth {
     .container, #wrapper.scope-confirms {
@@ -19,12 +19,14 @@
     #inline {
         display: flex;
         margin-top: 50px;
+
         > div:nth-child(odd) {
             width: 100%;
         }
     }
     #wrapper.scope-confirms {
         width: 95%;
+
         .scopes {
             background-color: $fillColor;
             padding: 5px;
@@ -48,6 +50,7 @@
     }
     #main-header {
         margin: 20px 0;
+
         #logo {
             width: 100%;
             max-width: 250px;
@@ -71,14 +74,12 @@
         background: $white;
         padding: 2px 3px;
         font-size: $FONT_SIZE_S;
+
         &.error-msg {
             border-color: $negativeColor;
         }
     }
-    ::-webkit-input-placeholder,
-    :-moz-placeholder,
-    ::-moz-placeholder,
-    :-ms-input-placeholder {
+    ::-webkit-input-placeholder, :-moz-placeholder, ::-moz-placeholder, :-ms-input-placeholder {
         font-style: italic;
         color: $secondaryContentColor;
     }
@@ -88,17 +89,18 @@
         margin-top: 22%;
     }
     .vertical-separator {
-        border-right: 1px solid #f2f2f2;
+        border-right: 1px solid $fillColor;
         width: 1px;
         height: 75px;
         margin-left: auto;
         margin-right: auto;
+
         &:first-child {
             margin-top: 28px;
         }
     }
     .circle-separator {
-        border: 1px solid #f2f2f2;
+        border: 1px solid $fillColor;
         border-radius: 100%;
         padding: 15px 18px;
     }
@@ -113,7 +115,8 @@
         .vertical-separator {
             height: 1px;
             width: 130px;
-            border-top: 1px solid #f2f2f2;
+            border-top: 1px solid $fillColor;
+
             &:first-child {
                 margin-top: 40px;
                 margin-left: 0;

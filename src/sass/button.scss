@@ -8,11 +8,12 @@
     font-weight: 400;
     font-family: inherit;
     border-radius: $BORDER_RADIUS;
-    &:active,
-    &:hover {
+
+    &:active, &:hover {
         text-decoration: none;
     }
 }
+
 button {
     @include link-button;
     cursor: pointer;
@@ -20,56 +21,65 @@ button {
     border: 0;
     background: $positiveColor;
     color: $contentInverseColor;
+
     &:visited {
         color: $contentInverseColor;
     }
-    &:active,
-    &:hover {
+    &:active, &:hover {
         background-color: $darkPositiveColor;
     }
     &.button-secondary {
         background: $fillColor;
         color: $contentColor;
+
         &:active, &:hover, &:visited {
             background-color: $borderColor;
         }
     }
 }
+
 .button {
     cursor: pointer;
     margin-bottom: 0.5em;
+
     span {
         @include link-button;
         overflow: visible;
         border: 0;
         color: $contentInverseColor;
         background: $positiveColor;
+
         &:hover {
-          background-color: $darkPositiveColor;
+            background-color: $darkPositiveColor;
         }
-        &visited{
-          color: $contentInverseColor;
+        &:visited {
+            color: $contentInverseColor;
         }
     }
 }
+
 .button-secondary {
     cursor: pointer;
     margin-bottom: 0.5em;
+
     span {
         @include link-button;
         overflow: visible;
         border: 0;
         color: $contentColor;
         background: $fillColor;
+
         &:hover {
             text-decoration: none;
             background: $borderColor;
         }
     }
 }
+
 .button-disabled {
     cursor: pointer;
     margin-bottom: 0.5em;
+
     span {
         @include link-button;
         overflow: visible;
@@ -78,8 +88,8 @@ button {
         color: $borderColor;
         background: $fillColor;
         cursor: default;
-        &:active,
-        &:hover {
+
+        &:active, &:hover {
             color: $borderColor;
             background: $fillColor;
         }

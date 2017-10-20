@@ -14,20 +14,22 @@
 //$contentColor:     #000;
 //$contentInverseColor:     #FFF;
 
+/* stylelint-disable color-no-hex */
 $black: #000;
 $white: #fff;
-$primaryBrandColor: #2A3052;
-$darkPrimaryBrandColor: #15212D;
-$secondaryBrandColor: #E98024;
+$primaryBrandColor: #2a3052;
+$darkPrimaryBrandColor: #15212d;
+$secondaryBrandColor: #e98024;
 $contentColor: #000;
-$contentInverseColor: #FFF;
-$secondaryContentColor: #C2C2C2;
-$borderColor: #DEDEDE;
-$fillColor: #F2F2F2;
-$positiveColor: #2E8836;
-$darkPositiveColor: #14602B;
-$negativeColor: #C03;
-$noticeColor: #FEF1CF;
-$chartColor: #6B8Fb9;
-$chartAreaColor: rgba(128,179,236,0.3);
+$contentInverseColor: #fff;
+$secondaryContentColor: #c2c2c2;
+$borderColor: #dedede;
+$fillColor: #f2f2f2;
+$positiveColor: #2e8836;
+$darkPositiveColor: #14602b;
+$negativeColor: #c03;
+$noticeColor: #fef1cf;
+$chartColor: #6b8fb9;
+$chartAreaColor: rgba(128, 179, 236, 0.3);
 $lightBlue: #29abe2;
+/* stylelint-enable color-no-hex */

@@ -9,25 +9,31 @@ select, input, textarea {
     background: $contentInverseColor;
     border-radius: $BORDER_RADIUS;
 }
+
 fieldset {
     border: 1px solid $fillColor;
 }
+
 .hint {
     font-size: $FONT_SIZE_S;
     color: $black;
-    margin-top: 3px
+    margin-top: 3px;
 }
+
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: $secondaryContentColor;
+    color: $secondaryContentColor;
 }
+
 ::-moz-placeholder { /* Firefox 19+ */
-  color: $secondaryContentColor;
+    color: $secondaryContentColor;
 }
+
 :-ms-input-placeholder { /* IE 10+ */
-  color: $secondaryContentColor;
+    color: $secondaryContentColor;
 }
+
 :-moz-placeholder { /* Firefox 18- */
-  color: $secondaryContentColor;
+    color: $secondaryContentColor;
 }
 
 //Jquery ui Selectmenu

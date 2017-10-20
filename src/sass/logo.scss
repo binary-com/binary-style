@@ -1,6 +1,7 @@
 .logo-wrapper {
     display: inline-flex;
     vertical-align: middle;
+
     .binary-logo-text {
         > div {
             width: 135px;
@@ -12,6 +13,7 @@
     }
     .logo-parent {
         display: inline-flex;
+
         .logo {
             width: 55px;
             height: 55px;
@@ -26,6 +28,7 @@
 .logo {
     display: inline-block;
     width: 24%;
+
     > div {
         width: 100%;
         height: 55px;
@@ -39,6 +42,7 @@
 .binary-logo-text {
     display: inline-block;
     padding: 0 10px;
+
     > div {
         width: 90%;
         height: 55px;
@@ -52,9 +56,9 @@
     }
 }
 
-img.responsive{
-  width: 100%;
-  height: auto;
+img.responsive {
+    width: 100%;
+    height: auto;
 }
 
 @media screen and (max-width: 769px) {

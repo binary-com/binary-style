@@ -1,56 +1,58 @@
 .chartOptions_button {
-  background: $fillColor;
-  margin-left: 5px; 
-  color: $primaryBrandColor;
-  border-radius: 2px;
-  &:hover {
-    cursor: pointer;
-  }
-  &.button_selected {
-    color: $contentInverseColor;
-    background: $primaryBrandColor;
+    background: $fillColor;
+    margin-left: 5px;
+    color: $primaryBrandColor;
+    border-radius: 2px;
+
     &:hover {
-      color: $contentInverseColor;
-      background: $primaryBrandColor;
+        cursor: pointer;
     }
-    [data-balloon] {
-      &:before, &:after {
-        opacity:0;
-      }
-    }
-    &[data-balloon] {
-      &:before, &:after {
-        opacity:0;
-      }
-    }
-  }
+    &.button_selected {
+        color: $contentInverseColor;
+        background: $primaryBrandColor;
 
-  span {
-    border-bottom: 0px;
-    cursor: pointer;
-    display: inline-block;
-    &[data-balloon]:before {
-      padding: 0.5em;
-      font-size: $FONT_SIZE_S;
-      border: none;
-      box-shadow: none;
-      border-radius: 0px;
+        &:hover {
+            color: $contentInverseColor;
+            background: $primaryBrandColor;
+        }
+        [data-balloon] {
+            &:before, &:after {
+                opacity: 0;
+            }
+        }
+        &[data-balloon] {
+            &:before, &:after {
+                opacity: 0;
+            }
+        }
     }
-  }
-  .img {
-    display: inline;
+    span {
+        border-bottom: 0px;
+        cursor: pointer;
+        display: inline-block;
 
-    div {
-      width: 25px;
-      height: 25px;
-      margin: 5px;
-      background-repeat: no-repeat;
-      background-position: center;
+        &[data-balloon]:before {
+            padding: 0.5em;
+            font-size: $FONT_SIZE_S;
+            border: none;
+            box-shadow: none;
+            border-radius: 0px;
+        }
     }
-    img {
-      width: 20px;
-      height: 20px;
-      margin: 5px;
+    .img {
+        display: inline;
+
+        div {
+            width: 25px;
+            height: 25px;
+            margin: 5px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        img {
+            width: 20px;
+            height: 20px;
+            margin: 5px;
+        }
     }
-  }
 }

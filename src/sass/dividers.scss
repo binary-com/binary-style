@@ -1,5 +1,6 @@
 .section-divider {
     display: flex;
+
     > div {
         &:not(.faded) {
             flex: 1;

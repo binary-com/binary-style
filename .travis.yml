@@ -1,10 +1,38 @@
-sudo: false
+git:
+  depth: 1
 language: node_js
 matrix:
-    fast_finish: true
+  fast_finish: true
 node_js:
-    - node
+- 8.5
 notifications:
-  email: false
-before_install: npm install -g grunt-cli
-install: npm install
+  email:
+  - amin@binary.com
+  - ashkan@binary.com
+branches:
+  only:
+  - master
+before_install:
+- yarn
+install: yarn build
+after_success:
+- git config --global user.email "ashkan.nemati@gmail.com"
+- git config --global user.name "ashkanx"
+- git config --global push.default simple
+- git clone --branch gh-pages https://${GHITHUB_TOKEN}@github.com/binary-com/binary-style.git
+  --depth 1 gh-pages
+- cd gh-pages
+- rm -rf $(node -e "console.log(require('../package.json').version);")
+- mkdir $(node -e "console.log(require('../package.json').version);")
+- cd $(node -e "console.log(require('../package.json').version);")
+- cp ../../binary.js .
+- cp ../../binary.more.js .
+- cd ..
+- git add --all
+- git commit -m 'Commit from TravisCI Build'
+- git push
+- cd ..
+- rm -rf gh-pages
+env:
+  global:
+    secure: kvbsRYqy0sdhbeMfzyNCoAW7twCVH6y/UWrCdyVpu4BeA8ztHIHNBVWSfnH569ucDPuoIrXWTe9ItbSF58hBsfYRZr/zmN2iutMLVXIn8Ac/K6MJC2eArJLp0CLZU1O7tAWoGaWRp7ZfNqJJEjbslN/u+8yt3qI3ze9VX8kySQuH99r7Ln95vgB+aUoNpbkfBYi54sHn92p9YpCnnytoj4fj+561LI1Zu8ByBlGxcl7qKzH3HuhhagwOwECzU4U4WPlpqm2OGNc+9YNjJ6uloilM9qT6Noc4ZLVWtOlptC/jZeI4CkzbhsMp53vOJsyH4LGkFPVxhSNJmSRfAo76Jiw+mVtTTEoWTVPaeP2//QD9E5pyXKTitvBT+cJKmxbuKA2X2hXHgCl0B2k/QAdtKHagS4/uIGe0OB6m+HVDeY+ivvB9kPUiM1TTOWy4dOl2FRo9eXRcqth0LPpClkaF5NBYtIjIGUkjR1R+8lecJi0n2CQD/o+ixOo+BpoihK5yKzoa9uyzIv2HWRQuC1DnXHqD7/0kLuK7JcEQ+5cDkq1no3W5X3+8776yOolEAo5ddD/VhKdXoWlEjwvYmPL51dpKXB6m7fy+jleelp/Y+bxNIGTSpiee5O8e3FCazI5i6SY4vjv+C7hoE4i8dpDFYidt3pOo5Y9GovKmDPm7XmY=

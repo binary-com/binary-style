@@ -1,5 +1,0 @@
-build/*.js
-src/index/
-src/js/binary.more.js
-src/js/oauth.js
-Gruntfile.js

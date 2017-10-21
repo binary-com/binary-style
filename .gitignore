@@ -1,7 +1,7 @@
-.sass-cache/
+_site
+.sass-cache
+.jekyll-metadata
 .idea/
-.grunt/
-dist/
-node_modules/
 binary.js.map
 binary.more.js.map
+node_modules/

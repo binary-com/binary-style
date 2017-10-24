@@ -1,0 +1,65 @@
+@mixin tab-list {
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin-left: 0;
+    background: none;
+    border-bottom: 1px solid $black;
+
+    li {
+        cursor: pointer;
+        border: none;
+        list-style-image: none;
+        background: $fillColor;
+        border-radius: 4px 4px 0 0;
+        margin: 0 6px 0 0;
+        padding: 0 10px;
+
+        a, a:visited {
+            padding: 0;
+            font-weight: normal;
+            text-decoration: none;
+            color: $black;
+            font-size: 90%;
+            background: transparent;
+        }
+    }
+    li.active, li.ui-tabs-active {
+        background: $primaryBrandColor;
+        color: $white;
+
+        a {
+            background: none;
+            color: $white;
+            font-weight: normal;
+            text-decoration: none;
+            padding: 0;
+            outline: none;
+        }
+        span.a-active {
+            line-height: 2;
+        }
+    }
+    ul.tm-ul-2 {
+        list-style-type: none;
+        margin: 0;
+
+        li {
+            background: none;
+
+            a {
+                color: $black;
+                padding-top: 0;
+                font-weight: normal;
+                text-decoration: none;
+                width: auto;
+            }
+            a.a-active {
+                color: $secondaryBrandColor;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+.error-msg {
+    font-style: italic;
+    font-size: $FONT_SIZE_S;
+    color: $negativeColor;
+}
+
+.notice-msg {
+    color: $contentColor;
+    background-color: $noticeColor;
+    padding: 10px;
+    overflow: hidden;
+}

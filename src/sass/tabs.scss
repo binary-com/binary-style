@@ -1,0 +1,60 @@
+.tabs-container, .has-tabs {
+    padding: 0;
+
+    ul.ui-tabs-nav {
+        border: none;
+        border-radius: 0;
+        padding: 0;
+        margin-left: 0;
+        background: none;
+
+        li {
+            border: none;
+            list-style-image: none;
+            background: $fillColor;
+            border-radius: $BORDER_RADIUS $BORDER_RADIUS 0 0;
+            margin: 0 2px 0 0;
+            padding: 0 10px;
+
+            a, a:visited {
+                padding: 3px 0 0 !important;
+                font-weight: normal;
+                text-decoration: none;
+                color: $contentColor;
+                font-size: 90%;
+                background: transparent;
+            }
+        }
+        li.active, li.ui-tabs-active {
+            background: $primaryBrandColor;
+            color: $contentInverseColor;
+
+            a {
+                background: none;
+                color: $contentInverseColor;
+                font-weight: normal;
+                text-decoration: none;
+                padding: 0;
+                outline: none;
+            }
+        }
+    }
+}
+
+.tabs-container, .container .has-tabs {
+    .ui-tabs-panel {
+        border: none;
+        padding: 0 !important;
+    }
+    ul.ui-tabs-nav {
+        margin-bottom: 2px;
+        border-bottom: 1px solid $black;
+    }
+}
+
+.has-tabs {
+    .ui-tabs-panel {
+        border: 1px solid $borderColor;
+        padding: 10px;
+    }
+}

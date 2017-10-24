@@ -1,5 +1,4 @@
 @mixin link-button {
-    text-decoration: none;
     text-align: center;
     line-height: 100%;
     text-transform: capitalize;
@@ -8,9 +7,18 @@
     font-weight: 400;
     font-family: inherit;
     border-radius: $BORDER_RADIUS;
+    box-shadow: 0 2px 2px 0 $boxShadowColor;
+    transition-property: box-shadow, background;
+    transition-duration: 0.3s;
 
-    &:active, &:hover {
+    &, &:active, &:hover {
         text-decoration: none;
+    }
+    &:hover {
+        box-shadow: 0 4px 4px 0 $boxShadowColor;
+    }
+    &:active {
+        box-shadow: 0 8px 8px 0 $boxShadowColor;
     }
 }
 
@@ -25,8 +33,11 @@ button {
     &:visited {
         color: $contentInverseColor;
     }
-    &:active, &:hover {
+    &:hover {
         background-color: $darkPositiveColor;
+    }
+    &:active {
+        background-color: $lightPositiveColor;
     }
     &.button-secondary {
         background: $fillColor;
@@ -54,6 +65,9 @@ button {
         }
         &:visited {
             color: $contentInverseColor;
+        }
+        &:active {
+            background-color: $lightPositiveColor;
         }
     }
 }
@@ -92,6 +106,7 @@ button {
         &:active, &:hover {
             color: $borderColor;
             background: $fillColor;
+            box-shadow: 0 2px 2px 0 $boxShadowColor;
         }
     }
 }

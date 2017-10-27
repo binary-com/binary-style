@@ -1,5 +1,9 @@
 module.exports = function (grunt) {
     return {
+	html: {
+            files: ['src/index/*.html'],
+            tasks: ['copy:all']
+	},
         css: {
             files: ['src/sass/*.scss'],
             tasks: ['stylelint', 'css']

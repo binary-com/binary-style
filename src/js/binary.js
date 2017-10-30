@@ -157,11 +157,43 @@ export function tabListener() {
     initMenuContent($('.content-tab-container').find('.tm-ul'));
 }
 
+export function sidebarCollapsible() {
+    $('.sidebar-collapsible a').on('click', function(e) {
+        e.preventDefault();
+        const $this   = $(this);
+        const $parent = $(this).parent();
+        $this.toggleClass('selected').parent().siblings().find('a').removeClass('selected');
+        $parent.toggleClass('active').siblings().removeClass('active');
+        toggleCollapsible($this);
+    });
+
+    function getChildrenHeight($el) {
+        let totalHeight = 0;
+        $el.children().each(function() {
+            totalHeight += $(this).outerHeight(true);
+        });
+        return totalHeight;
+    }
+
+    function toggleCollapsible($el) {
+        const $parent  = $el.parent();
+        const $submenu = $el.siblings('ul');
+        if ($parent.is('.active')) {
+            const totalHeight = getChildrenHeight($submenu);
+            $submenu.animate({ height: `${totalHeight}px` }, 300);
+        } else {
+            $submenu.animate({ height: '0px' }, 300);
+        }
+        $parent.siblings().find('ul').animate({ height: '0px' }, 300);
+    }
+}
+
 $(document).ready(() => {
     navMenuListener();
     topNavMenuListener();
     documentListener();
     langListener();
     tabListener();
+    sidebarCollapsible();
 });
 

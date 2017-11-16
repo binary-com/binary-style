@@ -181,6 +181,7 @@ export function sidebarCollapsible() {
         if ($parent.is('.active')) {
             const totalHeight = getChildrenHeight($submenu);
             $submenu.animate({ height: `${totalHeight}px` }, 300);
+            $submenu.find('li:first-child > a').addClass('selected'); // set first child active
         } else {
             $submenu.animate({ height: '0px' }, 300);
         }

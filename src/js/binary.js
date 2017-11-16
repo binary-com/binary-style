@@ -162,8 +162,8 @@ export function sidebarCollapsible() {
         e.preventDefault();
         const $this   = $(this);
         const $parent = $(this).parent();
-        $this.toggleClass('selected').parent().siblings().find('a').removeClass('selected');
-        $parent.toggleClass('active').siblings().removeClass('active');
+        $this.addClass('selected').parent().siblings().find('a').removeClass('selected');
+        $parent.addClass('active').siblings().removeClass('active');
         toggleCollapsible($this);
     });
 

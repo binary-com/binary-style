@@ -104,6 +104,9 @@
                 width: 10px;
                 transition: 0.3s;
             }
+            &.selected:before {
+                content: svg-url('<svg viewBox="0 0 17 32" xmlns="http://www.w3.org/2000/svg"><path d="M13.632 16L.27 30.318l1.462 1.364L16.368 16 1.73.318.27 1.682z" fill="#{rgba($white, 1)}"  fill-rule="evenodd"/></svg>');
+            }
         }
         li.has-submenu.active > a {
             &:before {

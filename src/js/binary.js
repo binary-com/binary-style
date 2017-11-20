@@ -160,10 +160,15 @@ export function tabListener() {
 export function sidebarCollapsible() {
     $('.sidebar-collapsible a').on('click', function(e) {
         e.preventDefault();
-        const $this   = $(this);
-        const $parent = $(this).parent();
-        $this.addClass('selected').parent().siblings().find('a').removeClass('selected');
-        $parent.addClass('active').siblings().removeClass('active');
+        const $this     = $(this);
+        const $parent   = $this.parent('li');
+        const $siblings = $parent.siblings('li');
+        if ($parent.hasClass('has-submenu')) {
+            $this.toggleClass('selected').parent('li').toggleClass('active');
+        } else {
+            $this.addClass('selected').parent('li').addClass('active');
+        }
+        $siblings.removeClass('active').find('> a').removeClass('selected');
         toggleCollapsible($this);
     });
 
@@ -181,7 +186,9 @@ export function sidebarCollapsible() {
         if ($parent.is('.active')) {
             const totalHeight = getChildrenHeight($submenu);
             $submenu.animate({ height: `${totalHeight}px` }, 300);
-            $submenu.find('li:first-child > a').addClass('selected'); // set first child active
+            if (!$submenu.find('.active').length) {
+                $submenu.find('li:first-child > a').addClass('selected'); // set first child active
+            }
         } else {
             $submenu.animate({ height: '0px' }, 300);
         }

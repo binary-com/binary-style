@@ -202,6 +202,5 @@ $(document).ready(() => {
     documentListener();
     langListener();
     tabListener();
-    sidebarCollapsible();
 });
 

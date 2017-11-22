@@ -7,12 +7,15 @@
     <title>Binary Style Guide</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
-    <script src="binary.js"></script>
-    <script src="style.js"></script>
+    <script src="index_files/style.js"></script>
     <link rel="icon" type="image/png" sizes="16x16" href="https://style.binary.com/images/favicons/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://style.binary.com/images/favicons/favicon-32x32.png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index_files/style.css">
     <link rel="stylesheet" href="binary.css">
+    <link rel="stylesheet" href="binary.more.css">
+
+    <script src="binary.js"></script>
+    <script src="binary.more.js"></script>
 </head>
 
 <body>
@@ -50,24 +53,60 @@
                     <li><a href="#table-section">Table</a></li>
                     <li><a href="#sidebar-section">Sidebar Menu</a></li>
                     <li><a href="#form-section">Form</a></li>
-                    <li><a href="#accordion-section">Accordion</a></li>
-                    <li><a href="#tabs-section">Tabs</a></li>
                     <li><a href="#icon-section">Icons</a></li>
                     <li><a href="#symbols-section">Symbols</a></li>
-                    <li><a href="#picker-section">Date and Time Pickers</a></li>
+                    <li><a href="#accordion-section">Accordion *</a></li>
+                    <li><a href="#tabs-section">Tabs *</a></li>
+                    <li><a href="#picker-section">Date and Time Pickers *</a></li>
                 </ul>
 
             </div>
             <div class="page-content">
                 <div class="f-row introduction-section">
                     <div class="f-item">
-                        <h1>binary-style</h1>
+                        <h1>Binary Style</h1>
                         <p>The goal of the project is to serve as base style for all Binary projects, and to ensure consistency and maintainability of the brand presentation.</p>
                         <h2>Usage</h2>
                         <ul class="bullet">
-                          <li>Include <a href="https://jquery.com/" target="_blank">jQuery</a> (Version 2.1.1) in your project</li>
-                          <li>Include the <a href="binary.js" target="_blank">JS file</a> in your project</li>
-                          <li>Include the styles by including <a href="binary.css" target="_blank">this file</a> in your project</li>
+                            <li>Include <a href="https://jquery.com/" target="_blank">jQuery</a> (Version 2.1.1) in your project</li>
+                            <li>Include these files in your project:<br/>
+<pre class="prettyprint">
+    <code>&lt;link href="https://style.binary.com/binary.css" rel="stylesheet" /&gt;
+    &lt;script src="https://style.binary.com/binary.js"&gt;&lt;/script&gt;</code>
+</pre>
+                            </li>
+                            <li>If you need Date and Time Pickers, Tabs or Accordion include the following files in your project, this will include a copy of jquery-ui@v1.12.1 and customized styles.<br/>
+<pre class="prettyprint">
+    <code>&lt;link href="https://style.binary.com/binary.more.css" rel="stylesheet" /&gt;
+    &lt;script src="https://style.binary.com/binary.more.js"&gt;&lt;/script&gt;</code>
+</pre>
+                            </li>
+                        </ul>
+                        <h2>NPM Usage</h2>
+                        <ul class="bullet">
+                            <li>Install jQuery:<br/>
+<pre class="prettyprint">
+    <code>npm install --save jquery</code>
+</pre>
+                            </li>
+                            <li>The library is available on npm:<br/>
+<pre class="prettyprint">
+    <code>npm install --save binary-style</code>
+</pre>
+                            </li>
+                            <li>Import these files in your project:<br/>
+<pre class="prettyprint">
+    <code>import 'jquery';
+    import 'binary-style';
+    import 'binary-style/binary.css';</code>
+</pre>
+                            </li>
+                            <li>If you need Date and Time Pickers, Tabs or Accordion import the following files as well, this will include a copy of jquery-ui@v1.12.1 and customized styles.<br/>
+<pre class="prettyprint">
+    <code>import 'binary-style/binary.more';
+    import 'binary-style/binary.more.css';</code>
+</pre>
+                            </li>
                         </ul>
                     </div>
                 </div>

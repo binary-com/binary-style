@@ -158,19 +158,7 @@ export function tabListener() {
 }
 
 export function sidebarCollapsible() {
-    $('.sidebar-collapsible a').on('click', function(e) {
-        e.preventDefault();
-        const $this     = $(this);
-        const $parent   = $this.parent('li');
-        const $siblings = $parent.siblings('li');
-        if ($parent.hasClass('has-submenu')) {
-            $this.toggleClass('selected').parent('li').toggleClass('active');
-        } else {
-            $this.addClass('selected').parent('li').addClass('active');
-        }
-        $siblings.removeClass('active').find('> a').removeClass('selected');
-        toggleCollapsible($this);
-    });
+    const sidebar = '.sidebar-collapsible';
 
     function getChildrenHeight($el) {
         let totalHeight = 0;
@@ -180,7 +168,7 @@ export function sidebarCollapsible() {
         return totalHeight;
     }
 
-    function toggleCollapsible($el) {
+    function toggleSubmenu($el) {
         const $parent  = $el.parent();
         const $submenu = $el.siblings('ul');
         if ($parent.is('.active')) {
@@ -194,6 +182,45 @@ export function sidebarCollapsible() {
         }
         $parent.siblings().find('ul').animate({ height: '0px' }, 300);
     }
+
+    function getTargetHref(current_target) {
+        const submenu = current_target.nextElementSibling;
+        const target  = submenu ? $(submenu).find($(submenu).find('.selected')[0] ? '.selected' : 'a:first')[0] : current_target;
+        return target.getAttribute('href');
+    }
+
+    function showSelectedContent(current_target) {
+        const $content = $('.sidebar-collapsible-content');
+        if (!$content) return;
+        const target   = getTargetHref(current_target);
+        $content
+            .find('> div')
+            .addClass('invisible')
+            .end()
+            .find(`${target}-content`)
+            .removeClass('invisible');
+    }
+
+    function initSidebar() {
+        if ($(sidebar).find('.active').length) {
+            $(sidebar).find('.active').removeClass('active');
+        }
+        $(sidebar).find('a').off('click').on('click', function(e) {
+            e.preventDefault();
+            const $this     = $(this);
+            const $parent   = $this.parent('li');
+            const $siblings = $parent.siblings('li');
+            if ($parent.hasClass('has-submenu')) {
+                $this.toggleClass('selected').parent('li').toggleClass('active');
+            } else {
+                $this.addClass('selected').parent('li').addClass('active');
+            }
+            $siblings.removeClass('active').find('> a').removeClass('selected');
+            toggleSubmenu($this);
+            showSelectedContent(e.target);
+        });
+    }
+    initSidebar();
 }
 
 $(document).ready(() => {
@@ -202,5 +229,6 @@ $(document).ready(() => {
     documentListener();
     langListener();
     tabListener();
+    sidebarCollapsible();
 });
 

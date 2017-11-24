@@ -40,7 +40,7 @@
             list-style-image: none;
             margin: 0;
             background: $fillColor;
-            line-height: 150%;
+            line-height: 38px;
             border-bottom: 1px solid $contentInverseColor;
 
             &:hover {
@@ -67,12 +67,17 @@
                 margin: 0 0 0 -1px;
                 padding: 0;
                 overflow: hidden;
+                background: $white;
 
                 li {
                     background: $white;
                     border: 1px solid $fillColor;
                     border-top: none;
+                    padding: 5px 0;
 
+                    &:hover {
+                        background: $white;
+                    }
                     a {
                         padding-left: 20px;
                         font-size: 16px;

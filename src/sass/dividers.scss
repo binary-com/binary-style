@@ -12,5 +12,16 @@
             color: $secondaryContentColor;
             padding: 0 20px;
         }
+        &.circle {
+            flex: 0;
+            border: 1px solid $fillColor;
+            border-radius: 50%;
+            margin: 0;
+            padding: 5px;
+            color: $secondaryContentColor;
+            text-transform: uppercase;
+            font-weight: 400;
+            font-size: 0.75rem;
+        }
     }
 }

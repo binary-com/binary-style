@@ -22,6 +22,9 @@
         .section-divider {
             padding: 10px 0;
         }
+        #oa_social_login_container iframe {
+            width: 100% !important;
+        }
     }
     #inline {
         display: flex;

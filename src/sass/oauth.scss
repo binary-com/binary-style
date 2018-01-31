@@ -1,4 +1,5 @@
 @import 'common_import';
+@import 'dividers';
 
 .oauth {
     .container, #wrapper.scope-confirms {
@@ -10,10 +11,19 @@
         max-width: 960px;
     }
     #wrapper {
+        max-width: 300px;
+        margin: auto;
+
         #frmLogin > div {
             width: 300px;
             margin-left: auto;
             margin-right: auto;
+        }
+        .section-divider {
+            padding: 10px 0;
+        }
+        #oa_social_login_container iframe {
+            width: 100% !important;
         }
     }
     #inline {
@@ -83,11 +93,6 @@
         font-style: italic;
         color: $secondaryContentColor;
     }
-    #oa_social_login_container iframe {
-        width: 100% !important;
-        height: 60px;
-        margin-top: 22%;
-    }
     .vertical-separator {
         border-right: 1px solid $fillColor;
         width: 1px;
@@ -137,9 +142,6 @@
         }
         #inline {
             flex-wrap: wrap;
-        }
-        #oa_social_login_container iframe {
-            margin-top: 8%;
         }
         .links {
             font-size: 13px;

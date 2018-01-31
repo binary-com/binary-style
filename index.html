@@ -750,6 +750,12 @@
                             <div class="align-self-center border-bottom-light-gray"></div>
                         </div>
                         <p>Section 2 text</p>
+                        <div class="section-divider">
+                            <div class="align-self-center border-bottom-light-gray"></div>
+                            <div class="circle">Or</div>
+                            <div class="align-self-center border-bottom-light-gray"></div>
+                        </div>
+                        <p>Section 3 text</p>
                     </div>
                 </div>
                 <div class="f-row control-section">
@@ -802,6 +808,12 @@
         &lt;div class=&quot;align-self-center border-bottom-light-gray&quot;&gt;&lt;/div&gt;
     &lt;/div&gt;
     &lt;p&gt;Section 2 text&lt;/p&gt;
+    &lt;div class=&quot;section-divider&quot;&gt;
+        &lt;div class=&quot;align-self-center border-bottom-light-gray&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;circle&quot;&gt;Or&lt;/div&gt;
+        &lt;div class=&quot;align-self-center border-bottom-light-gray&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p&gt;Section 3 text&lt;/p&gt;
                       </code>
                     </pre>
                         </div>
@@ -952,6 +964,60 @@
                                 });
                             </script>
                         </div>
+                        <div>
+                            <div class="sidebar-collapsible">
+                                <ul>
+                                    <li>
+                                        <a href="#">Section 1</a>
+                                    </li>
+                                    <li class="has-submenu">
+                                        <a href="#">Section 2 subsection</a>
+                                        <ul>
+                                            <li>
+                                                <a href="#">Subsection 1</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Subsection 2</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Subsection 3</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Subsection 4</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-submenu">
+                                        <a href="#">Section 3 subsection</a>
+                                        <ul>
+                                            <li>
+                                                <a href="#">Subsection 1</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Subsection 2</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">Section 4</a>
+                                    </li>
+                                     <li class="has-submenu">
+                                        <a href="#">Section 5 subsection</a>
+                                        <ul>
+                                            <li>
+                                                <a href="#">Subsection 1</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Subsection 2</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Subsection 3</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                     <div class="f-item">
                         <div class="code-sample">
@@ -974,6 +1040,41 @@
       $(this).parent().addClass('selected');
     });
   &lt;/script&gt;
+
+  &lt;div class="sidebar-collapsible"&gt;
+      &lt;ul&gt;
+          &lt;li&gt;
+              &lt;a href="#"&gt;Section 1&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class="has-submenu"&gt;
+              &lt;a href="#"&gt;Section 2 subsection&lt;/a&gt;
+              &lt;ul&gt;
+                  &lt;li&gt;&lt;a href="#"&gt;Subsection 1&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href="#"&gt;Subsection 2&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href="#"&gt;Subsection 3&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href="#"&gt;Subsection 4&lt;/a&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li class="has-submenu"&gt;
+              &lt;a href="#"&gt;Section 3 subsection&lt;/a&gt;
+              &lt;ul&gt;
+                  &lt;li&gt;&lt;a href="#"&gt;Subsection 1&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href="#"&gt;Subsection 2&lt;/a&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+              &lt;a href="#"&gt;Section 4&lt;/a&gt;
+          &lt;/li&gt;
+              &lt;li class="has-submenu"&gt;
+              &lt;a href="#"&gt;Section 5 subsection&lt;/a&gt;
+              &lt;ul&gt;
+                  &lt;li&gt;&lt;a href="#"&gt;Subsection 1&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href="#"&gt;Subsection 2&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href="#"&gt;Subsection 3&lt;/a&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+          &lt;/li&gt;
+      &lt;/ul&gt;
+  &lt;/div&gt;
                             </code>
                           </pre>
                         </div>

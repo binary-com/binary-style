@@ -30,19 +30,22 @@ export function navMenuListener() {
 }
 
 export function topNavMenuListener() {
-    $('.top-nav-menu > li').on('click', function(event) {
-        event.stopPropagation();
-        hide_menu($('#all-accounts, #all-accounts-top'));
-        hide_menu($('#language_select, #select_language'));
-        const childMenu = $(this).find(' > ul');
-        const $el = $('.top-nav-menu li ul');
-        if (+childMenu.css('opacity') === 1 && $(event.target).find('span').hasClass('nav-caret')) {
-            hide_menu($el);
-        } else if (+childMenu.css('opacity') === 0 && $(event.target).find('span').hasClass('nav-caret')) {
-            $el.animate({'opacity': 0}, 100, () => {
-                $el.css('visibility', 'hidden');
-                show_menu(childMenu);
-            });
+    const $menu           = $('.top-nav-menu li ul');
+    const $menus_to_hide  = $('#all-accounts, #all-accounts-top, #language_select, #select_language');
+    const nav_caret_class = 'nav-caret';
+    $('.top-nav-menu > li.nav-dropdown-toggle').on('click', function(event) {
+        const $target = $(event.target);
+        if ($target.find('span').hasClass(nav_caret_class) || $target.hasClass(nav_caret_class)) {
+            event.stopPropagation();
+            const $child_menu = $(this).find(' > ul');
+            if (+$child_menu.css('opacity') === 1) {
+                hide_menu($menu);
+            } else if (+$child_menu.css('opacity') === 0) {
+                hide_menu($menus_to_hide);
+                $menu.animate({'opacity': 0}, 100, () => {
+                    $menu.css('visibility', 'hidden');
+                }).promise().then(() => { show_menu($child_menu); });
+            }
         }
     });
 }

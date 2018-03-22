@@ -8,14 +8,39 @@ select, input, textarea {
     color: $contentColor;
     background: $contentInverseColor;
     border-radius: $BORDER_RADIUS;
-    appearance: none;
 
     &:hover {
-        border: 1px solid $contentColor;
+        border: 1px solid $primaryBrandColor;
     }
     &:focus, &:active {
         outline: none;
-        border: 1px solid $contentColor;
+        border: 1px solid $primaryBrandColor;
+    }
+}
+
+input[type=checkbox] {
+    display: none;
+
+    & + label {
+        position: relative;
+        cursor: pointer;
+        font-size: inherit;
+
+        &:before {
+            line-height: 1em;
+            content: url('images/common/ic-check-normal.svg');
+            display: inline-flex;
+            margin-right: 5px;
+            width: 16px;
+            height: 16px;
+            border-radius: $BORDER_RADIUS;
+        }
+    }
+    &:checked + label:before {
+        content: url('images/common/ic-check-active.svg');
+    }
+    &:not(:checked):hover + label:before {
+        content: url('images/common/ic-check-hover.svg');
     }
 }
 

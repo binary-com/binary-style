@@ -234,4 +234,3 @@ $(document).ready(() => {
     tabListener();
     sidebarCollapsible();
 });
-

@@ -8,6 +8,15 @@ select, input, textarea {
     color: $contentColor;
     background: $contentInverseColor;
     border-radius: $BORDER_RADIUS;
+    appearance: none;
+
+    &:hover {
+        border: 1px solid $contentColor;
+    }
+    &:focus, &:active {
+        outline: none;
+        border: 1px solid $contentColor;
+    }
 }
 
 fieldset {

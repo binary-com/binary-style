@@ -74,13 +74,15 @@ export function selectDropdown() {
             e.stopPropagation();
             $selectDropdown.text($(this).text()).removeClass('show');
 
-            const select_value = $(element).val();
+            const selected_value = $(element).val();
             const dropdown_value = $(this).attr('rel');
 
-            if (select_value !== dropdown_value) {
+            if (selected_value !== dropdown_value) {
                 $(element).val($(this).attr('rel')).change();
+                $listItems.not(this).each((idx, el) => {
+                    $(el).removeClass('selected');
+                });
                 $(this).addClass('selected');
-                console.log($listItems);
             }
         });
 

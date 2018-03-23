@@ -97,9 +97,12 @@ div.select-dropdown.show ~ ul.select-options {
         // &:not(:first-child) {
         //     border-top: 1px solid $fillColor;
         // }
-        &:hover {
+        &.selected {
             color: $contentInverseColor;
             background: $primaryBrandColor;
+        }
+        &:not(.selected):hover {
+            background-color: $fillColor;
         }
         &[rel='hide'] {
             display: none;

@@ -30,17 +30,18 @@ export function navMenuListener() {
 }
 
 export function selectDropdown() {
-    $('.dropdown').each(function() {
-        const $el = $(this);
-        const items = $el.children('option').length;
-        const select_id = this.id;
+    $('.dropdown').each((index, element) => {
+        const items = $(element).children('option').length;
 
-        $el.addClass('select-hidden');
-        $el.wrap('<div class="select"></div>');
-        $el.after('<div class="select-dropdown"></div>');
+        $(element).addClass('select-hidden');
+        $(element).wrap('<div class="select"></div>');
+        $(element).after('<div class="select-dropdown"></div>');
 
-        const $selectDropdown = $el.next('div.select-dropdown');
-        $selectDropdown.text($el.children('option').eq(0).text());
+        const $selectDropdown = $(element).next('div.select-dropdown');
+        const first_option = $(element).children('option').eq(0).text();
+        const selected_text = $(element).children('option').filter(':selected').text() || first_option;
+
+        $selectDropdown.text(selected_text);
 
         const $list = $('<ul />', {
             'class': 'select-options',
@@ -48,8 +49,9 @@ export function selectDropdown() {
 
         for (let i = 0; i < items; i++) {
             $('<li />', {
-                text: $el.children('option').eq(i).text(),
-                rel : $el.children('option').eq(i).val(),
+                text    : $(element).children('option').eq(i).text(),
+                rel     : $(element).children('option').eq(i).val(),
+                addClass: $(element).children('option').eq(i).is(':selected') ? 'selected' : '',
             }).appendTo($list);
         }
 
@@ -60,14 +62,26 @@ export function selectDropdown() {
             $('div.select-dropdown.show').not(this).each(function(){
                 $(this).removeClass('show');
             });
-            $(this).addClass('show');
+            if ($(this).hasClass('show')) {
+                $(this).removeClass('show');
+            }
+            else {
+                $(this).addClass('show');
+            }
         });
 
         $listItems.click(function(e) {
             e.stopPropagation();
             $selectDropdown.text($(this).text()).removeClass('show');
-            $el.val($(this).attr('rel'));
-            $(select_id).val($(this).attr('rel')).change();
+
+            const select_value = $(element).val();
+            const dropdown_value = $(this).attr('rel');
+
+            if (select_value !== dropdown_value) {
+                $(element).val($(this).attr('rel')).change();
+                $(this).addClass('selected');
+                console.log($listItems);
+            }
         });
 
         $(document).click(() => {

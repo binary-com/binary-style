@@ -29,6 +29,53 @@ export function navMenuListener() {
     });
 }
 
+export function selectDropdown() {
+    $('.dropdown').each(function() {
+        const $el = $(this);
+        const items = $el.children('option').length;
+        const select_id = this.id;
+
+        $el.addClass('select-hidden');
+        $el.wrap('<div class="select"></div>');
+        $el.after('<div class="select-dropdown"></div>');
+
+        const $selectDropdown = $el.next('div.select-dropdown');
+        $selectDropdown.text($el.children('option').eq(0).text());
+
+        const $list = $('<ul />', {
+            'class': 'select-options',
+        }).insertAfter($selectDropdown);
+
+        for (let i = 0; i < items; i++) {
+            $('<li />', {
+                text: $el.children('option').eq(i).text(),
+                rel : $el.children('option').eq(i).val(),
+            }).appendTo($list);
+        }
+
+        const $listItems = $list.children('li');
+
+        $selectDropdown.click(function(e) {
+            e.stopPropagation();
+            $('div.select-dropdown.show').not(this).each(function(){
+                $(this).removeClass('show');
+            });
+            $(this).addClass('show');
+        });
+
+        $listItems.click(function(e) {
+            e.stopPropagation();
+            $selectDropdown.text($(this).text()).removeClass('show');
+            $el.val($(this).attr('rel'));
+            $(select_id).val($(this).attr('rel')).change();
+        });
+
+        $(document).click(() => {
+            $selectDropdown.removeClass('show');
+        });
+    });
+}
+
 export function topNavMenuListener() {
     const $menu           = $('.top-nav-menu li ul');
     const $menus_to_hide  = $('#all-accounts, #all-accounts-top, #language_select, #select_language');
@@ -232,5 +279,6 @@ $(document).ready(() => {
     documentListener();
     langListener();
     tabListener();
+    selectDropdown();
     sidebarCollapsible();
 });

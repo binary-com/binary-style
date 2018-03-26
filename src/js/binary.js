@@ -29,65 +29,67 @@ export function navMenuListener() {
     });
 }
 
-export function selectDropdown() {
-    $('.dropdown').each((index, element) => {
-        const items = $(element).children('option');
+export function selectDropdown(el_name) {
+    if (el_name) {
+        $(el_name).each((index, element) => {
+            const items = $(element).children('option');
 
-        $(element).addClass('select-hidden');
-        $(element).wrap('<div class="select"></div>');
-        $(element).after('<div class="select-dropdown"></div>');
+            $(element).addClass('select-hidden');
+            $(element).wrap('<div class="select"></div>');
+            $(element).after('<div class="select-dropdown"></div>');
 
-        const $selectDropdown = $(element).next('div.select-dropdown');
+            const $selectDropdown = $(element).next('div.select-dropdown');
 
-        // check if selected option exists if not revert back to first option
-        const first_option = $(element).children('option').eq(0).text();
-        const selected_text = $(element).children('option').filter(':selected').text() || first_option;
+            // check if selected option exists if not revert back to first option
+            const first_option = $(element).children('option').eq(0).text();
+            const selected_text = $(element).children('option').filter(':selected').text() || first_option;
 
-        $selectDropdown.text(selected_text);
+            $selectDropdown.text(selected_text);
 
-        const $list = $('<ul />', {
-            'class': 'select-options',
-        }).insertAfter($selectDropdown);
+            const $list = $('<ul />', {
+                'class': 'select-options',
+            }).insertAfter($selectDropdown);
 
-        // add option values to new dropdown list
-        $.map(items, (i) => {
-            $('<li />', {
-                text    : $(i).text(),
-                value   : $(i).val(),
-                addClass: $(i).is(':selected') ? 'selected' : '',
-            }).appendTo($list);
+            // add option values to new dropdown list
+            $.map(items, (i) => {
+                $('<li />', {
+                    text    : $(i).text(),
+                    value   : $(i).val(),
+                    addClass: $(i).is(':selected') ? 'selected' : '',
+                }).appendTo($list);
+            });
+
+            const $listItems = $list.children('li');
+
+            $selectDropdown.click(function(e) {
+                e.stopPropagation();
+                // expand dropdown expand/collapse
+                $(this).toggleClass('show');
+            });
+
+            $listItems.click(function(e) {
+                e.stopPropagation();
+                $selectDropdown.text($(this).text()).removeClass('show');
+
+                const selected_value = $(element).val();
+                const dropdown_value = $(this).attr('value');
+
+                // sync original select with selected dropdown value
+                if (selected_value !== dropdown_value) {
+                    $(element).val($(this).attr('value')).change();
+                    $listItems.not(this).each((idx, el) => {
+                        $(el).removeClass('selected');
+                    });
+                    $(this).addClass('selected');
+                }
+            });
+
+            // collapse dropdown when clicking outside
+            $(document).click(() => {
+                if ($selectDropdown.hasClass('show')) $selectDropdown.removeClass('show');
+            });
         });
-
-        const $listItems = $list.children('li');
-
-        $selectDropdown.click(function(e) {
-            e.stopPropagation();
-            // expand dropdown expand/collapse
-            $(this).toggleClass('show');
-        });
-
-        $listItems.click(function(e) {
-            e.stopPropagation();
-            $selectDropdown.text($(this).text()).removeClass('show');
-
-            const selected_value = $(element).val();
-            const dropdown_value = $(this).attr('value');
-
-            // sync original select with selected dropdown value
-            if (selected_value !== dropdown_value) {
-                $(element).val($(this).attr('value')).change();
-                $listItems.not(this).each((idx, el) => {
-                    $(el).removeClass('selected');
-                });
-                $(this).addClass('selected');
-            }
-        });
-
-        // collapse dropdown when clicking outside
-        $(document).click(() => {
-            if ($selectDropdown.hasClass('show')) $selectDropdown.removeClass('show');
-        });
-    });
+    }
 }
 
 export function topNavMenuListener() {
@@ -293,6 +295,5 @@ $(document).ready(() => {
     documentListener();
     langListener();
     tabListener();
-    selectDropdown();
     sidebarCollapsible();
 });

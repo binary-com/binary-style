@@ -18,23 +18,24 @@ select, input, textarea {
     }
 }
 
-.select-hidden {
+select.select-hidden {
     height: 0;
-    width: 0;
     visibility: hidden;
+    pointer-events: none;
     padding-right: 10px;
 }
 
-.select {
+div.select {
     cursor: pointer;
     display: inline-block;
     position: relative;
     max-width: 220px;
-    width: 100%;
+    min-width: 120px;
+    width: inherit;
     height: 32px;
 }
 
-.select-dropdown {
+div.select-dropdown {
     position: absolute;
     top: 0;
     right: 0;
@@ -73,7 +74,7 @@ div.select-dropdown.show ~ ul.select-options {
     pointer-events: auto;
 }
 
-.select-options {
+ul.select-options {
     pointer-events: none;
     position: absolute;
     top: 100%;

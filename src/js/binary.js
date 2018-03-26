@@ -31,13 +31,15 @@ export function navMenuListener() {
 
 export function selectDropdown() {
     $('.dropdown').each((index, element) => {
-        const items = $(element).children('option').length;
+        const items = $(element).children('option');
 
         $(element).addClass('select-hidden');
         $(element).wrap('<div class="select"></div>');
         $(element).after('<div class="select-dropdown"></div>');
 
         const $selectDropdown = $(element).next('div.select-dropdown');
+
+        // check if selected option exists if not revert back to first option
         const first_option = $(element).children('option').eq(0).text();
         const selected_text = $(element).children('option').filter(':selected').text() || first_option;
 
@@ -47,27 +49,21 @@ export function selectDropdown() {
             'class': 'select-options',
         }).insertAfter($selectDropdown);
 
-        for (let i = 0; i < items; i++) {
+        // add option values to new dropdown list
+        $.map(items, (i) => {
             $('<li />', {
-                text    : $(element).children('option').eq(i).text(),
-                rel     : $(element).children('option').eq(i).val(),
-                addClass: $(element).children('option').eq(i).is(':selected') ? 'selected' : '',
+                text    : $(i).text(),
+                value   : $(i).val(),
+                addClass: $(i).is(':selected') ? 'selected' : '',
             }).appendTo($list);
-        }
+        });
 
         const $listItems = $list.children('li');
 
         $selectDropdown.click(function(e) {
             e.stopPropagation();
-            $('div.select-dropdown.show').not(this).each(function(){
-                $(this).removeClass('show');
-            });
-            if ($(this).hasClass('show')) {
-                $(this).removeClass('show');
-            }
-            else {
-                $(this).addClass('show');
-            }
+            // expand dropdown expand/collapse
+            $(this).toggleClass('show');
         });
 
         $listItems.click(function(e) {
@@ -75,10 +71,11 @@ export function selectDropdown() {
             $selectDropdown.text($(this).text()).removeClass('show');
 
             const selected_value = $(element).val();
-            const dropdown_value = $(this).attr('rel');
+            const dropdown_value = $(this).attr('value');
 
+            // sync original select with selected dropdown value
             if (selected_value !== dropdown_value) {
-                $(element).val($(this).attr('rel')).change();
+                $(element).val($(this).attr('value')).change();
                 $listItems.not(this).each((idx, el) => {
                     $(el).removeClass('selected');
                 });
@@ -86,8 +83,9 @@ export function selectDropdown() {
             }
         });
 
+        // collapse dropdown when clicking outside
         $(document).click(() => {
-            $selectDropdown.removeClass('show');
+            if ($selectDropdown.hasClass('show')) $selectDropdown.removeClass('show');
         });
     });
 }

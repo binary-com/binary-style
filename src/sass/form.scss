@@ -19,7 +19,8 @@ select, input, textarea {
 }
 
 .select-hidden {
-    display: none;
+    height: 0;
+    width: 0;
     visibility: hidden;
     padding-right: 10px;
 }
@@ -43,7 +44,6 @@ select, input, textarea {
     border-radius: $BORDER_RADIUS;
     background-color: $contentInverseColor;
     padding: 4px 15px;
-    transition: all 0.2s ease-in;
 
     &:after {
         content: '\002303';
@@ -51,18 +51,18 @@ select, input, textarea {
         color: $fillColor;
         top: 8px;
         right: 10px;
-        transition: all 0.2s ease-in;
+        transition: transform 0.2s ease-in;
         transform-origin: 50% 35%;
-        transform: none;
+        transform: rotate(180deg);
     }
     &:hover {
         border: 1px solid $primaryBrandColor;
     }
-    &:active, &.show {
+    &.show {
         border: 1px solid $primaryBrandColor;
 
         &:after {
-            transform: rotate(180deg);
+            transform: rotate(0deg);
         }
     }
 }
@@ -70,9 +70,11 @@ select, input, textarea {
 div.select-dropdown.show ~ ul.select-options {
     transform: scale(1, 1);
     opacity: 1;
+    pointer-events: auto;
 }
 
 .select-options {
+    pointer-events: none;
     position: absolute;
     top: 100%;
     right: 0;
@@ -83,20 +85,15 @@ div.select-dropdown.show ~ ul.select-options {
     list-style: none;
     background-color: $contentInverseColor;
     border: 1px solid $fillColor;
-    transition: all 0.25s;
+    transition: transform 0.25s, opacity 0.25s;
     transform-origin: top;
     transform: scale(1, 0);
     opacity: 0;
 
     li {
         margin: 0;
-        padding: 3px 0;
-        text-indent: 15px;
-        transition: all 0.2s ease-in;
+        padding: 4px 15px;
 
-        // &:not(:first-child) {
-        //     border-top: 1px solid $fillColor;
-        // }
         &.selected {
             color: $contentInverseColor;
             background: $primaryBrandColor;
@@ -112,7 +109,8 @@ div.select-dropdown.show ~ ul.select-options {
 
 input[type=radio] {
     &:checked, &:not(:checked) {
-        display: none;
+        position: absolute;
+        visibility: hidden;
 
         & + label {
             position: relative;
@@ -156,7 +154,8 @@ input[type=radio] {
 }
 
 input[type=checkbox] {
-    display: none;
+    position: absolute;
+    visibility: hidden;
 
     & + label {
         position: relative;
@@ -166,7 +165,8 @@ input[type=checkbox] {
         &:before {
             line-height: 1em;
             content: url('images/common/ic-check-normal.svg');
-            display: inline-flex;
+            display: inline-block;
+            vertical-align: middle;
             margin-right: 5px;
             width: 16px;
             height: 16px;

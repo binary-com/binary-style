@@ -29,10 +29,11 @@ div.select {
     cursor: pointer;
     display: inline-block;
     position: relative;
-    max-width: 220px;
-    min-width: 120px;
+    max-width: 100%;
+    min-width: 110px;
     width: inherit;
-    height: 32px;
+    height: 28px;
+    text-align: left;
 }
 
 div.select-dropdown {
@@ -44,14 +45,18 @@ div.select-dropdown {
     border: 1px solid $fillColor;
     border-radius: $BORDER_RADIUS;
     background-color: $contentInverseColor;
-    padding: 4px 15px;
+    padding: 2px 8px;
+    white-space: nowrap;
+    line-height: 1.4em;
+    text-transform: capitalize;;
+    vertical-align: middle;
 
     &:after {
         content: '\002303';
         position: absolute;
         color: $fillColor;
-        top: 8px;
-        right: 10px;
+        top: 6px;
+        right: 5px;
         transition: transform 0.2s ease-in;
         transform-origin: 50% 35%;
         transform: rotate(180deg);
@@ -76,12 +81,12 @@ div.select-dropdown.show ~ ul.select-options {
 
 ul.select-options {
     pointer-events: none;
-    position: absolute;
+    position: absolute !important;
     top: 100%;
     right: 0;
     left: 0;
     z-index: 999;
-    margin: 4px 0 0;
+    margin: 4px 0 0 !important;
     padding: 0;
     list-style: none;
     background-color: $contentInverseColor;
@@ -91,16 +96,27 @@ ul.select-options {
     transform: scale(1, 0);
     opacity: 0;
 
-    li {
-        margin: 0;
-        padding: 4px 15px;
+    li.select-items {
+        margin: 0 !important;
+        padding: 3px 8px;
+        display: block !important;
+        font-size: inherit;
+        text-transform: capitalize;
 
+        &.label {
+            color: $fillColor;
+            background-color: $contentInverseColor;
+        }
         &.selected {
             color: $contentInverseColor;
-            background: $primaryBrandColor;
+            background-color: $primaryBrandColor;
         }
-        &:not(.selected):hover {
+        &:not(.selected):not(.disabled):hover {
             background-color: $fillColor;
+        }
+        &.disabled {
+            color: $fillColor;
+            background: $contentInverseColor;
         }
         &[rel='hide'] {
             display: none;

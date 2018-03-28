@@ -32,189 +32,202 @@ export function navMenuListener() {
 export function selectDropdown(el_selector) {
     if (el_selector) {
         const init = () => {
-            $(el_selector).each((index, element) => {
-                // check if optgroup
-                if ($(element).children('optgroup').length) {
-                    const group_items = $(element).children('optgroup');
-                    const selected_item = group_items.find(':selected').text();
+            // check if optgroup
+            if ($(el_selector).children('optgroup').length) {
+                console.log('is optgroup');
+                const group_items = $(el_selector).children('optgroup');
+                const selected_item = group_items.find(':selected').text();
 
-                    $(element).addClass('select-hidden');
-                    $(element).wrap('<div class="select"></div>');
-                    $(element).after('<div class="select-dropdown"></div>');
+                $(el_selector).addClass('select-hidden');
+                $(el_selector).wrap('<div class="select"></div>');
+                $(el_selector).after('<div class="select-dropdown"></div>');
 
-                    const $selectDropdown = $(element).next('div.select-dropdown');
-                    $selectDropdown.text(selected_item);
+                const $selectDropdown = $(el_selector).next('div.select-dropdown');
+                $selectDropdown.text(selected_item);
 
-                    const $list = $('<ul />', {
-                        'class': 'select-options',
-                    }).insertAfter($selectDropdown);
+                const $list = $('<ul />', {
+                    'class': 'select-options',
+                }).insertAfter($selectDropdown);
 
-                    // break down group into list items
-                    const group_item = group_items.children();
+                // break down group into labels with its list items
+                group_items.each((idx, el) => {
+                    const group_item = $(el).children();
+                    $('<li />', {
+                        text    : $(el).attr('label'),
+                        addClass: 'select-items label',
+                    }).appendTo($list);
+
                     $.map(group_item, (i) => {
                         const isDisabled = $(i).is(':disabled');
                         const isSelected = $(i).is(':selected');
+                        let className = 'select-items';
+                        className += isSelected ? ' selected' : '';
+                        className += isDisabled ? ' disabled' : '';
                         $('<li />', {
                             text    : $(i).text(),
                             value   : $(i).val(),
-                            addClass: `select-items ${isSelected ? 'selected' : ''} ${isDisabled ? 'disabled' : ''}`,
+                            addClass: className,
                         }).appendTo($list);
                     });
+                });
 
-                    const $listItems = $list.children('li');
+                const $listItems = $list.children('li');
 
-                    $selectDropdown.click(function(e) {
-                        e.stopPropagation();
-                        // expand dropdown expand/collapse
-                        $(this).toggleClass('show');
-                    });
+                $selectDropdown.click((e) => {
+                    e.stopPropagation();
+                    const dropdown = e.target;
 
-                    $listItems.not('.disabled').click(function(e) {
-                        e.stopPropagation();
-                        $selectDropdown.text($(this).text()).removeClass('show');
+                    // expand dropdown expand/collapse
+                    $(dropdown).toggleClass('show');
+                });
 
-                        const selected_value = $(element).val();
-                        const dropdown_value = $(this).attr('value');
+                $listItems.not('.disabled').not('.label').click((e) => {
+                    const item = e.target;
+                    e.stopPropagation();
+                    $selectDropdown.text($(item).text()).removeClass('show');
 
+                    const selected_value = $(el_selector).val();
+                    const dropdown_value = $(item).attr('value');
 
-                        // sync original select with selected dropdown value
-                        if (selected_value !== dropdown_value) {
-                            const event = new Event('change');
-                            // dispatch event to trigger onChange value
-                            $(element).val(dropdown_value).get(0).dispatchEvent(event);
-                            $listItems.not(this).each((idx, el) => {
-                                $(el).removeClass('selected');
-                            });
-                            $(this).addClass('selected');
-                        }
-                    });
+                    // sync original select with selected dropdown value
+                    if (selected_value !== dropdown_value) {
+                        const event = new Event('change');
+                        // dispatch event to trigger onChange value
+                        $(el_selector).val(dropdown_value).get(0).dispatchEvent(event);
+                        $listItems.not(this).each((idx, el) => {
+                            $(el).removeClass('selected');
+                        });
+                        $(item).addClass('selected');
+                    }
+                });
 
-                    // collapse dropdown when clicking outside
-                    $(document).click((e) => {
-                        if (!$listItems.is(e.target) && $listItems.has(e.target).length === 0)
-                        {
-                            if ($selectDropdown.hasClass('show')) $selectDropdown.removeClass('show');
-                        }
-                    });
-                }
-                else {
-                    const items = $(element).children('option');
+                // collapse dropdown when clicking outside
+                $(document).click((e) => {
+                    if (!$listItems.is(e.target) && $listItems.has(e.target).length === 0) {
+                        if ($selectDropdown.hasClass('show')) $selectDropdown.removeClass('show');
+                    }
+                });
+            }
+            else {
+                const items = $(el_selector).children('option');
 
-                    $(element).addClass('select-hidden');
-                    $(element).wrap('<div class="select"></div>');
-                    $(element).after('<div class="select-dropdown"></div>');
+                $(el_selector).addClass('select-hidden');
+                $(el_selector).wrap('<div class="select"></div>');
+                $(el_selector).after('<div class="select-dropdown"></div>');
 
-                    const $selectDropdown = $(element).next('div.select-dropdown');
+                const $selectDropdown = $(el_selector).next('div.select-dropdown');
 
-                    // check if selected option exists if not revert back to first option
-                    const first_option = $(element).children('option').eq(0).text();
-                    const selected_text = $(element).children('option').filter(':selected').text() || first_option;
+                // check if selected option exists if not revert back to first option
+                const first_option = $(el_selector).children('option').eq(0).text();
+                const selected_text = $(el_selector).children('option').filter(':selected').text() || first_option;
 
-                    $selectDropdown.text(selected_text);
-                    const $list = $('<ul />', {
-                        'class': 'select-options',
-                    }).insertAfter($selectDropdown);
+                $selectDropdown.text(selected_text);
+                const $list = $('<ul />', {
+                    'class': 'select-options',
+                }).insertAfter($selectDropdown);
 
-                    // add option values to new dropdown list
-                    $.map(items, (i) => {
-                        const isDisabled = $(i).is(':disabled');
-                        const isSelected = $(i).is(':selected');
-                        $('<li />', {
-                            text    : $(i).text(),
-                            value   : $(i).val(),
-                            addClass: `select-items ${isSelected ? 'selected' : ''} ${isDisabled ? 'disabled' : ''}`,
-                        }).appendTo($list);
-                    });
+                // add option values to new dropdown list
+                $.map(items, (i) => {
+                    const isDisabled = $(i).is(':disabled');
+                    const isSelected = $(i).is(':selected');
+                    let className = 'select-items';
+                    className += isSelected ? ' selected' : '';
+                    className += isDisabled ? ' disabled' : '';
+                    $('<li />', {
+                        text    : $(i).text(),
+                        value   : $(i).val(),
+                        addClass: className,
+                    }).appendTo($list);
+                });
 
-                    const $listItems = $list.children('li');
+                const $listItems = $list.children('li');
 
-                    $selectDropdown.click(function(e) {
-                        e.stopPropagation();
-                        // expand dropdown expand/collapse
-                        $(this).toggleClass('show');
-                    });
+                $selectDropdown.click(function(e) {
+                    e.stopPropagation();
+                    // expand dropdown expand/collapse
+                    $(this).toggleClass('show');
+                });
 
-                    $listItems.not('.disabled').click(function(e) {
-                        e.stopPropagation();
-                        $selectDropdown.text($(this).text()).removeClass('show');
+                $listItems.not('.disabled').click(function(e) {
+                    e.stopPropagation();
+                    $selectDropdown.text($(this).text()).removeClass('show');
 
-                        const selected_value = $(element).val();
-                        const dropdown_value = $(this).attr('value');
+                    const selected_value = $(el_selector).val();
+                    const dropdown_value = $(this).attr('value');
 
-
-                        // sync original select with selected dropdown value
-                        if (selected_value !== dropdown_value) {
-                            const event = new Event('change');
-                            // dispatch event to trigger onChange value
-                            $(element).val(dropdown_value).get(0).dispatchEvent(event);
-                            $listItems.not(this).each((idx, el) => {
-                                $(el).removeClass('selected');
-                            });
-                            $(this).addClass('selected');
-                        }
-                    });
-                    // collapse dropdown when clicking outside
-                    $(document).click((e) => {
-                        if (!$listItems.is(e.target) && $listItems.has(e.target).length === 0)
-                        {
-                            if ($selectDropdown.hasClass('show')) $selectDropdown.removeClass('show');
-                        }
-                    });
-                }
-            });
+                    // sync original select with selected dropdown value
+                    if (selected_value !== dropdown_value) {
+                        const event = new Event('change');
+                        // dispatch event to trigger onChange value
+                        $(el_selector).val(dropdown_value).get(0).dispatchEvent(event);
+                        $listItems.not(this).each((idx, el) => {
+                            $(el).removeClass('selected');
+                        });
+                        $(this).addClass('selected');
+                    }
+                });
+                // collapse dropdown when clicking outside
+                $(document).click((e) => {
+                    if (!$listItems.is(e.target) && $listItems.has(e.target).length === 0)
+                    {
+                        if ($selectDropdown.hasClass('show')) $selectDropdown.removeClass('show');
+                    }
+                });
+            }
         };
 
         const refreshList = () => {
-            $(el_selector).each((index, element) => {
-                if ($(element).children('optgroup').length) {
-                    // refresh option items that are nested in optgroup
-                    console.log('refreshOptGroup');
-                }
-                else {
-                    const items = $(element).children('option');
-                    const $selectDropdown = $(element).next('div.select-dropdown');
+            if ($(el_selector).children('optgroup').length) {
+                // TO-DO: Refresh option items that are nested in optgroup
+                console.log('refresh option group');
+            }
+            else {
+                const items = $(el_selector).children('option');
+                const $selectDropdown = $(el_selector).next('div.select-dropdown');
 
-                    // check if selected option exists if not revert back to first option
-                    const first_option = $(element).children('option').eq(0).text();
-                    const selected_text = $(element).children('option').filter(':selected').text() || first_option;
+                // check if selected option exists if not revert back to first option
+                const first_option = $(el_selector).children('option').eq(0).text();
+                const selected_text = $(el_selector).children('option').filter(':selected').text() || first_option;
 
-                    $selectDropdown.text(selected_text);
+                $selectDropdown.text(selected_text);
 
-                    const $list = $(el_selector).siblings('.select-options');
-                    $list.empty();
+                const $list = $(el_selector).siblings('.select-options');
+                $list.empty();
 
-                    // add option values to new dropdown list
-                    $.map(items, (i) => {
-                        const isDisabled = $(i).is(':disabled');
-                        const isSelected = $(i).is(':selected');
-                        $('<li />', {
-                            text    : $(i).text(),
-                            value   : $(i).val(),
-                            addClass: `select-items ${isSelected ? 'selected' : ''} ${isDisabled ? 'disabled' : ''}`,
-                        }).appendTo($list);
-                    });
+                // add option values to new dropdown list
+                $.map(items, (i) => {
+                    const isDisabled = $(i).is(':disabled');
+                    const isSelected = $(i).is(':selected');
+                    let className = 'select-items';
+                    className += isSelected ? ' selected' : '';
+                    className += isDisabled ? ' disabled' : '';
+                    $('<li />', {
+                        text    : $(i).text(),
+                        value   : $(i).val(),
+                        addClass: className,
+                    }).appendTo($list);
+                });
 
-                    const $listItems = $list.children('li');
-                    $listItems.click(function(e) {
-                        e.stopPropagation();
-                        $selectDropdown.text($(this).text()).removeClass('show');
+                const $listItems = $list.children('li');
+                $listItems.click(function(e) {
+                    e.stopPropagation();
+                    $selectDropdown.text($(this).text()).removeClass('show');
 
-                        const selected_value = $(element).val();
-                        const dropdown_value = $(this).attr('value');
+                    const selected_value = $(el_selector).val();
+                    const dropdown_value = $(this).attr('value');
 
-                        // sync original select with selected dropdown value
-                        if (selected_value !== dropdown_value) {
-                            const event = new Event('change');
-                            // dispatch event to trigger onChange value
-                            $(element).val(dropdown_value).get(0).dispatchEvent(event);
-                            $listItems.not(this).each((idx, el) => {
-                                $(el).removeClass('selected');
-                            });
-                            $(this).addClass('selected');
-                        }
-                    });
-                }
-            });
+                    // sync original select with selected dropdown value
+                    if (selected_value !== dropdown_value) {
+                        const event = new Event('change');
+                        // dispatch event to trigger onChange value
+                        $(el_selector).val(dropdown_value).get(0).dispatchEvent(event);
+                        $listItems.not(this).each((idx, el) => {
+                            $(el).removeClass('selected');
+                        });
+                        $(this).addClass('selected');
+                    }
+                });
+            }
         };
 
         if (!$(el_selector).next('.select-dropdown').length) {

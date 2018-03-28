@@ -43,12 +43,12 @@ div.select-dropdown {
     bottom: 0;
     left: 0;
     border: 1px solid $fillColor;
-    border-radius: $BORDER_RADIUS;
+    border-radius: 4px;
     background-color: $contentInverseColor;
     padding: 2px 8px;
     white-space: nowrap;
     line-height: 1.4em;
-    text-transform: capitalize;;
+    text-transform: capitalize;
     vertical-align: middle;
 
     &:after {
@@ -95,6 +95,9 @@ ul.select-options {
     transform-origin: top;
     transform: scale(1, 0);
     opacity: 0;
+    max-height: 150px;
+    overflow-y: auto;
+    overflow-x: hidden;
 
     li.select-items {
         margin: 0 !important;
@@ -102,6 +105,7 @@ ul.select-options {
         display: block !important;
         font-size: inherit;
         text-transform: capitalize;
+        white-space: nowrap;
 
         &.label {
             color: $fillColor;
@@ -111,15 +115,12 @@ ul.select-options {
             color: $contentInverseColor;
             background-color: $primaryBrandColor;
         }
-        &:not(.selected):not(.disabled):hover {
+        &:not(.selected):not(.disabled):not(.label):hover {
             background-color: $fillColor;
         }
         &.disabled {
             color: $fillColor;
             background: $contentInverseColor;
-        }
-        &[rel='hide'] {
-            display: none;
         }
     }
 }

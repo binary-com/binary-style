@@ -29,7 +29,7 @@ export function navMenuListener() {
     });
 }
 
-export function selectDropdown(el_selector) {
+export function selectDropdown(el_selector, has_label) {
     if (el_selector) {
         const init = () => {
             // check if optgroup
@@ -52,11 +52,16 @@ export function selectDropdown(el_selector) {
                 // break down group into labels with its list items
                 group_items.each((idx, el) => {
                     const group_item = $(el).children();
-                    $('<li />', {
-                        text    : $(el).attr('label'),
-                        addClass: 'select-items label',
-                    }).appendTo($list);
+                    if (has_label) {
 
+                        // add label
+                        $('<li />', {
+                            text    : $(el).attr('label'),
+                            addClass: 'select-items label',
+                        }).appendTo($list);
+                    }
+
+                    // insert list elements
                     $.map(group_item, (i) => {
                         const isDisabled = $(i).is(':disabled');
                         const isSelected = $(i).is(':selected');

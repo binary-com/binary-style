@@ -30,7 +30,7 @@ div.select {
     display: inline-block;
     position: relative;
     max-width: 100%;
-    min-width: 110px;
+    min-width: 95px;
     width: inherit;
     height: 28px;
     text-align: left;
@@ -81,12 +81,12 @@ div.select-dropdown.show ~ ul.select-options {
 
 ul.select-options {
     pointer-events: none;
-    position: absolute !important;
+    position: absolute;
     top: 100%;
     right: 0;
     left: 0;
     z-index: 999;
-    margin: 4px 0 0 !important;
+    margin: 4px 0 0;
     padding: 0;
     list-style: none;
     background-color: $contentInverseColor;
@@ -100,9 +100,9 @@ ul.select-options {
     overflow-x: hidden;
 
     li.select-items {
-        margin: 0 !important;
+        margin: 0;
         padding: 3px 8px;
-        display: block !important;
+        display: block;
         font-size: inherit;
         text-transform: capitalize;
         white-space: nowrap;

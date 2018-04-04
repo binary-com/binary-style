@@ -26,17 +26,11 @@ select.select-hidden {
     padding-right: 10px;
     position: relative;
 
-    @media all and (max-width: 768px) {
+    @media all and (max-width: 480px) {
         visibility: visible;
         pointer-events: auto;
         width: 100%;
         text-transform: capitalize;
-
-        &:after {
-            content: '\002303';
-            position: absolute;
-            right: 4px;
-        }
     }
 }
 
@@ -50,9 +44,23 @@ div.select {
     height: 28px;
     text-align: left;
 
-    @media all and (max-width: 768px) {
+    &:after {
+        content: '';
+        position: absolute;
+    }
+    @media all and (max-width: 480px) {
         width: 100%;
-        padding-right: 8px;
+
+        &:after {
+            content: '\002303';
+            position: absolute;
+            top: 7px;
+            right: 5px;
+            color: $fillColor;
+            transition: transform 0.2s ease-in;
+            transform-origin: 50% 35%;
+            transform: rotate(180deg);
+        }
     }
 }
 
@@ -91,7 +99,7 @@ div.select-dropdown {
             transform: rotate(0deg);
         }
     }
-    @media all and (max-width: 768px) {
+    @media all and (max-width: 480px) {
         display: none;
     }
 }

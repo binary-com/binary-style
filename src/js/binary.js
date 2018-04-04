@@ -32,29 +32,35 @@ export function navMenuListener() {
 export function selectDropdown(selector) {
     if (!selector) return;
     
-    $(selector).addClass('select-hidden')
-        .wrap('<div class="select"></div>')
-        .after('<div class="select-dropdown"></div>');
-    
     let $select_dropdown, $list, $list_items;     
 
     function init() {   
+        const is_initialized = $(selector).hasClass('select-hidden');
+        if (!is_initialized) {
+            $(selector).addClass('select-hidden')
+                .wrap('<div class="select"></div>')
+                .after('<div class="select-dropdown"></div>');
+        }
+
         $select_dropdown = $(selector).next('div.select-dropdown');
         $select_dropdown.text($(selector).find(':selected').text());
         
-        $list = $('<ul />', { class: 'select-options' }).insertAfter($select_dropdown);
-        
-        const optgroups = $(selector).children('optgroup');
-        if (optgroups.length) {
-            // break down group into labels with its list items
-            optgroups.each((idx, el) => {
-                const options = $(el).children();
-                const label   = $(el).attr('label');
-                appendToList(options, label);
-            });
-        } else {
-            const options = $(selector).children('option');
-            appendToList(options);
+        $list = $select_dropdown.parent().find('.select-options');
+        if (!$list.length) {
+            $list = $('<ul />', { class: 'select-options' }).insertAfter($select_dropdown);
+
+            const optgroups = $(selector).children('optgroup');
+            if (optgroups.length) {
+                // break down group into labels with its list items
+                optgroups.each((idx, el) => {
+                    const options = $(el).children();
+                    const label   = $(el).attr('label');
+                    appendToList(options, label);
+                });
+            } else {
+                const options = $(selector).children('option');
+                appendToList(options);
+            }
         }
 
         // Attach event listeners

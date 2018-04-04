@@ -24,6 +24,20 @@ select.select-hidden {
     visibility: hidden;
     pointer-events: none;
     padding-right: 10px;
+    position: relative;
+
+    @media all and (max-width: 768px) {
+        visibility: visible;
+        pointer-events: auto;
+        width: 100%;
+        text-transform: capitalize;
+
+        &:after {
+            content: '\002303';
+            position: absolute;
+            right: 4px;
+        }
+    }
 }
 
 div.select {
@@ -35,6 +49,11 @@ div.select {
     width: inherit;
     height: 28px;
     text-align: left;
+
+    @media all and (max-width: 768px) {
+        width: 100%;
+        padding-right: 8px;
+    }
 }
 
 div.select-dropdown {
@@ -72,6 +91,9 @@ div.select-dropdown {
             transform: rotate(0deg);
         }
     }
+    @media all and (max-width: 768px) {
+        display: none;
+    }
 }
 
 div.select-dropdown.show ~ ul.select-options {
@@ -96,7 +118,9 @@ ul.select-options {
     transform-origin: top;
     transform: scale(1, 0);
     opacity: 0;
-    max-height: 100px;
+    max-height: 190px;
+    border-radius: 4px;
+    box-shadow: 0 0 2px 1px $fillColor;
     overflow-y: auto;
     overflow-x: hidden;
 

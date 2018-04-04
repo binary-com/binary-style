@@ -29,12 +29,12 @@ export function navMenuListener() {
     });
 }
 
-export function selectDropdown(selector) {
+export function selectDropdown(selector, has_label) {
     if (!selector) return;
-    
-    let $select_dropdown, $list, $list_items;     
 
-    function init() {   
+    let $select_dropdown, $list, $list_items;
+
+    function init() {
         const is_initialized = $(selector).hasClass('select-hidden');
         if (!is_initialized) {
             $(selector).addClass('select-hidden')
@@ -44,7 +44,7 @@ export function selectDropdown(selector) {
 
         $select_dropdown = $(selector).next('div.select-dropdown');
         $select_dropdown.text($(selector).find(':selected').text());
-        
+
         $list = $select_dropdown.parent().find('.select-options');
         if ($list.length) {
             // empty list to repopulate
@@ -53,7 +53,7 @@ export function selectDropdown(selector) {
             // create list
             $list = $('<ul />', { class: 'select-options' }).insertAfter($select_dropdown);
         }
-        
+
         const optgroups = $(selector).children('optgroup');
         if (optgroups.length) {
             // break down group into labels with its list items
@@ -68,14 +68,14 @@ export function selectDropdown(selector) {
         }
 
         // Attach event listeners
-        $select_dropdown.click((e) => {
+        $select_dropdown.off('click').on('click', (e) => {
             e.stopPropagation();
             // expand dropdown expand/collapse
             $(e.target).toggleClass('show');
         });
 
         $list_items = $list.children('li');
-        $list_items.not('.disabled').click((e) => {
+        $list_items.not('.disabled').off('click').on('click', (e) => {
             e.stopPropagation();
             const target = e.target;
             $select_dropdown.text($(target).text()).removeClass('show');
@@ -97,7 +97,7 @@ export function selectDropdown(selector) {
 
         // collapse dropdown when clicking outside
         $(document).click((e) => {
-            if ((!$list_items.is(e.target) && !$list_items.has(e.target).length) 
+            if ((!$list_items.is(e.target) && !$list_items.has(e.target).length)
                  && $select_dropdown.hasClass('show')) {
                 $select_dropdown.removeClass('show');
             }
@@ -105,11 +105,11 @@ export function selectDropdown(selector) {
     };
 
     function appendToList(options, label) {
-        if (label) {
+        if (has_label && label) {
             $('<li />', {
                 text    : label,
                 addClass: 'select-items label',
-            }).appendTo($list); 
+            }).appendTo($list);
         }
 
         $.map(options, (el) => {
@@ -121,7 +121,7 @@ export function selectDropdown(selector) {
                 value   : $(el).val(),
                 addClass: className,
             }).appendTo($list);
-        }); 
+        });
     }
 
     init();

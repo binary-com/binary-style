@@ -46,27 +46,32 @@ export function selectDropdown(selector) {
         $select_dropdown.text($(selector).find(':selected').text());
         
         $list = $select_dropdown.parent().find('.select-options');
-        if (!$list.length) {
+        if ($list.length) {
+            // empty list to repopulate
+            $list.empty();
+        } else {
+            // create list
             $list = $('<ul />', { class: 'select-options' }).insertAfter($select_dropdown);
-
-            const optgroups = $(selector).children('optgroup');
-            if (optgroups.length) {
-                // break down group into labels with its list items
-                optgroups.each((idx, el) => {
-                    const options = $(el).children();
-                    const label   = $(el).attr('label');
-                    appendToList(options, label);
-                });
-            } else {
-                const options = $(selector).children('option');
-                appendToList(options);
-            }
+        }
+        
+        const optgroups = $(selector).children('optgroup');
+        if (optgroups.length) {
+            // break down group into labels with its list items
+            optgroups.each((idx, el) => {
+                const options = $(el).children();
+                const label   = $(el).attr('label');
+                appendToList(options, label);
+            });
+        } else {
+            const options = $(selector).children('option');
+            appendToList(options);
         }
 
         // Attach event listeners
         $select_dropdown.click((e) => {
             e.stopPropagation();
-            $(e.target).toggleClass('show'); // expand dropdown expand/collapse
+            // expand dropdown expand/collapse
+            $(e.target).toggleClass('show');
         });
 
         $list_items = $list.children('li');

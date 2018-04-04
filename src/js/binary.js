@@ -29,219 +29,102 @@ export function navMenuListener() {
     });
 }
 
-export function selectDropdown(el_selector, has_label) {
-    if (el_selector) {
-        const init = () => {
-            // check if optgroup
-            if ($(el_selector).children('optgroup').length) {
-                console.log('is optgroup');
-                const group_items = $(el_selector).children('optgroup');
-                const selected_item = group_items.find(':selected').text();
+export function selectDropdown(selector) {
+    if (!selector) return;
+    
+    let $select_dropdown, $list, $list_items;     
 
-                $(el_selector).addClass('select-hidden');
-                $(el_selector).wrap('<div class="select"></div>');
-                $(el_selector).after('<div class="select-dropdown"></div>');
-
-                const $selectDropdown = $(el_selector).next('div.select-dropdown');
-                $selectDropdown.text(selected_item);
-
-                const $list = $('<ul />', {
-                    'class': 'select-options',
-                }).insertAfter($selectDropdown);
-
-                // break down group into labels with its list items
-                group_items.each((idx, el) => {
-                    const group_item = $(el).children();
-                    if (has_label) {
-
-                        // add label
-                        $('<li />', {
-                            text    : $(el).attr('label'),
-                            addClass: 'select-items label',
-                        }).appendTo($list);
-                    }
-
-                    // insert list elements
-                    $.map(group_item, (i) => {
-                        const isDisabled = $(i).is(':disabled');
-                        const isSelected = $(i).is(':selected');
-                        let className = 'select-items';
-                        className += isSelected ? ' selected' : '';
-                        className += isDisabled ? ' disabled' : '';
-                        $('<li />', {
-                            text    : $(i).text(),
-                            value   : $(i).val(),
-                            addClass: className,
-                        }).appendTo($list);
-                    });
-                });
-
-                const $listItems = $list.children('li');
-
-                $selectDropdown.click((e) => {
-                    e.stopPropagation();
-                    const dropdown = e.target;
-
-                    // expand dropdown expand/collapse
-                    $(dropdown).toggleClass('show');
-                });
-
-                $listItems.not('.disabled').not('.label').click((e) => {
-                    const item = e.target;
-                    e.stopPropagation();
-                    $selectDropdown.text($(item).text()).removeClass('show');
-
-                    const selected_value = $(el_selector).val();
-                    const dropdown_value = $(item).attr('value');
-
-                    // sync original select with selected dropdown value
-                    if (selected_value !== dropdown_value) {
-                        const event = new Event('change');
-                        // dispatch event to trigger onChange value
-                        $(el_selector).val(dropdown_value).get(0).dispatchEvent(event);
-                        $listItems.not(this).each((idx, el) => {
-                            $(el).removeClass('selected');
-                        });
-                        $(item).addClass('selected');
-                    }
-                });
-
-                // collapse dropdown when clicking outside
-                $(document).click((e) => {
-                    if (!$listItems.is(e.target) && $listItems.has(e.target).length === 0) {
-                        if ($selectDropdown.hasClass('show')) $selectDropdown.removeClass('show');
-                    }
-                });
-            }
-            else {
-                const items = $(el_selector).children('option');
-
-                $(el_selector).addClass('select-hidden');
-                $(el_selector).wrap('<div class="select"></div>');
-                $(el_selector).after('<div class="select-dropdown"></div>');
-
-                const $selectDropdown = $(el_selector).next('div.select-dropdown');
-
-                // check if selected option exists if not revert back to first option
-                const first_option = $(el_selector).children('option').eq(0).text();
-                const selected_text = $(el_selector).children('option').filter(':selected').text() || first_option;
-
-                $selectDropdown.text(selected_text);
-                const $list = $('<ul />', {
-                    'class': 'select-options',
-                }).insertAfter($selectDropdown);
-
-                // add option values to new dropdown list
-                $.map(items, (i) => {
-                    const isDisabled = $(i).is(':disabled');
-                    const isSelected = $(i).is(':selected');
-                    let className = 'select-items';
-                    className += isSelected ? ' selected' : '';
-                    className += isDisabled ? ' disabled' : '';
-                    $('<li />', {
-                        text    : $(i).text(),
-                        value   : $(i).val(),
-                        addClass: className,
-                    }).appendTo($list);
-                });
-
-                const $listItems = $list.children('li');
-
-                $selectDropdown.click(function(e) {
-                    e.stopPropagation();
-                    // expand dropdown expand/collapse
-                    $(this).toggleClass('show');
-                });
-
-                $listItems.not('.disabled').click(function(e) {
-                    e.stopPropagation();
-                    $selectDropdown.text($(this).text()).removeClass('show');
-
-                    const selected_value = $(el_selector).val();
-                    const dropdown_value = $(this).attr('value');
-
-                    // sync original select with selected dropdown value
-                    if (selected_value !== dropdown_value) {
-                        const event = new Event('change');
-                        // dispatch event to trigger onChange value
-                        $(el_selector).val(dropdown_value).get(0).dispatchEvent(event);
-                        $listItems.not(this).each((idx, el) => {
-                            $(el).removeClass('selected');
-                        });
-                        $(this).addClass('selected');
-                    }
-                });
-                // collapse dropdown when clicking outside
-                $(document).click((e) => {
-                    if (!$listItems.is(e.target) && $listItems.has(e.target).length === 0)
-                    {
-                        if ($selectDropdown.hasClass('show')) $selectDropdown.removeClass('show');
-                    }
-                });
-            }
-        };
-
-        const refreshList = () => {
-            if ($(el_selector).children('optgroup').length) {
-                // TO-DO: Refresh option items that are nested in optgroup
-                console.log('refresh option group');
-            }
-            else {
-                const items = $(el_selector).children('option');
-                const $selectDropdown = $(el_selector).next('div.select-dropdown');
-
-                // check if selected option exists if not revert back to first option
-                const first_option = $(el_selector).children('option').eq(0).text();
-                const selected_text = $(el_selector).children('option').filter(':selected').text() || first_option;
-
-                $selectDropdown.text(selected_text);
-
-                const $list = $(el_selector).siblings('.select-options');
-                $list.empty();
-
-                // add option values to new dropdown list
-                $.map(items, (i) => {
-                    const isDisabled = $(i).is(':disabled');
-                    const isSelected = $(i).is(':selected');
-                    let className = 'select-items';
-                    className += isSelected ? ' selected' : '';
-                    className += isDisabled ? ' disabled' : '';
-                    $('<li />', {
-                        text    : $(i).text(),
-                        value   : $(i).val(),
-                        addClass: className,
-                    }).appendTo($list);
-                });
-
-                const $listItems = $list.children('li');
-                $listItems.click(function(e) {
-                    e.stopPropagation();
-                    $selectDropdown.text($(this).text()).removeClass('show');
-
-                    const selected_value = $(el_selector).val();
-                    const dropdown_value = $(this).attr('value');
-
-                    // sync original select with selected dropdown value
-                    if (selected_value !== dropdown_value) {
-                        const event = new Event('change');
-                        // dispatch event to trigger onChange value
-                        $(el_selector).val(dropdown_value).get(0).dispatchEvent(event);
-                        $listItems.not(this).each((idx, el) => {
-                            $(el).removeClass('selected');
-                        });
-                        $(this).addClass('selected');
-                    }
-                });
-            }
-        };
-
-        if (!$(el_selector).next('.select-dropdown').length) {
-            init();
+    function init() {   
+        const is_initialized = $(selector).hasClass('select-hidden');
+        if (!is_initialized) {
+            $(selector).addClass('select-hidden')
+                .wrap('<div class="select"></div>')
+                .after('<div class="select-dropdown"></div>');
         }
-        else {
-            refreshList();
+
+        $select_dropdown = $(selector).next('div.select-dropdown');
+        $select_dropdown.text($(selector).find(':selected').text());
+        
+        $list = $select_dropdown.parent().find('.select-options');
+        if ($list.length) {
+            // empty list to repopulate
+            $list.empty();
+        } else {
+            // create list
+            $list = $('<ul />', { class: 'select-options' }).insertAfter($select_dropdown);
         }
+        
+        const optgroups = $(selector).children('optgroup');
+        if (optgroups.length) {
+            // break down group into labels with its list items
+            optgroups.each((idx, el) => {
+                const options = $(el).children();
+                const label   = $(el).attr('label');
+                appendToList(options, label);
+            });
+        } else {
+            const options = $(selector).children('option');
+            appendToList(options);
+        }
+
+        // Attach event listeners
+        $select_dropdown.click((e) => {
+            e.stopPropagation();
+            // expand dropdown expand/collapse
+            $(e.target).toggleClass('show');
+        });
+
+        $list_items = $list.children('li');
+        $list_items.not('.disabled').click((e) => {
+            e.stopPropagation();
+            const target = e.target;
+            $select_dropdown.text($(target).text()).removeClass('show');
+
+            const selected_value = $(selector).val();
+            const dropdown_value = $(target).attr('value');
+
+            // sync original select with selected dropdown value
+            if (selected_value !== dropdown_value) {
+                const event = new Event('change');
+                // dispatch event to trigger onChange value
+                $(selector).val(dropdown_value).get(0).dispatchEvent(event);
+                $list_items.not(target).each((idx, el) => {
+                    $(el).removeClass('selected');
+                });
+                $(target).addClass('selected');
+            }
+        });
+
+        // collapse dropdown when clicking outside
+        $(document).click((e) => {
+            if ((!$list_items.is(e.target) && !$list_items.has(e.target).length) 
+                 && $select_dropdown.hasClass('show')) {
+                $select_dropdown.removeClass('show');
+            }
+        });
+    };
+
+    function appendToList(options, label) {
+        if (label) {
+            $('<li />', {
+                text    : label,
+                addClass: 'select-items label',
+            }).appendTo($list); 
+        }
+
+        $.map(options, (el) => {
+            const is_disabled = $(el).is(':disabled');
+            const is_selected = $(el).is(':selected');
+            const className   = `select-items${is_selected ? ' selected': ''}${is_disabled ? ' disabled': ''}`;
+            $('<li />', {
+                text    : $(el).text(),
+                value   : $(el).val(),
+                addClass: className,
+            }).appendTo($list);
+        }); 
     }
+
+    init();
 }
 
 export function topNavMenuListener() {

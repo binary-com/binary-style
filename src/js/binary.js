@@ -43,7 +43,7 @@ export function selectDropdown(selector, has_label) {
         }
 
         $select_dropdown = $(selector).next('div.select-dropdown');
-        $select_dropdown.text($(selector).find(':selected').text());
+        $select_dropdown.text($(selector).find(':selected').text()).wrapInner('<span></span>');
 
         $list = $select_dropdown.parent().find('.select-options');
         if ($list.length) {
@@ -82,7 +82,7 @@ export function selectDropdown(selector, has_label) {
         $list_items.not('.disabled').off('click').on('click', (e) => {
             e.stopPropagation();
             const target = e.target;
-            $select_dropdown.text($(target).text()).removeClass('show');
+            $select_dropdown.text($(target).text()).removeClass('show').wrapInner('<span></span>');;
 
             const selected_value = $(selector).val();
             const dropdown_value = $(target).attr('value');

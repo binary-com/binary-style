@@ -80,6 +80,14 @@ div.select-dropdown {
     text-transform: capitalize;
     vertical-align: middle;
 
+    span {
+        position: absolute;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: calc(100% - 20px);
+        overflow: hidden;
+        pointer-events: none;
+    }
     &:after {
         content: '\002303';
         position: absolute;

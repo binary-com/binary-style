@@ -71,6 +71,10 @@ export function selectDropdown(selector, has_label) {
         $select_dropdown.off('click').on('click', (e) => {
             e.stopPropagation();
             // expand dropdown expand/collapse
+            const $siblings = $('.select-dropdown').not(e.target);
+            if ($siblings.hasClass('show')) {
+                $siblings.removeClass('show');
+            }
             $(e.target).toggleClass('show');
         });
 

@@ -161,7 +161,7 @@ ul.select-options {
             background-color: $fillColor;
         }
         &.disabled {
-            color: $fillColor;
+            color: $borderColor;
             background: $contentInverseColor;
         }
     }

@@ -76,7 +76,7 @@ div.select-dropdown {
     background-color: $contentInverseColor;
     padding: 2px 8px;
     white-space: nowrap;
-    line-height: 1.4em;
+    line-height: 1.2em;
     text-transform: capitalize;
     vertical-align: middle;
 
@@ -93,7 +93,7 @@ div.select-dropdown {
         position: absolute;
         color: $fillColor;
         top: 6px;
-        right: 5px;
+        right: 4px;
         transition: transform 0.2s ease-in;
         transform-origin: 50% 35%;
         transform: rotate(180deg);

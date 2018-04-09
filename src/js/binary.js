@@ -79,9 +79,10 @@ export function selectDropdown(selector, has_label) {
         });
 
         $list_items = $list.children('li');
-        $list_items.not('.disabled').off('click').on('click', (e) => {
+        $list_items.off('click').on('click', (e) => {
             e.stopPropagation();
             const target = e.target;
+            if (e.target.classList.contains('disabled')) return;
             $select_dropdown.text($(target).text()).removeClass('show').wrapInner('<span></span>');;
 
             const selected_value = $(selector).val();

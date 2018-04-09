@@ -32,18 +32,19 @@ export function navMenuListener() {
 export function selectDropdown(selector, has_label) {
     if (!selector) return;
 
+    const $selector = $(selector);
     let $select_dropdown, $list, $list_items;
 
     function init() {
-        const is_initialized = $(selector).hasClass('select-hidden');
+        const is_initialized = $selector.hasClass('select-hidden');
         if (!is_initialized) {
-            $(selector).addClass('select-hidden')
+            $selector.addClass('select-hidden')
                 .wrap('<div class="select"></div>')
                 .after('<div class="select-dropdown"></div>');
         }
 
-        $select_dropdown = $(selector).next('div.select-dropdown');
-        $select_dropdown.text($(selector).find(':selected').text()).wrapInner('<span></span>');
+        $select_dropdown = $selector.next('div.select-dropdown');
+        $select_dropdown.text($selector.find(':selected').text()).wrapInner('<span></span>');
 
         $list = $select_dropdown.parent().find('.select-options');
         if ($list.length) {
@@ -54,7 +55,7 @@ export function selectDropdown(selector, has_label) {
             $list = $('<ul />', { class: 'select-options' }).insertAfter($select_dropdown);
         }
 
-        const optgroups = $(selector).children('optgroup');
+        const optgroups = $selector.children('optgroup');
         if (optgroups.length) {
             // break down group into labels with its list items
             optgroups.each((idx, el) => {
@@ -63,7 +64,7 @@ export function selectDropdown(selector, has_label) {
                 appendToList(options, label);
             });
         } else {
-            const options = $(selector).children('option');
+            const options = $selector.children('option');
             appendToList(options);
         }
 
@@ -75,28 +76,28 @@ export function selectDropdown(selector, has_label) {
             if ($siblings.hasClass('show')) {
                 $siblings.removeClass('show');
             }
-            $(e.target).toggleClass('show');
+            $select_dropdown.toggleClass('show');
         });
 
         $list_items = $list.children('li');
         $list_items.off('click').on('click', (e) => {
             e.stopPropagation();
-            const target = e.target;
-            if (e.target.classList.contains('disabled')) return;
-            $select_dropdown.text($(target).text()).removeClass('show').wrapInner('<span></span>');;
+            const $target = $(e.target);
+            if ($target.hasClass('disabled')) return;
+            $select_dropdown.text($target.text()).removeClass('show').wrapInner('<span></span>');;
 
-            const selected_value = $(selector).val();
-            const dropdown_value = $(target).attr('value');
+            const selected_value = $selector.val();
+            const dropdown_value = $target.attr('value');
 
             // sync original select with selected dropdown value
             if (selected_value !== dropdown_value) {
                 const event = new Event('change');
                 // dispatch event to trigger onChange value
-                $(selector).val(dropdown_value).get(0).dispatchEvent(event);
-                $list_items.not(target).each((idx, el) => {
+                $selector.val(dropdown_value).get(0).dispatchEvent(event);
+                $list_items.not(e.target).each((idx, el) => {
                     $(el).removeClass('selected');
                 });
-                $(target).addClass('selected');
+                $target.addClass('selected');
             }
         });
 
@@ -112,19 +113,20 @@ export function selectDropdown(selector, has_label) {
     function appendToList(options, label) {
         if (has_label && label) {
             $('<li />', {
-                text    : label,
-                addClass: 'select-items label',
+                text : label,
+                class: 'select-items label',
             }).appendTo($list);
         }
 
         $.map(options, (el) => {
-            const is_disabled = $(el).is(':disabled');
-            const is_selected = $(el).is(':selected');
+            const $el = $(el);
+            const is_disabled = $el.is(':disabled');
+            const is_selected = $el.is(':selected');
             const className   = `select-items${is_selected ? ' selected': ''}${is_disabled ? ' disabled': ''}`;
             $('<li />', {
-                text    : $(el).text(),
-                value   : $(el).val(),
-                addClass: className,
+                text : $el.text(),
+                value: $el.val(),
+                class: className,
             }).appendTo($list);
         });
     }

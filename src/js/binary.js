@@ -209,7 +209,6 @@ export function sidebarCollapsible() {
             $(sidebar).find('.active').removeClass('active');
         }
         $(sidebar).find('a').off('click').on('click', function(e) {
-            e.preventDefault();
             const $this     = $(this);
             const $parent   = $this.parent('li');
             const $siblings = $parent.siblings('li');
@@ -219,7 +218,17 @@ export function sidebarCollapsible() {
                 $this.addClass('selected').parent('li').addClass('active');
             }
             $siblings.removeClass('active').find('> a').removeClass('selected');
-            toggleSubmenu($this);
+
+            const is_submenu_link = $this.is('.has-submenu ul .selected');
+            if (is_submenu_link) {
+                const $main = $this.closest('.has-submenu');
+                $main.children('.selected').addClass('no-transition');
+                const $submenu = $main.children('ul');
+                $submenu.finish();
+            }
+            else {
+                toggleSubmenu($this);
+            }
             showSelectedContent(e.target);
         });
     }

@@ -171,14 +171,16 @@ export function sidebarCollapsible() {
         return totalHeight;
     }
 
-    function toggleSubmenu($el) {
+    function toggleSubmenu($el, should_animate) {
         const $submenu = $el.siblings('ul');
         if ($el.is('.selected')) {
             const totalHeight = getChildrenHeight($submenu);
-            $submenu.stop().animate({ height: `${totalHeight}px` }, 300);
+            if (should_animate) $submenu.stop().animate({ height: `${totalHeight}px` }, 300);
+            else $submenu.height(totalHeight);
         }
         else {
-            $submenu.stop().animate({ height: '0px' }, 300);
+            if (should_animate) $submenu.stop().animate({ height: '0px' }, 300);
+            else $submenu.height(0);
         }
     }
 
@@ -201,16 +203,18 @@ export function sidebarCollapsible() {
     }
 
     function initSidebar() {
+        console.log('init');
         $(sidebar).off('click').on('click', function(e) {
-            console.log('click on', e.target, e, window.location.hash);
-
             const $target = $(e.target);
             const was_active = $target.is('.selected');
+
+            console.log($target.parent('li').siblings().find('.selected').length);
 
             if (!$target.is('a')) return;
 
             $(sidebar).find('.active').removeClass('active');
             $(sidebar).find('.selected').removeClass('selected');
+            $(sidebar).find('.no-transition').removeClass('no-transition');
 
             if ($target.siblings('ul').length) {
                 // parent link
@@ -220,13 +224,14 @@ export function sidebarCollapsible() {
                     const $first_link = $target.siblings('ul').find('li:first-child > a');
                     if ($first_link.length) $first_link[0].click();
                 }
-                toggleSubmenu($target);
+                toggleSubmenu($target, false);
             }
             else if ($target.closest('.has-submenu').length) {
                 // child link
-                $target.closest('.has-submenu').addClass('active').children('a').addClass('selected');
+                const $parent_link = $target.closest('.has-submenu').addClass('active').children('a').addClass('selected');
                 $target.addClass('selected').parent('li').addClass('active');
-                toggleSubmenu($target.closest('.has-submenu').children('a'));
+                toggleSubmenu($parent_link, false);
+                $parent_link.addClass('no-transition');
             }
             else {
                 // childless link

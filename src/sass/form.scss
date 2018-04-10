@@ -101,6 +101,10 @@ div.select-dropdown {
     &:hover {
         border: 1px solid $primaryBrandColor;
     }
+    &:focus {
+        outline: none;
+        border: 1px solid $primaryBrandColor;
+    }
     &.show {
         border: 1px solid $primaryBrandColor;
 
@@ -160,6 +164,12 @@ ul.select-options {
         &:not(.selected):not(.disabled):not(.label):hover {
             background-color: $fillColor;
         }
+        &:not(.selected):not(.disabled):not(.label).active {
+            background-color: $fillColor;
+        }
+        &:not(.selected):not(.disabled):not(.label):focus {
+            background-color: $fillColor;
+        }
         &.disabled {
             color: $borderColor;
             background: $contentInverseColor;
@@ -170,7 +180,7 @@ ul.select-options {
 input[type=radio] {
     &:checked, &:not(:checked) {
         position: absolute;
-        visibility: hidden;
+        opacity: 0;
 
         & + label {
             position: relative;
@@ -186,7 +196,7 @@ input[type=radio] {
                 top: 0;
                 width: 16px;
                 height: 16px;
-                border: 1px solid $primaryBrandColor;
+                border: 1px solid $borderColor;
                 border-radius: 100%;
                 background: $contentInverseColor;
             }
@@ -201,11 +211,17 @@ input[type=radio] {
                 border-radius: 100%;
                 transition: all 0.2s ease;
             }
+            &:hover:before, &:active:before, &:focus:before {
+                border: 1px solid $primaryBrandColor;
+            }
         }
     }
     &:not(:checked) + label:after {
         opacity: 0;
         transform: scale(0);
+    }
+    &:checked + label:before {
+        border: 1px solid $primaryBrandColor;
     }
     &:checked + label:after {
         opacity: 1;
@@ -215,7 +231,7 @@ input[type=radio] {
 
 input[type=checkbox] {
     position: absolute;
-    visibility: hidden;
+    opacity: 0;
 
     & + label {
         position: relative;
@@ -236,7 +252,7 @@ input[type=checkbox] {
     &:checked + label:before {
         content: svg-url('<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><title>Artboard</title><g fill="none" fill-rule="evenodd"><path d="M2 0h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z" fill="#2A3052"/><path d="M4.854 8.144a.5.5 0 1 0-.708.706l2 2.003a.5.5 0 0 0 .708 0l5-5a.5.5 0 0 0-.708-.707L6.5 9.793l-1.646-1.65z" fill="#FFF" fill-rule="nonzero"/></g></svg>');
     }
-    &:not(:checked):hover + label:before {
+    &:not(:checked):hover + label:before, &:not(:checked):focus + label:before {
         content: svg-url('<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><title>Artboard</title><path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2zm0-1h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z" fill="#2A3052" fill-rule="nonzero"/></svg>');
     }
 }

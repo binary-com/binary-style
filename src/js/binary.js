@@ -84,7 +84,7 @@ export function selectDropdown(selector, has_label) {
             e.stopPropagation();
             const $target = $(e.target);
             if ($target.hasClass('disabled')) return;
-            $select_dropdown.text($target.text()).removeClass('show').wrapInner('<span></span>');;
+            $select_dropdown.text($target.text()).removeClass('show').wrapInner('<span></span>');
 
             const selected_value = $selector.val();
             const dropdown_value = $target.attr('value');

@@ -201,13 +201,12 @@ export function sidebarCollapsible() {
     }
 
     function initSidebar() {
-        $(sidebar).off('click').on('click', function(e) {
+        $(sidebar).off('click').on('click', (e) => {
             const $target = $(e.target);
 
             if (!$target.is('a')) return;
 
             const was_active = $target.is('.selected');
-            const $sidebar   = $(sidebar);
 
             if ($target.siblings('ul').length) {
                 // parent link

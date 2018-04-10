@@ -207,6 +207,8 @@ export function sidebarCollapsible() {
             const $target = $(e.target);
             const was_active = $target.is('.selected');
 
+            if (!$target.is('a')) return;
+
             $(sidebar).find('.active').removeClass('active');
             $(sidebar).find('.selected').removeClass('selected');
 

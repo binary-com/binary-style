@@ -212,15 +212,15 @@ export function sidebarCollapsible() {
             if ($target.siblings('ul').length) {
                 // parent link
                 e.preventDefault();
-                $sidebar.find('.active').removeClass('active');
-                $sidebar.find('.selected').removeClass('selected');
-                $sidebar.find('.no-transition').removeClass('no-transition');
                 if (!was_active) {
                     $target.addClass('selected').parent('li').addClass('active');
                     const $first_link = $target.siblings('ul').find('li:first-child > a');
                     if ($first_link.length) {
                         $first_link[0].click();
                     }
+                }
+                else {
+                    $target.removeClass('selected no-transition').parent('li').removeClass('active');
                 }
                 toggleSubmenu($target);
             }

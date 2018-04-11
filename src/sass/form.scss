@@ -154,7 +154,10 @@ ul.select-options {
         white-space: nowrap;
 
         &.label {
-            color: $fillColor;
+            cursor: default;
+            font-size: 85%;
+            padding: 3px 6px;
+            color: $secondaryBrandColor;
             background-color: $contentInverseColor;
         }
         &.selected {

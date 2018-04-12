@@ -55,9 +55,11 @@ div.select {
         &:after {
             content: '\002303';
             position: absolute;
-            top: 7px;
+            top: 8px;
             right: 5px;
-            color: $fillColor;
+            font-size: 120%;
+            background: $white;
+            color: $borderColor;
             transition: transform 0.2s ease-in;
             transform-origin: 50% 35%;
             transform: rotate(180deg);
@@ -91,7 +93,7 @@ div.select-dropdown {
     &:after {
         content: '\002303';
         position: absolute;
-        color: $fillColor;
+        color: $borderColor;
         top: 6px;
         right: 4px;
         transition: transform 0.2s ease-in;

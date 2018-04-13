@@ -172,18 +172,14 @@ export function sidebarCollapsible() {
     }
 
     function toggleSubmenu($el) {
-        const $parent  = $el.parent();
         const $submenu = $el.siblings('ul');
-        if ($parent.is('.active')) {
+        if ($el.is('.selected')) {
             const totalHeight = getChildrenHeight($submenu);
-            $submenu.animate({ height: `${totalHeight}px` }, 300);
-            if (!$submenu.find('.active').length) {
-                $submenu.find('li:first-child > a').addClass('selected'); // set first child active
-            }
-        } else {
-            $submenu.animate({ height: '0px' }, 300);
+            $submenu.height(totalHeight);
         }
-        $parent.siblings().find('ul').animate({ height: '0px' }, 300);
+        else {
+            $submenu.height(0);
+        }
     }
 
     function getTargetHref(current_target) {
@@ -205,21 +201,39 @@ export function sidebarCollapsible() {
     }
 
     function initSidebar() {
-        if ($(sidebar).find('.active').length) {
-            $(sidebar).find('.active').removeClass('active');
-        }
-        $(sidebar).find('a').off('click').on('click', function(e) {
-            e.preventDefault();
-            const $this     = $(this);
-            const $parent   = $this.parent('li');
-            const $siblings = $parent.siblings('li');
-            if ($parent.hasClass('has-submenu')) {
-                $this.toggleClass('selected').parent('li').toggleClass('active');
-            } else {
-                $this.addClass('selected').parent('li').addClass('active');
+        $(sidebar).off('click').on('click', (e) => {
+            const $target = $(e.target);
+
+            if (!$target.is('a')) return;
+
+            const was_active = $target.is('.selected');
+
+            if ($target.siblings('ul').length) {
+                // parent link
+                e.preventDefault();
+                if (!was_active) {
+                    $target.addClass('selected').parent('li').addClass('active');
+                    const $first_link = $target.siblings('ul').find('li:first-child > a');
+                    if ($first_link.length) {
+                        $first_link[0].click();
+                    }
+                }
+                else {
+                    $target.removeClass('selected no-transition').parent('li').removeClass('active');
+                }
+                toggleSubmenu($target);
             }
-            $siblings.removeClass('active').find('> a').removeClass('selected');
-            toggleSubmenu($this);
+            else if ($target.closest('.has-submenu').length) {
+                // child link
+                const $parent_link = $target.closest('.has-submenu').addClass('active').children('a').addClass('selected');
+                $target.addClass('selected').parent('li').addClass('active');
+                $parent_link.addClass('no-transition');
+                toggleSubmenu($parent_link);
+            }
+            else {
+                // childless link
+                $target.addClass('selected').parent('li').addClass('active');
+            }
             showSelectedContent(e.target);
         });
     }

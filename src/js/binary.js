@@ -166,7 +166,7 @@ export function selectDropdown(selector, has_label) {
                     break;
                 case 40:
                     if ($select_dropdown.hasClass('focused')) {
-                        event.preventDefault();
+                        e.preventDefault();
                     }
                     removeActiveClasses();
                     if (!$select_dropdown.hasClass('show')) {
@@ -179,7 +179,7 @@ export function selectDropdown(selector, has_label) {
                     $current.addClass('active');
                     break;
                 default:
-                    if (isAlphaNumeric && key_matching_item.length) {
+                    if (isAlphaNumeric && key_matching_item.length && $select_dropdown.hasClass('show') && $select_dropdown.hasClass('focused')) {
                         removeActiveClasses();
                         key_matching_item.first().addClass('active');
                     }

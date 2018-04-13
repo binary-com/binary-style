@@ -40,7 +40,7 @@ export function selectDropdown(selector, has_label) {
         if (!is_initialized) {
             $selector.addClass('select-hidden')
                 .wrap('<div class="select"></div>')
-                .after('<div class="select-dropdown"></div>');
+                .after('<div class="select-dropdown" tabindex="0"></div>');
         }
 
         $select_dropdown = $selector.next('div.select-dropdown');
@@ -91,13 +91,98 @@ export function selectDropdown(selector, has_label) {
 
             // sync original select with selected dropdown value
             if (selected_value !== dropdown_value) {
-                const event = new Event('change');
-                // dispatch event to trigger onChange value
-                $selector.val(dropdown_value).get(0).dispatchEvent(event);
+                triggerEventChange(dropdown_value);
                 $list_items.not(e.target).each((idx, el) => {
                     $(el).removeClass('selected');
                 });
                 $target.addClass('selected');
+                removeActiveClasses();
+            }
+        });
+
+        const removeActiveClasses = () => {
+            const list = $select_dropdown.parent().find('.select-options');
+            list.find('li.select-items').removeClass('active');
+
+        };
+
+        const triggerEventChange = (value) => {
+            const event = new Event('change');
+            // dispatch event to trigger onChange value
+            $selector.val(value).get(0).dispatchEvent(event);
+        };
+
+        // attach focus event/class
+        $select_dropdown.on('focusin', () => $select_dropdown.addClass('focused'));
+        $select_dropdown.on('focusout', () => $select_dropdown.removeClass('focused'));
+
+        // attach keypress events
+        $select_dropdown.off('keydown').on('keydown', (e) => {
+
+            const selected_value = $selector.val();
+            const key            =  e.keyCode || e.which;
+            const key_string     = String.fromCharCode(key);
+            const $target        = $(e.target).next('ul.select-options');
+            const $active        = $target.children().filter('.active');
+            const active_target  = $target.find('li.select-items.active').first();
+            let $current;
+
+            const key_matching_item = $target.find('li.select-items').filter((idx, item) => {
+                const found_item = $(item).not('.selected').not('.active').not('.disabled').text().charAt(0).toLowerCase() === key_string.toLowerCase();
+                return found_item;
+            });
+
+            const isAlphaNumeric = /^[a-z0-9]+$/i.test(key_string);
+            const isActiveFocus  = ($select_dropdown.hasClass('show') && $select_dropdown.hasClass('focused'));
+
+            if (!key === 9 || isActiveFocus) {
+                e.preventDefault();
+            }
+
+            switch (key) {
+                case 9:
+                    if ($select_dropdown.hasClass('show') && $select_dropdown.hasClass('focused')) {
+                        removeActiveClasses();
+                        $select_dropdown.removeClass('show');
+                    }
+                    break;
+                case 13:
+                    if (active_target && active_target.attr('value') && (active_target.attr('value') !== selected_value) || active_target.attr('value') === '') {
+                        $target.find('li.select-items').removeClass('selected');
+                        triggerEventChange(active_target.attr('value'));
+                        active_target.addClass('selected');
+                        $select_dropdown.text(active_target.text()).removeClass('show').wrapInner('<span></span>');
+                    }
+                    removeActiveClasses();
+                    $select_dropdown.removeClass('show');
+                    break;
+                case 38:
+                    removeActiveClasses();
+                    $current = $active.prevAll(':not(.disabled):not(.selected)').eq(0);
+                    if (!$active.length || $active.is(':first-child')) {
+                        $current = $target.children().not('.disabled').not('.selected').last();
+                    }
+                    $current.addClass('active');
+                    break;
+                case 40:
+                    if ($select_dropdown.hasClass('focused')) {
+                        event.preventDefault();
+                    }
+                    removeActiveClasses();
+                    if (!$select_dropdown.hasClass('show')) {
+                        $select_dropdown.addClass('show');
+                    }
+                    $current = $active.nextAll(':not(.disabled):not(.selected)').eq(0);
+                    if (!$active.length || $active.is(':last-child')) {
+                        $current = $target.children().not('.disabled').not('.selected').first();
+                    }
+                    $current.addClass('active');
+                    break;
+                default:
+                    if (isAlphaNumeric && key_matching_item.length) {
+                        removeActiveClasses();
+                        key_matching_item.first().addClass('active');
+                    }
             }
         });
 
@@ -106,6 +191,7 @@ export function selectDropdown(selector, has_label) {
             if ((!$list_items.is(e.target) && !$list_items.has(e.target).length)
                  && $select_dropdown.hasClass('show')) {
                 $select_dropdown.removeClass('show');
+                removeActiveClasses();
             }
         });
     };

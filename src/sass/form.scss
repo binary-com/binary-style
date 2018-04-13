@@ -55,10 +55,12 @@ div.select {
         &:after {
             content: '\002303';
             position: absolute;
-            top: 8px;
+            top: 9px;
             right: 5px;
             font-size: 120%;
             background: $white;
+            height: 20px;
+            line-height: normal;
             color: $borderColor;
             transition: transform 0.2s ease-in;
             transform-origin: 50% 35%;

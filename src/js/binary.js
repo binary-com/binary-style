@@ -1,6 +1,16 @@
 /*
  * js code for Drop-Down Menu
  */
+require('select2');
+
+export function select2Matcher(params, data) {
+    const query = params.term || '';
+    const text = data.text || '';
+    if (text.toUpperCase().indexOf(query.toUpperCase()) === 0) {
+        return data;
+    }
+    return false;
+};
 
 export function hide_menu($element) {
     $element.animate({'opacity': 0}, 100, () => {

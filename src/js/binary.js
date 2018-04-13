@@ -156,6 +156,23 @@ export function selectDropdown(selector, has_label) {
                     removeActiveClasses();
                     $select_dropdown.removeClass('show');
                     break;
+                case 32:
+                    if ($select_dropdown.hasClass('focused') && !$select_dropdown.hasClass('show')) {
+                        e.preventDefault();
+                        removeActiveClasses();
+                        $select_dropdown.addClass('show');
+                    }
+                    else if ($select_dropdown.hasClass('show') && $select_dropdown.hasClass('focused')) {
+                        if (active_target && active_target.attr('value') && (active_target.attr('value') !== selected_value) || active_target.attr('value') === '') {
+                            $target.find('li.select-items').removeClass('selected');
+                            triggerEventChange(active_target.attr('value'));
+                            active_target.addClass('selected');
+                            $select_dropdown.text(active_target.text()).removeClass('show').wrapInner('<span></span>');
+                        }
+                        removeActiveClasses();
+                        $select_dropdown.removeClass('show');
+                    }
+                    break;
                 case 38:
                     removeActiveClasses();
                     $current = $active.prevAll(':not(.disabled):not(.selected)').eq(0);

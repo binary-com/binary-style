@@ -159,3 +159,9 @@ header, #header, .header {
 .align-self-center {
     align-self: center;
 }
+
+.no-transition {
+    &, &:before, &:after {
+        transition: none !important;
+    }
+}

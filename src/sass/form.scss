@@ -1,13 +1,266 @@
 select, input, textarea {
+    appearance: none;
     font-family: inherit;
     font-size: inherit;
     font-weight: inherit;
     font-style: inherit;
-    padding: 2px 3px;
+    padding: 2px 8px;
     border: 1px solid $fillColor;
     color: $contentColor;
     background: $contentInverseColor;
     border-radius: $BORDER_RADIUS;
+
+    &:hover {
+        border: 1px solid $primaryBrandColor;
+    }
+    &:focus, &:active {
+        outline: none;
+        border: 1px solid $primaryBrandColor;
+    }
+}
+
+select.select-hidden {
+    height: 0;
+    visibility: hidden;
+    pointer-events: none;
+    padding-right: 10px;
+    position: relative;
+
+    @media all and (max-width: 480px) {
+        visibility: visible;
+        pointer-events: auto;
+        width: 100%;
+        height: auto;
+        text-transform: capitalize;
+    }
+}
+
+div.select {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    max-width: 100%;
+    min-width: 95px;
+    width: inherit;
+    height: 28px;
+    text-align: left;
+
+    &:after {
+        content: '';
+        position: absolute;
+    }
+    @media all and (max-width: 480px) {
+        width: 100%;
+
+        &:after {
+            content: '\002303';
+            position: absolute;
+            top: 9px;
+            right: 5px;
+            font-size: 120%;
+            background: $white;
+            height: 20px;
+            line-height: normal;
+            color: $borderColor;
+            transition: transform 0.2s ease-in;
+            transform-origin: 50% 35%;
+            transform: rotate(180deg);
+        }
+    }
+}
+
+div.select-dropdown {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 1px solid $fillColor;
+    border-radius: 4px;
+    background-color: $contentInverseColor;
+    padding: 2px 8px;
+    white-space: nowrap;
+    line-height: 1.2em;
+    text-transform: capitalize;
+    vertical-align: middle;
+
+    span {
+        position: absolute;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: calc(100% - 24px);
+        overflow: hidden;
+        pointer-events: none;
+    }
+    &:after {
+        content: '\002303';
+        position: absolute;
+        color: $borderColor;
+        top: 6px;
+        right: 4px;
+        transition: transform 0.2s ease-in;
+        transform-origin: 50% 35%;
+        transform: rotate(180deg);
+    }
+    &:hover {
+        border: 1px solid $primaryBrandColor;
+    }
+    &:focus {
+        outline: none;
+        border: 1px solid $primaryBrandColor;
+    }
+    &.show {
+        border: 1px solid $primaryBrandColor;
+
+        &:after {
+            transform: rotate(0deg);
+        }
+    }
+    @media all and (max-width: 480px) {
+        display: none;
+    }
+}
+
+div.select-dropdown.show ~ ul.select-options {
+    transform: scale(1, 1);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+ul.select-options {
+    pointer-events: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    margin: 4px 0 0;
+    padding: 0;
+    list-style: none;
+    background-color: $contentInverseColor;
+    border: 1px solid $fillColor;
+    transition: transform 0.25s, opacity 0.25s;
+    transform-origin: top;
+    transform: scale(1, 0);
+    opacity: 0;
+    max-height: 190px;
+    border-radius: 4px;
+    box-shadow: 0 0 2px 1px $fillColor;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    li.select-items {
+        margin: 0;
+        padding: 3px 4px 3px 8px;
+        display: block;
+        font-size: inherit;
+        text-transform: capitalize;
+
+        &.label {
+            cursor: default;
+            font-size: 85%;
+            padding: 3px 6px;
+            color: $secondaryBrandColor;
+            background-color: $contentInverseColor;
+        }
+        &.selected {
+            color: $contentInverseColor;
+            background-color: $primaryBrandColor;
+        }
+        &:not(.selected):not(.disabled):not(.label):hover {
+            background-color: $fillColor;
+        }
+        &:not(.selected):not(.disabled):not(.label).active {
+            background-color: $fillColor;
+        }
+        &:not(.selected):not(.disabled):not(.label):focus {
+            background-color: $fillColor;
+        }
+        &.disabled {
+            color: $borderColor;
+            background: $contentInverseColor;
+        }
+    }
+}
+
+input[type=radio] {
+    &:checked, &:not(:checked) {
+        position: absolute;
+        opacity: 0;
+
+        & + label {
+            position: relative;
+            padding-left: 22px;
+            cursor: pointer;
+            line-height: 1em;
+            display: inline-block;
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 16px;
+                height: 16px;
+                border: 1px solid $borderColor;
+                border-radius: 100%;
+                background: $contentInverseColor;
+            }
+            &:after {
+                content: '';
+                width: 10px;
+                height: 10px;
+                background: $primaryBrandColor;
+                position: absolute;
+                top: 4px;
+                left: 4px;
+                border-radius: 100%;
+                transition: all 0.2s ease;
+            }
+            &:hover:before, &:active:before, &:focus:before {
+                border: 1px solid $primaryBrandColor;
+            }
+        }
+    }
+    &:not(:checked) + label:after {
+        opacity: 0;
+        transform: scale(0);
+    }
+    &:checked + label:before {
+        border: 1px solid $primaryBrandColor;
+    }
+    &:checked + label:after {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+input[type=checkbox] {
+    position: absolute;
+    opacity: 0;
+
+    & + label {
+        position: relative;
+        cursor: pointer;
+        font-size: inherit;
+
+        &:before {
+            line-height: 1em;
+            content: svg-url('<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><title>Artboard</title><path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2zm0-1h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z" fill="#DEDEDE" fill-rule="nonzero"/></svg>');
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 5px;
+            width: 16px;
+            height: 16px;
+            border-radius: $BORDER_RADIUS;
+        }
+    }
+    &:checked + label:before {
+        content: svg-url('<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><title>Artboard</title><g fill="none" fill-rule="evenodd"><path d="M2 0h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z" fill="#2A3052"/><path d="M4.854 8.144a.5.5 0 1 0-.708.706l2 2.003a.5.5 0 0 0 .708 0l5-5a.5.5 0 0 0-.708-.707L6.5 9.793l-1.646-1.65z" fill="#FFF" fill-rule="nonzero"/></g></svg>');
+    }
+    &:not(:checked):hover + label:before, &:not(:checked):focus + label:before {
+        content: svg-url('<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><title>Artboard</title><path d="M2 1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2zm0-1h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z" fill="#2A3052" fill-rule="nonzero"/></svg>');
+    }
 }
 
 fieldset {

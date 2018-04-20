@@ -1,5 +1,5 @@
 {
-  "name": "binary-style",
+  "name": "@binary-com/binary-style",
   "version": "0.2.4",
   "description": "Style system and guide for Binary.com",
   "main": "binary.js",
@@ -14,7 +14,7 @@
     "url": "git+https://github.com/binary-com/binary-style.git"
   },
   "author": "Binary.com",
-  "license": "Apache License 2.0",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/binary-com/binary-style/issues"
   },

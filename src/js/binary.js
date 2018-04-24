@@ -378,91 +378,10 @@ export function tabListener() {
     initMenuContent($('.content-tab-container').find('.tm-ul'));
 }
 
-export function sidebarCollapsible() {
-    const sidebar = '.sidebar-collapsible';
-
-    function getChildrenHeight($el) {
-        let totalHeight = 0;
-        $el.children().each(function() {
-            totalHeight += $(this).outerHeight(true);
-        });
-        return totalHeight;
-    }
-
-    function toggleSubmenu($el) {
-        const $submenu = $el.siblings('ul');
-        if ($el.is('.selected')) {
-            const totalHeight = getChildrenHeight($submenu);
-            $submenu.height(totalHeight);
-        }
-        else {
-            $submenu.height(0);
-        }
-    }
-
-    function getTargetHref(current_target) {
-        const submenu = current_target.nextElementSibling;
-        const target  = submenu ? $(submenu).find($(submenu).find('.selected')[0] ? '.selected' : 'a:first')[0] : current_target;
-        return target.getAttribute('href');
-    }
-
-    function showSelectedContent(current_target) {
-        const $content = $('.sidebar-collapsible-content');
-        if (!$content) return;
-        const target   = getTargetHref(current_target);
-        $content
-            .find('> div')
-            .addClass('invisible')
-            .end()
-            .find(`${target}-content`)
-            .removeClass('invisible');
-    }
-
-    function initSidebar() {
-        $(sidebar).off('click').on('click', (e) => {
-            const $target = $(e.target);
-
-            if (!$target.is('a')) return;
-
-            const was_active = $target.is('.selected');
-
-            if ($target.siblings('ul').length) {
-                // parent link
-                e.preventDefault();
-                if (!was_active) {
-                    $target.addClass('selected').parent('li').addClass('active');
-                    const $first_link = $target.siblings('ul').find('li:first-child > a');
-                    if ($first_link.length) {
-                        $first_link[0].click();
-                    }
-                }
-                else {
-                    $target.removeClass('selected no-transition').parent('li').removeClass('active');
-                }
-                toggleSubmenu($target);
-            }
-            else if ($target.closest('.has-submenu').length) {
-                // child link
-                const $parent_link = $target.closest('.has-submenu').addClass('active').children('a').addClass('selected');
-                $target.addClass('selected').parent('li').addClass('active');
-                $parent_link.addClass('no-transition');
-                toggleSubmenu($parent_link);
-            }
-            else {
-                // childless link
-                $target.addClass('selected').parent('li').addClass('active');
-            }
-            showSelectedContent(e.target);
-        });
-    }
-    initSidebar();
-}
-
 $(document).ready(() => {
     navMenuListener();
     topNavMenuListener();
     documentListener();
     langListener();
     tabListener();
-    sidebarCollapsible();
 });

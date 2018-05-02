@@ -2,18 +2,26 @@
   "metadata": {
     "name": "binary_symbols",
     "lastOpened": 0,
-    "created": 1510552800676
+    "created": 1525241548026
   },
   "iconSets": [
     {
       "selection": [
+        {
+          "order": 48,
+          "id": 30,
+          "name": "DAI",
+          "prevSize": 32,
+          "code": 59650,
+          "tempChar": ""
+        },
         {
           "order": 36,
           "id": 20,
           "name": "USD",
           "prevSize": 32,
           "code": 36,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 37,
@@ -21,7 +29,7 @@
           "name": "EUR",
           "prevSize": 32,
           "code": 8364,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 38,
@@ -29,7 +37,7 @@
           "name": "GBP",
           "prevSize": 32,
           "code": 163,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 39,
@@ -37,7 +45,7 @@
           "name": "JPY",
           "prevSize": 32,
           "code": 165,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 40,
@@ -45,7 +53,7 @@
           "name": "A",
           "prevSize": 32,
           "code": 65,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 41,
@@ -53,7 +61,7 @@
           "name": "BTC",
           "prevSize": 32,
           "code": 66,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 42,
@@ -61,7 +69,7 @@
           "name": "BCH",
           "prevSize": 32,
           "code": 59649,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 43,
@@ -69,7 +77,7 @@
           "name": "LTC",
           "prevSize": 32,
           "code": 76,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 47,
@@ -77,7 +85,7 @@
           "name": "ETH",
           "prevSize": 32,
           "code": 69,
-          "tempChar": ""
+          "tempChar": ""
         },
         {
           "order": 45,
@@ -85,20 +93,35 @@
           "name": "ETC",
           "prevSize": 32,
           "code": 59648,
-          "tempChar": ""
+          "tempChar": ""
         }
       ],
       "id": 0,
       "metadata": {
         "name": "Symbols",
         "importSize": {
-          "width": 104,
-          "height": 172
+          "width": 18,
+          "height": 18
         }
       },
       "height": 1024,
       "prevSize": 32,
       "icons": [
+        {
+          "id": 30,
+          "paths": [
+            "M512 0l512 455.111-512 227.556-512-227.556 512-455.111zM512 796.444l512-227.556-512 455.111-512-455.111 512 227.556zM170.667 455.111h227.556l113.778-113.778v-227.556l-341.333 341.333zM853.333 455.111l-341.333-341.333v227.556l113.778 113.778h227.556z"
+          ],
+          "attrs": [
+            {}
+          ],
+          "isMulticolor": false,
+          "isMulticolor2": false,
+          "grid": 0,
+          "tags": [
+            "dai"
+          ]
+        },
         {
           "id": 20,
           "paths": [

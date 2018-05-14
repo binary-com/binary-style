@@ -212,15 +212,6 @@ export function selectDropdown(selector, has_label) {
                     }
             }
         });
-
-        // collapse dropdown when clicking outside
-        // $(document).click((e) => {
-        //     if ((!$list_items.is(e.target) && !$list_items.has(e.target).length)
-        //          && $select_dropdown.hasClass('show')) {
-        //         $select_dropdown.removeClass('show');
-        //         removeActiveClasses();
-        //     }
-        // });
     };
 
     function appendToList(options, label) {

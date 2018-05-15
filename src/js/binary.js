@@ -212,15 +212,6 @@ export function selectDropdown(selector, has_label) {
                     }
             }
         });
-
-        // collapse dropdown when clicking outside
-        $(document).click((e) => {
-            if ((!$list_items.is(e.target) && !$list_items.has(e.target).length)
-                 && $select_dropdown.hasClass('show')) {
-                $select_dropdown.removeClass('show');
-                removeActiveClasses();
-            }
-        });
     };
 
     function appendToList(options, label) {
@@ -269,10 +260,19 @@ export function topNavMenuListener() {
 }
 
 export function documentListener() {
+    const select_els = document.getElementsByClassName('select-dropdown');
     $(document).on('click', () => {
         hide_menu($('#all-accounts, #all-accounts-top'));
         hide_menu($('.top-nav-menu li ul'));
         hide_menu($('#language_select, #select_language'));
+        if (select_els.length && select_els.length > 0) {
+            // collapse dropdowns when clicking outside
+            Array.from(select_els).forEach(el => {
+                if ($(el).hasClass('show') || $(el).hasClass('focused')) {
+                    $(el).removeClass('show focused');
+                }
+            });
+        }
     });
 }
 

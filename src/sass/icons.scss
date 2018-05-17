@@ -156,10 +156,10 @@ $contract_icons: (
     &.CALLE.negative-color {
         background-image: contract-icon('mb_calle', $negativeColor);
     }
-    &.PUT {
+    &.PUTE {
         background-image: contract-icon('mb_put');
     }
-    &.PUT.negative-color {
+    &.PUTE.negative-color {
         background-image: contract-icon('mb_put', $negativeColor);
     }
 }

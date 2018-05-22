@@ -97,7 +97,7 @@ export function selectDropdown(selector, has_label) {
             $select_dropdown.text($target.text()).removeClass('show').wrapInner('<span></span>');
 
             const selected_value = $selector.val();
-            const dropdown_value = $target.attr('value');
+            const dropdown_value = $target.data('value');
 
             // sync original select with selected dropdown value
             if (selected_value !== dropdown_value) {
@@ -157,9 +157,9 @@ export function selectDropdown(selector, has_label) {
                     }
                     break;
                 case 13:
-                    if (active_target && active_target.attr('value') && (active_target.attr('value') !== selected_value) || active_target.attr('value') === '') {
+                    if (active_target && active_target.data('value') && (active_target.data('value') !== selected_value) || active_target.data('value') === '') {
                         $target.find('li.select-items').removeClass('selected');
-                        triggerEventChange(active_target.attr('value'));
+                        triggerEventChange(active_target.data('value'));
                         active_target.addClass('selected');
                         $select_dropdown.text(active_target.text()).removeClass('show').wrapInner('<span></span>');
                     }
@@ -173,9 +173,9 @@ export function selectDropdown(selector, has_label) {
                         $select_dropdown.addClass('show');
                     }
                     else if ($select_dropdown.hasClass('show') && $select_dropdown.hasClass('focused')) {
-                        if (active_target && active_target.attr('value') && (active_target.attr('value') !== selected_value) || active_target.attr('value') === '') {
+                        if (active_target && active_target.data('value') && (active_target.data('value') !== selected_value) || active_target.data('value') === '') {
                             $target.find('li.select-items').removeClass('selected');
-                            triggerEventChange(active_target.attr('value'));
+                            triggerEventChange(active_target.data('value'));
                             active_target.addClass('selected');
                             $select_dropdown.text(active_target.text()).removeClass('show').wrapInner('<span></span>');
                         }
@@ -228,9 +228,9 @@ export function selectDropdown(selector, has_label) {
             const is_selected = $el.is(':selected');
             const className   = `select-items${is_selected ? ' selected': ''}${is_disabled ? ' disabled': ''}`;
             $('<li />', {
-                text : $el.text(),
-                value: $el.val(),
-                class: className,
+                'text'      : $el.text(),
+                'data-value': $el.val(),
+                'class'     : className,
             }).appendTo($list);
         });
     }

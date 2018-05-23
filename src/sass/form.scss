@@ -119,6 +119,9 @@ div.select-dropdown {
     @media all and (max-width: 480px) {
         display: none;
     }
+    &.disabled:hover {
+        cursor: not-allowed;
+    }
 }
 
 div.select-dropdown.show ~ ul.select-options {

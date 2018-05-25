@@ -56,6 +56,10 @@ export function selectDropdown(selector, has_label) {
         $select_dropdown = $selector.next('div.select-dropdown');
         $select_dropdown.text($selector.find(':selected').text()).wrapInner('<span></span>');
 
+        if ($selector.attr('disabled') === 'disabled') {
+            $select_dropdown.addClass('disabled');
+        }
+
         $list = $select_dropdown.parent().find('.select-options');
         if ($list.length) {
             // empty list to repopulate
@@ -81,6 +85,8 @@ export function selectDropdown(selector, has_label) {
         // Attach event listeners
         $select_dropdown.off('click').on('click', (e) => {
             e.stopPropagation();
+            if ($select_dropdown.hasClass('disabled')) return;
+            
             // expand dropdown expand/collapse
             const $siblings = $('.select-dropdown').not(e.target);
             if ($siblings.hasClass('show')) {

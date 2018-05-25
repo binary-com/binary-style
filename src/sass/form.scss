@@ -116,11 +116,11 @@ div.select-dropdown {
             transform: rotate(0deg);
         }
     }
-    @media all and (max-width: 480px) {
-        display: none;
-    }
     &.disabled:hover {
         cursor: not-allowed;
+    }
+    @media all and (max-width: 480px) {
+        display: none;
     }
 }
 

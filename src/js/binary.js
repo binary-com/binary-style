@@ -16,11 +16,9 @@ export function select2onFocus() {
     let select2_open;
     // Trigger Select2 on TAB button or focus
     $(document).on('focus', '.select2-selection--single', (e) => {
-
         select2_open = $(e.target).parent().parent().siblings('select');
         select2_open.select2('open');
     });
-
     // ie11 fix
     if (/rv:11.0/i.test(navigator.userAgent)) {
         $(document).on('blur', '.select2-search__field', () => {

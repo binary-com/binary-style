@@ -404,4 +404,5 @@ $(document).ready(() => {
     documentListener();
     langListener();
     tabListener();
+    select2onFocus();
 });

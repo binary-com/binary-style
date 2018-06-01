@@ -101,7 +101,6 @@ export function selectDropdown(selector, has_label) {
         $select_dropdown.off('click').on('click', (e) => {
             e.stopPropagation();
             if ($select_dropdown.hasClass('disabled')) return;
-
             // expand dropdown expand/collapse
             const $siblings = $('.select-dropdown').not(e.target);
             if ($siblings.hasClass('show')) {

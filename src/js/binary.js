@@ -12,6 +12,21 @@ export function select2Matcher(params, data) {
     return false;
 };
 
+export function select2onFocus() {
+    let select2_open;
+    // Trigger Select2 on TAB button or focus
+    $(document).on('focus', '.select2-selection--single', (e) => {
+        select2_open = $(e.target).parent().parent().siblings('select');
+        select2_open.select2('open');
+    });
+    // ie11 fix
+    if (/rv:11.0/i.test(navigator.userAgent)) {
+        $(document).on('blur', '.select2-search__field', () => {
+            select2_open.select2('close');
+        });
+    }
+};
+
 export function hide_menu($element) {
     $element.animate({'opacity': 0}, 100, () => {
         $element.css('visibility', 'hidden')
@@ -86,7 +101,6 @@ export function selectDropdown(selector, has_label) {
         $select_dropdown.off('click').on('click', (e) => {
             e.stopPropagation();
             if ($select_dropdown.hasClass('disabled')) return;
-            
             // expand dropdown expand/collapse
             const $siblings = $('.select-dropdown').not(e.target);
             if ($siblings.hasClass('show')) {
@@ -390,4 +404,5 @@ $(document).ready(() => {
     documentListener();
     langListener();
     tabListener();
+    select2onFocus();
 });

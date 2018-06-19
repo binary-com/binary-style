@@ -164,16 +164,16 @@
                           </a>
                         </div>
                         <ul class="top-nav-menu mobile-hide">
-                          <li>
-                            <a href="javascript:;" class="nav-dropdown-toggle">Menu One <span class="nav-caret"></span></a>
+                          <li class="nav-dropdown-toggle">
+                            <a href="javascript:;">Menu One <span class="nav-caret"></span></a>
                             <ul>
                               <li>
                                 <a href="javascript:;" class="disabled">Disabled Menu Item</a>
                               </li>
                             </ul>
                           </li>
-                          <li>
-                            <a href="javascript:;" class="nav-dropdown-toggle">Menu Two <span class="nav-caret"></span></a>
+                          <li class="nav-dropdown-toggle">
+                            <a href="javascript:;">Menu Two <span class="nav-caret"></span></a>
                             <ul>
                               <li>
                                 <a href="javascript:;">Menu Item<span class="nav-submenu-caret"></span></a>
@@ -293,8 +293,8 @@
     &lt;/a&gt;
     &lt;/div&gt;
     &lt;ul class=&quot;top-nav-menu mobile-hide&quot;&gt;
-    &lt;li&gt;
-      &lt;a href=&quot;javascript:;&quot; class=&quot;nav-dropdown-toggle&quot;&gt;
+    &lt;li class=&quot;nav-dropdown-toggle&quot;&gt;
+      &lt;a href=&quot;javascript:;&quot;&gt;
         Menu One
         &lt;span class=&quot;nav-caret&quot;&gt;&lt;/span&gt;
       &lt;/a&gt;
@@ -306,8 +306,8 @@
         &lt;/li&gt;
       &lt;/ul&gt;
     &lt;/li&gt;
-    &lt;li&gt;
-      &lt;a href=&quot;javascript:;&quot; class=&quot;nav-dropdown-toggle&quot;&gt;
+    &lt;li class=&quot;nav-dropdown-toggle&quot;&gt;
+      &lt;a href=&quot;javascript:;&quot;&gt;
         Menu Two
         &lt;span class=&quot;nav-caret&quot;&gt;&lt;/span&gt;
       &lt;/a&gt;
@@ -1088,12 +1088,35 @@
                 </div>
                 <div class="f-row form-section">
                     <div class="f-item">
-                        <div style="margin-top:20px;">
-                            <select>
-                                <option value="" selected="selected">Option 1</option>
-                                <option value="">Option 2</option>
-                                <option value="">Option 3</option>
+                        <div style="margin-top:18px;width:110px;">
+                            <select id="dropdown">
+                                <option value="option1" selected>Option 1</option>
+                                <option value="option2">Option 2</option>
+                                <option value="option3" disabled>Option 3</option>
                             </select>
+                            <script type="text/javascript">
+                                selectDropdown('#dropdown');
+                            </script>
+                        </div>
+                        <div style="margin-top:20px;">
+                            <input id="checkbox1" type="checkbox" value="option1" />
+                            <label for="checkbox1">Option 1</label>
+                            <br/>
+                            <input id="checkbox2" type="checkbox" value="option2" />
+                            <label for="checkbox2">Option 2</label>
+                            <br/>
+                            <input id="checkbox3" type="checkbox" value="option3" />
+                            <label for="checkbox3">Option 3</label>
+                        </div>
+                        <div style="margin-top:20px;">
+                            <input id="radio1" type="radio" value="option1" name="radio" />
+                            <label for="radio1">Option 1</label>
+                            <br/>
+                            <input id="radio2" type="radio" value="option2" name="radio" />
+                            <label for="radio2">Option 2</label>
+                            <br/>
+                            <input id="radio3" type="radio" value="option3" name="radio" />
+                            <label for="radio3">Option 3</label>
                         </div>
                         <div style="margin-top:20px;">
                             <input type='text'/>
@@ -1107,14 +1130,34 @@
                         <div class="code-sample">
                             <pre class="prettyprint">
                         <code>
-  &lt;select&gt;
-    &lt;option value=&quot;&quot; selected=&quot;selected&quot;&gt;Option 1&lt;/option&gt;
-    &lt;option value=&quot;&quot;&gt;Option 2&lt;/option&gt;
-     &lt;option value=&quot;&quot;&gt;Option 3&lt;/option&gt;
+  &lt;select id=&quot;dropdown&quot;&gt
+    &lt;option value=&quot;option1&quot; selected&gt;Option 1&lt;/option&gt;
+    &lt;option value=&quot;option2&quot;&gt;Option 2&lt;/option&gt;
+    &lt;option value=&quot;option3&quot; disabled&gt;Option 3&lt;/option&gt;
   &lt;/select&gt;
+  &lt;script type=&quot;&gt;text/javascript&quot;&gt;&gt;
+      selectDropdown('#dropdown');
+  &lt;/script&gt;
 
-  &lt;input type='text'/&gt;
-  &lt;p class='hint'&gt;Hint comes here&lt;/p&gt;
+  &lt;input id=&quot;options&quot; type=&quot;checkbox&quot; value=&quot;option1&quot;/&gt;
+  &lt;label for=&quot;options&quot;>Option 1&lt;/label&gt;
+  &lt;input id=&quot;options&quot; type=&quot;checkbox&quot; value=&quot;option2&quot;/&gt;
+  &lt;label for=&quot;options&quot;>Option 2&lt;/label&gt;
+  &lt;input id=&quot;options&quot; type=&quot;checkbox&quot; value=&quot;option3&quot;/&gt;
+  &lt;label for=&quot;options&quot;>Option 3&lt;/label&gt;
+
+  &lt;input id=&quot;radio1&quot; type=&quot;radio&quot; value=&quot;option1&quot; name=&quot;radio&quot;/&gt;
+  &lt;label for=&quot;radio1&quot;>Option 1&lt;/label&gt;
+  &lt;input id=&quot;radio2&quot; type=&quot;radio&quot; value=&quot;option2&quot; name=&quot;radio&quot;/&gt;
+  &lt;label for=&quot;radio2&quot;>Option 2&lt;/label&gt;
+  &lt;input id=&quot;radio3&quot; type=&quot;radio&quot; value=&quot;option3&quot; name=&quot;radio&quot;/&gt;
+  &lt;label for=&quot;radio3&quot;>Option 3&lt;/label&gt;
+
+  &lt;input type=&quot;text&quot;/&gt;
+  &lt;p class=&quot;hint&quot;&gt;Hint comes here&lt;/p&gt;
+
+  &lt;input type=&quot;text&quot;/&gt;
+  &lt;p class=&quot;hint&quot;&gt;Hint comes here&lt;/p&gt;
 
   &lt;textarea name=&quot;name&quot; rows=&quot;8&quot; cols=&quot;40&quot;&gt;&lt;/textarea&gt;
                       </code>

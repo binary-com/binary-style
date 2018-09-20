@@ -99,3 +99,10 @@ grunt release --production=1 [--cleanup]
 - `--cleanup` [optional]
   - Creates CNAME file
   - Deploys to gh-pages with the option `add: false`
+
+
+### Publishing new version
+To publish new package version to npm, run
+```
+grunt npm_publish
+```

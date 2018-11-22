@@ -2,25 +2,17 @@
   "metadata": {
     "name": "binary_symbols",
     "lastOpened": 0,
-    "created": 1536895852079
+    "created": 1542921666775
   },
   "iconSets": [
     {
       "selection": [
         {
-          "order": 61,
-          "id": 0,
-          "name": "DAI",
-          "prevSize": 32,
-          "tempChar": "",
-          "code": 59650
-        },
-        {
           "order": 62,
           "id": 1,
           "name": "USD",
           "prevSize": 32,
-          "tempChar": "",
+          "tempChar": "",
           "code": 36
         },
         {
@@ -28,7 +20,7 @@
           "id": 2,
           "name": "EUR",
           "prevSize": 32,
-          "tempChar": "",
+          "tempChar": "",
           "code": 8364
         },
         {
@@ -36,7 +28,7 @@
           "id": 3,
           "name": "GBP",
           "prevSize": 32,
-          "tempChar": "",
+          "tempChar": "",
           "code": 163
         },
         {
@@ -44,7 +36,7 @@
           "id": 4,
           "name": "JPY",
           "prevSize": 32,
-          "tempChar": "",
+          "tempChar": "",
           "code": 165
         },
         {
@@ -52,7 +44,7 @@
           "id": 5,
           "name": "A",
           "prevSize": 32,
-          "tempChar": "",
+          "tempChar": "",
           "code": 65
         },
         {
@@ -60,7 +52,7 @@
           "id": 6,
           "name": "BTC",
           "prevSize": 32,
-          "tempChar": "",
+          "tempChar": "",
           "code": 66
         },
         {
@@ -68,7 +60,7 @@
           "id": 7,
           "name": "BCH",
           "prevSize": 32,
-          "tempChar": "",
+          "tempChar": "",
           "code": 59649
         },
         {
@@ -76,7 +68,7 @@
           "id": 8,
           "name": "LTC",
           "prevSize": 32,
-          "tempChar": "",
+          "tempChar": "",
           "code": 76
         },
         {
@@ -84,7 +76,7 @@
           "id": 9,
           "name": "ETH",
           "prevSize": 32,
-          "tempChar": "",
+          "tempChar": "",
           "code": 69
         },
         {
@@ -92,7 +84,7 @@
           "id": 10,
           "name": "ETC",
           "prevSize": 32,
-          "tempChar": "",
+          "tempChar": "",
           "code": 59648
         },
         {
@@ -101,7 +93,7 @@
           "name": "UST",
           "prevSize": 32,
           "code": 59651,
-          "tempChar": ""
+          "tempChar": ""
         }
       ],
       "id": 0,
@@ -115,22 +107,6 @@
       "height": 1024,
       "prevSize": 32,
       "icons": [
-        {
-          "id": 0,
-          "paths": [
-            "M512 0l512 455.111-512 227.556-512-227.556 512-455.111zM512 796.444l512-227.556-512 455.111-512-455.111 512 227.556zM853.333 455.111l-341.333-341.333-341.333 341.333 227.556-0.090 113.778-113.688 113.778 113.778h227.556z"
-          ],
-          "attrs": [
-            {}
-          ],
-          "grid": 0,
-          "tags": [
-            "dai"
-          ],
-          "isMulticolor": false,
-          "isMulticolor2": false,
-          "defaultCode": 59650
-        },
         {
           "id": 1,
           "paths": [

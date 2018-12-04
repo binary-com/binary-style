@@ -107,6 +107,18 @@ export function selectDropdown(selector, has_label) {
                 $siblings.removeClass('show');
             }
             $select_dropdown.toggleClass('show');
+            const list = $select_dropdown.parent().find('.select-options');
+            const forceScroll = (element) => {
+                element.scrollTop += 1;
+                element.scrollTop -= 1;
+            };
+
+            if (list[0].clientHeight < list[0].scrollHeight) {
+                const interval = setInterval(forceScroll.bind(null, list[0]), 300);
+                setTimeout(() => {
+                    clearInterval(interval);
+                }, 1500);
+            }
         });
 
         $list_items = $list.children('li');

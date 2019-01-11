@@ -22,9 +22,6 @@
         .section-divider {
             padding: 10px 0;
         }
-        #oa_social_login_container iframe {
-            width: 100% !important;
-        }
     }
     #inline {
         display: flex;
@@ -32,6 +29,14 @@
 
         > div:nth-child(odd) {
             width: 100%;
+        }
+    }
+    #oa_social_login_container {
+        text-align: center;
+
+        iframe {
+            height: 95px !important;
+            width: 100% !important;
         }
     }
     #wrapper.scope-confirms {

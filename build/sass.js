@@ -9,6 +9,7 @@ module.exports = {
             { src: 'src/sass/jquery-ui-custom.scss', dest: global.dist + '/binary.more.css' },
             { src: 'src/sass/all.isolated.scss',     dest: global.dist + '/binary.isolated.css' },
             { src: 'src/sass/oauth.scss',            dest: global.dist + '/oauth.css' },
+            { src: 'src/sass/oneall.scss',           dest: global.dist + '/oneall.css' },
         ]
     }
 };

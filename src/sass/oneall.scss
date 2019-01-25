@@ -16,6 +16,9 @@
                 display: flex;
                 justify-content: center;
 
+                #provider_facebook {
+                    display: none;  // TODO: remove to show Facebook button
+                }
                 .provider {
                     position: relative;
 

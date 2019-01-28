@@ -33,6 +33,7 @@
     }
     #oa_social_login_container {
         text-align: center;
+        height: 44px;
 
         iframe {
             height: 95px !important;
@@ -62,6 +63,12 @@
                 margin-left: 0;
             }
         }
+    }
+    .no-margin {
+        margin: 0;
+    }
+    .padding-bottom-10 {
+        padding-bottom: 10px;
     }
     #main-header {
         margin: 20px 0;

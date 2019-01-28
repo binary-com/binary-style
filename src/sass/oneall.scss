@@ -25,6 +25,10 @@
                     .name {
                         position: absolute;
                         top: 20%;
+
+                        @-moz-document url-prefix() { /* stylelint-disable-line function-url-quotes */
+                            top: 28%;
+                        }
                     }
                 }
             }

@@ -22,9 +22,6 @@
         .section-divider {
             padding: 10px 0;
         }
-        #oa_social_login_container iframe {
-            width: 100% !important;
-        }
     }
     #inline {
         display: flex;
@@ -32,6 +29,15 @@
 
         > div:nth-child(odd) {
             width: 100%;
+        }
+    }
+    #oa_social_login_container {
+        text-align: center;
+        height: 44px;
+
+        iframe {
+            height: 95px !important;
+            width: 100% !important;
         }
     }
     #wrapper.scope-confirms {
@@ -58,6 +64,12 @@
             }
         }
     }
+    .no-margin {
+        margin: 0;
+    }
+    .padding-bottom-10 {
+        padding-bottom: 10px;
+    }
     #main-header {
         margin: 20px 0;
 
@@ -76,6 +88,7 @@
     }
     button {
         margin-top: 18px;
+        margin-bottom: 0;
     }
     input {
         box-sizing: border-box;

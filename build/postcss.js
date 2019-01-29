@@ -10,6 +10,7 @@ module.exports = {
             global.dist + '/binary.more.css',
             global.dist + '/binary.isolated.css',
             global.dist + '/oauth.css',
+            global.dist + '/oneall.css',
         ],
     }
 };

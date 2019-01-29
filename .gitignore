@@ -5,3 +5,4 @@ dist/
 node_modules/
 binary.js.map
 binary.more.js.map
+.DS_Store

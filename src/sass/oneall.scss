@@ -1,0 +1,87 @@
+@import 'colors';
+@import 'constants';
+
+.plugin {
+    margin: 0;
+    font-size: $FONT_SIZE_N;
+    font-family: $FONT-STACK;
+
+    #providers {
+        .providers_group .providers_block {
+            overflow: hidden;
+            clear: both;
+
+            .providers_row {
+                clear: both;
+                display: flex;
+                justify-content: center;
+
+                #provider_facebook {
+                    display: none;  // TODO: remove to show Facebook button
+                }
+                .provider {
+                    position: relative;
+
+                    .name {
+                        position: absolute;
+                        top: 20%;
+
+                        @-moz-document url-prefix() { /* stylelint-disable-line function-url-quotes */
+                            top: 28%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.provider {
+    & + .provider {
+        margin-left: 10px;
+    }
+    a.button {
+        background-position-x: 7px;
+        background-position-y: center;
+        background-repeat: no-repeat;
+        border-radius: 4px;
+        border: 1px solid $borderColor;
+        padding: 5px 0;
+        box-sizing: border-box;
+        width: 200px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        transition: background-color 0.2s;
+        @media screen and (max-width: 480px) {
+            background-position-x: center;
+            width: 80px;
+        }
+
+        &:hover {
+            background-color: $borderColor;
+        }
+        span {
+            display: none !important;
+        }
+    }
+    a.button#button_google {
+        background-image: url('images/oneall/google.svg');
+    }
+    a.button#button_facebook {
+        background-image: url('images/oneall/facebook.svg');
+    }
+    .name {
+        &#name_google {
+            left: 40%;
+        }
+        &#name_facebook {
+            left: 38%;
+        }
+        @media screen and (max-width: 480px) {
+            display: none;
+        }
+    }
+}

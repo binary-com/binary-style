@@ -1,6 +1,5 @@
 const path           = require('path');
 const webpack        = require('webpack');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = function (grunt) {
     const isProduction = grunt.cli.tasks[0] === 'release';

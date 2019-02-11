@@ -16,6 +16,9 @@
         transition: none;
         animation: none;
     }
+    &.usb:before {
+        content: '\e902';
+    }
     &.aud:before {
         content: '\0041\0024';
     }

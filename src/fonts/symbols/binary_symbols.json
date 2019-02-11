@@ -2,41 +2,49 @@
   "metadata": {
     "name": "binary_symbols",
     "lastOpened": 0,
-    "created": 1542921666775
+    "created": 1549851282629
   },
   "iconSets": [
     {
       "selection": [
         {
-          "order": 62,
+          "order": 85,
+          "id": 12,
+          "name": "USB",
+          "prevSize": 32,
+          "code": 59650,
+          "tempChar": ""
+        },
+        {
+          "order": 81,
           "id": 1,
           "name": "USD",
           "prevSize": 32,
-          "tempChar": "",
+          "tempChar": "",
           "code": 36
         },
         {
-          "order": 63,
+          "order": 83,
           "id": 2,
           "name": "EUR",
           "prevSize": 32,
-          "tempChar": "",
+          "tempChar": "",
           "code": 8364
         },
         {
-          "order": 64,
+          "order": 79,
           "id": 3,
           "name": "GBP",
           "prevSize": 32,
-          "tempChar": "",
+          "tempChar": "",
           "code": 163
         },
         {
-          "order": 65,
+          "order": 80,
           "id": 4,
           "name": "JPY",
           "prevSize": 32,
-          "tempChar": "",
+          "tempChar": "",
           "code": 165
         },
         {
@@ -44,7 +52,7 @@
           "id": 5,
           "name": "A",
           "prevSize": 32,
-          "tempChar": "",
+          "tempChar": "",
           "code": 65
         },
         {
@@ -52,7 +60,7 @@
           "id": 6,
           "name": "BTC",
           "prevSize": 32,
-          "tempChar": "",
+          "tempChar": "",
           "code": 66
         },
         {
@@ -60,7 +68,7 @@
           "id": 7,
           "name": "BCH",
           "prevSize": 32,
-          "tempChar": "",
+          "tempChar": "",
           "code": 59649
         },
         {
@@ -68,7 +76,7 @@
           "id": 8,
           "name": "LTC",
           "prevSize": 32,
-          "tempChar": "",
+          "tempChar": "",
           "code": 76
         },
         {
@@ -76,7 +84,7 @@
           "id": 9,
           "name": "ETH",
           "prevSize": 32,
-          "tempChar": "",
+          "tempChar": "",
           "code": 69
         },
         {
@@ -84,7 +92,7 @@
           "id": 10,
           "name": "ETC",
           "prevSize": 32,
-          "tempChar": "",
+          "tempChar": "",
           "code": 59648
         },
         {
@@ -93,20 +101,36 @@
           "name": "UST",
           "prevSize": 32,
           "code": 59651,
-          "tempChar": ""
+          "tempChar": ""
         }
       ],
       "id": 0,
       "metadata": {
         "name": "Symbols",
         "importSize": {
-          "width": 18,
-          "height": 18
+          "width": 49,
+          "height": 44
         }
       },
       "height": 1024,
       "prevSize": 32,
       "icons": [
+        {
+          "id": 12,
+          "paths": [
+            "M940.068 372.364h200.295v69.818h-200.295v116.364h200.295v69.818h-200.295v57.886c-0.462 95.197-30.384 173.064-89.767 233.602s-139.907 94.504-241.574 101.898l-35.352 1.386c-110.448 0-198.481-29.807-264.102-89.42s-98.894-141.64-99.818-246.080v-59.273h-209.455v-69.818h209.455v-116.364h-209.455v-69.818h209.455v-372.364h131.705v683.477c0 73.016 20.102 129.74 60.307 170.176s97.507 60.653 171.909 60.653c75.326 0 132.975-20.102 172.949-60.307s59.96-96.814 59.96-169.83v-684.17h133.784v372.364z"
+          ],
+          "attrs": [
+            {}
+          ],
+          "width": 1140,
+          "isMulticolor": false,
+          "isMulticolor2": false,
+          "grid": 0,
+          "tags": [
+            "USB_symbol"
+          ]
+        },
         {
           "id": 1,
           "paths": [
@@ -296,22 +320,6 @@
           ]
         }
       ],
-      "invisible": false,
-      "colorThemes": []
-    },
-    {
-      "selection": [],
-      "id": 1,
-      "metadata": {
-        "name": "Untitled Set",
-        "importSize": {
-          "width": 150,
-          "height": 175
-        }
-      },
-      "height": 1024,
-      "prevSize": 32,
-      "icons": [],
       "invisible": false,
       "colorThemes": []
     }

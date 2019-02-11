@@ -61,6 +61,11 @@ npm install
 sudo npm install -g grunt-cli
 ```
 
+### Build
+```
+grunt webpack
+```
+
 ### Deploy to your gh-pages
 ```
 grunt deploy

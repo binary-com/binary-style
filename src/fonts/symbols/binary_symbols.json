@@ -8,7 +8,7 @@
     {
       "selection": [
         {
-          "order": 85,
+          "order": 89,
           "id": 12,
           "name": "USB",
           "prevSize": 32,
@@ -48,7 +48,7 @@
           "code": 165
         },
         {
-          "order": 66,
+          "order": 86,
           "id": 5,
           "name": "A",
           "prevSize": 32,
@@ -118,7 +118,7 @@
         {
           "id": 12,
           "paths": [
-            "M940.068 372.364h200.295v69.818h-200.295v116.364h200.295v69.818h-200.295v57.886c-0.462 95.197-30.384 173.064-89.767 233.602s-139.907 94.504-241.574 101.898l-35.352 1.386c-110.448 0-198.481-29.807-264.102-89.42s-98.894-141.64-99.818-246.080v-59.273h-209.455v-69.818h209.455v-116.364h-209.455v-69.818h209.455v-372.364h131.705v683.477c0 73.016 20.102 129.74 60.307 170.176s97.507 60.653 171.909 60.653c75.326 0 132.975-20.102 172.949-60.307s59.96-96.814 59.96-169.83v-684.17h133.784v372.364z"
+            "M861.62 401.969h157.838v55.016h-157.838v91.691h157.838v55.016h-157.838v45.615c-0.366 75.014-23.944 136.379-70.736 184.084s-110.244 74.47-190.363 80.296l-27.856 1.089c-87.037 0-156.405-23.49-208.118-70.469s-77.929-111.615-78.658-193.92v-46.707h-165.059v-55.016h165.059v-91.691h-165.059v-55.016h165.059v-293.429h103.781v538.594c0 57.535 15.844 102.236 47.524 134.104s76.836 47.797 135.471 47.797c59.358 0 104.787-15.844 136.287-47.524s47.244-76.291 47.244-133.827v-539.141h105.425v293.429z"
           ],
           "attrs": [
             {}
@@ -126,7 +126,7 @@
           "width": 1140,
           "isMulticolor": false,
           "isMulticolor2": false,
-          "grid": 0,
+          "grid": 16,
           "tags": [
             "USB_symbol"
           ]
@@ -142,7 +142,7 @@
           "width": 515,
           "isMulticolor": false,
           "isMulticolor2": false,
-          "grid": 0,
+          "grid": 16,
           "tags": [
             "USD"
           ],
@@ -159,7 +159,7 @@
           "width": 646,
           "isMulticolor": false,
           "isMulticolor2": false,
-          "grid": 0,
+          "grid": 16,
           "tags": [
             "EUR"
           ],
@@ -176,7 +176,7 @@
           "width": 716,
           "isMulticolor": false,
           "isMulticolor2": false,
-          "grid": 0,
+          "grid": 16,
           "tags": [
             "GBP"
           ],
@@ -193,7 +193,7 @@
           "width": 719,
           "isMulticolor": false,
           "isMulticolor2": false,
-          "grid": 0,
+          "grid": 16,
           "tags": [
             "JPY"
           ],
@@ -210,7 +210,7 @@
           "width": 899,
           "isMulticolor": false,
           "isMulticolor2": false,
-          "grid": 0,
+          "grid": 16,
           "tags": [
             "A"
           ],
@@ -227,7 +227,7 @@
           "width": 679,
           "isMulticolor": false,
           "isMulticolor2": false,
-          "grid": 0,
+          "grid": 16,
           "tags": [
             "BTC"
           ],
@@ -244,7 +244,7 @@
             {}
           ],
           "width": 1088,
-          "grid": 0,
+          "grid": 16,
           "tags": [
             "BCH"
           ],
@@ -263,7 +263,7 @@
           "width": 756,
           "isMulticolor": false,
           "isMulticolor2": false,
-          "grid": 0,
+          "grid": 16,
           "tags": [
             "LTC"
           ],
@@ -278,7 +278,7 @@
             {}
           ],
           "width": 637,
-          "grid": 0,
+          "grid": 16,
           "tags": [
             "ETH"
           ],
@@ -295,7 +295,7 @@
             {}
           ],
           "width": 619,
-          "grid": 0,
+          "grid": 16,
           "tags": [
             "ETC"
           ],
@@ -314,7 +314,7 @@
           "width": 1008,
           "isMulticolor": false,
           "isMulticolor2": false,
-          "grid": 0,
+          "grid": 16,
           "tags": [
             "tether"
           ]
@@ -372,7 +372,8 @@
     },
     "historySize": 50,
     "showCodes": true,
-    "gridSize": 16
+    "gridSize": 16,
+    "showGrid": true
   },
   "uid": -1
 }

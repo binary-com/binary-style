@@ -2,49 +2,57 @@
   "metadata": {
     "name": "binary_symbols",
     "lastOpened": 0,
-    "created": 1542921666775
+    "created": 1549851282629
   },
   "iconSets": [
     {
       "selection": [
         {
-          "order": 62,
+          "order": 91,
+          "id": 12,
+          "name": "USB",
+          "prevSize": 32,
+          "code": 59650,
+          "tempChar": ""
+        },
+        {
+          "order": 81,
           "id": 1,
           "name": "USD",
           "prevSize": 32,
-          "tempChar": "",
+          "tempChar": "",
           "code": 36
         },
         {
-          "order": 63,
+          "order": 83,
           "id": 2,
           "name": "EUR",
           "prevSize": 32,
-          "tempChar": "",
+          "tempChar": "",
           "code": 8364
         },
         {
-          "order": 64,
+          "order": 79,
           "id": 3,
           "name": "GBP",
           "prevSize": 32,
-          "tempChar": "",
+          "tempChar": "",
           "code": 163
         },
         {
-          "order": 65,
+          "order": 80,
           "id": 4,
           "name": "JPY",
           "prevSize": 32,
-          "tempChar": "",
+          "tempChar": "",
           "code": 165
         },
         {
-          "order": 66,
+          "order": 86,
           "id": 5,
           "name": "A",
           "prevSize": 32,
-          "tempChar": "",
+          "tempChar": "",
           "code": 65
         },
         {
@@ -52,7 +60,7 @@
           "id": 6,
           "name": "BTC",
           "prevSize": 32,
-          "tempChar": "",
+          "tempChar": "",
           "code": 66
         },
         {
@@ -60,7 +68,7 @@
           "id": 7,
           "name": "BCH",
           "prevSize": 32,
-          "tempChar": "",
+          "tempChar": "",
           "code": 59649
         },
         {
@@ -68,7 +76,7 @@
           "id": 8,
           "name": "LTC",
           "prevSize": 32,
-          "tempChar": "",
+          "tempChar": "",
           "code": 76
         },
         {
@@ -76,7 +84,7 @@
           "id": 9,
           "name": "ETH",
           "prevSize": 32,
-          "tempChar": "",
+          "tempChar": "",
           "code": 69
         },
         {
@@ -84,7 +92,7 @@
           "id": 10,
           "name": "ETC",
           "prevSize": 32,
-          "tempChar": "",
+          "tempChar": "",
           "code": 59648
         },
         {
@@ -93,20 +101,36 @@
           "name": "UST",
           "prevSize": 32,
           "code": 59651,
-          "tempChar": ""
+          "tempChar": ""
         }
       ],
       "id": 0,
       "metadata": {
         "name": "Symbols",
         "importSize": {
-          "width": 18,
-          "height": 18
+          "width": 49,
+          "height": 44
         }
       },
       "height": 1024,
       "prevSize": 32,
       "icons": [
+        {
+          "id": 12,
+          "paths": [
+            "M762.908 331.174v69.732l88.52-45.808v104.817l-88.52 45.808v137.4c-0.335 71.46-22.038 129.909-65.107 175.353s-101.474 70.94-175.21 76.489l-25.64 1.040c-80.106 0-143.956-22.375-191.551-67.123-19.234-18.084-34.638-38.916-46.208-62.496l-116.699 60.39v-104.817l92.005-47.611c-0.906-9.767-1.405-19.83-1.494-30.184v-38.774l-90.51 46.837v-104.817l90.51-46.837v-372.579h95.523v513.051c0 54.809 14.579 97.389 43.739 127.743s70.721 45.529 124.684 45.529c54.633 0 96.445-15.091 125.437-45.27s43.488-72.673 43.488-127.482v-513.569h97.033v98.363l88.52-45.808v104.817l-88.52 45.808z"
+          ],
+          "attrs": [
+            {}
+          ],
+          "width": 1140,
+          "grid": 16,
+          "tags": [
+            "USB_symbol"
+          ],
+          "isMulticolor": false,
+          "isMulticolor2": false
+        },
         {
           "id": 1,
           "paths": [
@@ -118,7 +142,7 @@
           "width": 515,
           "isMulticolor": false,
           "isMulticolor2": false,
-          "grid": 0,
+          "grid": 16,
           "tags": [
             "USD"
           ],
@@ -135,7 +159,7 @@
           "width": 646,
           "isMulticolor": false,
           "isMulticolor2": false,
-          "grid": 0,
+          "grid": 16,
           "tags": [
             "EUR"
           ],
@@ -152,7 +176,7 @@
           "width": 716,
           "isMulticolor": false,
           "isMulticolor2": false,
-          "grid": 0,
+          "grid": 16,
           "tags": [
             "GBP"
           ],
@@ -169,7 +193,7 @@
           "width": 719,
           "isMulticolor": false,
           "isMulticolor2": false,
-          "grid": 0,
+          "grid": 16,
           "tags": [
             "JPY"
           ],
@@ -186,7 +210,7 @@
           "width": 899,
           "isMulticolor": false,
           "isMulticolor2": false,
-          "grid": 0,
+          "grid": 16,
           "tags": [
             "A"
           ],
@@ -203,7 +227,7 @@
           "width": 679,
           "isMulticolor": false,
           "isMulticolor2": false,
-          "grid": 0,
+          "grid": 16,
           "tags": [
             "BTC"
           ],
@@ -220,7 +244,7 @@
             {}
           ],
           "width": 1088,
-          "grid": 0,
+          "grid": 16,
           "tags": [
             "BCH"
           ],
@@ -239,7 +263,7 @@
           "width": 756,
           "isMulticolor": false,
           "isMulticolor2": false,
-          "grid": 0,
+          "grid": 16,
           "tags": [
             "LTC"
           ],
@@ -254,7 +278,7 @@
             {}
           ],
           "width": 637,
-          "grid": 0,
+          "grid": 16,
           "tags": [
             "ETH"
           ],
@@ -271,7 +295,7 @@
             {}
           ],
           "width": 619,
-          "grid": 0,
+          "grid": 16,
           "tags": [
             "ETC"
           ],
@@ -290,28 +314,12 @@
           "width": 1008,
           "isMulticolor": false,
           "isMulticolor2": false,
-          "grid": 0,
+          "grid": 16,
           "tags": [
             "tether"
           ]
         }
       ],
-      "invisible": false,
-      "colorThemes": []
-    },
-    {
-      "selection": [],
-      "id": 1,
-      "metadata": {
-        "name": "Untitled Set",
-        "importSize": {
-          "width": 150,
-          "height": 175
-        }
-      },
-      "height": 1024,
-      "prevSize": 32,
-      "icons": [],
       "invisible": false,
       "colorThemes": []
     }
@@ -360,11 +368,13 @@
       "height": 32,
       "columns": 16,
       "margin": 16,
-      "sprite": false
+      "sprite": false,
+      "name": "icomoon"
     },
     "historySize": 50,
     "showCodes": true,
-    "gridSize": 16
+    "gridSize": 16,
+    "showGrid": true
   },
   "uid": -1
 }

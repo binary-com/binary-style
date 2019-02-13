@@ -61,6 +61,22 @@ npm install
 sudo npm install -g grunt-cli
 ```
 
+### Build
+
+To build everything and run the test suite
+
+```
+grunt default
+```
+
+optionally, you can run these to only build what you need, note that `copy` is a must
+
+```
+grunt copy
+grunt css
+grunt js
+```
+
 ### Deploy to your gh-pages
 ```
 grunt deploy

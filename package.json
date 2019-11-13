@@ -4,7 +4,7 @@
   "description": "Style system and guide for Binary.com",
   "main": "binary.js",
   "scripts": {
-    "build": "grunt build",
+    "build": "grunt default",
     "test": "grunt test",
     "watch": "sudo -p 'enter password for sudo:' grunt livereload",
     "serve": "sudo -p 'enter password for sudo:' grunt serve",

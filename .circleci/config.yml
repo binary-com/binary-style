@@ -37,7 +37,7 @@ commands:
           name: Installing ruby and sass
           command: |
             sudo apt-get update && sudo apt-get install -y ruby-full
-            gem install sass
+            sudo gem install sass
   npm_install_from_cache:
     description: "npm install and save cache"
     steps:

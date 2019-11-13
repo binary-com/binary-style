@@ -77,10 +77,8 @@ grunt css
 grunt js
 ```
 
-### Deploy to your gh-pages
-```
-grunt deploy
-```
+### Deploy 
+Merging the PRs to master branch deploys changes to production
 
 ### Using sub-folders
 There are times that you are working on various branches at the same time, and you want to deploy/test each branch separately on your gh-pages, you can simply use `--branch=branchname` for grunt commands:

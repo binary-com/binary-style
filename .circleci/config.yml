@@ -94,6 +94,7 @@ jobs:
       - git_checkout_from_cache
       - install_deps
       - npm_install_from_cache
+      - npm_build
       - docker_build
       - docker_push
       - k8s_deploy

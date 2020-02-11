@@ -141,5 +141,5 @@ workflows:
           filters:
             branches:
               only: /^master$/
-          context: binary-frontend-deploy  # need to change the context name here
+          context: binary-frontend-artifact-upload  # need to change the context name here
 

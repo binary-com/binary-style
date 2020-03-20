@@ -99,7 +99,7 @@ commands:
       - run: 
           name: Building docker image
           command: |
-            docker build -t ${DOCKHUB_ORGANISATION}/binary-static-style:${CIRCLE_SHA1} -t ${DOCKHUB_ORGANISATION}/binary-static-style:latest.
+            docker build -t ${DOCKHUB_ORGANISATION}/binary-static-style:${CIRCLE_SHA1} -t ${DOCKHUB_ORGANISATION}/binary-static-style:latest .
   docker_push:
     description: "Push image to docker hub"
     steps:

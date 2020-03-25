@@ -116,7 +116,7 @@ commands:
       - run: 
           name: Deploying to k8s cluster for service binary-style
           command: |
-	    for SERVER_ID in {1..5}
+            for SERVER_ID in {1..5}
             do
               KUBE_SERVER_REF="KUBE_SERVER_$SERVER_ID"
               SERVICEACCOUNT_TOKEN_REF="SERVICEACCOUNT_TOKEN_$SERVER_ID"

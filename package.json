@@ -1,6 +1,6 @@
 {
   "name": "@binary-com/binary-style",
-  "version": "0.2.19",
+  "version": "0.2.20",
   "description": "Style system and guide for Binary.com",
   "main": "binary.js",
   "scripts": {

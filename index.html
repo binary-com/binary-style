@@ -1,0 +1,1595 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Binary Style Guide</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script src="index_files/style.js"></script>
+    <link rel="icon" type="image/png" sizes="16x16" href="https://style.binary.com/images/favicons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://style.binary.com/images/favicons/favicon-32x32.png">
+    <link rel="stylesheet" href="index_files/style.css">
+    <link rel="stylesheet" href="binary.css">
+    <link rel="stylesheet" href="binary.more.css">
+
+    <script src="binary.js"></script>
+    <script src="binary.more.js"></script>
+</head>
+
+<body>
+    <div id="topbar" class="primary-bg-color-dark"></div>
+    <div id="header" class="dark-blue">
+        <div class="container">
+            <div class="logo-wrapper">
+                <a href="https://binary.com" class="logo-parent">
+                    <div class="logo">
+                        <div></div>
+                    </div>
+                    <div class="mobile-hide binary-logo-text">
+                        <div></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="content">
+        <!-- mobile menu will be populated by javascript using the sidebar-left values to avoid duplication -->
+        <select id="mobile-page-selector"></select>
+        <div class="page-wrapper">
+            <div class="sidebar-left">
+                <ul>
+                    <li><a href="/">Introduction</a></li>
+                    <li><a href="#header-section">Header</a></li>
+                    <li><a href="#logo-section">Logo and Favicons</a></li>
+                    <li><a href="#colors-section">Colors</a></li>
+                    <li><a href="#title-section">Title</a></li>
+                    <li><a href="#text-section">Text</a></li>
+                    <li><a href="#button-section">Link and Buttons</a></li>
+                    <li><a href="#message-section">Messages</a></li>
+                    <li><a href="#control-section">Controls</a></li>
+                    <li><a href="#spinner-section">Spinner</a></li>
+                    <li><a href="#table-section">Table</a></li>
+                    <li><a href="#sidebar-section">Sidebar Menu</a></li>
+                    <li><a href="#form-section">Form</a></li>
+                    <li><a href="#icon-section">Icons</a></li>
+                    <li><a href="#symbols-section">Symbols</a></li>
+                    <li><a href="#accordion-section">Accordion *</a></li>
+                    <li><a href="#tabs-section">Tabs *</a></li>
+                    <li><a href="#picker-section">Date and Time Pickers *</a></li>
+                </ul>
+
+            </div>
+            <div class="page-content">
+                <div class="f-row introduction-section">
+                    <div class="f-item">
+                        <h1>Binary Style</h1>
+                        <p>The goal of the project is to serve as base style for all Binary projects, and to ensure consistency and maintainability of the brand presentation.</p>
+                        <h2>Usage</h2>
+                        <ul class="bullet">
+                            <li>Include <a href="https://jquery.com/" target="_blank">jQuery</a> (Version 2.1.1) in your project</li>
+                            <li>Include these files in your project:<br/>
+<pre class="prettyprint">
+    <code>&lt;link href="https://style.binary.com/binary.css" rel="stylesheet" /&gt;
+    &lt;script src="https://style.binary.com/binary.js"&gt;&lt;/script&gt;</code>
+</pre>
+                            </li>
+                            <li>If you need Date and Time Pickers, Tabs or Accordion include the following files in your project, this will include a copy of jquery-ui@v1.12.1 and customized styles.<br/>
+<pre class="prettyprint">
+    <code>&lt;link href="https://style.binary.com/binary.more.css" rel="stylesheet" /&gt;
+    &lt;script src="https://style.binary.com/binary.more.js"&gt;&lt;/script&gt;</code>
+</pre>
+                            </li>
+                        </ul>
+                        <h2>NPM Usage</h2>
+                        <ul class="bullet">
+                            <li>Install jQuery:<br/>
+<pre class="prettyprint">
+    <code>npm install --save jquery</code>
+</pre>
+                            </li>
+                            <li>The library is available on npm:<br/>
+<pre class="prettyprint">
+    <code>npm install --save binary-style</code>
+</pre>
+                            </li>
+                            <li>Import these files in your project:<br/>
+<pre class="prettyprint">
+    <code>import 'jquery';
+    import 'binary-style';
+    import 'binary-style/binary.css';</code>
+</pre>
+                            </li>
+                            <li>If you need Date and Time Pickers, Tabs or Accordion import the following files as well, this will include a copy of jquery-ui@v1.12.1 and customized styles.<br/>
+<pre class="prettyprint">
+    <code>import 'binary-style/binary.more';
+    import 'binary-style/binary.more.css';</code>
+</pre>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="f-row header-section">
+                    <div class="f-item">
+                        <h1 class="h1-title">Header</h1>
+                    </div>
+                </div>
+                <div class="f-row header-section">
+                    <div class="topbar primary-bg-color-dark" style="height:25px;margin-left:20px;">
+                        <div class="languages">
+                            <ul id="display_language">
+                                <li class="EN">
+                                    <span class="world world-white"></span>
+                                    <div class="language-wrapper">
+                                        <span class="language">English</span>
+                                    </div>
+                                    <span class="nav-caret"></span>
+                                </li>
+                            </ul>
+                            <ul id="select_language">
+                                <li class="EN">
+                                    <span class="world world-black"></span>
+                                    <div class="language-wrapper">
+                                        <span class="language">English</span>
+                                    </div>
+                                    <span class="nav-caret"></span>
+                                </li>
+                                <li class="ID">Indonesia</li>
+                                <li class="DE">Deutsch</li>
+                                <li class="EN invisible">English</li>
+                                <li class="ES">Español</li>
+                                <li class="FR">Français</li>
+                                <li class="IT">Italiano</li>
+                                <li class="PL">Polski</li>
+                                <li class="PT">Português</li>
+                                <li class="RU">Русский</li>
+                                <li class="VI">Tiếng Việt</li>
+                                <li class="ZH_CN">简体中文</li>
+                                <li class="ZH_TW">繁體中文</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="dark-blue header" style="width:100%;margin-left:20px;">
+                      <div class="container">
+                        <div class="logo-wrapper" style="width:30%;">
+                          <a href="https://binary.com" class="logo-parent">
+                            <div class="logo">
+                              <div></div>
+                            </div>
+                            <div class="mobile-hide binary-logo-text">
+                              <div></div>
+                            </div>
+                          </a>
+                        </div>
+                        <ul class="top-nav-menu mobile-hide">
+                          <li class="nav-dropdown-toggle">
+                            <a href="javascript:;">Menu One <span class="nav-caret"></span></a>
+                            <ul>
+                              <li>
+                                <a href="javascript:;" class="disabled">Disabled Menu Item</a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="nav-dropdown-toggle">
+                            <a href="javascript:;">Menu Two <span class="nav-caret"></span></a>
+                            <ul>
+                              <li>
+                                <a href="javascript:;">Menu Item<span class="nav-submenu-caret"></span></a>
+                                <ul>
+                                  <li>
+                                    <a href="javascript:;">Menu Item<span class="nav-submenu-caret"></span></a>
+                                    <ul>
+                                      <li><a href="javascript:;">Menu Item</a></li>
+                                    </ul>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li>
+                                <a href="javascript:;">Menu Item<span class="nav-submenu-caret"></span></a>
+                                <ul>
+                                  <li>
+                                    <a href="javascript:;">Menu Item</a>
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                        <div id="main-logout">
+                          <ul id="main-account" class="nav-menu main-nav">
+                            <li class="account">
+                              <a href="javascript:;">
+                                <div class="main-account">
+                                  <div class="account-type">Real Account</div>
+                                  <div class="account-id">CR9010912</div>
+                                  <div class="topMenuBalance">USD 0.00</div>
+                                </div>
+                                <div class="nav-caret"></div>
+                              </a>
+                            </li>
+                          </ul>
+                          <ul id="all-accounts-top" class="nav-menu main-nav" style="opacity: 0;">
+                            <li class="account">
+                              <a href="javascript:;">
+                                <div class="main-account">
+                                  <div class="account-type">Real Account</div>
+                                  <div class="account-id">CR9010912</div>
+                                  <div class="topMenuBalance">USD 0.00</div>
+                                </div>
+                                <div class="nav-caret"></div>
+                              </a>
+                              <ul>
+                                <a class="link" href="javascript:;">
+                                  <li class="topMenuProfile">Profile</li>
+                                </a>
+                                <a class="link" href="javascript:;">
+                                  <li class="topMenuSecurity">Security & Limits</li>
+                                </a>
+                                <div class="separator-line-thin-gray"></div>
+                                <div class="login-id-list">
+                                  <a href="javascript:;" value="VRTC1191226">
+                                    <li>
+                                      <div>Virtual Account</div>
+                                      <div>VRTC1191226</div>
+                                    </li>
+                                  </a>
+                                  <div class="separator-line-thin-gray"></div>
+                                </div>
+                                <a href="javascript:;">
+                                  <li>Sign out</li>
+                                </a>
+                              </ul>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="f-item">
+                        <div class="code-sample">
+                            <pre class="prettyprint">
+                    <code>
+  &lt;div class=&quot;topbar primary-bg-color-dark&quot;&gt;
+    &lt;div class=&quot;languages&quot;&gt;
+      &lt;ul id=&quot;display_language&quot;&gt;
+        &lt;li class=&quot;EN&quot;&gt;
+          &lt;span class=&quot;world world-white&quot;&gt;&lt;/span&gt;
+          &lt;span class=&quot;language&quot;&gt;English&lt;/span&gt;
+          &lt;span class=&quot;nav-caret&quot;&gt;&lt;/span&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;ul id=&quot;select_language&quot;&gt;
+        &lt;li class=&quot;EN&quot;&gt;
+          &lt;span class=&quot;world world-black&quot;&gt;&lt;/span&gt;
+          &lt;span class=&quot;language&quot;&gt;English&lt;/span&gt;
+          &lt;span class=&quot;nav-caret&quot;&gt;&lt;/span&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;ID&quot;&gt;Indonesia&lt;/li&gt;
+        &lt;li class=&quot;DE&quot;&gt;Deutsch&lt;/li&gt;
+        &lt;li class=&quot;EN invisible&quot;&gt;English&lt;/li&gt;
+        &lt;li class=&quot;ES&quot;&gt;Espa&ntilde;ol&lt;/li&gt;
+        &lt;li class=&quot;FR&quot;&gt;Fran&ccedil;ais&lt;/li&gt;
+        &lt;li class=&quot;IT&quot;&gt;Italiano&lt;/li&gt;
+        &lt;li class=&quot;PL&quot;&gt;Polski&lt;/li&gt;
+        &lt;li class=&quot;PT&quot;&gt;Portugu&ecirc;s&lt;/li&gt;
+        &lt;li class=&quot;RU&quot;&gt;Русский&lt;/li&gt;
+        &lt;li class=&quot;VI&quot;&gt;Tiếng Việt&lt;/li&gt;
+        &lt;li class=&quot;ZH_CN&quot;&gt;简体中文&lt;/li&gt;
+        &lt;li class=&quot;ZH_TW&quot;&gt;繁體中文&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;dark-blue header&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;logo-wrapper&quot;&gt;
+    &lt;a href=&quot;https://binary.com&quot; class=&quot;logo-parent&quot;&gt;
+      &lt;div class=&quot;logo&quot;&gt;
+        &lt;div&gt;&alt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;mobile-hide binary-logo-text&quot;&gt;
+        &lt;img class=&quot;responsive&quot; src=&quot;./images/logo/type.svg&quot;&gt;
+      &lt;/div&gt;
+    &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;ul class=&quot;top-nav-menu mobile-hide&quot;&gt;
+    &lt;li class=&quot;nav-dropdown-toggle&quot;&gt;
+      &lt;a href=&quot;javascript:;&quot;&gt;
+        Menu One
+        &lt;span class=&quot;nav-caret&quot;&gt;&lt;/span&gt;
+      &lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;a href=&quot;javascript:;&quot; class=&quot;disabled&quot;&gt;
+            Disabled Menu Item
+          &lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;nav-dropdown-toggle&quot;&gt;
+      &lt;a href=&quot;javascript:;&quot;&gt;
+        Menu Two
+        &lt;span class=&quot;nav-caret&quot;&gt;&lt;/span&gt;
+      &lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;
+          &lt;a href=&quot;javascript:;&quot;&gt;
+            Menu Item
+            &lt;span class=&quot;nav-submenu-caret&quot;&gt;&lt;/span&gt;
+          &lt;/a&gt;
+          &lt;ul&gt;
+            &lt;li&gt;
+              &lt;a href=&quot;javascript:;&quot;&gt;
+                Menu Item
+                &lt;span class=&quot;nav-submenu-caret&quot;&gt;&lt;/span&gt;
+              &lt;/a&gt;
+              &lt;ul&gt;
+                &lt;li&gt;
+                  &lt;a href=&quot;javascript:;&quot;&gt;Menu Item&lt;/a&gt;
+                &lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+              &lt;a href=&quot;javascript:;&quot;&gt;
+                Menu Item
+                &lt;span class=&quot;nav-submenu-caret&quot;&gt;&lt;/span&gt;
+              &lt;/a&gt;
+              &lt;ul&gt;
+                &lt;li&gt;
+                  &lt;a href=&quot;javascript:;&quot;&gt;Menu Item&lt;/a&gt;
+                &lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+      &lt;div id=&quot;main-logout&quot;&gt;
+        &lt;ul id=&quot;main-account&quot; class=&quot;nav-menu main-nav&quot;&gt;
+          &lt;li class=&quot;account&quot;&gt;
+            &lt;a href=&quot;javascript:;&quot;&gt;
+              &lt;div class=&quot;main-account&quot;&gt;
+                &lt;div class=&quot;account-type&quot;&gt;Real Account&lt;/div&gt;
+                &lt;div class=&quot;account-id&quot;&gt;CR9010912&lt;/div&gt;
+                &lt;div class=&quot;topMenuBalance&quot;&gt;USD 0.00&lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;nav-caret&quot;&gt;&lt;/div&gt;
+            &lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;ul id=&quot;all-accounts-top&quot; class=&quot;nav-menu main-nav&quot;
+        style=&quot;opacity: 0;&quot;&gt;
+          &lt;li class=&quot;account&quot;&gt;
+            &lt;a href=&quot;javascript:;&quot;&gt;
+              &lt;div class=&quot;main-account&quot;&gt;
+                &lt;div class=&quot;account-type&quot;&gt;Real Account&lt;/div&gt;
+                &lt;div class=&quot;account-id&quot;&gt;CR9010912&lt;/div&gt;
+                &lt;div class=&quot;topMenuBalance&quot;&gt;USD 0.00&lt;/div&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;nav-caret&quot;&gt;&lt;/div&gt;
+            &lt;/a&gt;
+            &lt;ul&gt;
+              &lt;a class=&quot;link&quot; href=&quot;javascript:;&quot;&gt;
+                &lt;li class=&quot;topMenuProfile&quot;&gt;Profile&lt;/li&gt;
+              &lt;/a&gt;
+              &lt;a class=&quot;link&quot; href=&quot;javascript:;&quot;&gt;
+                &lt;li class=&quot;topMenuSecurity&quot;&gt;Security &amp; Limits&lt;/li&gt;
+              &lt;/a&gt;
+              &lt;div class=&quot;separator-line-thin-gray&quot;&gt;&lt;/div&gt;
+              &lt;div class=&quot;login-id-list&quot;&gt;
+                &lt;a href=&quot;javascript:;&quot; value=&quot;VRTC1191226&quot;&gt;
+                  &lt;li&gt;
+                    &lt;div&gt;Virtual Account&lt;/div&gt;
+                    &lt;div&gt;VRTC1191226&lt;/div&gt;
+                  &lt;/li&gt;
+                &lt;/a&gt;
+                &lt;div class=&quot;separator-line-thin-gray&quot;&gt;&lt;/div&gt;
+              &lt;/div&gt;
+              &lt;a href=&quot;javascript:;&quot;&gt;
+                &lt;li&gt;Sign out&lt;/li&gt;
+              &lt;/a&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+                    </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="f-row logo-section">
+                    <div class="f-item">
+                        <h1>Logo and Favicons</h1>
+                    </div>
+                </div>
+                <div class="f-row logo-section">
+                    <div class="f-item">
+                        <h3>Logo (separate)</h3>
+                        <div class="logo-wrapper primary-bg-color">
+                            <a class="logo-parent" href="https://binary.com">
+                                <div class="logo">
+                                    <div></div>
+                                </div>
+                                <div class="mobile-hide binary-logo-text">
+                                    <div></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div style="margin-top:10px;">
+                            <h3>Logo (combined)</h3>
+                            <img style="width:210px;" src="./images/logo/binary_logo_dark.svg" />
+                        </div>
+                        <div style="margin-top:10px;">
+                            <h3>Favicon</h3>
+                            <img style="width:18px;" src="./images/favicons/favicon.ico" />
+                        </div>
+                    </div>
+                    <div class="f-item">
+                        <div class="code-sample">
+                            <pre class="prettyprint">
+                    <code>
+    Logo (separate):
+    &lt;a class=&quot;logo-parent&quot; href=&quot;https://binary.com&quot;&gt;
+        &lt;div class=&quot;logo&quot;&gt;
+            &lt;div&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;mobile-hide binary-logo-text&quot;&gt;
+            &lt;div&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/a&gt;
+    Logo (combined):
+    &lt;img src=&quot;https://style.binary.com/
+                images/logo/binary_logo_dark.svg&quot; /&gt;
+    Favicon:
+    &lt;link rel=&quot;apple-touch-icon&quot; sizes=&quot;57x57&quot;
+    href=&quot;https://style.binary.com/images/
+               favicons/apple-touch-icon-57x57.png&quot;&gt;
+    &lt;link rel=&quot;apple-touch-icon&quot; sizes=&quot;114x114&quot;
+    href=&quot;https://style.binary.com/images/
+               favicons/apple-touch-icon-114x114.png&quot;&gt;
+    &lt;link rel=&quot;apple-touch-icon&quot; sizes=&quot;72x72&quot;
+    href=&quot;https://style.binary.com/images/
+               favicons/apple-touch-icon-72x72.png&quot;&gt;
+    &lt;link rel=&quot;apple-touch-icon&quot; sizes=&quot;144x144&quot;
+    href=&quot;https://style.binary.com/images/
+               favicons/apple-touch-icon-144x144.png&quot;&gt;
+    &lt;link rel=&quot;apple-touch-icon&quot; sizes=&quot;60x60&quot;
+    href=&quot;https://style.binary.com/images/
+               favicons/apple-touch-icon-60x60.png&quot;&gt;
+    &lt;link rel=&quot;apple-touch-icon&quot; sizes=&quot;120x120&quot;
+    href=&quot;https://style.binary.com/images/
+               favicons/apple-touch-icon-120x120.png&quot;&gt;
+    &lt;link rel=&quot;apple-touch-icon&quot; sizes=&quot;76x76&quot;
+    href=&quot;https://style.binary.com/images/
+               favicons/apple-touch-icon-76x76.png&quot;&gt;
+    &lt;link rel=&quot;apple-touch-icon&quot; sizes=&quot;152x152&quot;
+    href=&quot;https://style.binary.com/images/
+               favicons/apple-touch-icon-152x152.png&quot;&gt;
+    &lt;link rel=&quot;apple-touch-icon&quot; sizes=&quot;180x180&quot;
+    href=&quot;https://style.binary.com/images/
+               favicons/apple-touch-icon-180x180.png&quot;&gt;
+    &lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; sizes=&quot;192x192&quot;
+    href=&quot;https://style.binary.com/images/
+               favicons/favicon-192x192.png&quot;&gt;
+    &lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; sizes=&quot;160x160&quot;
+    href=&quot;https://style.binary.com/images/
+               favicons/favicon-160x160.png&quot;&gt;
+    &lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; sizes=&quot;96x96&quot;
+    href=&quot;https://style.binary.com/images/
+               favicons/favicon-96x96.png&quot;&gt;
+    &lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; sizes=&quot;16x16&quot;
+    href=&quot;https://style.binary.com/images/
+               favicons/favicon-16x16.png&quot; &gt;
+    &lt;link rel=&quot;icon&quot; type=&quot;image/png&quot; sizes=&quot;32x32&quot;
+    href=&quot;https://style.binary.com/images/
+               favicons/favicon-32x32.png&quot; &gt;
+
+                  </code>
+                </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="f-row colors-section">
+                    <div class="f-item">
+                        <h1>Colors</h1>
+                    </div>
+                </div>
+                <div class="f-row colors-section">
+                    <div class="f-item">
+                        <p style="background-color:#15212d;padding:10px;color:#fff;">Dark Blue
+                            <br>#15212d</p>
+                    </div>
+                    <div class="f-item">
+                        <p style="background-color:#2a3052;padding:10px;color:#fff;">Brand Blue
+                            <br>#2a3052</p>
+                    </div>
+                    <div class="f-item">
+                        <p style="background-color:#e98024;padding:10px;color:#fff;">Brand Orange
+                            <br>#e98024</p>
+                    </div>
+                </div>
+
+                <div class="f-row title-section">
+                    <div class="f-item">
+                        <h1>Title</h1>
+                    </div>
+                </div>
+                <div class="f-row title-section">
+                    <div class="f-item">
+                        <h1>Header 1</h1>
+                        <h1 class="dark">Header 1 Dark</h1>
+                        <h2>Header 2</h2>
+                        <h3>Header 3</h3>
+                    </div>
+                    <div class="f-item">
+                        <div class="code-sample">
+                            <pre class="prettyprint">
+                    <code>
+    &lt;h1&gt;Title&lt;/h1&gt;
+    &lt;h1 class=&quot;dark&quot;&gt;Title&lt;/h1&gt;
+    &lt;h2&gt;Title&lt;/h2&gt;
+    &lt;h3&gt;Title&lt;/h3&gt;
+                  </code>
+                </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="f-row text-section">
+                    <div class="f-item">
+                        <h1>Text</h1>
+                    </div>
+                </div>
+                <div class="f-row text-section">
+                    <div class="f-item">
+                        <p>paragraph with <strong>strong text</strong></p>
+                        <p class="font-s">This is small font</p>
+                        <p class="font-xs">This is extra small font</p>
+                        <ul>
+                            <li>unordered list item 1</li>
+                            <li>unordered list item 2</li>
+                            <li>unordered list item 3</li>
+                        </ul>
+                        <ul class="bullet">
+                            <li>unordered list item 1</li>
+                            <li>unordered list item 2</li>
+                            <li>unordered list item 3</li>
+                        </ul>
+                        <ul class="checked">
+                            <li>unordered list item 1</li>
+                            <li>unordered list item 2</li>
+                            <li>unordered list item 3</li>
+                        </ul>
+                        <ol>
+                            <li>ordered list item 1</li>
+                            <li>ordered list item 2</li>
+                            <li>ordered list item 3</li>
+                        </ol>
+                    </div>
+                    <div class="f-item">
+                        <div class="code-sample">
+                            <pre class="prettyprint">
+                    <code>
+    &lt;p&gt;paragraph with&lt;strong&gt;strong text&lt;/strong&gt;&lt;/p&gt;
+    &lt;p class=&quot;font-s&quot;&gt;This is small font&lt;/p&gt;
+    &lt;p class=&quot;font-xs&quot;&gt;This is extra small font&lt;/p&gt;
+    &lt;ul&gt;
+    &lt;li&gt;unordered list item 1&lt;/li&gt;
+    &lt;li&gt;unordered list item 2&lt;/li&gt;
+    &lt;li&gt;unordered list item 3&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul class=&quot;bullet&quot;&gt;
+    &lt;li&gt;unordered list item 1&lt;/li&gt;
+    &lt;li&gt;unordered list item 2&lt;/li&gt;
+    &lt;li&gt;unordered list item 3&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ul class=&quot;checked&quot;&gt;
+    &lt;li&gt;unordered list item 1&lt;/li&gt;
+    &lt;li&gt;unordered list item 2&lt;/li&gt;
+    &lt;li&gt;unordered list item 3&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;ol&gt;
+    &lt;li&gt;ordered list item 1&lt;/li&gt;
+    &lt;li&gt;ordered list item 2&lt;/li&gt;
+    &lt;li&gt;ordered list item 3&lt;/li&gt;
+    &lt;/ol&gt;
+                  </code>
+                </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="f-row button-section">
+                    <div class="f-item">
+                        <h1>Link and Buttons</h1>
+                    </div>
+                </div>
+                <div class="f-row button-section">
+                    <div class="f-item">
+                        <p>paragraph with <a href="javascript:;">link</a>
+                        </p>
+                        <p>
+                            <a class="button" href="javascript:;">
+                                <span>button link</span>
+                            </a>
+                        </p>
+                        <p>
+                            <a class="button-secondary" href="javascript:;">
+                                <span>button link</span>
+                            </a>
+                        </p>
+                        <p>
+                            <a class="button-disabled">
+                                <span>Disabled</span>
+                            </a>
+                        </p>
+                        <p>
+                            <button type="button" name="button">button</button>
+                        </p>
+                    </div>
+                    <div class="f-item">
+                        <div class="code-sample">
+                            <pre class="prettyprint">
+                        <code>
+      &lt;p&gt;paragraph with &lt;a href=&quot;#&quot;&gt;link&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;
+          &lt;a class=&quot;button&quot; href=&quot;#&quot;&gt;
+              &lt;span&gt;button link&lt;/span&gt;
+          &lt;/a&gt;
+      &lt;/p&gt;
+      &lt;p&gt;
+          &lt;a class=&quot;button-secondary&quot; href=&quot;#&quot;&gt;
+              &lt;span&gt;button link&lt;/span&gt;
+          &lt;/a&gt;
+      &lt;/p&gt;
+      &lt;p&gt;
+          &lt;a class=&quot;button-disabled&quot;&gt;
+              &lt;span&gt;Disabled&lt;/span&gt;
+          &lt;/a&gt;
+      &lt;/p&gt;
+      &lt;p&gt;
+          &lt;button type=&quot;button&quot; name=&quot;button&quot;&gt;button&lt;/button&gt;
+      &lt;/p&gt;
+                      </code>
+                    </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="f-row message-section">
+                    <div class="f-item">
+                        <h1>Messages</h1>
+                    </div>
+                </div>
+                <div class="f-row message-section">
+                    <div class="f-item">
+                        <p class="success-msg">success message</p>
+                        <p class="notice-msg" style="margin-right:1rem;">notice message</p>
+                        <p class="error-msg">error message</p>
+                        <p><span data-balloon="message">text with default tooltip</span></p>
+                        <span data-balloon="large size tooltip at bottom" data-balloon-length="large" data-balloon-pos="down" class="no-underline">text with long tooltip</span>
+                    </div>
+                    <div class="f-item">
+                        <div class="code-sample">
+                            <pre class="prettyprint">
+                        <code>
+    &lt;p class=&quot;success-msg&quot;&gt;success message&lt;/p&gt;
+    &lt;p class=&quot;notice-msg&quot;&gt;notice message&lt;/p&gt;
+    &lt;p class=&quot;error-msg&quot;&gt;error message&lt;/p&gt;
+    &lt;span data-balloon=&quot;message&quot;&gt;
+      text with default tooltip
+    &lt;/span&gt;
+    &lt;span data-balloon=&quot;large size tooltip at bottom&quot;
+      data-balloon-length=&quot;large&quot; data-balloon-pos=&quot;down&quot;
+      class=&quot;no-underline&quot;&gt;
+        text with long tooltip
+    &lt;/span&gt;
+                      </code>
+                    </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="f-row control-section">
+                    <div class="f-item">
+                        <h1>Controls</h1>
+                    </div>
+                </div>
+                <div class="f-row control-section">
+                    <div class="f-item">
+                        <h2>Steps</h2>
+                        <div class="steps">
+                            <div class="step">
+                                <div class="border-bottom"></div>
+                                <div class="circle">1</div>
+                                <div style="padding: 20px 10px;">
+                                    <div class="center-text">
+                                        <img src="http://placehold.it/50x50" />
+                                    </div>
+                                    <p>sample text</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="border-bottom"></div>
+                                <div class="circle">2</div>
+                                <div style="padding: 20px 10px;">
+                                    <div class="center-text">
+                                        <img src="http://placehold.it/50x50" />
+                                    </div>
+                                    <p>sample text</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="border-bottom"></div>
+                                <div class="circle">3</div>
+                                <div style="padding: 20px 10px;">
+                                    <div class="center-text">
+                                        <img src="http://placehold.it/50x50" />
+                                    </div>
+                                    <p>sample text</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="f-row control-section">
+                    <div class="f-item">
+                        <h2>Section Dividers</h2>
+                        <div class="section-divider">
+                            <div class="align-self-center border-bottom-light-gray"></div>
+                            <div class="faded">Section 1</div>
+                            <div class="align-self-center border-bottom-light-gray"></div>
+                        </div>
+                        <p>Section 1 text</p>
+                        <div class="section-divider">
+                            <div class="align-self-center border-bottom-light-gray"></div>
+                            <div class="faded">Section 2</div>
+                            <div class="align-self-center border-bottom-light-gray"></div>
+                        </div>
+                        <p>Section 2 text</p>
+                        <div class="section-divider">
+                            <div class="align-self-center border-bottom-light-gray"></div>
+                            <div class="circle">Or</div>
+                            <div class="align-self-center border-bottom-light-gray"></div>
+                        </div>
+                        <p>Section 3 text</p>
+                    </div>
+                </div>
+                <div class="f-row control-section">
+                    <div class="f-item">
+                        <div class="code-sample">
+                            <pre class="prettyprint">
+                        <code>
+    &lt;div class=&quot;steps&quot;&gt;
+        &lt;div class=&quot;step&quot;&gt;
+            &lt;div class=&quot;border-bottom&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;circle&quot;&gt;1&lt;/div&gt;
+            &lt;div style=&quot;padding: 20px 10px;&quot;&gt;
+                &lt;div class=&quot;center-text&quot;&gt;
+                    &lt;img src=&quot;http://placehold.it/50x50&quot; /&gt;
+                &lt;/div&gt;
+                &lt;p&gt;sample text&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;step&quot;&gt;
+            &lt;div class=&quot;border-bottom&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;circle&quot;&gt;2&lt;/div&gt;
+            &lt;div style=&quot;padding: 20px 10px;&quot;&gt;
+                &lt;div class=&quot;center-text&quot;&gt;
+                    &lt;img src=&quot;http://placehold.it/50x50&quot; /&gt;
+                &lt;/div&gt;
+                &lt;p&gt;sample text&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;step&quot;&gt;
+            &lt;div class=&quot;border-bottom&quot;&gt;&lt;/div&gt;
+            &lt;div class=&quot;circle&quot;&gt;3&lt;/div&gt;
+            &lt;div style=&quot;padding: 20px 10px;&quot;&gt;
+                &lt;div class=&quot;center-text&quot;&gt;
+                    &lt;img src=&quot;http://placehold.it/50x50&quot; /&gt;
+                &lt;/div&gt;
+                &lt;p&gt;sample text&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&quot;section-divider&quot;&gt;
+        &lt;div class=&quot;align-self-center border-bottom-light-gray&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;faded&quot;&gt;Section 1&lt;/div&gt;
+        &lt;div class=&quot;align-self-center border-bottom-light-gray&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p&gt;Section 1 text&lt;/p&gt;
+    &lt;div class=&quot;section-divider&quot;&gt;
+        &lt;div class=&quot;align-self-center border-bottom-light-gray&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;faded&quot;&gt;Section 2&lt;/div&gt;
+        &lt;div class=&quot;align-self-center border-bottom-light-gray&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p&gt;Section 2 text&lt;/p&gt;
+    &lt;div class=&quot;section-divider&quot;&gt;
+        &lt;div class=&quot;align-self-center border-bottom-light-gray&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;circle&quot;&gt;Or&lt;/div&gt;
+        &lt;div class=&quot;align-self-center border-bottom-light-gray&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;p&gt;Section 3 text&lt;/p&gt;
+                      </code>
+                    </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="f-row spinner-section">
+                    <div class="f-item">
+                        <h1>Spinner</h1>
+                    </div>
+                </div>
+                <div class="f-row spinner-section">
+                    <div class="f-item">
+                        <p>use over a transparent background:</p>
+                        <div class="barspinner dark">
+                            <div class="rect1"></div>
+                            <div class="rect2"></div>
+                            <div class="rect3"></div>
+                            <div class="rect4"></div>
+                            <div class="rect5"></div>
+                        </div>
+                        <p>use over a dark background:</p>
+                        <div class="primary-bg-color" style="padding: 20px;">
+                            <div class="barspinner white">
+                                <div class="rect1"></div>
+                                <div class="rect2"></div>
+                                <div class="rect3"></div>
+                                <div class="rect4"></div>
+                                <div class="rect5"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f-item">
+                        <div class="code-sample">
+                            <pre class="prettyprint">
+                        <code>
+    use over a transparent background:
+    &lt;div class=&quot;barspinner dark&quot;&gt;
+        &lt;div class=&quot;rect1&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;rect2&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;rect3&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;rect4&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;rect5&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    use over a dark background:
+    &lt;div class=&quot;barspinner white&quot;&gt;
+        &lt;div class=&quot;rect1&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;rect2&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;rect3&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;rect4&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;rect5&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+                      </code>
+                    </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="f-row table-section">
+                    <div class="f-item">
+                        <h1>Table</h1>
+                    </div>
+                </div>
+                <div class="f-row f-row-start table-section">
+                    <div class="f-item" style="margin-top:20px;">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Header</th>
+                                    <th>Header</th>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                                <tr>
+                                    <th>Footer</th>
+                                    <th>Footer</th>
+                                </tr>
+                            </tfoot>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>data 1</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>data 2</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="f-item">
+                        <div class="code-sample">
+                            <pre class="prettyprint">
+                        <code>
+      &lt;table&gt;
+          &lt;thead&gt;
+              &lt;tr&gt;
+                  &lt;th&gt;Header&lt;/th&gt;
+                  &lt;th&gt;Header&lt;/th&gt;
+              &lt;/tr&gt;
+          &lt;/thead&gt;
+          &lt;tfoot&gt;
+              &lt;tr&gt;
+                  &lt;th&gt;Footer&lt;/th&gt;
+                  &lt;th&gt;Footer&lt;/th&gt;
+              &lt;/tr&gt;
+          &lt;/tfoot&gt;
+          &lt;tbody&gt;
+              &lt;tr&gt;
+                  &lt;td&gt;1&lt;/td&gt;
+                  &lt;td&gt;data 1&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr&gt;
+                  &lt;td&gt;2&lt;/td&gt;
+                  &lt;td&gt;data 2&lt;/td&gt;
+              &lt;/tr&gt;
+          &lt;/tbody&gt;
+      &lt;/table&gt;
+                      </code>
+                    </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="f-row sidebar-section">
+                    <div class="f-item">
+                        <h1>Sidebar Menu</h1>
+                    </div>
+                </div>
+                <div class="f-row f-row-start sidebar-section">
+                    <div class="f-item">
+                        <div>
+                            <div class="sidebar-left">
+                                <ul>
+                                    <li>
+                                        <a href="#">Section 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Section 2</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <script type="text/javascript">
+                                $('.sidebar-left a').on('click', function(e) {
+                                    e.preventDefault();
+                                    $('.sidebar-left li').removeClass('selected');
+                                    $(this).parent().addClass('selected');
+                                });
+                            </script>
+                        </div>
+                        <div>
+                            <div class="sidebar-collapsible">
+                                <ul>
+                                    <li>
+                                        <a href="#">Section 1</a>
+                                    </li>
+                                    <li class="has-submenu">
+                                        <a href="#">Section 2 subsection</a>
+                                        <ul>
+                                            <li>
+                                                <a href="#">Subsection 1</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Subsection 2</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Subsection 3</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Subsection 4</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="has-submenu">
+                                        <a href="#">Section 3 subsection</a>
+                                        <ul>
+                                            <li>
+                                                <a href="#">Subsection 1</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Subsection 2</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">Section 4</a>
+                                    </li>
+                                     <li class="has-submenu">
+                                        <a href="#">Section 5 subsection</a>
+                                        <ul>
+                                            <li>
+                                                <a href="#">Subsection 1</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Subsection 2</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Subsection 3</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f-item">
+                        <div class="code-sample">
+                            <pre class="prettyprint">
+                            <code>
+  &lt;div class=&quot;sidebar-left&quot;&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Section 1&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;Section 2&lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;
+    $('.sidebar-left a').on('click', function(e) {
+      e.preventDefault();
+      $('.sidebar-left li').removeClass('selected');
+      $(this).parent().addClass('selected');
+    });
+  &lt;/script&gt;
+
+  &lt;div class="sidebar-collapsible"&gt;
+      &lt;ul&gt;
+          &lt;li&gt;
+              &lt;a href="#"&gt;Section 1&lt;/a&gt;
+          &lt;/li&gt;
+          &lt;li class="has-submenu"&gt;
+              &lt;a href="#"&gt;Section 2 subsection&lt;/a&gt;
+              &lt;ul&gt;
+                  &lt;li&gt;&lt;a href="#"&gt;Subsection 1&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href="#"&gt;Subsection 2&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href="#"&gt;Subsection 3&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href="#"&gt;Subsection 4&lt;/a&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li class="has-submenu"&gt;
+              &lt;a href="#"&gt;Section 3 subsection&lt;/a&gt;
+              &lt;ul&gt;
+                  &lt;li&gt;&lt;a href="#"&gt;Subsection 1&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href="#"&gt;Subsection 2&lt;/a&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+          &lt;/li&gt;
+          &lt;li&gt;
+              &lt;a href="#"&gt;Section 4&lt;/a&gt;
+          &lt;/li&gt;
+              &lt;li class="has-submenu"&gt;
+              &lt;a href="#"&gt;Section 5 subsection&lt;/a&gt;
+              &lt;ul&gt;
+                  &lt;li&gt;&lt;a href="#"&gt;Subsection 1&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href="#"&gt;Subsection 2&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href="#"&gt;Subsection 3&lt;/a&gt;&lt;/li&gt;
+              &lt;/ul&gt;
+          &lt;/li&gt;
+      &lt;/ul&gt;
+  &lt;/div&gt;
+                            </code>
+                          </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="f-row form-section">
+                    <div class="f-item">
+                        <h1>Form</h1>
+                    </div>
+                </div>
+                <div class="f-row form-section">
+                    <div class="f-item">
+                        <div style="margin-top:18px;width:110px;">
+                            <select id="dropdown">
+                                <option value="option1" selected>Option 1</option>
+                                <option value="option2">Option 2</option>
+                                <option value="option3" disabled>Option 3</option>
+                            </select>
+                            <script type="text/javascript">
+                                selectDropdown('#dropdown');
+                            </script>
+                        </div>
+                        <div style="margin-top:20px;">
+                            <input id="checkbox1" type="checkbox" value="option1" />
+                            <label for="checkbox1">Option 1</label>
+                            <br/>
+                            <input id="checkbox2" type="checkbox" value="option2" />
+                            <label for="checkbox2">Option 2</label>
+                            <br/>
+                            <input id="checkbox3" type="checkbox" value="option3" />
+                            <label for="checkbox3">Option 3</label>
+                        </div>
+                        <div style="margin-top:20px;">
+                            <input id="radio1" type="radio" value="option1" name="radio" />
+                            <label for="radio1">Option 1</label>
+                            <br/>
+                            <input id="radio2" type="radio" value="option2" name="radio" />
+                            <label for="radio2">Option 2</label>
+                            <br/>
+                            <input id="radio3" type="radio" value="option3" name="radio" />
+                            <label for="radio3">Option 3</label>
+                        </div>
+                        <div style="margin-top:20px;">
+                            <input type='text'/>
+                            <p class='hint'>Hint comes here</p>
+                        </div>
+                        <div style="margin-top:20px;">
+                            <textarea name="name" rows="8" cols="20"></textarea>
+                        </div>
+                    </div>
+                    <div class="f-item">
+                        <div class="code-sample">
+                            <pre class="prettyprint">
+                        <code>
+  &lt;select id=&quot;dropdown&quot;&gt
+    &lt;option value=&quot;option1&quot; selected&gt;Option 1&lt;/option&gt;
+    &lt;option value=&quot;option2&quot;&gt;Option 2&lt;/option&gt;
+    &lt;option value=&quot;option3&quot; disabled&gt;Option 3&lt;/option&gt;
+  &lt;/select&gt;
+  &lt;script type=&quot;&gt;text/javascript&quot;&gt;&gt;
+      selectDropdown('#dropdown');
+  &lt;/script&gt;
+
+  &lt;input id=&quot;options&quot; type=&quot;checkbox&quot; value=&quot;option1&quot;/&gt;
+  &lt;label for=&quot;options&quot;>Option 1&lt;/label&gt;
+  &lt;input id=&quot;options&quot; type=&quot;checkbox&quot; value=&quot;option2&quot;/&gt;
+  &lt;label for=&quot;options&quot;>Option 2&lt;/label&gt;
+  &lt;input id=&quot;options&quot; type=&quot;checkbox&quot; value=&quot;option3&quot;/&gt;
+  &lt;label for=&quot;options&quot;>Option 3&lt;/label&gt;
+
+  &lt;input id=&quot;radio1&quot; type=&quot;radio&quot; value=&quot;option1&quot; name=&quot;radio&quot;/&gt;
+  &lt;label for=&quot;radio1&quot;>Option 1&lt;/label&gt;
+  &lt;input id=&quot;radio2&quot; type=&quot;radio&quot; value=&quot;option2&quot; name=&quot;radio&quot;/&gt;
+  &lt;label for=&quot;radio2&quot;>Option 2&lt;/label&gt;
+  &lt;input id=&quot;radio3&quot; type=&quot;radio&quot; value=&quot;option3&quot; name=&quot;radio&quot;/&gt;
+  &lt;label for=&quot;radio3&quot;>Option 3&lt;/label&gt;
+
+  &lt;input type=&quot;text&quot;/&gt;
+  &lt;p class=&quot;hint&quot;&gt;Hint comes here&lt;/p&gt;
+
+  &lt;input type=&quot;text&quot;/&gt;
+  &lt;p class=&quot;hint&quot;&gt;Hint comes here&lt;/p&gt;
+
+  &lt;textarea name=&quot;name&quot; rows=&quot;8&quot; cols=&quot;40&quot;&gt;&lt;/textarea&gt;
+                      </code>
+                    </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="f-row accordion-section">
+                    <div class="f-item">
+                        <h1>Accordion</h1>
+                    </div>
+                </div>
+                <div class="f-row accordion-section">
+                    <div class="f-item" style="min-width:300px;">
+                        <div id="accordion" style="margin-top:20px;">
+                            <h3>Section 1</h3>
+                            <div>Contents of section 1</div>
+                            <h3>Section 2</h3>
+                            <div>Contents of section 2</div>
+                        </div>
+                        <script type="text/javascript">
+                            $('#accordion').accordion({
+                                heightStyle : 'content',
+                                collapsible : true,
+                                active      : false
+                            });
+                        </script>
+                    </div>
+                    <div class="f-item">
+                        <div class="code-sample">
+                            <pre class="prettyprint">
+                        <code>
+  &lt;div id="accordion"&gt;
+    &lt;h3&gt;Section 1&lt;/h3&gt;
+    &lt;div&gt;Contents of section 1&lt;/div&gt;
+    &lt;h3&gt;Section 2&lt;/h3&gt;
+    &lt;div&gt;Contents of section 2&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;script type="text/javascript"&gt;
+    $('#accordion').accordion({
+      heightStyle : 'content',
+      collapsible : true,
+      active      : false
+    });
+  &lt;/script&gt;
+                      </code>
+                    </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="f-row tabs-section">
+                    <div class="f-item">
+                        <h1>Tabs</h1>
+                    </div>
+                </div>
+                <div class="f-row tabs-section">
+                    <div class="f-item">
+                        <p>Tabs:</p>
+                        <div class="has-tabs" style="margin-top:20px;">
+                            <ul>
+                                <li><a href="#tab_1">Tab 1</a></li>
+                                <li><a href="#tab_2">Tab 2</a></li>
+                            </ul>
+                            <div id="tab_1">Contents of tab 1</div>
+                            <div id="tab_2">Contents of tab 2</div>
+                        </div>
+                        <script type='text/javascript'>
+                            $('.has-tabs').tabs();
+                        </script>
+                        <p>Tabs with subsections:</p>
+                        <div class="content-tab-container tab-with-subsection" style="margin-top: 10px;">
+                            <div class="tab-menu">
+                                <div class="tab-menu-wrap">
+                                    <ul class="tm-ul">
+                                        <li id="first-tab" class="tm-li active first">
+                                            <span class="menu-wrap-a">
+                                                <span class="menu-wrap-b">
+                                                    <a class="tm-a first a-active">Tab 1</a>
+                                                </span>
+                                            </span>
+                                            <ul class="tm-ul-2">
+                                                <li id="first-tab-subsection-one" class="tm-li-2 first">
+                                                    <span class="tm-a-2 a-active">Subsection of tab 1</span>
+                                                </li>
+                                            </ul>
+                                        </li><li id="second-tab" class="tm-li">
+                                            <a href="javascript:;" class="tm-a">Tab 2</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="tab-content">
+                                <div class="tab-content-wrapper menu-has-sub-item">
+                                    <div id="first-tab-subsection-one-content" class="toggle-content">
+                                        Contents of tab 1
+                                    </div>
+                                    <div id="second-tab-content" class="toggle-content invisible">
+                                        Contents of tab 2
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f-item">
+                        <div class="code-sample">
+                            <pre class="prettyprint">
+                        <code>
+  Tabs:
+  &lt;div class="has-tabs"&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="#tab_1"&gt;Tab 1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#tab_2"&gt;Tab 2&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div id="tab_1"&gt;
+      Contents of tab 1
+    &lt;/div&gt;
+    &lt;div id="tab_2"&gt;
+      Contents of tab 2
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;script type="text/javascript"&gt;
+    $('.has-tabs').tabs();
+  &lt;/script&gt;
+
+  Tabs with subsections:
+  &lt;div class=&quot;content-tab-container
+                      tab-with-subsection&quot;&gt;
+    &lt;div class=&quot;tab-menu&quot;&gt;
+      &lt;div class=&quot;tab-menu-wrap&quot;&gt;
+        &lt;ul class=&quot;tm-ul&quot;&gt;
+          &lt;li id=&quot;first-tab&quot;
+                 class=&quot;tm-li active first&quot;&gt;
+            &lt;span class=&quot;menu-wrap-a&quot;&gt;
+              &lt;span class=&quot;menu-wrap-b&quot;&gt;
+                &lt;a class=&quot;tm-a first
+                            a-active&quot;&gt;Tab 1&lt;/a&gt;
+              &lt;/span&gt;
+            &lt;/span&gt;
+            &lt;ul class=&quot;tm-ul-2&quot;&gt;
+              &lt;li id=&quot;first-tab-subsection-one&quot;
+                     class=&quot;tm-li-2 first&quot;&gt;
+                &lt;span class=&quot;tm-a-2 a-active&quot;&gt;
+                  Subsection of tab 1
+                &lt;/span&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/li&gt;&lt;li id=&quot;second-tab&quot;
+                            class=&quot;tm-li&quot;&gt;
+            &lt;a href=&quot;javascript:;&quot;
+                  class=&quot;tm-a&quot;&gt;Tab 2&lt;/a&gt;
+          &lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tab-content&quot;&gt;
+      &lt;div class=&quot;tab-content-wrapper
+                          menu-has-sub-item&quot;&gt;
+        &lt;div id=&quot;first-tab-subsection-one-content&quot;
+                class=&quot;toggle-content&quot;&gt;
+          Contents of tab 1
+        &lt;/div&gt;
+        &lt;div id=&quot;second-tab-content&quot;
+                class=&quot;toggle-content invisible&quot;&gt;
+          Contents of tab 2
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+                      </code>
+                    </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="f-row icon-section">
+                    <div class="f-item">
+                        <h1>Icons</h1>
+                    </div>
+                </div>
+
+                <div class="f-row icon-section">
+                    <div class="f-item" style="max-width: 550px; margin-top:18px;">
+                        <div class="f-row icon-section">
+                          <div class="f-item chartOptions_button">
+                            <span class = "templateButton" data-balloon="Candles" data-balloon-pos="down">
+                              <div class="img"><div class="candlestick-icon"></div></div>
+                            </span>
+                          </div>
+                          <div class="f-item chartOptions_button">
+                            <span class = "templateButton" data-balloon="Chart template" data-balloon-pos="down">
+                              <div class="img"><div class="chart_template-icon"></div></div>
+                            </span>
+                          </div>
+                          <div class="f-item chartOptions_button">
+                            <span class = "templateButton" data-balloon="Comparisons" data-balloon-pos="down">
+                              <div class="img"><div class="comparison-icon"></div></div>
+                            </span>
+                          </div>
+                          <div class="f-item chartOptions_button">
+                            <span class = "templateButton" data-balloon="Crosshair" data-balloon-pos="down">
+                              <div class="img"><div class="crosshair-icon"></div></div>
+                            </span>
+                          </div>
+                          <div class="f-item chartOptions_button">
+                            <span class = "templateButton" data-balloon="Dot" data-balloon-pos="down">
+                              <div class="img"><div class="dot-icon"></div></div>
+                            </span>
+                          </div>
+                          <div class="f-item chartOptions_button">
+                            <span class = "templateButton" data-balloon="Drawing" data-balloon-pos="down">
+                              <div class="img"><div class="drawing-icon"></div></div>
+                            </span>
+                          </div>
+                        </div>
+                        <div class="f-row icon-section">
+                          <div class="f-item chartOptions_button">
+                            <span class = "templateButton" data-balloon="indicator" data-balloon-pos="down">
+                              <div class="img"><div class="indicator-icon"></div></div>
+                            </span>
+                          </div>
+                          <div class="f-item chartOptions_button">
+                            <span class = "templateButton" data-balloon="Line" data-balloon-pos="down">
+                              <div class="img"><div class="line-icon"></div></div>
+                            </span>
+                          </div>
+                          <div class="f-item chartOptions_button">
+                            <span class = "templateButton" data-balloon="Line dot" data-balloon-pos="down">
+                              <div class="img"><div class="linedot-icon"></div></div>
+                            </span>
+                          </div>
+                          <div class="f-item chartOptions_button">
+                            <span class = "templateButton" data-balloon="OHLC" data-balloon-pos="down">
+                              <div class="img"><div class="ohlc-icon"></div></div>
+                            </span>
+                          </div>
+                          <div class="f-item chartOptions_button">
+                            <span class = "templateButton" data-balloon="Share" data-balloon-pos="down">
+                              <div class="img"><div class="share-icon"></div></div>
+                            </span>
+                          </div>
+                          <div class="f-item chartOptions_button">
+                            <span class = "templateButton" data-balloon="Spline" data-balloon-pos="down">
+                              <div class="img"><div class="spline-icon"></div></div>
+                            </span>
+                          </div>
+                        </div>
+                        <div class="f-row icon-section">
+                          <div class="f-item chartOptions_button button_selected">
+                            <span class = "templateButton" data-balloon="Candles" data-balloon-pos="down">
+                              <div class="img"><div class="candlestick-w-icon"></div></div>
+                            </span>
+                          </div>
+                          <div class="f-item chartOptions_button button_selected">
+                            <span class = "templateButton" data-balloon="Chart template" data-balloon-pos="down">
+                              <div class="img"><div class="chart_template-w-icon"></div></div>
+                            </span>
+                          </div>
+                          <div class="f-item chartOptions_button button_selected">
+                            <span class = "templateButton" data-balloon="Dot" data-balloon-pos="down">
+                              <div class="img"><div class="dot-w-icon"></div></div>
+                            </span>
+                          </div>
+                          <div class="f-item chartOptions_button button_selected">
+                            <span class = "templateButton" data-balloon="Drawing" data-balloon-pos="down">
+                              <div class="img"><div class="drawing-w-icon"></div></div>
+                            </span>
+                          </div>
+                          <div class="f-item chartOptions_button button_selected">
+                            <span class = "templateButton" data-balloon="Line" data-balloon-pos="down">
+                              <div class="img"><div class="line-w-icon"></div></div>
+                            </span>
+                          </div>
+                          <div class="f-item chartOptions_button button_selected">
+                            <span class = "templateButton" data-balloon="Line dot" data-balloon-pos="down">
+                              <div class="img"><div class="linedot-w-icon"></div></div>
+                            </span>
+                          </div>
+                        </div>
+                        <div class="f-row icon-section" style="max-width:150px">
+                          <div class="f-item chartOptions_button button_selected">
+                            <span class = "templateButton" data-balloon="OHLC" data-balloon-pos="down">
+                              <div class="img"><div class="ohlc-w-icon"></div></div>
+                            </span>
+                          </div>
+                          <div class="f-item chartOptions_button button_selected">
+                            <span class = "templateButton" data-balloon="Share" data-balloon-pos="down">
+                              <div class="img"><div class="share-w-icon"></div></div>
+                            </span>
+                          </div>
+                          <div class="f-item chartOptions_button button_selected">
+                            <span class = "templateButton" data-balloon="Spline" data-balloon-pos="down">
+                              <div class="img"><div class="spline-w-icon"></div></div>
+                            </span>
+                          </div>
+                        </div>
+
+                    </div>
+                    <div class="f-item">
+                        <div class="code-sample">
+                            <pre class="prettyprint">
+                        <code>
+  &lt;div class="f-item chartOptions_button"&gt;
+    &lt;span class = "templateButton"
+          data-balloon="Candles" data-balloon-pos="down"&gt;
+      &lt;div class="img"&gt;
+        &lt;div
+        class="candlestick-icon"&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class="f-item chartOptions_button button_selected"&gt;
+    &lt;span class = "templateButton"
+          data-balloon="Candles" data-balloon-pos="down"&gt;
+      &lt;div class="img"&gt;
+        &lt;div
+        class="candlestick-icon"&gt;
+        &lt;/div&gt;
+    &lt;/span&gt;
+  &lt;/div&gt;
+                      </code>
+                    </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="f-row symbols-section">
+                    <div class="f-item">
+                        <h1>Symbols</h1>
+                    </div>
+                </div>
+                <div class="f-row symbols-section">
+                    <div class="f-item">
+                        <p><span class="symbols aud"></span>12,345.00</p>
+                        <p><span class="symbols eur"></span>12,345.00</p>
+                        <p><span class="symbols gbp"></span>12,345.00</p>
+                        <p><span class="symbols jpy"></span>12,345</p>
+                        <p><span class="symbols usd"></span>12,345.00</p>
+                        <p><span class="symbols btc"></span>0.005</p>
+                        <p><span class="symbols bch"></span>0.005</p>
+                        <p><span class="symbols eth"></span>0.005</p>
+                        <p><span class="symbols etc"></span>0.005</p>
+                        <p><span class="symbols ltc"></span>0.005</p>
+                        <p><span class="symbols ust"></span>0.005</p>
+                        <p><span class="symbols usb"></span>0.005</p>
+                    </div>
+                    <div class="f-item">
+                        <div class="code-sample">
+                            <pre class="prettyprint">
+                                <code>
+    &lt;span class=&quot;symbols aud&quot;&gt;&lt;/span&gt;12,345.00
+    &lt;span class=&quot;symbols eud&quot;&gt;&lt;/span&gt;12,345.00
+    &lt;span class=&quot;symbols gbp&quot;&gt;&lt;/span&gt;12,345.00
+    &lt;span class=&quot;symbols jpy&quot;&gt;&lt;/span&gt;12,345
+    &lt;span class=&quot;symbols usd&quot;&gt;&lt;/span&gt;12,345.00
+    &lt;span class=&quot;symbols btc&quot;&gt;&lt;/span&gt;0.005
+    &lt;span class=&quot;symbols bch&quot;&gt;&lt;/span&gt;0.005
+    &lt;span class=&quot;symbols eth&quot;&gt;&lt;/span&gt;0.005
+    &lt;span class=&quot;symbols etc&quot;&gt;&lt;/span&gt;0.005
+    &lt;span class=&quot;symbols ltc&quot;&gt;&lt;/span&gt;0.005
+    &lt;span class=&quot;symbols ust&quot;&gt;&lt;/span&gt;0.005
+    &lt;span class=&quot;symbols usb&quot;&gt;&lt;/span&gt;0.005
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="f-row picker-section">
+                    <div class="f-item">
+                        <h1>Date and Time Pickers</h1>
+                    </div>
+                </div>
+
+                <div class="f-row picker-section">
+                    <div class="f-item">
+                        <h3>Date Picker:</h3>
+                        <div>
+                            <input type="text" id="date-picker" size="12" readonly="readonly"/>
+                        </div>
+                        <h3>Time Picker:</h3>
+                        <div>
+                            <input type="text" id="time-picker" size="12" maxlength="5"/>
+                        </div>
+                    </div>
+                    <div class="f-item">
+                        <div class="code-sample">
+                            <pre class="prettyprint">
+                                <code>
+  Date Picker:
+  &lt;input type=&quot;text&quot; id=&quot;date-picker&quot; size=&quot;12&quot; readonly=&quot;readonly&quot;/&gt;
+  Time Picker:
+  &lt;input type=&quot;text&quot; id=&quot;time-picker&quot; size=&quot;12&quot; maxLength=&quot;5&quot;/&gt;
+  &lt;script type=&quot;text/javascript&quot;&gt;
+  var date = new Date();
+  $('#date-picker').datepicker({
+    dateFormat: 'dd M, yy',
+    changeMonth: true,
+    changeYear: true,
+    minDate: date,
+  });
+  $(&quot;#time-picker&quot;)
+    .on('click', function() {
+      date = new Date();
+      $(this).timepicker('destroy').timepicker({
+        minTime: {
+          hour: date.getHours(),
+          minute: date.getMinutes()
+        }
+      });
+    })
+    .on('keypress', debounce(function(time) {
+      var regex = new RegExp(time);
+      if (!/^(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]$/.test(regex)) {
+        $('#time-picker').parent().append($('<p>', {class: 'error-msg', text: 'Time is invalid'}));
+      }
+    }));
+  });
+  &lt;/script&gt;
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

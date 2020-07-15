@@ -1,0 +1,371 @@
+main {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+h1 {
+    margin-top: 0;
+}
+.container {
+    margin: 0 auto;
+    max-width: 1240px;
+    padding-right: 10px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+.palette{
+  padding: 10px;
+  border: 1px solid #000;
+}
+/*Header */
+.dark-blue {
+    background: #15212d;
+}
+#header{
+    background: #2a3052;
+    border-top: 2px solid #394171;
+    border-bottom: 4px solid #e98024;
+    height: 75px;
+}
+.header{
+    background: #2a3052;
+    border-top: 2px solid #394171;
+    border-bottom: 4px solid #e98024;
+    height: 75px;
+}
+#topbar-info div {
+    display: inline-flex;
+    padding: 0 10px;
+}
+[role="tab-content"] .tab-content {
+  display: none;
+}
+#tab-1 {
+  display: block;
+}
+#tabs {
+  margin-top: 2rem;
+}
+.tab-content {
+    font-size: initial;
+}
+.code-sample {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+.code-sample code{
+  margin-bottom: 0;
+}
+.f-demo {
+  padding: 5px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  background: #f7f7f7;
+  text-align: center;
+}
+
+/* desert scheme ported from vim to google prettify */
+
+pre.prettyprint {
+  display: block;
+  background-color: #333
+}
+pre .nocode {
+  background-color: none;
+  color: #000
+}
+pre .str {
+  color: #ffa0a0
+}
+
+/* string  - pink */
+
+pre .kwd {
+  color: #f0e68c;
+}
+pre .com {
+  color: #87ceeb
+}
+
+/* comment - skyblue */
+
+pre .typ {
+  color: #98fb98
+}
+
+/* type    - lightgreen */
+
+pre .lit {
+  color: #cd5c5c
+}
+
+/* literal - darkred */
+
+pre .pun {
+  color: #fff
+}
+
+/* punctuation */
+
+pre .pln {
+  color: #fff
+}
+
+/* plaintext */
+
+pre .tag {
+  color: #f0e68c;
+}
+
+/* html/xml tag    - lightyellow */
+
+pre .atn {
+  color: #bdb76b;
+  font-weight: bold
+}
+
+/* attribute name  - khaki */
+
+pre .atv {
+  color: #ffa0a0
+}
+
+/* attribute value - pink */
+
+pre .dec {
+  color: #98fb98
+}
+
+/* decimal         - lightgreen */
+
+
+/* Specify class=linenums on a pre to get line numbering */
+
+ol.linenums {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #AEAEAE
+}
+
+/* IE indents via margin-left */
+
+li.L0, li.L1, li.L2, li.L3, li.L5, li.L6, li.L7, li.L8 {
+  list-style-type: none
+}
+
+/* Alternate shading for lines */
+
+li.L1, li.L3, li.L5, li.L7, li.L9 {}
+@media print {
+  pre.prettyprint {
+    background-color: none
+  }
+  pre .str, code .str {
+    color: #060
+  }
+  pre .kwd, code .kwd {
+    color: #006;
+    font-weight: bold
+  }
+  pre .com, code .com {
+    color: #600;
+    font-style: italic
+  }
+  pre .typ, code .typ {
+    color: #404;
+    font-weight: bold
+  }
+  pre .lit, code .lit {
+    color: #044
+  }
+  pre .pun, code .pun {
+    color: #440
+  }
+  pre .pln, code .pln {
+    color: #000
+  }
+  pre .tag, code .tag {
+    color: #006;
+    font-weight: bold
+  }
+  pre .atn, code .atn {
+    color: #404
+  }
+  pre .atv, code .atv {
+    color: #060
+  }
+}
+
+/* Flex */
+.f-row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  /*align-items: center;*/
+}
+.f-row.flex-vertical {
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.f-row.flex-vertical .f-item {
+  width: 100%;
+}
+.f-row.f-row-start {
+  justify-content: flex-start;
+}
+.f-row.f-row-end {
+  justify-content: flex-end;
+}
+.f-row.f-row-between {
+  justify-content: space-between;
+}
+.f-row.f-row-around {
+  justify-content: space-around;
+}
+.icon-section > .f-item .f-row {
+    margin-bottom: 1rem;
+}
+
+.f-item-common, .f-item, .f-item-10, .f-item-20, .f-item-25, .f-item-33, .f-item-50, .f-item-67, .f-item-75, .f-item-80, .f-item-90 {
+  display: inline-block;
+  width: initial;
+  margin-left: 20px;
+}
+
+.f-item {
+  flex: 1 1 auto;
+}
+
+.f-item-10 {
+  flex: 0 0 10%;
+  max-width: 10%;
+}
+
+.f-item-20 {
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+
+.f-item-25 {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+.f-item-33 {
+  flex: 0 0 33.3333%;
+  max-width: 33.3333%;
+}
+
+.f-item-50 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.f-item-67 {
+  flex: 0 0 66.666%;
+  max-width: 66.666%;
+}
+
+.f-item-75 {
+  flex: 0 0 75%;
+  max-width: 75%;
+}
+
+.f-item-80 {
+  flex: 0 0 80%;
+  max-width: 80%;
+}
+
+.f-item-90 {
+  flex: 0 0 90%;
+  max-width: 90%;
+}
+
+/* align a flex item. default is set by flex-row which is center */
+.f-item-start {
+  align-self: flex-start;
+}
+
+.f-item-end {
+  align-self: flex-end;
+}
+
+.f-item-center {
+  align-self: center;
+}
+
+.f-item-base {
+  align-self: baseline;
+}
+
+.f-item-stretch {
+  align-self: stretch;
+}
+
+#content {
+    max-width: 1240px;
+    padding: 0 2rem;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+#mobile-page-selector {
+    width: 100%;
+    display: none;
+    margin: 2rem 0 1rem;
+}
+
+.page-wrapper {
+    display: flex;
+    margin-top: 40px;
+}
+
+.page-wrapper > .sidebar-left {
+    flex: 1;
+    margin: 0 0 2rem 0;
+    overflow: hidden;
+}
+
+.page-wrapper > .sidebar-left ul {
+    padding: 0;
+    margin: 0;
+}
+
+.page-content {
+    font-size: 18px;
+    flex: 4;
+}
+
+.page-content > div:not(:first-child) {
+    display: none;
+}
+
+@media all and (max-width: 479px) {
+  .f-item-common-1, .f-item, .f-item-10, .f-item-20, .f-item-25, .f-item-33, .f-item-50, .f-item-67, .f-item-75, .f-item-80, .f-item-90 {
+    padding: 0.25rem;
+    display: inline-block;
+    width: initial;
+  }
+
+  .f-item, .f-item-10, .f-item-20, .f-item-25, .f-item-33, .f-item-50, .f-item-67, .f-item-75, .f-item-80, .f-item-90 {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 769px) {
+    .mobile-hide {
+        display: none !important;
+    }
+    #header #logo, .header #logo {
+        width: 100%;
+    }
+    #mobile-page-selector {
+        display: block;
+    }
+    .sidebar-left {
+        display: none;
+    }
+}

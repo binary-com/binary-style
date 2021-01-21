@@ -191,6 +191,7 @@
                 transition: transform 0.2s ease-in;
                 transform-origin: 50% 30%;
                 transform: rotate(180deg);
+                pointer-events: none;
             }
         }
     }

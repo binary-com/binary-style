@@ -17,7 +17,7 @@ https://style.binary.com/binary.more.js
 https://style.binary.com/binary.more.css
 ```
 
-### NPM Usage (Recommended)
+## Manual import
 
 - The library is available on `npm`
 

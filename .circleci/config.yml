@@ -3,24 +3,6 @@ orbs:
   k8s: circleci/kubernetes@0.7.0
   slack: circleci/slack@3.4.2
 commands:
-  git_checkout_from_cache:
-    description: "Git checkout and save cache"
-    steps:
-      - restore_cache:
-          name: Git restore cache
-          keys:
-            - source-v1-{{ .Branch }}-{{ .Revision }}
-            - source-v1-{{ .Branch }}-
-            - source-v1-
-      - checkout
-      - run:
-          name: Compress git objects 
-          command: git gc
-      - save_cache:
-          name: Git save cache
-          key: source-v1-{{ .Branch }}-{{ .Revision }}
-          paths:
-            - ".git"
   install_deps:
     description: "Install ruby and sass"
     steps:
@@ -51,30 +33,15 @@ commands:
       - run:
           name: "Build binary-style"
           command: npm run build
-  deploy:
-    description: "Deploy to static branches"
+  versioning:
+    description: "Add version to build"
     parameters:
       target_branch:
         type: string
     steps:
-      - checkout
-      - attach_workspace:
-          at: dist
       - run:
           name: Tag build
           command: echo "<< parameters.target_branch >> $(date -u +'%Y-%m-%dT%H:%M:%SZ')" > dist/version
-      - run:
-          name: Install and configure dependencies
-          command: |
-            sudo npm install -g gh-pages@2.0.1
-            git config user.email "ci-build@binary.com"
-            git config user.name "ci-build"
-      - add_ssh_keys:
-          fingerprints:
-            - "01:67:4a:6d:26:9c:70:c4:1a:60:91:88:d9:dd:f0:83"
-      - run:
-          name: Deploy docs to gh-pages branch
-          command: gh-pages -d dist --branch << parameters.target_branch >> --message '[skip ci]'
   docker_build_push:
     description: "Build Docker image"
     steps:
@@ -133,14 +100,14 @@ commands:
           name: "Publish to cloudflare pages (production)"
           command: |
             cd dist
-            npx wrangler pages publish . --project-name=binary-style-pages --branch=main
+            npx wrangler pages publish . --project-name=binary-style-pages --branch=maintest
             echo "New website - http://cf-pages-binary-style.binary.com"
 jobs:
   build:
     docker:
       - image: circleci/node:9.9.0-stretch
     steps:
-      - git_checkout_from_cache
+      - checkout
       - install_deps
       - npm_install
       - build
@@ -148,10 +115,12 @@ jobs:
     docker:
       - image: circleci/node:9.9.0-stretch
     steps:
-      - git_checkout_from_cache
+      - checkout
       - install_deps
       - npm_install
       - build
+      - versioning:
+          target_branch: "staging"
       - persist_to_workspace:
           root: dist
           paths:
@@ -160,27 +129,19 @@ jobs:
     docker:
       - image: circleci/node:9.9.0-stretch
     steps:
-      - git_checkout_from_cache
+      - checkout
       - install_deps
       - npm_install
       - build
+      - versioning:
+          target_branch: "production"
       - persist_to_workspace:
           root: dist
           paths:
             - .
-      - deploy:
-          target_branch: "production"
-      - notify_slack
-  release_aws_production:
-    docker:
-      - image: circleci/node:9.9.0-stretch
-    steps:
-      - git_checkout_from_cache
-      - install_deps
-      - npm_install
-      - build
       - docker_build_push
       - k8s_deploy
+      #- notify_slack
   publish_cloudflare_staging:
     docker:
       - image: cimg/node:18.4.0
@@ -203,24 +164,12 @@ workflows:
           filters:
             branches:
               ignore: /^master$/
-  release:
+  release_staging:
     jobs:
       - release_staging:
           filters:
             branches:
               only: /^master$/
-      - release_production:
-          filters:
-            branches:
-              ignore: /.*/
-            tags:
-              only: /^production.*/
-      - release_aws_production:
-          filters:
-            branches:
-              ignore: /.*/
-            tags:
-              only: /^production.*/
           context: binary-frontend-artifact-upload
       - publish_cloudflare_staging:
           requires:
@@ -228,6 +177,15 @@ workflows:
           filters:
             branches:
               only: /^master$/
+          context: binary-frontend-artifact-upload
+  release_production:
+    jobs:
+      - release_production:
+          filters:
+            branches:
+              ignore: /.*/
+            tags:
+              only: /^production.*/
           context: binary-frontend-artifact-upload
       - publish_cloudflare_production:
           requires:

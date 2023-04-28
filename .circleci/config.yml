@@ -105,7 +105,7 @@ commands:
 jobs:
   build:
     docker:
-      - image: circleci/node:9.9.0-stretch
+      - image: circleci/node:14-buster
     steps:
       - checkout
       - install_deps
@@ -113,7 +113,7 @@ jobs:
       - build
   release_staging:
     docker:
-      - image: circleci/node:9.9.0-stretch
+      - image: circleci/node:14-buster
     steps:
       - checkout
       - install_deps
@@ -127,7 +127,7 @@ jobs:
             - .
   release_production:
     docker:
-      - image: circleci/node:9.9.0-stretch
+      - image: circleci/node:14-buster
     steps:
       - checkout
       - install_deps

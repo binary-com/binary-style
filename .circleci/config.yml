@@ -100,7 +100,7 @@ commands:
           name: "Publish to cloudflare pages (production)"
           command: |
             cd dist
-            npx wrangler pages publish . --project-name=binary-style-pages --branch=maintest
+            npx wrangler pages publish . --project-name=binary-style-pages --branch=main
             echo "New website - http://cf-pages-binary-style.binary.com"
 jobs:
   build:
@@ -141,7 +141,7 @@ jobs:
             - .
       - docker_build_push
       - k8s_deploy
-      #- notify_slack
+      - notify_slack
   publish_cloudflare_staging:
     docker:
       - image: cimg/node:18.4.0
